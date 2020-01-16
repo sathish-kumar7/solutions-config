@@ -65,6 +65,24 @@
           "use_dimension_value": "true"
         },
         {
+          "name": "Average Of ASR Deviation",
+          "column": "asr_deviation_from_median",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true"
+        },
+        {
+          "name": "Coefficient of Dispersion",
+          "column": "avg(asr_deviation_from_median)/avg(median_asr)",
+          "aggregate_type": "",
+          "use_dimension_value": "true"
+        },
+        {
+          "name": "Price Related Differential",
+          "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
+          "aggregate_type": "",
+          "use_dimension_value": "true"
+        },
+        {
           "name": "Median Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
           "aggregate_type": "median",
@@ -75,12 +93,6 @@
           "column": "estimated_total_market_value",
           "aggregate_type": "sum",
           "stack_column": "land_use_type"
-        },
-        {
-          "name": "Average Of ASR Deviation",
-          "column": "asr_deviation_from_median",
-          "aggregate_type": "avg",
-          "use_dimension_value": "true"
         }
       ],
       "filter_by_entries": [
