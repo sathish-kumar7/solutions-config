@@ -872,6 +872,18 @@
           "column": "asr_deviation_from_median",
           "aggregate_type": "avg",
           "use_dimension_value": "true"
+        },
+        {
+          "name": "Coefficient of Dispersion",
+          "column": "avg(asr_deviation_from_median)/avg(median_asr)",
+          "aggregate_type": "",
+          "use_dimension_value": "true"
+        },
+        {
+          "name": "Price Related Differential",
+          "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
+          "aggregate_type": "",
+          "use_dimension_value": "true"
         }
       ],
       "filter_by_entries": [
