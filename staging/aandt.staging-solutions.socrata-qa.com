@@ -65,7 +65,7 @@
           "use_dimension_value": "true"
         },
         {
-          "name": "Average Of ASR Deviation",
+          "name": "Average Absolute Deviation",
           "column": "asr_deviation_from_median",
           "aggregate_type": "avg",
           "use_dimension_value": "true"
@@ -77,7 +77,7 @@
           "use_dimension_value": "true"
         },
         {
-          "name": "Price Related Differential",
+          "name": "Price Relative Differential",
           "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
           "aggregate_type": "",
           "use_dimension_value": "true"
