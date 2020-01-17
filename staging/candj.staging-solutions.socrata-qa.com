@@ -44,6 +44,7 @@
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
+          "prefix": "",
           "suffix": "%"
         }
       ],
