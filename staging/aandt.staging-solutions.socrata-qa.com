@@ -63,36 +63,54 @@
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "aggregate_type": "avg",
           "use_dimension_value": "true"
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%"
         },
         {
           "name": "Average Absolute Deviation",
           "column": "asr_deviation_from_median",
           "aggregate_type": "avg",
           "use_dimension_value": "true"
+          "precision": "2",
+          "prefix": "",
+          "suffix": ""
         },
         {
           "name": "Coefficient of Dispersion",
           "column": "avg(asr_deviation_from_median)/avg(median_asr)",
           "aggregate_type": "",
           "use_dimension_value": "true"
+          "precision": "2",
+          "prefix": "",
+          "suffix": ""
         },
         {
           "name": "Price Relative Differential",
           "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
           "aggregate_type": "",
           "use_dimension_value": "true"
+          "precision": "2",
+          "prefix": "",
+          "suffix": ""
         },
         {
           "name": "Median Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
           "aggregate_type": "median",
           "use_dimension_value": "true"
+          "precision": "2",
+          "prefix": "",
+          "suffix": ""
         },
         {
           "name": "Estimated Total Market Value",
           "column": "estimated_total_market_value",
           "aggregate_type": "sum",
           "stack_column": "land_use_type"
+          "precision": "2",
+          "prefix": "",
+          "suffix": ""
         }
       ],
       "filter_by_entries": [
