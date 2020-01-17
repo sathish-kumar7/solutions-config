@@ -966,6 +966,9 @@
       "fields": {
         "date_column": "fiscal_year"
       },
+      "parent_queries": [
+        "select * where service = 'Education'"
+      ],
       "dimension_entries": [
         {
           "column": "service",
