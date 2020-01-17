@@ -141,6 +141,13 @@
           "name": "Tax Year"
         }
       ],
+      "quick_filter_entries": [
+        {
+          "column": "saledt",
+          "name": "Sale Date",
+          "renderType": "date"
+        }
+      ],
       "map": {
         "centerLat": "39.018425261608655",
         "centerLng": "-84.00102962486125",
