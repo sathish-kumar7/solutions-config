@@ -55,13 +55,17 @@
           "name": "Total amount spent",
           "column": "actual_amount",
           "aggregate_type": "sum",
-          "stack_column": "entry_type"
+          "stack_column": "entry_type",
+          "prefix": "$",
+          "precision": "2"
         },
         {
           "name": "Total amount approved",
           "column": "approved_amount",
           "aggregate_type": "sum",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "prefix": "$",
+          "precision": "2"
         }
       ],
       "filter_by_entries": [
@@ -218,12 +222,16 @@
         {
           "name": "Total Revenue",
           "column": "actual_amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "precision": "2"
         },
         {
           "name": "Total Projections",
           "column": "projected_amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "precision": "2"
         }
       ],
       "map": {
@@ -281,12 +289,16 @@
         {
           "column": "approved_amount",
           "name": "Approved Amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "precision": "2"
         },
         {
           "column": "actual_amount",
           "name": "Actual Amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "precision": "2"
         }
       ],
       "map": {
@@ -344,7 +356,9 @@
         {
           "name": "Annual Total",
           "column": "pay_total",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "precision": "2"
         }
       ],
       "map": {
@@ -417,19 +431,23 @@
           "name": "Mean ratio",
           "column": "(market_total/case(sale_price == 0,1, true, sale_price))",
           "aggregate_type": "avg",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2"
         },
         {
           "name": "Sales",
           "column": "sale_type",
           "aggregate_type": "count",
-          "stacked_column": "sale_type"
+          "stacked_column": "sale_type",
+          "precision": "2"
         },
         {
           "name": "Building value",
           "column": "building_value",
           "aggregate_type": "sum",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "$"
         }
       ],
       "filter_by_entries": [
@@ -560,7 +578,8 @@
           "name": "Incidents",
           "column": "occurred_incident_type",
           "aggregate_type": "count",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2"
         }
       ],
       "filter_by_entries": [
@@ -744,19 +763,23 @@
           "name": "Mean Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "aggregate_type": "avg",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2"
         },
         {
           "name": "Median Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
           "aggregate_type": "median",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2"
         },
         {
           "name": "Estimated Total Market Value",
           "column": "estimated_total_market_value",
           "aggregate_type": "sum",
-          "stack_column": "land_use_type"
+          "stack_column": "land_use_type",
+          "precision": "2",
+          "prefix": "$"
         }
       ],
       "filter_by_entries": [
@@ -871,19 +894,22 @@
           "name": "Average Absolute Deviation",
           "column": "asr_deviation_from_median",
           "aggregate_type": "avg",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2"
         },
         {
           "name": "Coefficient of Dispersion",
           "column": "avg(asr_deviation_from_median)/avg(median_asr)",
           "aggregate_type": "",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2"
         },
         {
           "name": "Price Relative Differential",
           "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
           "aggregate_type": "",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2"
         }
       ],
       "filter_by_entries": [
@@ -983,7 +1009,8 @@
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
-          "stack_column": "entry_type"
+          "stack_column": "entry_type",
+          "precision": "2"
         }
       ],
       "filter_by_entries": [
