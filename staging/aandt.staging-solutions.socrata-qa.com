@@ -1,5 +1,7 @@
 {
-  "branding": {},
+  "branding": {
+    "delimiter": ","
+  },
   "template_entries": [
     {
       "name": "Clermont County Property Data",
