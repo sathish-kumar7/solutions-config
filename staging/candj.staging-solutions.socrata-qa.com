@@ -42,7 +42,9 @@
           "name": "Clearance Rate",
           "column": "(sum(closed)/case(sum(opened) == 0, 1, true, sum(opened))*100)",
           "aggregate_type": "",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2",
+          "suffix": "%"
         }
       ],
       "filter_by_entries": [
