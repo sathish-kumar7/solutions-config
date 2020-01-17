@@ -53,13 +53,19 @@
           "name": "Total amount spent",
           "column": "actual_amount",
           "aggregate_type": "sum",
-          "stack_column": "entry_type"
+          "stack_column": "entry_type",
+          "precision": "2",
+          "prefix": "$",
+          "suffix": ""
         },
         {
           "name": "Total amount approved",
           "column": "approved_amount",
           "aggregate_type": "sum",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "$",
+          "suffix": ""
         }
       ],
       "filter_by_entries": [
@@ -216,12 +222,18 @@
         {
           "name": "Total Revenue",
           "column": "actual_amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "precision": "2",
+          "prefix": "$",
+          "suffix": ""
         },
         {
           "name": "Total Projections",
           "column": "projected_amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "precision": "2",
+          "prefix": "$",
+          "suffix": ""
         }
       ],
       "map": {
@@ -279,12 +291,18 @@
         {
           "column": "approved_amount",
           "name": "Approved Amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "precision": "2",
+          "prefix": "$",
+          "suffix": ""
         },
         {
           "column": "actual_amount",
           "name": "Actual Amount",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "precision": "2",
+          "prefix": "$",
+          "suffix": ""
         }
       ],
       "map": {
@@ -342,7 +360,10 @@
         {
           "name": "Annual Total",
           "column": "pay_total",
-          "aggregate_type": "sum"
+          "aggregate_type": "sum",
+          "precision": "2",
+          "prefix": "$",
+          "suffix": ""
         }
       ],
       "map": {
