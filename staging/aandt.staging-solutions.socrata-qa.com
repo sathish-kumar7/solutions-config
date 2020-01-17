@@ -65,7 +65,7 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": "%"
+          "suffix": ""
         },
         {
           "name": "Average Absolute Deviation",
@@ -108,8 +108,8 @@
           "column": "estimated_total_market_value",
           "aggregate_type": "sum",
           "stack_column": "land_use_type",
-          "precision": "2",
-          "prefix": "",
+          "precision": "0",
+          "prefix": "$",
           "suffix": ""
         }
       ],
