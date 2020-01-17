@@ -80,7 +80,7 @@
           "name": "Coefficient of Dispersion",
           "column": "avg(asr_deviation_from_median)/avg(median_asr)",
           "aggregate_type": "",
-          "use_dimension_value": "true"
+          "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
           "suffix": ""
