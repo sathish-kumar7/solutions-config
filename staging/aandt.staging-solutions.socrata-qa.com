@@ -117,10 +117,6 @@
       ],
       "filter_by_entries": [
         {
-          "column": "tax_year",
-          "name": "Tax Year"
-        },
-        {
           "column": "style",
           "name": "style"
         }
