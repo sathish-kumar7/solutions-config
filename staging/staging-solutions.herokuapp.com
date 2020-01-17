@@ -957,6 +957,61 @@
           "color": "#32a889"
         }
       ]
+    },
+    {
+      "name": "ERP metrics",
+      "dataset_domain": "evergreen.data.socrata.com",
+      "dataset_id": "s8xp-hq5q",
+      "default_view": "Snapshot",
+      },
+      "fields": {
+        "date_column": "fiscal_year"
+      },
+      "dimension_entries": [
+        {
+          "column": "service",
+          "name": "Service"
+        }
+      ],
+      "group_by_entries": [
+        
+      ],
+      "view_entries": [
+        {
+          "name": "Funds",
+          "column": "entry_type",
+          "aggregate_type": "count",
+          "stack_column": "entry_type"
+        }
+      ],
+      "filter_by_entries": [
+        {
+          "column": "fund",
+          "name": "Fund"
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "service",
+          "name": "Service"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "service",
+          "name": "Service",
+          "renderType": "text"
+        }
+      ],
+      "map": {
+        
+      },
+      "shape_datasets": [
+        
+      ],
+      "shape_outline_dataset_entries": [
+        
+      ]
     }
   ]
 }
