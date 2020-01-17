@@ -618,6 +618,13 @@
           "name": "Officer Name"
         }
       ],
+      "quick_filter_entries": [
+        {
+          "column": "reported_date_time",
+          "name": "Reported Date",
+          "renderType": "date"
+        }
+      ],
       "map": {
         "centerLat": "27.857590",
         "centerLng": "-82.711240",
