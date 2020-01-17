@@ -139,7 +139,7 @@
           "name": "Tax Year"
         },
         {
-          "name": "Mean Ratio",
+          "name": "Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)"
         }
       ],
