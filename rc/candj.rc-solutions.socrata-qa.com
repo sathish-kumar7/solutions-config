@@ -52,10 +52,6 @@
         {
           "column": "judgename",
           "name": "Judge"
-        },
-        {
-          "column": "statusdate",
-          "name": "Status Date"
         }
       ],
       "leaf_page_entries": [
@@ -94,6 +90,13 @@
         {
           "column": "casetypecodedescription",
           "name": "Case Description"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "statusdate",
+          "name": "Status Date",
+          "renderType": "date"
         }
       ],
       "map": {
