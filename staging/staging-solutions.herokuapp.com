@@ -60,6 +60,17 @@
           "precision": "2"
         },
         {
+          "name": "Amount spent on Salary And Wages",
+          "column": "actual_amount",
+          "aggregate_type": "sum",
+          "stack_column": "entry_type",
+          "prefix": "$",
+          "precision": "2",
+          "quick_filters": [
+            {type: "text", column: "category", field: "quick_filter_0_s8xp_hq5q_4", values: ["Salary and Wages"], operator: "="}
+          ]
+        },
+        {
           "name": "Total amount approved",
           "column": "approved_amount",
           "aggregate_type": "sum",
