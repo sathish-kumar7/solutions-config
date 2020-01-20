@@ -9,26 +9,47 @@
   "is_private": "false",
   "template_entries": [
     {
-      "name": "Financials",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "mik7-qbhe",
-      "default_view": "Over Time",
+      "name": "ERP - Financials",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "darw-mart",
+      "default_view": "Snapshot",
       "fields": {
-        "date_column": "fiscal_year"
+        "date_column": "fiscalmonth"
       },
       "dimension_entries": [
         {
+          "column": "organization",
+          "name": "Organisation"
+        },
+        {
           "column": "department",
           "name": "Department"
+        },
+        {
+          "column": "departmentgroup",
+          "name": "Department group"
         }
       ],
       "view_entries": [
         {
-          "name": "Total Revenue",
-          "column": "actual_amount",
-          "aggregate_type": "sum"
+          "name": "Original Budget",
+          "column": "originalbudget",
+          "aggregate_type": "sum",
+          "tags": ["Budget"]
+        },
+        {
+          "name": "Revised Budget",
+          "column": "revisedbudget",
+          "aggregate_type": "sum",
+          "tags": ["Budget"]
+        },
+        {
+          "name": "Actual amount",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "tags": ["Budget"]
         }
       ]
     }
   ]
-}
+}   
