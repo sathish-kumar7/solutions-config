@@ -80,7 +80,7 @@
             "type": "text",
             "field": "quick_filter_0_darw_mart_0",
             "values": ["Operating"],
-            "operator": "is"
+            "operator": "="
             }
           ]
         },
@@ -98,7 +98,7 @@
             "type": "text",
             "field": "quick_filter_0_darw_mart_0",
             "values": ["Revenue"],
-            "operator": "is"
+            "operator": "="
             }
           ]
         },
@@ -116,7 +116,7 @@
             "type": "text",
             "field": "quick_filter_0_darw_mart_0",
             "values": ["Balance Sheet"],
-            "operator": "is"
+            "operator": "="
             }
           ]
         }
