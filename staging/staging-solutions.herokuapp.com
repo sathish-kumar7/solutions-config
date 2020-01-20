@@ -68,8 +68,8 @@
           "precision": "2",
           "quick_filters": [
             { 
-              "type": "text", 
               "column": "category", 
+              "type": "text", 
               "field": "quick_filter_0_s8xp_hq5q_4", 
               "values": ["Salary and Wages"], 
               "operator": "="
