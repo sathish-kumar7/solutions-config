@@ -66,6 +66,35 @@
           "precision": "2",
           "tags": ["Budget"]
         }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "organization",
+          "name": "Organisation"
+        },   
+        {
+          "column": "accountstatus",
+          "name": "Account status"
+        },
+        {
+          "column": "fiscalyear",
+          "name": "Fiscal year"
+        },
+        {
+          "column": "accounttype",
+          "name": "Account type"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "fund",
+          "name": "Fund",
+          "renderType": "text"
+        }
       ]
     }
   ]
