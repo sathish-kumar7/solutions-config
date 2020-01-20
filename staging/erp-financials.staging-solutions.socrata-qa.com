@@ -76,7 +76,7 @@
           "tags": ["Budget"],
           "quick_filters": [
           {
-            "column": "program",
+            "column": "accounttype",
             "type": "text",
             "field": "quick_filter_0_darw_mart_0",
             "values": ["Operating"],
@@ -94,7 +94,7 @@
           "tags": ["Budget"],
           "quick_filters": [
           {
-            "column": "program",
+            "column": "accounttype",
             "type": "text",
             "field": "quick_filter_0_darw_mart_0",
             "values": ["Revenue"],
@@ -112,7 +112,7 @@
           "tags": ["Budget"],
           "quick_filters": [
           {
-            "column": "program",
+            "column": "accounttype",
             "type": "text",
             "field": "quick_filter_0_darw_mart_0",
             "values": ["Balance Sheet"],
