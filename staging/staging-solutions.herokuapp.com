@@ -67,7 +67,13 @@
           "prefix": "$",
           "precision": "2",
           "quick_filters": [
-            {type: "text", column: "category", field: "quick_filter_0_s8xp_hq5q_4", values: ["Salary and Wages"], operator: "="}
+            { 
+              "type": "text", 
+              "column": "category", 
+              "field": "quick_filter_0_s8xp_hq5q_4", 
+              "values": ["Salary and Wages"], 
+              "operator": "="
+            }
           ]
         },
         {
