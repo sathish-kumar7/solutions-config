@@ -81,10 +81,6 @@
           "name": "Account status"
         },
         {
-          "column": "fiscalyear",
-          "name": "Fiscal year"
-        },
-        {
           "column": "accounttype",
           "name": "Account type"
         }
