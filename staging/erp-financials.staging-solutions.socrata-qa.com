@@ -18,6 +18,10 @@
       },
       "dimension_entries": [
         {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
           "column": "organization",
           "name": "Organisation"
         },
