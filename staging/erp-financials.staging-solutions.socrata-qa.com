@@ -40,6 +40,7 @@
           "column": "originalbudget",
           "aggregate_type": "sum",
           "tags": ["Budget"]
+        },
         {
           "name": "Revised Budget",
           "column": "revisedbudget",
