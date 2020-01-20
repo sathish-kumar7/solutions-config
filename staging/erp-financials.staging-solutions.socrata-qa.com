@@ -79,7 +79,7 @@
             "column": "accounttype",
             "type": "text",
             "field": "quick_filter_0_darw_mart_0",
-            "values": ["Operating"],
+            "values": ["Expense"],
             "operator": "="
             }
           ]
