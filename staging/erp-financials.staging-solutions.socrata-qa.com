@@ -28,9 +28,7 @@
         {
           "column": "accountstatus",
           "name": "Account status"
-        }
-      ],
-      "group_by_entries": [
+        },
         {
           "column": "fiscalyear",
           "name": "Fiscal year"
@@ -41,34 +39,18 @@
           "name": "Original Budget",
           "column": "originalbudget",
           "aggregate_type": "sum",
-          "tags": ["Budget"],
-          "visualization": {
-            "snapshot": {
-                "chart_type": "groupChart"
-                }
-            }
-        },
+          "tags": ["Budget"]
         {
           "name": "Revised Budget",
           "column": "revisedbudget",
           "aggregate_type": "sum",
-          "tags": ["Budget"],
-          "visualization": {
-            "snapshot": {
-                "chart_type": "groupChart"
-                }
-            }
+          "tags": ["Budget"]
         },
         {
           "name": "Actual amount",
           "column": "actual",
           "aggregate_type": "sum",
-          "tags": ["Budget"],
-          "visualization": {
-            "snapshot": {
-                "chart_type": "groupChart"
-                }
-            }
+          "tags": ["Budget"]
         }
       ]
     }
