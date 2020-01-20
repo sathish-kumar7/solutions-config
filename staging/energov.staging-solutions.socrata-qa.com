@@ -204,7 +204,7 @@
       "name": "Opex Revenue",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "mik7-qbhe",
-      "default_view": "Snapshot",
+      "default_view": "Map",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -269,7 +269,7 @@
       "name": "Capex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "dszp-jd2s",
-      "default_view": "Snapshot",
+      "default_view": "Table",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -338,7 +338,7 @@
       "name": "Payroll",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "qu7r-i9cv",
-      "default_view": "Snapshot",
+      "default_view": "Pie Chart",
       "fields": {
         "date_column": "fiscal_year"
       },
