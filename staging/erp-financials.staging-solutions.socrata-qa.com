@@ -41,16 +41,22 @@
       "view_entries": [
         {
           "name": "Original Budget",
-          "column": "originalbudget",
+          "column": "ltdoriginalbudget",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"]
+          "tags": ["Budget"],
+          "use_dimension_value": "true",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Revised Budget",
-          "column": "revisedbudget",
+          "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -59,7 +65,7 @@
         },
         {
           "name": "Actual amount",
-          "column": "actual",
+          "column": "(actual + encumbrance)",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
