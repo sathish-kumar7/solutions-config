@@ -43,18 +43,27 @@
           "name": "Original Budget",
           "column": "originalbudget",
           "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
           "tags": ["Budget"]
         },
         {
           "name": "Revised Budget",
           "column": "revisedbudget",
           "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
           "tags": ["Budget"]
         },
         {
           "name": "Actual amount",
           "column": "actual",
           "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
           "tags": ["Budget"]
         }
       ]
