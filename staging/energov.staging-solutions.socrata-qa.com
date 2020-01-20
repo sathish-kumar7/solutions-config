@@ -1,11 +1,5 @@
 {
   "branding": {},
-  "tag_list": [
-    "Cases",
-    "Judges",
-    "Clearence rates",
-    "Districts and counties"
-  ],
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
