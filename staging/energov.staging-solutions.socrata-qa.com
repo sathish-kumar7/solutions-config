@@ -1,5 +1,13 @@
 {
   "branding": {},
+  "tag_list": [
+    "Cases",
+    "Judges",
+    "Clearence rates",
+    "Districts and counties"
+  ],
+  "show_share_via_email": true,
+  "is_private": "false",
   "template_entries": [
     {
       "name": "Opex Budget",
@@ -47,7 +55,14 @@
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
-          "stack_column": "entry_type"
+          "stack_column": "entry_type",
+          "quick_filters": {
+            "type": "text",
+            "column": "department",
+            "field": "quick_filter_0_s8xp_hq5q_1",
+            "values": ["Library"],
+            "operator": "="
+            }
         },
         {
           "name": "Total amount spent",
