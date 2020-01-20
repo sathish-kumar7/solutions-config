@@ -144,6 +144,11 @@
           "column": "accounttype",
           "name": "Account Type",
           "renderType": "text"
+        },
+        {
+        "column": "fiscalmonth",
+          "name": "Fiscal Month",
+          "renderType": "date"
         }
       ]
     }
