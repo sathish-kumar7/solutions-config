@@ -1,0 +1,71 @@
+Config:
+-------------
+- branding: {}
+- show_share_via_email:  true/false
+- is_private: true/false
+- template_entries: array{template_entry}
+
+
+Template Entry:
+----------------
+- name: string
+- dataset_domain: string(domain),
+- dataset_id: string(four-by-four),
+- default_view: 'Pie Chart'/'Over Time'/'Scatterplot'/'Map'/'Snapshot'
+- visualization:
+    - snapshot:
+        - chart_type: 'groupChart'/
+- fields:
+    - date_column: string(dataset_column)
+    - incident_type: string(dataset_column)
+    - location: string(dataset_column)
+    - {four-by-four}: string(dataset_computed_column)
+- dimension_entries
+    - [n].column: string(dataset_column)
+    - [n].name: string
+- group_by_entries
+    - [n].column: string(dataset_column)
+    - [n].name: string
+- filter_by_entries
+    - [n].column: string(dataset_column)
+    - [n].name: string
+- leaf_page_entries
+    - [n].column: string(dataset_column)
+    - [n].name: string
+- quick_filter_entries
+    - [n].column: string(dataset_column)
+    - [n].name: string
+    - [n].renderType: 'text'/'number'/'date'
+- view_entries
+    - [n].name: string
+    - [n].column: string(dateset_column)
+    - [n].aggregate_type: 'sum'/'avg'/..
+    - [n].stack_column: string(dateset_column)
+    - [n].prefix: string
+    - [n].precision: string(0-10)
+    - [n].use_dimension_value: true/false
+- map
+    - centerLat: string(lat),
+    - centerLng: string(lng),
+    - zoom: string(1-20),
+    - mini_map_zoom: string(1-20),
+    - shapes_outline_highlight_width: string(1-10),
+    - style_entries
+        - name: string
+        - style: string(mapbox_style_string)
+- shape_datasets
+    - shape_dataset_domain: string(domain)
+    - shape_name: string
+    - dataset_id: string(four-by-four)
+    - fields: 
+        - shape: string(dataset_column)
+        - shape_id: string(dataset_column)
+    - color: string(hex_color)
+- shape_outline_dataset_entries
+    - shape_outline_dataset_domain: string(domain)
+    - outline_name: string,
+    - shape_outline_dataset_id: string(four-by-four)
+    - fields: 
+        - shape: string(dataset_column)
+    - color: string(hex_color)
+    - show_by_default: 'true'/'false'
