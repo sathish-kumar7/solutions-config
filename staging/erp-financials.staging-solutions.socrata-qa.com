@@ -46,13 +46,7 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
-          "use_dimension_value": "true",
-          "visualization": {
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
-          }
+          "tags": ["Budget"]
         },
         {
           "name": "Revised Budget",
