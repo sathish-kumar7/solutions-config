@@ -7,7 +7,7 @@
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "default_view": "Pie Chart",
+      "default_view": "Snapshot",
       "visualization": {
         "snapshot": {
           "chart_type": "groupChart"
