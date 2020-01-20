@@ -56,13 +56,15 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "stack_column": "entry_type",
-          "quick_filters": {
+          "quick_filters": [
+          {
             "type": "text",
             "column": "department",
             "field": "quick_filter_0_s8xp_hq5q_1",
             "values": ["Library"],
             "operator": "="
             }
+          ]
         },
         {
           "name": "Total amount spent",
