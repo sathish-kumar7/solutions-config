@@ -1,5 +1,11 @@
 {
   "branding": {},
+  "tag_list": [
+    "Cases",
+    "Judges",
+    "Clearence rates",
+    "Districts and counties"
+  ],
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
@@ -50,6 +56,7 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "stack_column": "entry_type"
+          "tags": ["Cases", "Clearence rates"]
         },
         {
           "name": "Total amount spent",
@@ -57,7 +64,16 @@
           "aggregate_type": "sum",
           "stack_column": "entry_type",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "quick_filters": [
+          {
+            "column": "program",
+            "type": "text",
+            "field": "quick_filter_0_s8xp_hq5q_2",
+            "values": ["a"],
+            "operator": "like"
+            }
+          ]
         },
         {
           "name": "Amount spent on Salary And Wages",
