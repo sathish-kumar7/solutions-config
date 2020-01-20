@@ -65,6 +65,60 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"]
+        },
+        {
+          "name": "Budget - Operating",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": ["Budget"],
+          "quick_filters": [
+          {
+            "column": "program",
+            "type": "text",
+            "field": "quick_filter_0_darw_mart_0",
+            "values": ["Operating"],
+            "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "Budget - Revenue",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": ["Budget"],
+          "quick_filters": [
+          {
+            "column": "program",
+            "type": "text",
+            "field": "quick_filter_0_darw_mart_0",
+            "values": ["Revenue"],
+            "operator": "is"
+            }
+          ]
+        },
+        {
+          "name": "Budget - Cash Accounts",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": ["Budget"],
+          "quick_filters": [
+          {
+            "column": "program",
+            "type": "text",
+            "field": "quick_filter_0_darw_mart_0",
+            "values": ["Balance Sheet"],
+            "operator": "is"
+            }
+          ]
         }
       ],
       "leaf_page_entries": [
@@ -87,8 +141,8 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "fund",
-          "name": "Fund",
+          "column": "accounttype",
+          "name": "Account Type",
           "renderType": "text"
         }
       ]
