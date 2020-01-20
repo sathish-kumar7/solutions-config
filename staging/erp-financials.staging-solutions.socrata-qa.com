@@ -24,11 +24,7 @@
         {
           "column": "organization",
           "name": "Organisation"
-        },
-        {
-          "column": "accounttype",
-          "name": "Account type"
-        },
+        },   
         {
           "column": "accountstatus",
           "name": "Account status"
@@ -36,6 +32,10 @@
         {
           "column": "fiscalyear",
           "name": "Fiscal year"
+        },
+        {
+          "column": "accounttype",
+          "name": "Account type"
         }
       ],
       "view_entries": [
