@@ -22,12 +22,16 @@
           "name": "Organisation"
         },
         {
-          "column": "department",
-          "name": "Department"
+          "column": "accounttype",
+          "name": "Account type"
         },
         {
-          "column": "departmentgroup",
-          "name": "Department group"
+          "column": "accountstatus",
+          "name": "Account status"
+        },
+        {
+          "column": "fiscalyear",
+          "name": "Fiscal year"
         }
       ],
       "view_entries": [
