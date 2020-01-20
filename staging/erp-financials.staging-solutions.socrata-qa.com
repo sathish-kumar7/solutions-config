@@ -59,7 +59,7 @@
         },
         {
           "name": "Actual amount",
-          "column": "(actual + encumbrance)",
+          "column": "actual",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
