@@ -55,7 +55,7 @@
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
-          "stack_column": "entry_type"
+          "stack_column": "entry_type",
           "tags": ["Cases", "Clearence rates"]
         },
         {
