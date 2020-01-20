@@ -57,12 +57,12 @@
           "aggregate_type": "count",
           "stack_column": "entry_type",
           "quick_filters": [
-          {
-            "type": "text",
-            "column": "department",
-            "field": "quick_filter_0_s8xp_hq5q_1",
-            "values": ["Library"],
-            "operator": "="
+            { 
+              "column": "category", 
+              "type": "text", 
+              "field": "quick_filter_0_s8xp_hq5q_4", 
+              "values": ["Salary and Wages"], 
+              "operator": "="
             }
           ]
         },
