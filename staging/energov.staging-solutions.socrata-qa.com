@@ -1,5 +1,8 @@
 {
-  "branding": {},
+  "branding": {
+    "browser_title": "Solutions | EnerGov ",
+    "title": "Solutions - EnerGov"
+  },
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
