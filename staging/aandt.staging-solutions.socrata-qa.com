@@ -8,12 +8,7 @@
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
-      "default_view": "Map",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
+      "default_view": "Snapshot",
       "parent_queries": [
         "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
@@ -67,7 +62,12 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "visualization": {
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Average Absolute Deviation",
@@ -76,7 +76,12 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "visualization": {
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Coefficient of Dispersion",
@@ -85,7 +90,12 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "visualization": {
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Price Relative Differential",
@@ -94,7 +104,12 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "visualization": {
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Median Ratio",
@@ -103,7 +118,12 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "visualization": {
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Estimated Total Market Value",
@@ -112,7 +132,12 @@
           "stack_column": "land_use_type",
           "precision": "0",
           "prefix": "$",
-          "suffix": ""
+          "suffix": "",
+          "visualization": {
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
