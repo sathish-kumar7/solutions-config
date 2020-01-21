@@ -40,31 +40,28 @@
       ],
       "view_entries": [
         {
-          "name": "Original Budget",
+          "name": "Original Budget vs Actuals",
           "column": "ltdoriginalbudget",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"]
+          "tags": ["Budget"],
+          "name_1": "Actual amount",
+          "column_1": "actual",
+          "aggregate_type_1": "sum"
         },
         {
-          "name": "Revised Budget",
+          "name": "Revised Budget vs Actuals",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"]
-        },
-        {
-          "name": "Actual amount",
-          "column": "actual",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": ["Budget"]
+          "tags": ["Budget"],
+          "name_1": "Actual amount",
+          "column_1": "actual",
+          "aggregate_type_1": "sum"
         },
         {
           "name": "Budget - Operating",
