@@ -1,5 +1,8 @@
 {
-  "branding": {},
+  "branding": {
+    "browser_title": "Solutions | QA ",
+    "title": "Solutions - QA"
+  },
   "tag_list": [
     "Cases",
     "Judges",
