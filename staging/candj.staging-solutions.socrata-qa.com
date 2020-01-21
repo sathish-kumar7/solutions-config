@@ -37,7 +37,7 @@
       ],
       "view_entries": [
         {
-          "name": "Clearance Rate",
+          "name": "Q3 2006 Clearance Rate",
           "column": "(sum(closed)/case(sum(opened) == 0, 1, true, sum(opened))*100)",
           "aggregate_type": "",
           "use_dimension_value": "true",
