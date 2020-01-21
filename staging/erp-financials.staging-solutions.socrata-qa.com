@@ -49,7 +49,12 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum"
+          "aggregate_type_1": "sum",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Revised Budget vs Actuals",
@@ -61,7 +66,12 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum"
+          "aggregate_type_1": "sum",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Budget - Operating",
