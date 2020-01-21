@@ -666,6 +666,10 @@
         {
           "column": "reporting_officer_full_name",
           "name": "Officer Name"
+        },
+        {
+          "column": "reported_date_time",
+          "name": "Reported Date"
         }
       ],
       "quick_filter_entries": [
