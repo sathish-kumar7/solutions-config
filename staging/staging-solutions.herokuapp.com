@@ -13,8 +13,7 @@
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "default_view": "Snapshot"
-      },
+      "default_view": "Snapshot",
       "fields": {
         "date_column": "fiscal_year"
       },
