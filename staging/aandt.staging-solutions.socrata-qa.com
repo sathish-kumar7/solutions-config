@@ -1,5 +1,7 @@
 {
   "branding": {
+    "browser_title": "Solutions | A&T ",
+    "title": "Solutions - Tax and Appraisals",
     "delimiter": ","
   },
   "tag_list": [
