@@ -61,7 +61,7 @@
           "prefix": "$",
           "precision": "2",
           "name_1": "Total amount approved",
-          "column": "approved_amount",
+          "column_1": "approved_amount",
           "aggregate_type_1": "sum",
           "quick_filters": [
           {
