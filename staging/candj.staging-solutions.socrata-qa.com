@@ -1,5 +1,8 @@
 {
-  "branding": {},
+  "branding": {
+    "browser_title": "Solutions | C&J ",
+    "title": "Solutions - Courts and Justice"
+  },
   "tag_list": [
     "Clearance Rates",
     "Cases"
