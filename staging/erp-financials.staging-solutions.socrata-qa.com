@@ -38,6 +38,12 @@
           "name": "Account type"
         }
       ],
+      "group_by_entries": [
+        {
+          "column": "accounttype",
+          "name": "Account type"
+        }
+      ],
       "view_entries": [
         {
           "name": "Original Budget",
@@ -46,7 +52,12 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"]
+          "tags": ["Budget"],
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Revised Budget",
@@ -55,7 +66,12 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"]
+          "tags": ["Budget"],
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Actual amount",
@@ -64,7 +80,12 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"]
+          "tags": ["Budget"],
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Budget - Operating",
