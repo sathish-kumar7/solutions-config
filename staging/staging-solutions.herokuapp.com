@@ -601,8 +601,8 @@
           "name": "Status"
         },
         {
-          "column": "exceptional_clearance",
-          "name": "Clearance"
+          "column": "assigned_bureau",
+          "name": "Assigned Bureau"
         }
       ],
       "group_by_entries": [
