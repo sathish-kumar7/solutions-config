@@ -136,8 +136,9 @@
       "bench_mark_entries": [
         {
           "view_column": "caseid",
+          "dimension_column": "judgename",
           "display_name": "Case Benchmark",
-          "value": "200"
+          "value": "120"
         }
       ],
       "map": {
