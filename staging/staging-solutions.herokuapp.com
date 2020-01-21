@@ -133,8 +133,8 @@
           "name": "Category"
         },
         {
-          "column": "Year",
-          "name": "fiscal_year"
+          "column": "fiscal_year",
+          "name": "Year"
         }
       ],
       "quick_filter_entries": [
@@ -164,8 +164,8 @@
           "renderType": "text"
         },
         {
-          "column": "Year",
-          "name": "fiscal_year",
+          "column": "fiscal_year",
+          "name": "Year",
           "renderType": "number"
         }
       ],
