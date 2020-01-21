@@ -38,12 +38,6 @@
           "name": "Account type"
         }
       ],
-      "group_by_entries": [
-        {
-          "column": "fiscalyear",
-          "name": "Fiscal Year"
-        }
-      ],
       "view_entries": [
         {
           "name": "Original Budget vs Actuals",
@@ -55,13 +49,7 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum",
-          "use_dimension_value": "true",
-          "visualization": {
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
-          }
+          "aggregate_type_1": "sum"
         },
         {
           "name": "Revised Budget vs Actuals",
@@ -73,13 +61,7 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum",
-          "use_dimension_value": "true",
-          "visualization": {
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
-          }
+          "aggregate_type_1": "sum"
         },
         {
           "name": "Budget - Operating",
