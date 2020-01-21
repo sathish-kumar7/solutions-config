@@ -1,12 +1,13 @@
 {
   "branding": {},
   "tag_list": [
-    "Courts & Justice"
+    "Clearance Rates",
+    "Cases"
   ],
   "template_entries": [
     {
       "name": "Courts and Justice",
-      "description": "Case status",
+      "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
       "dataset_id": "mhwy-h4pu",
       "default_view": "Snapshot",
@@ -45,7 +46,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Courts & Justice"
+            "Clearance Rates"
           ],
           "visualization": {
               "snapshot": {
@@ -73,7 +74,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Courts & Justice"
+            "Cases"
           ],
           "visualization": {
               "snapshot": {
