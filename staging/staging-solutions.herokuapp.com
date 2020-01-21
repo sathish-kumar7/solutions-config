@@ -131,6 +131,10 @@
         {
           "column": "category",
           "name": "Category"
+        },
+        {
+          "column": "Year",
+          "name": "fiscal_year"
         }
       ],
       "quick_filter_entries": [
@@ -152,12 +156,17 @@
         {
           "column": "fund",
           "name": "Fund",
-          "renderType": "number"
+          "renderType": "text"
         },
         {
           "column": "category",
           "name": "Category",
           "renderType": "text"
+        },
+        {
+          "column": "Year",
+          "name": "fiscal_year",
+          "renderType": "number"
         }
       ],
       "map": {
