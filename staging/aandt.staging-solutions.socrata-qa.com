@@ -67,7 +67,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Courts & Justice"
+            "Tax & Appraisals"
           ],
           "visualization": {
              "snapshot": {
@@ -84,7 +84,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Courts & Justice"
+            "Tax & Appraisals"
           ],
           "visualization": {
              "snapshot": {
@@ -100,6 +100,9 @@
           "precision": "2",
           "prefix": "",
           "suffix": "",
+          "tags": [
+            "Tax & Appraisals"
+          ],
           "visualization": {
              "snapshot": {
                 "chart_type": "groupChart"
@@ -115,7 +118,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Courts & Justice"
+            "Tax & Appraisals"
           ],
           "visualization": {
              "snapshot": {
@@ -132,7 +135,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Courts & Justice"
+            "Tax & Appraisals"
           ],
           "visualization": {
              "snapshot": {
