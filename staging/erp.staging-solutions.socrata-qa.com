@@ -1,5 +1,8 @@
 {
-  "branding": {},
+  "branding": {
+    "browser_title": "Solutions | ERP ",
+    "title": "Solutions - ERP"
+  },
   "template_entries": [
     {
       "name": "Opex Budget",
