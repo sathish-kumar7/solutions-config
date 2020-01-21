@@ -7,11 +7,6 @@
       "dataset_domain": "courtsandjustice.demo.socrata.com",
       "dataset_id": "mhwy-h4pu",
       "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "statusdate",
         "incident_type": "casetypecodedescription",
@@ -45,7 +40,12 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": "%"
+          "suffix": "%",
+          "visualization": {
+              "snapshot": {
+                  "chart_type": "groupChart"
+                }
+            }
         }
       ],
       "filter_by_entries": [
