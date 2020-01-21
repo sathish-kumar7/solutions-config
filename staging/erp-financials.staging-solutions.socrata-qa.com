@@ -38,12 +38,6 @@
           "name": "Account type"
         }
       ],
-      "group_by_entries": [
-        {
-          "column": "accounttype",
-          "name": "Account type"
-        }
-      ],
       "view_entries": [
         {
           "name": "Original Budget",
