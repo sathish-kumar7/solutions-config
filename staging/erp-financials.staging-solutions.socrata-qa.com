@@ -52,12 +52,7 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
-          "visualization": {
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
-          }
+          "tags": ["Budget"]
         },
         {
           "name": "Revised Budget",
@@ -66,12 +61,7 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
-          "visualization": {
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
-          }
+          "tags": ["Budget"]
         },
         {
           "name": "Actual amount",
@@ -80,12 +70,7 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
-          "visualization": {
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
-          }
+          "tags": ["Budget"]
         },
         {
           "name": "Budget - Operating",
