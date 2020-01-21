@@ -40,8 +40,8 @@
       ],
       "group_by_entries": [
         {
-          "column": "fiscal_year",
-          "name": "Year"
+          "column": "fiscalyear",
+          "name": "Fiscal Year"
         }
       ],
       "view_entries": [
