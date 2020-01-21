@@ -1,5 +1,8 @@
 {
   "branding": {},
+  "tag_list": [
+    "Courts & Justice"
+  ],
   "template_entries": [
     {
       "name": "Courts and Justice",
@@ -41,6 +44,9 @@
           "precision": "2",
           "prefix": "",
           "suffix": "%",
+          "tags": [
+            "Courts & Justice"
+          ],
           "visualization": {
               "snapshot": {
                   "chart_type": "groupChart"
