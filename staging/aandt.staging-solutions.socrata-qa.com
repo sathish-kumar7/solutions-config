@@ -2,6 +2,9 @@
   "branding": {
     "delimiter": ","
   },
+  "tag_list": [
+    "Tax & Appraisals"
+  ],
   "template_entries": [
     {
       "name": "Clermont County Property Data",
@@ -63,6 +66,9 @@
           "precision": "2",
           "prefix": "",
           "suffix": "",
+          "tags": [
+            "Courts & Justice"
+          ],
           "visualization": {
              "snapshot": {
                 "chart_type": "groupChart"
@@ -77,6 +83,9 @@
           "precision": "2",
           "prefix": "",
           "suffix": "",
+          "tags": [
+            "Courts & Justice"
+          ],
           "visualization": {
              "snapshot": {
                 "chart_type": "groupChart"
@@ -105,6 +114,9 @@
           "precision": "2",
           "prefix": "",
           "suffix": "",
+          "tags": [
+            "Courts & Justice"
+          ],
           "visualization": {
              "snapshot": {
                 "chart_type": "groupChart"
@@ -119,6 +131,9 @@
           "precision": "2",
           "prefix": "",
           "suffix": "",
+          "tags": [
+            "Courts & Justice"
+          ],
           "visualization": {
              "snapshot": {
                 "chart_type": "groupChart"
@@ -133,6 +148,9 @@
           "precision": "0",
           "prefix": "$",
           "suffix": "",
+          "tags": [
+            "Courts & Justice"
+          ],
           "visualization": {
              "snapshot": {
                 "chart_type": "groupChart"
