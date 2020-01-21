@@ -68,7 +68,7 @@
           "name": "Count of Cases",
           "column": "caseid",
           "aggregate_type": "count",
-          "use_dimension_value": "true",
+          "stack_column": "casetypecode",
           "precision": "",
           "prefix": "",
           "suffix": "",
@@ -137,8 +137,8 @@
         {
           "view_column": "caseid",
           "dimension_column": "judgename",
-          "display_name": "Case Benchmark",
-          "value": "120"
+          "display_name": "State Standard",
+          "value": "100"
         }
       ],
       "map": {
