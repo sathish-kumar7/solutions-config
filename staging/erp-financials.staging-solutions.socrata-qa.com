@@ -1,6 +1,8 @@
 {
   "branding": {
-    "delimiter": ","
+    "delimiter": ",",
+    "browser_title": "Solutions | ERP | Financials ",
+    "title": "Solutions - ERP Financials"
   },
   "tag_list": [
     "Budget"
