@@ -6,7 +6,7 @@
     "Clearence rates",
     "Districts and counties"
   ],
-  "show_share_via_email": "true",
+  "show_share_via_email": false,
   "is_private": "false",
   "template_entries": [
     {
