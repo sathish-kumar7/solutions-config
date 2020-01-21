@@ -264,7 +264,8 @@
           "column": "actual_amount",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "tags": ["Cases", "Judges"]
         },
         {
           "name": "Total Projections",
@@ -331,14 +332,16 @@
           "name": "Approved Amount",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "tags": ["Cases", "Clearence rates"]
         },
         {
           "column": "actual_amount",
           "name": "Actual Amount",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "tags": ["Cases", "Judges"]
         }
       ],
       "map": {
@@ -398,7 +401,8 @@
           "column": "pay_total",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "tags": ["Cases", "Districts and counties"]
         }
       ],
       "map": {
@@ -472,14 +476,16 @@
           "column": "(market_total/case(sale_price == 0,1, true, sale_price))",
           "aggregate_type": "avg",
           "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "tags": ["Cases", "Districts and counties"]
         },
         {
           "name": "Sales",
           "column": "sale_type",
           "aggregate_type": "count",
           "stacked_column": "sale_type",
-          "precision": "2"
+          "precision": "2",
+          "tags": ["Cases", "Districts and counties"]
         },
         {
           "name": "Building value",
