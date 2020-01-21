@@ -571,11 +571,6 @@
       "dataset_domain": "pinellasparkpd.data.socrata.com",
       "dataset_id": "qs3a-3222",
       "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "reported_date_time",
         "incident_type": "occurred_incident_type",
@@ -620,6 +615,11 @@
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "2",
+          "visualization": {
+             "snapshot": {
+                "chart_type": "groupChart"
+                }
+            },
           "quick_filters": [
           {
             "type": "date",
