@@ -175,6 +175,13 @@
           "renderType": "date"
         }
       ],
+      "bench_mark_entries": [
+        {
+          "view_column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
+          "display_name": "Ratio Benchmark",
+          "value": "1"
+        }
+      ],
       "map": {
         "centerLat": "39.018425261608655",
         "centerLng": "-84.00102962486125",
