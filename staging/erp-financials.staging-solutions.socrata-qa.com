@@ -56,6 +56,7 @@
           "name_1": "Actual amount",
           "column_1": "actual",
           "aggregate_type_1": "sum",
+          "use_dimension_value": "true",
           "visualization": {
             "snapshot": {
               "chart_type": "groupChart"
@@ -73,6 +74,7 @@
           "name_1": "Actual amount",
           "column_1": "actual",
           "aggregate_type_1": "sum",
+          "use_dimension_value": "true",
           "visualization": {
             "snapshot": {
               "chart_type": "groupChart"
