@@ -63,6 +63,23 @@
                 }
             }
           ]
+        },
+        {
+          "name": "Count of Cases",
+          "column": "caseid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Courts & Justice"
+          ],
+          "visualization": {
+              "snapshot": {
+                  "chart_type": "groupChart"
+                }
+            }
         }
       ],
       "filter_by_entries": [
@@ -114,6 +131,13 @@
           "column": "statusdate",
           "name": "Status Date",
           "renderType": "date"
+        }
+      ],
+      "bench_mark_entries": [
+        {
+          "view_column": "caseid",
+          "display_name": "Case Benchmark",
+          "value": "200"
         }
       ],
       "map": {
