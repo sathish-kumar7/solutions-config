@@ -72,7 +72,7 @@
           "name": "Count of Cases",
           "column": "caseid",
           "aggregate_type": "count",
-          "stack_column": "casetypecode",
+          "use_dimension_value": "true",
           "precision": "",
           "prefix": "",
           "suffix": "",
