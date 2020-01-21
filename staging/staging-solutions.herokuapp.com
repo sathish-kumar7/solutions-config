@@ -618,7 +618,7 @@
             "type": "date",
             "column": "reported_date_time",
             "field": "quick_filter_5_qs3a_3222_0",
-            "daterange": {"start_date": "2019-12-01", "end_date": "2019-12-30"}
+            "dateRange": {"start_date": "2019-12-01", "end_date": "2019-12-30"}
             }
           ]
         }
