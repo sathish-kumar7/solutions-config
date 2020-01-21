@@ -612,7 +612,15 @@
           "column": "occurred_incident_type",
           "aggregate_type": "count",
           "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "quick_filters": [
+          {
+            "type": "date",
+            "column": "reported_date_time",
+            "field": "quick_filter_5_qs3a_3222_0",
+            "daterange": {start_date: "2019-12-01", end_date: "2019-12-30"}
+            }
+          ]
         }
       ],
       "filter_by_entries": [
