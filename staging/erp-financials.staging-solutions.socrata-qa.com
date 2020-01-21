@@ -38,6 +38,12 @@
           "name": "Account type"
         }
       ],
+      "group_by_entries": [
+        {
+          "column": "fiscal_year",
+          "name": "Year"
+        }
+      ],
       "view_entries": [
         {
           "name": "Original Budget vs Actuals",
