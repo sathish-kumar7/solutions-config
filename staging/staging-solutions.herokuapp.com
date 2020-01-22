@@ -1056,7 +1056,7 @@
       "name": "ERP metrics",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "default_view": "Table",
+      "default_view": "Pie Chart",
       "fields": {
         "date_column": "fiscal_year"
       },
