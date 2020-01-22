@@ -99,6 +99,21 @@
               ],
               "operator": "like"
             }
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#abcdef",
+              "operator": "between",
+              "value": "2000000000",
+              "to": "3000000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
           ]
         },
         {
