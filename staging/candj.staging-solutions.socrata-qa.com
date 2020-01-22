@@ -55,7 +55,7 @@
               "name": "On track",
               "color": "#110cde",
               "operator": ">",
-              "value": "100000",
+              "value": "120000",
               "icon": "icons-check-circle"
             },
             {
@@ -94,6 +94,20 @@
                 "start_date": "2006-07-01",
                 "end_date": "2006-09-30"
                 }
+            }
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": ">=",
+              "value": "100",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
             }
           ],
           "visualization": {
