@@ -66,7 +66,7 @@
           "precision": "2",
           "prefix": "",
           "suffix": "",
-          "stack_column": "style",
+          "use_dimension_value": "true",
           "tags": [
             "Tax & Appraisals"
           ],
