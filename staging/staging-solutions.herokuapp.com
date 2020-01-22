@@ -53,7 +53,9 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "stack_column": "entry_type",
-          "default_view": "Snapshot",
+          "visualization": {
+            "default_view": "Snapshot"
+          },
           "tags": [
             "Cases",
             "Clearence rates"
@@ -69,7 +71,9 @@
           "name_1": "Total amount approved",
           "column_1": "approved_amount",
           "aggregate_type_1": "sum",
-          "default_view": "Snapshot",
+          "visualization": {
+            "default_view": "Scatterplot"
+          },
           "quick_filters": [
             {
               "column": "program",
@@ -89,7 +93,9 @@
           "stack_column": "entry_type",
           "prefix": "$",
           "precision": "2",
-          "default_view": "Snapshot",
+          "visualization": {
+            "default_view": "Pie Chart"
+          },
           "quick_filters": [
             {
               "column": "category",
@@ -107,7 +113,9 @@
           "column": "approved_amount",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
-          "default_view": "Snapshot",
+          "visualization": {
+            "default_view": "Over Time"
+          },
           "prefix": "$",
           "precision": "2"
         }
@@ -277,7 +285,9 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "default_view": "Over Time",
+          "visualization": {
+            "default_view": "Snapshot"
+          },
           "tags": [
             "Cases",
             "Judges"
@@ -288,7 +298,9 @@
           "column": "projected_amount",
           "aggregate_type": "sum",
           "prefix": "$",
-          "default_view": "Over Time",
+          "visualization": {
+            "default_view": "Scatterplot"
+          },
           "precision": "2"
         }
       ],
@@ -349,7 +361,9 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "default_view": "Pie Chart",
+          "visualization": {
+            "default_view": "Pie Chart"
+          },
           "tags": [
             "Cases",
             "Clearence rates"
@@ -361,7 +375,9 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "default_view": "Pie Chart",
+          "visualization": {
+            "default_view": "Pie Chart"
+          },
           "tags": [
             "Cases",
             "Judges"
@@ -429,7 +445,9 @@
             "Cases",
             "Districts and counties"
           ],
-          "default_view": "Scatterplot"
+          "visualization": {
+            "default_view": "Scatterplot"
+          }
         }
       ],
       "map": {
@@ -502,8 +520,8 @@
             "Cases",
             "Districts and counties"
           ],
-          "default_view": "Map",
           "visualization": {
+            "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -519,8 +537,8 @@
             "Cases",
             "Districts and counties"
           ],
-          "default_view": "Map",
           "visualization": {
+            "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -533,8 +551,8 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "$",
-          "default_view": "Map",
           "visualization": {
+            "default_view": "Over Time",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -665,8 +683,8 @@
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "2",
-          "default_view": "Snapshot",
           "visualization": {
+            "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -872,8 +890,8 @@
           "aggregate_type": "avg",
           "use_dimension_value": "true",
           "precision": "2",
-          "default_view": "Map",
           "visualization": {
+            "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -885,8 +903,8 @@
           "aggregate_type": "median",
           "use_dimension_value": "true",
           "precision": "2",
-          "default_view": "Map",
           "visualization": {
+            "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -899,8 +917,8 @@
           "stack_column": "land_use_type",
           "precision": "2",
           "prefix": "$",
-          "default_view": "Map",
           "visualization": {
+            "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1015,8 +1033,8 @@
           "aggregate_type": "avg",
           "use_dimension_value": "true",
           "precision": "2",
-          "default_view": "Snapshot",
           "visualization": {
+            "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1028,8 +1046,8 @@
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
-          "default_view": "Snapshot",
           "visualization": {
+            "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1040,7 +1058,13 @@
           "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
           "aggregate_type": "",
           "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -1138,7 +1162,9 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "stack_column": "entry_type",
-          "default_view": "Table",
+          "visualization": {
+            "default_view": "Table"
+          },
           "precision": "2"
         }
       ],
