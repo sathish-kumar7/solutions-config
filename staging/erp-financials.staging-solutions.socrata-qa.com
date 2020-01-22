@@ -14,7 +14,6 @@
       "name": "ERP - Financials",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "darw-mart",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "fiscalmonth"
       },
@@ -51,7 +50,10 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum"
+          "aggregate_type_1": "sum",
+          "visualization": {
+            "default_view": "Snapshot"
+          }
         },
         {
           "name": "Revised Budget vs Actuals",
@@ -63,7 +65,10 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum"
+          "aggregate_type_1": "sum",
+          "visualization": {
+            "default_view": "Snapshot"
+          }
         },
         {
           "name": "Budget - Operating",
@@ -73,6 +78,24 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#e31219",
+              "operator": "between",
+              "value": "1200000000",
+              "to": "1250000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
           "quick_filters": [
           {
             "column": "accounttype",
@@ -91,6 +114,20 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#e31219",
+              "operator": "<",
+              "value": "1500000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
+          ],
           "quick_filters": [
           {
             "column": "accounttype",
@@ -99,7 +136,10 @@
             "values": ["Revenue"],
             "operator": "="
             }
-          ]
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          }
         },
         {
           "name": "Budget - Cash Accounts",
@@ -109,6 +149,20 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#e31219",
+              "operator": "<",
+              "value": "2000000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
+          ],
           "quick_filters": [
           {
             "column": "accounttype",
@@ -117,7 +171,10 @@
             "values": ["Balance Sheet"],
             "operator": "="
             }
-          ]
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          }
         }
       ],
       "leaf_page_entries": [
