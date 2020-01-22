@@ -127,6 +127,112 @@
         ]
       }
     },
+        {
+      "name": "Code Enforcement",
+      "dataset_domain": "elumitas.demo.socrata.com",
+      "dataset_id": "7inr-h555",
+      "default_view": "Snapshot",
+      "fields": {
+        "date_column": "requestdatetime"
+      },
+      "dimension_entries": [
+        {
+          "column": "inspectiontypename",
+          "name": "Inspection"
+        },
+        {
+          "column": "inspectionstatusname",
+          "name": "Inspection Status"
+        },
+        {
+          "column": "inspectionlinktypename",
+          "name": "Inspection Link Name"
+        },
+        {
+          "column": "balancedue",
+          "name": "Balance due"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Inspections",
+          "column": "inspectionid",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "inspections",
+          "tags": [
+            "Code Enforcement"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+        },
+        "target_entries": [
+        {
+          "name": "On track",
+          "color": "#110cde",
+          "operator": ">",
+          "value": "30",
+          "icon": "icons-check-circle"
+        },
+        {
+          "name": "Off track",
+          "color": "#e31219",
+          "icon": "icons-times-circle"
+        }
+        ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "inspectiontypename",
+          "name": "Inspection"
+        },
+        {
+          "column": "inspectionstatusname",
+          "name": "Inspection Status"
+        },
+        {
+          "column": "inspectionlinktypename",
+          "name": "Inspection Link Name"
+        },
+        {
+          "column": "balancedue",
+          "name": "Balance due"
+        }
+      ],
+      "map": {
+        "centerLat": "42.038333",
+        "centerLng": "-88.322778",
+        "zoom": "10",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
+    },
     {
       "name": "Business Services",
       "dataset_domain": "elumitas.demo.socrata.com",
