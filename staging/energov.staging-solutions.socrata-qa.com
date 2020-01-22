@@ -126,6 +126,122 @@
           }
         ]
       }
+    },
+    {
+      "name": "Business Services",
+      "dataset_domain": "elumitas.demo.socrata.com",
+      "dataset_id": "9pi7-qev8",
+      "default_view": "Snapshot",
+      "fields": {
+        "date_column": "applicationdate"
+      },
+      "dimension_entries": [
+        {
+          "column": "companyname",
+          "name": "Company"
+        },
+        {
+          "column": "licensestatus",
+          "name": "License Status"
+        },
+        {
+          "column": "licenseclass",
+          "name": "License Class"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "district",
+          "name": "District"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "License Applications",
+          "column": "licenseid",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "Licenses",
+          "tags": [
+            "Business Services"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+        {
+          "name": "On track",
+          "color": "#110cde",
+          "operator": ">",
+          "value": "30",
+          "icon": "icons-check-circle"
+        },
+        {
+          "name": "Off track",
+          "color": "#e31219",
+          "icon": "icons-times-circle"
+        }
+        ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "companyname",
+          "name": "Company"
+        },
+        {
+          "column": "licensestatus",
+          "name": "License Status"
+        },
+        {
+          "column": "licenseclass",
+          "name": "License Class"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
+        },
+        {
+          "column": "district",
+          "name": "District"
+        }
+      ],
+      "map": {
+        "centerLat": "42.038333",
+        "centerLng": "-88.322778",
+        "zoom": "10",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     }
   ]
 }
