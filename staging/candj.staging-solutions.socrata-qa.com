@@ -40,38 +40,6 @@
       ],
       "view_entries": [
         {
-          "name": "Q3 2006 Clearance Rate",
-          "column": "(sum(closed)/case(sum(opened) == 0, 1, true, sum(opened))*100)",
-          "aggregate_type": "",
-          "use_dimension_value": "true",
-          "precision": "2",
-          "prefix": "",
-          "suffix": "%",
-          "name_1": "Count of cases",
-          "column_1": "caseid",
-          "aggregate_type_1": "count",
-          "tags": [
-            "Clearance Rates"
-          ],
-          "quick_filters": [
-            {
-             "column": "statusdate",
-             "type": "date",
-             "field": "quick_filter_0_mhwy_h4pu_0",
-             "dateRange": {
-                "start_date": "2006-07-01",
-                "end_date": "2006-09-30"
-                }
-            }
-          ],
-          "visualization": {
-          "default_view": "Snapshot",
-            "snapshot": {
-                "chart_type": "groupChart"
-            }
-         }
-        },
-        {
           "name": "Count of Cases",
           "column": "caseid",
           "aggregate_type": "count",
@@ -94,6 +62,38 @@
               "name": "Off track",
               "color": "#110cde",
               "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+         }
+        },
+        {
+          "name": "Q3 2006 Clearance Rate",
+          "column": "(sum(closed)/case(sum(opened) == 0, 1, true, sum(opened))*100)",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%",
+          "name_1": "Count of cases",
+          "column_1": "caseid",
+          "aggregate_type_1": "count",
+          "tags": [
+            "Clearance Rates"
+          ],
+          "quick_filters": [
+            {
+             "column": "statusdate",
+             "type": "date",
+             "field": "quick_filter_0_mhwy_h4pu_0",
+             "dateRange": {
+                "start_date": "2006-07-01",
+                "end_date": "2006-09-30"
+                }
             }
           ],
           "visualization": {
