@@ -14,7 +14,6 @@
       "name": "ERP - Financials",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "darw-mart",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "fiscalmonth"
       },
@@ -51,7 +50,10 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum"
+          "aggregate_type_1": "sum",
+          "visualization": {
+            "default_view": "Snapshot"
+          }
         },
         {
           "name": "Revised Budget vs Actuals",
@@ -63,7 +65,10 @@
           "tags": ["Budget"],
           "name_1": "Actual amount",
           "column_1": "actual",
-          "aggregate_type_1": "sum"
+          "aggregate_type_1": "sum",
+          "visualization": {
+            "default_view": "Pie Chart"
+          }
         },
         {
           "name": "Budget - Operating",
@@ -73,6 +78,9 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"],
+          "visualization": {
+            "default_view": "Over Time"
+          },
           "quick_filters": [
           {
             "column": "accounttype",
@@ -99,7 +107,10 @@
             "values": ["Revenue"],
             "operator": "="
             }
-          ]
+          ],
+          "visualization": {
+            "default_view": "Scatterplot"
+          }
         },
         {
           "name": "Budget - Cash Accounts",
@@ -117,7 +128,10 @@
             "values": ["Balance Sheet"],
             "operator": "="
             }
-          ]
+          ],
+          "visualization": {
+            "default_view": "Table"
+          }
         }
       ],
       "leaf_page_entries": [
