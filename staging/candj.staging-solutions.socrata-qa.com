@@ -33,12 +33,6 @@
           "name": "Zip Code"
         }
       ],
-      "group_by_entries": [
-        {
-          "column": "nodename",
-          "name": "Court Name"
-        }
-      ],
       "view_entries": [
         {
           "name": "Q3 2006 Clearance Rate",
@@ -76,12 +70,7 @@
           "suffix": "",
           "tags": [
             "Cases"
-          ],
-          "visualization": {
-              "snapshot": {
-                  "chart_type": "groupChart"
-                }
-          }
+          ]
         }
       ],
       "filter_by_entries": [
