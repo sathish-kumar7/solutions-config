@@ -21,20 +21,20 @@
       },
       "dimension_entries": [
         {
-          "column": "permittype",
-          "name": "Permit Type"
-        },
-        {
           "column": "projectname",
           "name": "Project"
+        },
+        {
+          "column": "permitstatus",
+          "name": "Permit Status"
         },
         {
           "column": "permitworkclass",
           "name": "Permit Class"
         },
         {
-          "column": "permitstatus",
-          "name": "Permit Status"
+          "column": "permittype",
+          "name": "Permit Type"
         }
       ],
       "group_by_entries": [
@@ -63,17 +63,39 @@
         "target_entries": [
         {
           "name": "On track",
-          "color": "#abcdef",
+          "color": "#110cde",
           "operator": ">",
           "value": "30",
           "icon": "icons-check-circle"
         },
         {
           "name": "Off track",
-          "color": "#110cde",
+          "color": "#abcdef",
           "icon": "icons-times-circle"
         }
         ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "projectname",
+          "name": "Project"
+        },
+        {
+          "column": "permitstatus",
+          "name": "Permit Status"
+        },
+        {
+          "column": "permitworkclass",
+          "name": "Permit Class"
+        },
+        {
+          "column": "permittype",
+          "name": "Permit Type"
+        },
+        {
+          "column": "district",
+          "name": "District"
         }
       ],
       "map": {
