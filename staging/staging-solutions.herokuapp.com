@@ -72,7 +72,7 @@
           "column_1": "approved_amount",
           "aggregate_type_1": "sum",
           "visualization": {
-            "default_view": "Scatterplot"
+            "default_view": "Snapshot"
           },
           "quick_filters": [
             {
@@ -285,6 +285,9 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
+          "name_1": "Projected Amount",
+          "column_1": "projected_amount",
+          "aggregate_type_1": "sum",
           "visualization": {
             "default_view": "Snapshot"
           },
