@@ -16,7 +16,6 @@
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -54,7 +53,11 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "stack_column": "entry_type",
-          "tags": ["Cases", "Clearence rates"]
+          "default_view": "Snapshot",
+          "tags": [
+            "Cases",
+            "Clearence rates"
+          ]
         },
         {
           "name": "Total amount spent",
@@ -66,13 +69,16 @@
           "name_1": "Total amount approved",
           "column_1": "approved_amount",
           "aggregate_type_1": "sum",
+          "default_view": "Snapshot",
           "quick_filters": [
-          {
-            "column": "program",
-            "type": "text",
-            "field": "quick_filter_0_s8xp_hq5q_2",
-            "values": ["a"],
-            "operator": "like"
+            {
+              "column": "program",
+              "type": "text",
+              "field": "quick_filter_0_s8xp_hq5q_2",
+              "values": [
+                "a"
+              ],
+              "operator": "like"
             }
           ]
         },
@@ -83,12 +89,15 @@
           "stack_column": "entry_type",
           "prefix": "$",
           "precision": "2",
+          "default_view": "Snapshot",
           "quick_filters": [
-            { 
-              "column": "category", 
-              "type": "text", 
-              "field": "quick_filter_0_s8xp_hq5q_4", 
-              "values": ["Salary and Wages"], 
+            {
+              "column": "category",
+              "type": "text",
+              "field": "quick_filter_0_s8xp_hq5q_4",
+              "values": [
+                "Salary and Wages"
+              ],
               "operator": "="
             }
           ]
@@ -98,6 +107,7 @@
           "column": "approved_amount",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
+          "default_view": "Snapshot",
           "prefix": "$",
           "precision": "2"
         }
@@ -247,7 +257,6 @@
       "name": "Opex Revenue",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "mik7-qbhe",
-      "default_view": "Over Time",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -268,13 +277,18 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "tags": ["Cases", "Judges"]
+          "default_view": "Over Time",
+          "tags": [
+            "Cases",
+            "Judges"
+          ]
         },
         {
           "name": "Total Projections",
           "column": "projected_amount",
           "aggregate_type": "sum",
           "prefix": "$",
+          "default_view": "Over Time",
           "precision": "2"
         }
       ],
@@ -311,7 +325,6 @@
       "name": "Capex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "dszp-jd2s",
-      "default_view": "Pie Chart",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -336,7 +349,11 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "tags": ["Cases", "Clearence rates"]
+          "default_view": "Pie Chart",
+          "tags": [
+            "Cases",
+            "Clearence rates"
+          ]
         },
         {
           "column": "actual_amount",
@@ -344,7 +361,11 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "tags": ["Cases", "Judges"]
+          "default_view": "Pie Chart",
+          "tags": [
+            "Cases",
+            "Judges"
+          ]
         }
       ],
       "map": {
@@ -380,7 +401,6 @@
       "name": "Payroll",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "qu7r-i9cv",
-      "default_view": "Scatterplot",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -405,7 +425,11 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "tags": ["Cases", "Districts and counties"]
+          "tags": [
+            "Cases",
+            "Districts and counties"
+          ],
+          "default_view": "Scatterplot"
         }
       ],
       "map": {
@@ -441,12 +465,6 @@
       "name": "Cobb-Dekalb-Fulton",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3hre-b49k",
-      "default_view": "Map",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "sale_date",
         "incident_type": "class",
@@ -480,7 +498,16 @@
           "aggregate_type": "avg",
           "use_dimension_value": "true",
           "precision": "2",
-          "tags": ["Cases", "Districts and counties"]
+          "tags": [
+            "Cases",
+            "Districts and counties"
+          ],
+          "default_view": "Map",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Sales",
@@ -488,7 +515,16 @@
           "aggregate_type": "count",
           "stacked_column": "sale_type",
           "precision": "2",
-          "tags": ["Cases", "Districts and counties"]
+          "tags": [
+            "Cases",
+            "Districts and counties"
+          ],
+          "default_view": "Map",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Building value",
@@ -496,7 +532,13 @@
           "aggregate_type": "sum",
           "use_dimension_value": "true",
           "precision": "2",
-          "prefix": "$"
+          "prefix": "$",
+          "default_view": "Map",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -579,7 +621,6 @@
       "name": "Incidents Data",
       "dataset_domain": "pinellasparkpd.data.socrata.com",
       "dataset_id": "qs3a-3222",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "reported_date_time",
         "incident_type": "occurred_incident_type",
@@ -624,17 +665,21 @@
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "2",
+          "default_view": "Snapshot",
           "visualization": {
-             "snapshot": {
-                "chart_type": "groupChart"
-                }
-            },
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          },
           "quick_filters": [
-          {
-            "type": "date",
-            "column": "reported_date_time",
-            "field": "quick_filter_5_qs3a_3222_0",
-            "dateRange": {"start_date": "2019-12-01", "end_date": "2019-12-30"}
+            {
+              "type": "date",
+              "column": "reported_date_time",
+              "field": "quick_filter_5_qs3a_3222_0",
+              "dateRange": {
+                "start_date": "2019-12-01",
+                "end_date": "2019-12-30"
+              }
             }
           ]
         }
@@ -778,12 +823,6 @@
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
-      "default_view": "Map",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "saledt",
         "incident_type": "land_use_type",
@@ -832,14 +871,26 @@
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "aggregate_type": "avg",
           "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "default_view": "Map",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Median Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
           "aggregate_type": "median",
           "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "default_view": "Map",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Estimated Total Market Value",
@@ -847,7 +898,13 @@
           "aggregate_type": "sum",
           "stack_column": "land_use_type",
           "precision": "2",
-          "prefix": "$"
+          "prefix": "$",
+          "default_view": "Map",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -926,12 +983,6 @@
       "name": "Parcels",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
-      "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "saledt",
         "incident_type": "land_use_type",
@@ -963,14 +1014,26 @@
           "column": "asr_deviation_from_median",
           "aggregate_type": "avg",
           "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "default_view": "Snapshot",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Coefficient of Dispersion",
           "column": "avg(asr_deviation_from_median)/avg(median_asr)",
           "aggregate_type": "",
           "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "default_view": "Snapshot",
+          "visualization": {
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Price Relative Differential",
@@ -1056,7 +1119,6 @@
       "name": "ERP metrics",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "default_view": "Table",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -1069,15 +1131,14 @@
           "name": "Service"
         }
       ],
-      "group_by_entries": [
-        
-      ],
+      "group_by_entries": [],
       "view_entries": [
         {
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
           "stack_column": "entry_type",
+          "default_view": "Table",
           "precision": "2"
         }
       ],
@@ -1093,18 +1154,10 @@
           "name": "Service"
         }
       ],
-      "quick_filter_entries": [
-        
-      ],
-      "map": {
-        
-      },
-      "shape_datasets": [
-        
-      ],
-      "shape_outline_dataset_entries": [
-        
-      ]
+      "quick_filter_entries": [],
+      "map": {},
+      "shape_datasets": [],
+      "shape_outline_dataset_entries": []
     }
   ]
 }
