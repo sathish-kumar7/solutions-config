@@ -83,7 +83,7 @@
             "Cases"
           ],
           "visualization": {
-          "default_view": "Pie Chart",
+          "default_view": "Snapshot",
             "snapshot": {
                 "chart_type": "groupChart"
             }
