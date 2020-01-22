@@ -81,7 +81,7 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#e31219",
+              "color": "#110cde",
               "operator": "between",
               "value": "1200000000",
               "to": "1250000000",
@@ -89,7 +89,7 @@
             },
             {
               "name": "Off track",
-              "color": "#110cde",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ],
@@ -117,14 +117,14 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#e31219",
+              "color": "#110cde",
               "operator": "<",
               "value": "1500000000",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
-              "color": "#110cde",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ],
@@ -152,14 +152,14 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#e31219",
+              "color": "#110cde",
               "operator": "<",
               "value": "2000000000",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
-              "color": "#110cde",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ],
