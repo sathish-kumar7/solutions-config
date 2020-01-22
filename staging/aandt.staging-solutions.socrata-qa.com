@@ -89,7 +89,7 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Over Time",
+             "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -107,7 +107,7 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Scatterplot",
+             "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -125,7 +125,7 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Pie Chart",
+             "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart"
             }
