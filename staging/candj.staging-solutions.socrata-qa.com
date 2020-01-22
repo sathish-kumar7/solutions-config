@@ -13,7 +13,6 @@
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
       "dataset_id": "mhwy-h4pu",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "statusdate",
         "incident_type": "casetypecodedescription",
@@ -66,6 +65,7 @@
             }
           ],
           "visualization": {
+          "default_view": "Snapshot",
             "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -76,13 +76,14 @@
           "column": "caseid",
           "aggregate_type": "count",
           "use_dimension_value": "true",
-          "precision": "",
+          "precision": "2",
           "prefix": "",
           "suffix": "",
           "tags": [
             "Cases"
           ],
           "visualization": {
+          "default_view": "Pie Chart",
             "snapshot": {
                 "chart_type": "groupChart"
             }
