@@ -105,8 +105,8 @@
               "name": "On track",
               "color": "#abcdef",
               "operator": "between",
-              "value": "2000000000",
-              "to": "3000000000",
+              "value": "30000",
+              "to": "100000",
               "icon": "icons-check-circle"
             },
             {
