@@ -70,7 +70,7 @@
         },
         {
           "name": "Off track",
-          "color": "#abcdef",
+          "color": "#e31219",
           "icon": "icons-times-circle"
         }
         ]
