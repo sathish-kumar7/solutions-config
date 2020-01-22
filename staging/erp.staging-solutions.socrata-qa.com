@@ -130,7 +130,7 @@
             }
           ],
           "visualization": {
-            "default_view": "Table"
+            "default_view": "Snapshot"
           }
         }
       ],
