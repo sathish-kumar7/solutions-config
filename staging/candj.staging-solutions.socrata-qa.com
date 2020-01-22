@@ -54,11 +54,6 @@
           "tags": [
             "Clearance Rates"
           ],
-          "visualization": {
-              "snapshot": {
-                  "chart_type": "groupChart"
-                }
-            },
           "quick_filters": [
             {
              "column": "statusdate",
