@@ -81,7 +81,12 @@
           "suffix": "",
           "tags": [
             "Cases"
-          ]
+          ],
+          "visualization": {
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+         }
         }
       ],
       "filter_by_entries": [
