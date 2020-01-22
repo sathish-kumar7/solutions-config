@@ -67,7 +67,7 @@
           "column_1": "actual",
           "aggregate_type_1": "sum",
           "visualization": {
-            "default_view": "Pie Chart"
+            "default_view": "Snapshot"
           }
         },
         {
@@ -79,7 +79,7 @@
           "precision": "2",
           "tags": ["Budget"],
           "visualization": {
-            "default_view": "Over Time"
+            "default_view": "Snapshot"
           },
           "quick_filters": [
           {
@@ -109,7 +109,7 @@
             }
           ],
           "visualization": {
-            "default_view": "Scatterplot"
+            "default_view": "Snapshot"
           }
         },
         {
