@@ -59,6 +59,21 @@
           "tags": [
             "Cases",
             "Clearence rates"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#abcdef",
+              "operator": "between",
+              "value": "30000",
+              "to": "100000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
           ]
         },
         {
