@@ -63,7 +63,7 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#e31219",
               "operator": "between",
               "value": "30000",
               "to": "100000",
@@ -103,7 +103,7 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#e31219",
               "operator": "between",
               "value": "30000",
               "to": "100000",
@@ -328,7 +328,7 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#e31219",
               "operator": "between",
               "value": "30000",
               "to": "100000",
