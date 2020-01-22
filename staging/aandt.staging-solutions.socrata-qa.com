@@ -13,7 +13,6 @@
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
-      "default_view": "Snapshot",
       "parent_queries": [
         "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
@@ -71,7 +70,8 @@
           "tags": [
             "Tax & Appraisals"
           ],
-          "visualization": {
+          "visualization": {   
+             "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -89,6 +89,7 @@
             "Tax & Appraisals"
           ],
           "visualization": {
+             "default_view": "Over Time",
              "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -106,6 +107,7 @@
             "Tax & Appraisals"
           ],
           "visualization": {
+             "default_view": "Scatterplot",
              "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -123,6 +125,7 @@
             "Tax & Appraisals"
           ],
           "visualization": {
+             "default_view": "Pie Chart",
              "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -139,7 +142,8 @@
           "tags": [
             "Tax & Appraisals"
           ],
-          "visualization": {
+          "visualization": { 
+             "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart"
             }
@@ -157,6 +161,7 @@
             "Courts & Justice"
           ],
           "visualization": {
+             "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart"
             }
