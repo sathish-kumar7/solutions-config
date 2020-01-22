@@ -78,6 +78,21 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#e31219",
+              "operator": "between",
+              "value": "1200000000",
+              "to": "1250000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
+          ],
           "visualization": {
             "default_view": "Snapshot"
           },
@@ -99,6 +114,20 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#e31219",
+              "operator": "<",
+              "value": "1500000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
+          ],
           "quick_filters": [
           {
             "column": "accounttype",
@@ -120,6 +149,20 @@
           "suffix": "",
           "precision": "2",
           "tags": ["Budget"],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#e31219",
+              "operator": "<",
+              "value": "2000000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
+          ],
           "quick_filters": [
           {
             "column": "accounttype",
