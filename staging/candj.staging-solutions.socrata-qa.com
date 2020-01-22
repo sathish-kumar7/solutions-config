@@ -76,11 +76,25 @@
           "column": "caseid",
           "aggregate_type": "count",
           "use_dimension_value": "true",
-          "precision": "2",
+          "precision": "0",
           "prefix": "",
-          "suffix": "",
+          "suffix": "cases",
           "tags": [
             "Cases"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#e31219",
+              "operator": ">",
+              "value": "100000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#110cde",
+              "icon": "icons-times-circle"
+            }
           ],
           "visualization": {
           "default_view": "Snapshot",
