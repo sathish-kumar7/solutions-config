@@ -159,7 +159,7 @@
       "view_entries": [
         {
           "name": "Open Inspections",
-          "column": "case(isstatusscheduled='True', 1, true, 0)",
+          "column": "case(isstatusindicatesuccess='False', 1, true, 0)",
           "aggregate_type": "sum",
           "precision": "0",
           "prefix": "",
@@ -209,8 +209,8 @@
                 {
                   "name": "On track",
                   "color": "#110cde",
-                  "operator": "<",
-                  "value": "200",
+                  "operator": ">",
+                  "value": "100000",
                   "icon": "icons-check-circle"
                 },
                 {
