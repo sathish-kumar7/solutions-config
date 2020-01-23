@@ -13,8 +13,8 @@
   "template_entries": [
     {
       "name": "Community Development",
-      "dataset_domain": "elumitas.demo.socrata.com",
-      "dataset_id": "qhb6-qezh",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "amhj-22i6",
       "default_view": "Snapshot",
       "fields": {
         "date_column": "applicationdate"
@@ -129,8 +129,8 @@
     },
         {
       "name": "Code Enforcement",
-      "dataset_domain": "elumitas.demo.socrata.com",
-      "dataset_id": "7inr-h555",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "vnvd-qqjp",
       "default_view": "Snapshot",
       "fields": {
         "date_column": "requestdatetime"
@@ -235,8 +235,8 @@
     },
     {
       "name": "Business Services",
-      "dataset_domain": "elumitas.demo.socrata.com",
-      "dataset_id": "9pi7-qev8",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "sb4f-xivi",
       "default_view": "Snapshot",
       "fields": {
         "date_column": "applicationdate"
