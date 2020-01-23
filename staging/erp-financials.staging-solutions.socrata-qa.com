@@ -1,212 +1,268 @@
 {
   "branding": {
-    "delimiter": ",",
-    "browser_title": "Solutions | ERP | Financials ",
-    "title": "Solutions - ERP Financials"
+    "browser_title": "Solutions | EnerGov ",
+    "title": "Solutions - EnerGov"
   },
   "tag_list": [
-    "Budget"
+    "Community Development",
+    "Business Services",
+    "Code Enforcement"
   ],
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
     {
-      "name": "ERP - Financials",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "darw-mart",
+      "name": "Community Development",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "amhj-22i6",
       "fields": {
-        "date_column": "fiscalmonth"
+        "date_column": "applicationdate"
       },
       "dimension_entries": [
         {
-          "column": "fund",
-          "name": "Fund"
+          "column": "projectname",
+          "name": "Project"
         },
         {
-          "column": "organization",
-          "name": "Organisation"
-        },   
-        {
-          "column": "accountstatus",
-          "name": "Account status"
+          "column": "permitstatus",
+          "name": "Permit Status"
         },
         {
-          "column": "fiscalyear",
-          "name": "Fiscal year"
+          "column": "permitworkclass",
+          "name": "Permit Class"
         },
         {
-          "column": "accounttype",
-          "name": "Account type"
+          "column": "permittype",
+          "name": "Permit Type"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "district",
+          "name": "District"
         }
       ],
       "view_entries": [
         {
-          "name": "Original Budget vs Actuals",
-          "column": "ltdoriginalbudget",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": ["Budget"],
-          "name_1": "Actual amount",
-          "column_1": "actual",
-          "aggregate_type_1": "sum",
-          "visualization": {
-            "default_view": "Snapshot"
-          }
+          "name": "Permits Issued",
+          "column": "permitid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "permits",
+          "tags": [
+            "Community Development"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
         },
+        "target_entries": [
         {
-          "name": "Revised Budget vs Actuals",
-          "column": "ltdrevisedbudget",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": ["Budget"],
-          "name_1": "Actual amount",
-          "column_1": "actual",
-          "aggregate_type_1": "sum",
-          "visualization": {
-            "default_view": "Snapshot"
-          }
-        },
-        {
-          "name": "Budget - Operating",
-          "column": "actual",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": ["Budget"],
-          "target_entries": [
-            {
               "name": "On track",
               "color": "#110cde",
-              "operator": "between",
-              "value": "1200000000",
-              "to": "1250000000",
+              "operator": ">",
+              "value": "30",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
               "icon": "icons-times-circle"
-            }
-          ],
-          "visualization": {
-            "default_view": "Snapshot"
-          },
-          "quick_filters": [
-          {
-            "column": "accounttype",
-            "type": "text",
-            "field": "quick_filter_0_darw_mart_0",
-            "values": ["Expense"],
-            "operator": "="
             }
           ]
-        },
-        {
-          "name": "Budget - Revenue",
-          "column": "actual",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": ["Budget"],
-          "target_entries": [
-            {
-              "name": "On track",
-              "color": "#110cde",
-              "operator": "<",
-              "value": "1500000000",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ],
-          "quick_filters": [
-          {
-            "column": "accounttype",
-            "type": "text",
-            "field": "quick_filter_0_darw_mart_0",
-            "values": ["Revenue"],
-            "operator": "="
-            }
-          ],
-          "visualization": {
-            "default_view": "Snapshot"
-          }
-        },
-        {
-          "name": "Budget - Cash Accounts",
-          "column": "actual",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": ["Budget"],
-          "target_entries": [
-            {
-              "name": "On track",
-              "color": "#110cde",
-              "operator": "<",
-              "value": "2000000000",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ],
-          "quick_filters": [
-          {
-            "column": "accounttype",
-            "type": "text",
-            "field": "quick_filter_0_darw_mart_0",
-            "values": ["Balance Sheet"],
-            "operator": "="
-            }
-          ],
-          "visualization": {
-            "default_view": "Snapshot"
-          }
         }
       ],
       "leaf_page_entries": [
         {
-          "column": "fund",
-          "name": "Fund"
+          "column": "projectname",
+          "name": "Project"
         },
         {
-          "column": "organization",
-          "name": "Organisation"
-        },   
-        {
-          "column": "accountstatus",
-          "name": "Account status"
+          "column": "permitstatus",
+          "name": "Permit Status"
         },
         {
-          "column": "accounttype",
-          "name": "Account type"
+          "column": "permitworkclass",
+          "name": "Permit Class"
+        },
+        {
+          "column": "permittype",
+          "name": "Permit Type"
+        },
+        {
+          "column": "district",
+          "name": "District"
+        }
+      ]
+    },
+        {
+      "name": "Code Enforcement",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "vnvd-qqjp",
+      "fields": {
+        "date_column": "requestdatetime"
+      },
+      "dimension_entries": [
+        {
+          "column": "inspectiontypename",
+          "name": "Inspection"
+        },
+        {
+          "column": "inspectionstatusname",
+          "name": "Inspection Status"
+        },
+        {
+          "column": "inspectionlinktypename",
+          "name": "Inspection Link Name"
+        },
+        {
+          "column": "balancedue",
+          "name": "Balance due"
         }
       ],
-      "quick_filter_entries": [
+      "view_entries": [
         {
-          "column": "accounttype",
-          "name": "Account Type",
-          "renderType": "text"
+          "name": "Inspections",
+          "column": "inspectionid",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "inspections",
+          "tags": [
+            "Code Enforcement"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+        },
+        "target_entries": [
+        {
+          "name": "On track",
+          "color": "#110cde",
+          "operator": ">",
+          "value": "30",
+          "icon": "icons-check-circle"
         },
         {
-        "column": "fiscalmonth",
-          "name": "Fiscal Month",
-          "renderType": "date"
+          "name": "Off track",
+          "color": "#e31219",
+          "icon": "icons-times-circle"
+        }
+        ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "inspectiontypename",
+          "name": "Inspection"
+        },
+        {
+          "column": "inspectionstatusname",
+          "name": "Inspection Status"
+        },
+        {
+          "column": "inspectionlinktypename",
+          "name": "Inspection Link Name"
+        },
+        {
+          "column": "balancedue",
+          "name": "Balance due"
+        }
+      ]
+    },
+    {
+      "name": "Business Services",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "sb4f-xivi",
+      "fields": {
+        "date_column": "applicationdate"
+      },
+      "dimension_entries": [
+        {
+          "column": "doingbusinessas",
+          "name": "Business"
+        },
+        {
+          "column": "licensestatus",
+          "name": "License Status"
+        },
+        {
+          "column": "licenseclass",
+          "name": "License Class"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "district",
+          "name": "District"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "License Applications",
+          "column": "licenseid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "Licenses",
+          "tags": [
+            "Business Services"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+        {
+          "name": "On track",
+          "color": "#110cde",
+          "operator": ">",
+          "value": "1300",
+          "icon": "icons-check-circle"
+        },
+        {
+          "name": "Off track",
+          "color": "#e31219",
+          "icon": "icons-times-circle"
+        }
+        ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "doingbusinessas",
+          "name": "Business"
+        },
+        {
+          "column": "licensestatus",
+          "name": "License Status"
+        },
+        {
+          "column": "licenseclass",
+          "name": "License Class"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
+        },
+        {
+          "column": "district",
+          "name": "District"
         }
       ]
     }
   ]
-}   
+}
