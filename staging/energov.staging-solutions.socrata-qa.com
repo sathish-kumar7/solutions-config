@@ -177,8 +177,8 @@
                 {
                   "name": "On track",
                   "color": "#110cde",
-                  "operator": ">",
-                  "value": "30",
+                  "operator": "<",
+                  "value": "5000",
                   "icon": "icons-check-circle"
                 },
                 {
