@@ -577,14 +577,14 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#110cde",
               "operator": "==",
               "value": "30000",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
-              "color": "#712314",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ]
@@ -765,14 +765,14 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#110cde",
               "operator": ">=",
               "value": "1000",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
-              "color": "#712314",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ]
@@ -975,14 +975,14 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#110cde",
               "operator": "<=",
               "value": "9",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
-              "color": "#712314",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ]
@@ -1145,14 +1145,14 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#110cde",
               "operator": ">",
               "value": "30000",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
-              "color": "#712314",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ]
@@ -1273,14 +1273,14 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#abcdef",
+              "color": "#110cde",
               "operator": "<",
               "value": "30000",
               "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
-              "color": "#712314",
+              "color": "#e31219",
               "icon": "icons-times-circle"
             }
           ]
