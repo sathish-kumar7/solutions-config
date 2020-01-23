@@ -15,7 +15,6 @@
       "name": "Community Development",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "amhj-22i6",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "applicationdate"
       },
@@ -97,41 +96,12 @@
           "column": "district",
           "name": "District"
         }
-      ],
-      "map": {
-        "centerLat": "42.038333",
-        "centerLng": "-88.322778",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
+      ]
     },
         {
       "name": "Code Enforcement",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "vnvd-qqjp",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "requestdatetime"
       },
@@ -203,41 +173,12 @@
           "column": "balancedue",
           "name": "Balance due"
         }
-      ],
-      "map": {
-        "centerLat": "42.038333",
-        "centerLng": "-88.322778",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
+      ]
     },
     {
       "name": "Business Services",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "sb4f-xivi",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "applicationdate"
       },
@@ -319,35 +260,7 @@
           "column": "district",
           "name": "District"
         }
-      ],
-      "map": {
-        "centerLat": "42.038333",
-        "centerLng": "-88.322778",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
+      ]
     }
   ]
 }
