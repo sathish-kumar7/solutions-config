@@ -74,39 +74,6 @@
               "icon": "icons-times-circle"
             }
           ]
-        },
-        {
-          "name": "Open Applications",
-          "column": "
-          case(isstatuscompleted == 'True', 0, 'False', 1)",
-          "aggregate_type": "count",
-          "use_dimension_value": "true",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "applications",
-          "tags": [
-            "Community Development"
-          ],
-       "visualization": {
-          "default_view": "Snapshot",
-            "snapshot": {
-                "chart_type": "groupChart"
-            }
-        },
-        "target_entries": [
-        {
-              "name": "On track",
-              "color": "#110cde",
-              "operator": "<",
-              "value": "30",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
         }
       ],
       "leaf_page_entries": [
