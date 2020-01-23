@@ -155,6 +155,38 @@
           "icon": "icons-times-circle"
         }
         ]
+        },
+        {
+          "name": "Open Applications",
+          "column": "case(isstatuscompleted='False', 1, true, 0)",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "Applications",
+          "tags": [
+            "Business Services"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": "<",
+                  "value": "200",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
       ],
       "leaf_page_entries": [
@@ -226,19 +258,19 @@
             }
         },
         "target_entries": [
-        {
-          "name": "On track",
-          "color": "#110cde",
-          "operator": ">",
-          "value": "1300",
-          "icon": "icons-check-circle"
-        },
-        {
-          "name": "Off track",
-          "color": "#e31219",
-          "icon": "icons-times-circle"
-        }
-        ]
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": ">",
+                  "value": "1300",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
       ],
       "leaf_page_entries": [
