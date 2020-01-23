@@ -32,9 +32,7 @@
         },
         {
           "column": "fiscalyear",
-          "name": "Fiscal year",
-          "column": "permitworkclass",
-          "name": "Permit Class"
+          "name": "Fiscal year"
         },
         {
           "column": "accounttype",
