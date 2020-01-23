@@ -159,7 +159,7 @@
         {
           "name": "Open Applications",
           "column": "case(isstatuscompleted='False', 1, true, 0)",
-          "aggregate_type": "count",
+          "aggregate_type": "sum",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
