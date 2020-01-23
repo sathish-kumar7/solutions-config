@@ -217,7 +217,7 @@
         "date_column": "hearingdate"
       },
       "parent_queries": [
-        "select *
+        "select *"
       ],
       "dimension_entries": [
         {
