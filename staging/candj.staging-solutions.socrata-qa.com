@@ -217,7 +217,7 @@
         "date_column": "hearingdate"
       },
       "parent_queries": [
-        "select *"
+        "select count(hearingdate) as total_hearing_dates, casenumber, min(hearingdate) as first_hearing, max(hearingdate) as last_hearing, first(d1) as d1, first(d2) as d2, first(d3) as d3, group by casenumber|> select *, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainity_count |> select sum(certainity_count)/count(*) as trial_certainity, group by d1, d2, d3"
       ],
       "dimension_entries": [
         {
@@ -240,7 +240,7 @@
       "view_entries": [
         {
           "name": "Case Certainity",
-          "column": "",
+          "column": "trial_certainity",
           "aggregate_type": "",
           "precision": "0",
           "prefix": "",
