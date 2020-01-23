@@ -573,7 +573,21 @@
             "snapshot": {
               "chart_type": "groupChart"
             }
-          }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#abcdef",
+              "operator": "==",
+              "value": "30000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#712314",
+              "icon": "icons-times-circle"
+            }
+          ]
         },
         {
           "name": "Sales",
@@ -746,6 +760,20 @@
                 "start_date": "2019-12-01",
                 "end_date": "2019-12-30"
               }
+            }
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#abcdef",
+              "operator": ">=",
+              "value": "1000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#712314",
+              "icon": "icons-times-circle"
             }
           ]
         }
@@ -943,7 +971,21 @@
             "snapshot": {
               "chart_type": "groupChart"
             }
-          }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#abcdef",
+              "operator": "<=",
+              "value": "9",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#712314",
+              "icon": "icons-times-circle"
+            }
+          ]
         },
         {
           "name": "Median Ratio",
@@ -1099,7 +1141,21 @@
             "snapshot": {
               "chart_type": "groupChart"
             }
-          }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#abcdef",
+              "operator": ">",
+              "value": "30000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#712314",
+              "icon": "icons-times-circle"
+            }
+          ]
         },
         {
           "name": "Price Relative Differential",
@@ -1213,7 +1269,21 @@
           "visualization": {
             "default_view": "Table"
           },
-          "precision": "2"
+          "precision": "2",
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#abcdef",
+              "operator": "<",
+              "value": "30000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#712314",
+              "icon": "icons-times-circle"
+            }
+          ]
         }
       ],
       "filter_by_entries": [
