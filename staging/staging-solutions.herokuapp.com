@@ -1275,7 +1275,7 @@
               "name": "On track",
               "color": "#110cde",
               "operator": "==",
-              "value": "8337",
+              "value": "833",
               "icon": "icons-check-circle"
             },
             {
