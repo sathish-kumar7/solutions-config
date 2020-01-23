@@ -185,7 +185,8 @@
         {
           "column": "organization",
           "name": "Organisation"
-        },   
+        },
+        {
           "column": "licensestatus",
           "name": "License Status"
         },
@@ -203,8 +204,6 @@
           "column": "accounttype",
           "name": "Account Type",
           "renderType": "text"
-          "column": "licensetype",
-          "name": "License Type"
         },
         {
         "column": "fiscalmonth",
@@ -215,4 +214,3 @@
     }
   ]
 }   
-
