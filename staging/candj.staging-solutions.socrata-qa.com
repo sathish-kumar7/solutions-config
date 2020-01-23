@@ -217,19 +217,19 @@
         "date_column": "hearingdate"
       },
       "parent_queries": [
-        "select count(hearingdate) as total_hearing_dates, casenumber, min(hearingdate) as first_hearing, max(hearingdate) as last_hearing, first(casetypedescription) as casetypedescription, first(casecategorydescription) as casecategorydescription, first(casecategorymappingdescription) as casecategorymappingdescription, group by casenumber|> select *, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainity_count |> select sum(certainity_count)/count(*) as trial_certainity, group by casetypedescription, casecategorydescription, casecategorymappingdescription"
+        "select count(hearingdate) as total_hearing_dates, casenumber, min(hearingdate) as first_hearing, max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as case_category_description, min(casecategorymappingdescription) as case_category_mapping_description group by casenumber |> select total_hearing_dates,casenumber, first_hearing, last_hearing, case_type_description, case_category_description, case_category_mapping_description, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainity_count |> select sum(certainity_count)/count(*) as trial_certainity, min(first_hearing) as first_hearing, min(last_hearing) as last_hearing, case_type_description, case_category_description, case_category_mapping_description, casenumber group by case_type_description, case_category_description, case_category_mapping_description, casenumber"
       ],
       "dimension_entries": [
         {
-          "column": "casetypedescription",
+          "column": "case_type_description",
           "name": "Case Type Description"
         },
         {
-          "column": "casecategorydescription",
+          "column": "case_category_description",
           "name": "Case Category Description"
         },
         {
-          "column": "casecategorymappingdescription",
+          "column": "case_category_mapping_description",
           "name": "Case Category Mapping Description"
         }
       ],
@@ -238,7 +238,7 @@
           "name": "Case Certainity",
           "column": "trial_certainity",
           "aggregate_type": "",
-          "precision": "0",
+          "precision": "1",
           "prefix": "",
           "suffix": "",
           "tags": [
@@ -249,40 +249,22 @@
             "snapshot": {
                 "chart_type": "barChart"
             }
-        },
-        "target_entries": [
-        {
-          "name": "On track",
-          "color": "#110cde",
-          "operator": ">",
-          "value": "30",
-          "icon": "icons-check-circle"
-        },
-        {
-          "name": "Off track",
-          "color": "#e31219",
-          "icon": "icons-times-circle"
         }
-        ]
         }
       ],
       "leaf_page_entries": [
         {
-          "column": "casetypedescription",
+          "column": "case_type_description",
           "name": "Case Type Description"
         },
         {
-          "column": "casecategorydescription",
+          "column": "case_category_description",
           "name": "Case Category Description"
         },
         {
-          "column": "casecategorymappingdescription",
+          "column": "case_category_mapping_description",
           "name": "Case Category Mapping Description"
-        },
-        {
-          "column": "hearingtypedescription",
-          "name": "Hearing Type"
-        }   
+        }  
       ],
       "map": {
         "centerLat": "42.038333",
