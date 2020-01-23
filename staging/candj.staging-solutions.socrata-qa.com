@@ -237,7 +237,7 @@
         {
           "name": "Case Certainity",
           "column": "trial_certainity",
-          "aggregate_type": "sum",
+          "aggregate_type": "avg",
           "precision": "1",
           "prefix": "",
           "suffix": "",
