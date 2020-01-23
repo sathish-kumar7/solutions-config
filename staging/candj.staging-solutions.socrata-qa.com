@@ -217,7 +217,7 @@
         "date_column": "hearingdate"
       },
       "parent_queries": [
-        "select *, count(hearingdate) as total_hearing_dates, min(hearingdate) as first_hearing, max(hearingdate) as last_hearing, count (casenumber) as total_cases"
+        "select *
       ],
       "dimension_entries": [
         {
@@ -240,8 +240,8 @@
       "view_entries": [
         {
           "name": "Case Certainity",
-          "column": "(case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0)) /total_cases",
-          "aggregate_type": "sum",
+          "column": "",
+          "aggregate_type": "",
           "precision": "0",
           "prefix": "",
           "suffix": "",
