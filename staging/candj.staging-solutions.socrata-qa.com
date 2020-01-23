@@ -207,6 +207,115 @@
       },
       "shape_dataset_entries": [],
       "shape_outline_dataset_entries": []
+    },
+    {
+      "name": "Courts Operations",
+      "dataset_domain": "courtsandjustice.demo.socrata.com",
+      "dataset_id": "6nic-t5bv",
+      "default_view": "Snapshot",
+      "fields": {
+        "date_column": "hearingdate"
+      },
+      "parent_queries": [
+        "select *, count(hearingdate) as total_hearing_dates, min(hearingdate) as first_hearing, max(hearingdate) as last_hearing, count (casenumber) as total_cases"
+      ],
+      "dimension_entries": [
+        {
+          "column": "casetypedescription",
+          "name": "Case Type Description"
+        },
+        {
+          "column": "casecategorydescription",
+          "name": "Case Category Description"
+        },
+        {
+          "column": "casecategorymappingdescription",
+          "name": "Case Category Mapping Description"
+        },
+        {
+          "column": "hearingtypedescription",
+          "name": "Hearing Type"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Case Certainity",
+          "column": "(case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0)) /total_cases",
+          "aggregate_type": "sum",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Cases"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+        },
+        "target_entries": [
+        {
+          "name": "On track",
+          "color": "#110cde",
+          "operator": ">",
+          "value": "30",
+          "icon": "icons-check-circle"
+        },
+        {
+          "name": "Off track",
+          "color": "#e31219",
+          "icon": "icons-times-circle"
+        }
+        ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "casetypedescription",
+          "name": "Case Type Description"
+        },
+        {
+          "column": "casecategorydescription",
+          "name": "Case Category Description"
+        },
+        {
+          "column": "casecategorymappingdescription",
+          "name": "Case Category Mapping Description"
+        },
+        {
+          "column": "hearingtypedescription",
+          "name": "Hearing Type"
+        }   
+      ],
+      "map": {
+        "centerLat": "42.038333",
+        "centerLng": "-88.322778",
+        "zoom": "10",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     }
   ]
 }
