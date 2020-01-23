@@ -67,7 +67,7 @@
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-check-circle"
+              "icon": "icons-eye-circle"
             },
             {
               "name": "Off track",
