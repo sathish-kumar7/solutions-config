@@ -185,8 +185,8 @@
       },
       "dimension_entries": [
         {
-          "column": "companyname",
-          "name": "Company"
+          "column": "doingbusinessas",
+          "name": "Business"
         },
         {
           "column": "licensestatus",
@@ -243,8 +243,8 @@
       ],
       "leaf_page_entries": [
         {
-          "column": "companyname",
-          "name": "Company"
+          "column": "doingbusinessas",
+          "name": "Business"
         },
         {
           "column": "licensestatus",
