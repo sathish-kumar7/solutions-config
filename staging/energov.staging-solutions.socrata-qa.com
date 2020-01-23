@@ -158,9 +158,9 @@
       ],
       "view_entries": [
         {
-          "name": "Inspections",
-          "column": "inspectionid",
-          "aggregate_type": "count",
+          "name": "Open Inspections",
+          "column": "case(isstatusscheduled='True', 1, true, 0)",
+          "aggregate_type": "sum",
           "precision": "0",
           "prefix": "",
           "suffix": "inspections",
@@ -179,6 +179,38 @@
                   "color": "#110cde",
                   "operator": ">",
                   "value": "30",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
+        },
+        {
+          "name": "Completed Inspections",
+          "column": "case(isstatusindicatesuccess='True', 1, true, 0)",
+          "aggregate_type": "sum",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "inspections",
+          "tags": [
+            "Code Enforcement"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": "<",
+                  "value": "200",
                   "icon": "icons-check-circle"
                 },
                 {
