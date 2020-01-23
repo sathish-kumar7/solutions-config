@@ -158,8 +158,8 @@
         },
         {
           "name": "Open Applications",
-          "column": "(case(isstatuscompleted='False', 1, true, 0))",
-          "aggregate_type": "sum",
+          "column": "sum(case(isstatuscompleted='False', 1, true, 0))",
+          "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
