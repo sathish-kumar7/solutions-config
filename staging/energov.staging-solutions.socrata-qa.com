@@ -106,6 +106,9 @@
       "fields": {
         "date_column": "requestdatetime"
       },
+      "parent_queries": [
+        "select *, case(isstatuscompleted='False', 1, true, 0) as cases_pending"
+      ],
       "dimension_entries": [
         {
           "column": "inspectiontypename",
@@ -142,24 +145,24 @@
             }
         },
         "target_entries": [
-            {
-              "name": "On track",
-              "color": "#110cde",
-              "operator": ">",
-              "value": "30",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": ">",
+                  "value": "30",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         },
         {
           "name": "Open Applications",
-          "column": "sum(case(isstatuscompleted=='False', 1, true, 0))",
-          "aggregate_type": "",
+          "column": "cases_pending",
+          "aggregate_type": "sum",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
