@@ -142,23 +142,23 @@
             }
         },
         "target_entries": [
-        {
-          "name": "On track",
-          "color": "#110cde",
-          "operator": ">",
-          "value": "30",
-          "icon": "icons-check-circle"
-        },
-        {
-          "name": "Off track",
-          "color": "#e31219",
-          "icon": "icons-times-circle"
-        }
-        ]
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": ">",
+              "value": "30",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ]
         },
         {
           "name": "Open Applications",
-          "column": "case(isstatuscompleted='False', 1, true, 0)",
+          "column": "(case(isstatuscompleted='False', 1, true, 0))",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
           "precision": "0",
