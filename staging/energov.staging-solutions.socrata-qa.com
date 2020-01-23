@@ -230,7 +230,7 @@
           "name": "On track",
           "color": "#110cde",
           "operator": ">",
-          "value": "30",
+          "value": "1300",
           "icon": "icons-check-circle"
         },
         {
