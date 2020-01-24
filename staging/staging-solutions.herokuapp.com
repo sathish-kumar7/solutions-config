@@ -832,6 +832,24 @@
               "precision": "",
               "prefix": "",
               "suffix": ""
+            },
+            {
+              "column": "case_disposition",
+              "name": "Case Disposition",
+              "aggregate_type": "count",
+              "render_type": "bar",
+              "precision": "",
+              "prefix": "",
+              "suffix": "disposition"
+            },
+            {
+              "column": "case_id",
+              "name": "Cases",
+              "aggregate_type": "count",
+              "render_type": "bullet",
+              "precision": "",
+              "prefix": "",
+              "suffix": "cases"
             }
           ],
           "quick_filters": [
