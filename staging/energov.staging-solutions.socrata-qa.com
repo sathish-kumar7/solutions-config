@@ -82,7 +82,7 @@
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
-          "suffix": "Applications",
+          "suffix": "",
           "tags": [
             "Business Services"
           ],
@@ -163,7 +163,7 @@
           "aggregate_type": "sum",
           "precision": "0",
           "prefix": "",
-          "suffix": "inspections",
+          "suffix": "",
           "tags": [
             "Code Enforcement"
           ],
@@ -195,7 +195,7 @@
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
-          "suffix": "inspections",
+          "suffix": "",
           "tags": [
             "Code Enforcement"
           ],
@@ -279,7 +279,7 @@
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
-          "suffix": "Licenses",
+          "suffix": "",
           "tags": [
             "Business Services"
           ],
