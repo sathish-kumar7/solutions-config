@@ -1387,19 +1387,23 @@
       "quick_filter_entries": [
         {
           "column": "fund",
-          "name": "Fund"
+          "name": "Fund",
+          "renderType": "text"
         },
         {
           "column": "program",
-          "name": "Program"
+          "name": "Program",
+          "renderType": "text"
         },
         {
           "column": "category",
-          "name": "Category"
+          "name": "Category",
+          "renderType": "text"
         },
         {
           "column": "department",
-          "name": "Department"
+          "name": "Department",
+          "renderType": "text"
         }
       ],
       "map": {},
