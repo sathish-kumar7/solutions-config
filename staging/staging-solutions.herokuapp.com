@@ -74,6 +74,14 @@
               "color": "#e31219",
               "icon": "icons-stop-circle"
             }
+          ],
+          "comparison_column_entires": [
+            {
+              "column": "department",
+              "name": "Department",
+              "aggregate_type": "count",
+              "render_type": "stack"
+            }
           ]
         },
         {
