@@ -208,6 +208,11 @@
           "view_column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "display_name": "Ratio Benchmark",
           "value": "1"
+        },
+        {
+          "view_column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
+          "display_name": "Relative Differential Benchmark",
+          "value": "1"
         }
       ],
       "map": {
