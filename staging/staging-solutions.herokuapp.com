@@ -37,16 +37,6 @@
           "name": "Category"
         }
       ],
-      "group_by_entries": [
-        {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
-          "column": "fiscal_year",
-          "name": "Year"
-        }
-      ],
       "view_entries": [
         {
           "name": "Funds",
