@@ -1,19 +1,18 @@
 {
   "branding": {
+    "browser_title": "Solutions | A&T ",
+    "title": "Solutions - Tax and Appraisals",
     "delimiter": ","
   },
+  "tag_list": [
+    "Tax & Appraisals"
+  ],
   "template_entries": [
     {
       "name": "Clermont County Property Data",
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
-      "default_view": "Map",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "parent_queries": [
         "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
@@ -64,10 +63,19 @@
           "name": "Mean Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "aggregate_type": "avg",
-          "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "use_dimension_value": "true",
+          "tags": [
+            "Tax & Appraisals"
+          ],
+          "visualization": {   
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Average Absolute Deviation",
@@ -76,7 +84,16 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "tags": [
+            "Tax & Appraisals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Coefficient of Dispersion",
@@ -85,7 +102,16 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "tags": [
+            "Tax & Appraisals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Price Relative Differential",
@@ -94,7 +120,16 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "tags": [
+            "Tax & Appraisals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Median Ratio",
@@ -103,7 +138,16 @@
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
-          "suffix": ""
+          "suffix": "",
+          "tags": [
+            "Tax & Appraisals"
+          ],
+          "visualization": { 
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Estimated Total Market Value",
@@ -112,7 +156,16 @@
           "stack_column": "land_use_type",
           "precision": "0",
           "prefix": "$",
-          "suffix": ""
+          "suffix": "",
+          "tags": [
+            "Courts & Justice"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -148,6 +201,18 @@
           "column": "saledt",
           "name": "Sale Date",
           "renderType": "date"
+        }
+      ],
+      "bench_mark_entries": [
+        {
+          "view_column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
+          "display_name": "Ratio Benchmark",
+          "value": "1"
+        },
+        {
+          "view_column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
+          "display_name": "Relative Differential Benchmark",
+          "value": "1"
         }
       ],
       "map": {
