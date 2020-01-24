@@ -1364,6 +1364,18 @@
         {
           "column": "fund",
           "name": "Fund"
+        },
+        {
+          "column": "program",
+          "name": "Program"
+        },
+        {
+          "column": "category",
+          "name": "Category"
+        },
+        {
+          "column": "department",
+          "name": "Department"
         }
       ],
       "leaf_page_entries": [
