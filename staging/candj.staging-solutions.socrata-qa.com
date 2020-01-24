@@ -54,7 +54,7 @@
               "aggregate_type": "",
               "prefix": "",
               "suffix": "",
-              "precision": "0",
+              "precision": "",
               "render_type": "stack"
               }
            ],
