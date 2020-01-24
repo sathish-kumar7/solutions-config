@@ -1384,7 +1384,24 @@
           "name": "Service"
         }
       ],
-      "quick_filter_entries": [],
+      "quick_filter_entries": [
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "program",
+          "name": "Program"
+        },
+        {
+          "column": "category",
+          "name": "Category"
+        },
+        {
+          "column": "department",
+          "name": "Department"
+        }
+      ],
       "map": {},
       "shape_datasets": [],
       "shape_outline_dataset_entries": []
