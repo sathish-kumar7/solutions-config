@@ -47,6 +47,17 @@
           "precision": "0",
           "prefix": "",
           "suffix": "cases",
+          "comparison_column_entires": [
+              { 
+              "column": "case(opened == 1, 'Open', true, 'Closed')",
+              "name": "",
+              "aggregate_type": "",
+              "prefix": "",
+              "suffix": "",
+              "precision": "0",
+              "render_type": "stack"
+              }
+           ],
           "tags": [
             "Cases"
           ],
@@ -182,7 +193,7 @@
           "view_column": "caseid",
           "dimension_column": "judgename",
           "display_name": "State Standard",
-          "value": "100"
+          "value": "50"
         }
       ],
       "map": {
