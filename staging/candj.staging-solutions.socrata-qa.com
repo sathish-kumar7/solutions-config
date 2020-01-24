@@ -50,7 +50,7 @@
           "comparison_column_entires": [
               { 
               "column": "casetypecodedescription",
-              "name": "Category",
+              "name": "Case Category",
               "aggregate_type": "",
               "render_type": "stack",
               "prefix": "",
