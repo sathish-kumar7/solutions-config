@@ -56,9 +56,23 @@
           "visualization": {
             "default_view": "Snapshot"
           },
+          "precision": "0",
+          "prefix": "",
+          "suffix": "funds",
           "tags": [
             "Cases",
             "Clearence rates"
+          ],
+          "comparison_column_entires": [
+            {
+              "column": "department",
+              "name": "Department",
+              "aggregate_type": "count",
+              "render_type": "bullet",
+              "precision": "0",
+              "prefix": "",
+              "suffix": "departments"
+            }
           ],
           "target_entries": [
             {
@@ -73,14 +87,6 @@
               "name": "Off track",
               "color": "#e31219",
               "icon": "icons-stop-circle"
-            }
-          ],
-          "comparison_column_entires": [
-            {
-              "column": "department",
-              "name": "Department",
-              "aggregate_type": "count",
-              "render_type": "stack"
             }
           ]
         },
