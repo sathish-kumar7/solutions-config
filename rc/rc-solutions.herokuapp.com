@@ -1,18 +1,21 @@
 {
-  "branding": {},
-  "show_share_via_email": true,
+  "branding": {
+    "browser_title": "Solutions | QA ",
+    "title": "Solutions - QA"
+  },
+  "tag_list": [
+    "Cases",
+    "Judges",
+    "Clearence rates",
+    "Districts and counties"
+  ],
+  "show_share_via_email": "false",
   "is_private": "false",
   "template_entries": [
     {
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -34,36 +37,152 @@
           "name": "Category"
         }
       ],
-      "group_by_entries": [
-        {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
-          "column": "fiscal_year",
-          "name": "Year"
-        }
-      ],
       "view_entries": [
         {
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
-          "stack_column": "entry_type"
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "precision": "0",
+          "prefix": "",
+          "suffix": "funds",
+          "tags": [
+            "Cases",
+            "Clearence rates"
+          ],
+          "comparison_column_entires": [
+            {
+              "column": "department",
+              "name": "Department",
+              "aggregate_type": "count",
+              "render_type": "bar",
+              "precision": "0",
+              "prefix": "",
+              "suffix": "departments"
+            },
+            {
+              "column": "entry_type",
+              "name": "Entry type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "precision": "0",
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "column": "category",
+              "name": "Category",
+              "aggregate_type": "count",
+              "render_type": "bullet",
+              "precision": "0",
+              "prefix": "",
+              "suffix": "categories"
+            }
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "between",
+              "value": "30000",
+              "to": "100000",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ]
         },
         {
           "name": "Total amount spent",
           "column": "actual_amount",
           "aggregate_type": "sum",
-          "stack_column": "entry_type",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "suffix": "Total",
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+           "comparison_column_entires": [
+            {
+              "column": "approved_amount",
+              "name": "Approved Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Approved"
+            },
+            {
+              "column": "recommneded_amount",
+              "name": "Recommended Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Recommended"
+            }
+          ],
+          "quick_filters": [
+            {
+              "column": "program",
+              "type": "text",
+              "field": "quick_filter_0_s8xp_hq5q_2",
+              "values": [
+                "a"
+              ],
+              "operator": "like"
+            }
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "between",
+              "value": "30000",
+              "to": "100000",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ]
+        },
+        {
+          "name": "Amount spent on Salary And Wages",
+          "column": "actual_amount",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "precision": "2",
+          "visualization": {
+            "default_view": "Pie Chart"
+          },
+          "quick_filters": [
+            {
+              "column": "category",
+              "type": "text",
+              "field": "quick_filter_0_s8xp_hq5q_4",
+              "values": [
+                "Salary and Wages"
+              ],
+              "operator": "="
+            }
+          ]
         },
         {
           "name": "Total amount approved",
           "column": "approved_amount",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
+          "visualization": {
+            "default_view": "Over Time"
+          },
           "prefix": "$",
           "precision": "2"
         }
@@ -98,6 +217,10 @@
         {
           "column": "category",
           "name": "Category"
+        },
+        {
+          "column": "fiscal_year",
+          "name": "Year"
         }
       ],
       "quick_filter_entries": [
@@ -119,12 +242,17 @@
         {
           "column": "fund",
           "name": "Fund",
-          "renderType": "number"
+          "renderType": "text"
         },
         {
           "column": "category",
           "name": "Category",
           "renderType": "text"
+        },
+        {
+          "column": "fiscal_year",
+          "name": "Year",
+          "renderType": "number"
         }
       ],
       "map": {
@@ -204,7 +332,6 @@
       "name": "Opex Revenue",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "mik7-qbhe",
-      "default_view": "Over Time",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -224,13 +351,58 @@
           "column": "actual_amount",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "comparison_column_entires": [
+            {
+              "column": "recommneded_amount",
+              "name": "Recommended Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Recommended"
+            },
+            {
+              "column": "actual_amount",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Actual"
+            }
+          ],
+          "tags": [
+            "Cases",
+            "Judges"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "between",
+              "value": "30000",
+              "to": "100000",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ]
         },
         {
           "name": "Total Projections",
           "column": "projected_amount",
           "aggregate_type": "sum",
           "prefix": "$",
+          "visualization": {
+            "default_view": "Scatterplot"
+          },
           "precision": "2"
         }
       ],
@@ -267,7 +439,6 @@
       "name": "Capex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "dszp-jd2s",
-      "default_view": "Pie Chart",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -291,14 +462,39 @@
           "name": "Approved Amount",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Pie Chart"
+          },
+          "tags": [
+            "Cases",
+            "Clearence rates"
+          ],
+          "comparison_column_entires": [
+            {
+              "column": "actual_amount",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Actual"
+            }
+          ]
         },
         {
           "column": "actual_amount",
           "name": "Actual Amount",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Pie Chart"
+          },
+          "tags": [
+            "Cases",
+            "Judges"
+          ]
         }
       ],
       "map": {
@@ -334,7 +530,6 @@
       "name": "Payroll",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "qu7r-i9cv",
-      "default_view": "Scatterplot",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -358,7 +553,14 @@
           "column": "pay_total",
           "aggregate_type": "sum",
           "prefix": "$",
-          "precision": "2"
+          "precision": "2",
+          "tags": [
+            "Cases",
+            "Districts and counties"
+          ],
+          "visualization": {
+            "default_view": "Scatterplot"
+          }
         }
       ],
       "map": {
@@ -394,12 +596,6 @@
       "name": "Cobb-Dekalb-Fulton",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3hre-b49k",
-      "default_view": "Map",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "sale_date",
         "incident_type": "class",
@@ -431,23 +627,61 @@
           "name": "Mean ratio",
           "column": "(market_total/case(sale_price == 0,1, true, sale_price))",
           "aggregate_type": "avg",
-          "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "tags": [
+            "Cases",
+            "Districts and counties"
+          ],
+          "visualization": {
+            "default_view": "Map",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "==",
+              "value": "30000",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ]
         },
         {
           "name": "Sales",
           "column": "sale_type",
           "aggregate_type": "count",
           "stacked_column": "sale_type",
-          "precision": "2"
+          "precision": "",
+          "tags": [
+            "Cases",
+            "Districts and counties"
+          ],
+          "visualization": {
+            "default_view": "Map",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Building value",
           "column": "building_value",
           "aggregate_type": "sum",
-          "use_dimension_value": "true",
           "precision": "2",
-          "prefix": "$"
+          "prefix": "$",
+          "visualization": {
+            "default_view": "Over Time",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -530,12 +764,6 @@
       "name": "Incidents Data",
       "dataset_domain": "pinellasparkpd.data.socrata.com",
       "dataset_id": "qs3a-3222",
-      "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "reported_date_time",
         "incident_type": "occurred_incident_type",
@@ -559,8 +787,8 @@
           "name": "Status"
         },
         {
-          "column": "exceptional_clearance",
-          "name": "Clearance"
+          "column": "assigned_bureau",
+          "name": "Assigned Bureau"
         }
       ],
       "group_by_entries": [
@@ -578,8 +806,67 @@
           "name": "Incidents",
           "column": "occurred_incident_type",
           "aggregate_type": "count",
-          "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "",
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          },
+          "comparison_column_entires": [
+            {
+              "column": "status",
+              "name": "Status",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "precision": "",
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "column": "case_disposition",
+              "name": "Case Disposition",
+              "aggregate_type": "count",
+              "render_type": "bar",
+              "precision": "",
+              "prefix": "",
+              "suffix": "disposition"
+            },
+            {
+              "column": "case_id",
+              "name": "Cases",
+              "aggregate_type": "count",
+              "render_type": "bullet",
+              "precision": "",
+              "prefix": "",
+              "suffix": "cases"
+            }
+          ],
+          "quick_filters": [
+            {
+              "type": "date",
+              "column": "reported_date_time",
+              "field": "quick_filter_5_qs3a_3222_0",
+              "dateRange": {
+                "start_date": "2019-12-01",
+                "end_date": "2019-12-30"
+              }
+            }
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": ">=",
+              "value": "1000",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ]
         }
       ],
       "filter_by_entries": [
@@ -616,6 +903,17 @@
         {
           "column": "reporting_officer_full_name",
           "name": "Officer Name"
+        },
+        {
+          "column": "reported_date_time",
+          "name": "Reported Date"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "reported_date_time",
+          "name": "Reported Date",
+          "renderType": "date"
         }
       ],
       "map": {
@@ -710,12 +1008,6 @@
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
-      "default_view": "Map",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "saledt",
         "incident_type": "land_use_type",
@@ -763,23 +1055,52 @@
           "name": "Mean Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "aggregate_type": "avg",
-          "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Map",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "<=",
+              "value": "9",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ]
         },
         {
           "name": "Median Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
           "aggregate_type": "median",
-          "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Map",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Estimated Total Market Value",
           "column": "estimated_total_market_value",
           "aggregate_type": "sum",
-          "stack_column": "land_use_type",
           "precision": "2",
-          "prefix": "$"
+          "prefix": "$",
+          "visualization": {
+            "default_view": "Map",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -858,12 +1179,6 @@
       "name": "Parcels",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
-      "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
       "fields": {
         "date_column": "saledt",
         "incident_type": "land_use_type",
@@ -894,22 +1209,51 @@
           "name": "Average Absolute Deviation",
           "column": "asr_deviation_from_median",
           "aggregate_type": "avg",
-          "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         },
         {
           "name": "Coefficient of Dispersion",
           "column": "avg(asr_deviation_from_median)/avg(median_asr)",
           "aggregate_type": "",
-          "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": ">",
+              "value": "30000",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ]
         },
         {
           "name": "Price Relative Differential",
           "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
           "aggregate_type": "",
-          "use_dimension_value": "true",
-          "precision": "2"
+          "precision": "2",
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -988,7 +1332,6 @@
       "name": "ERP metrics",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "default_view": "Snapshot",
       "fields": {
         "date_column": "fiscal_year"
       },
@@ -1001,22 +1344,57 @@
           "name": "Service"
         }
       ],
-      "group_by_entries": [
-        
-      ],
+      "group_by_entries": [],
       "view_entries": [
         {
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
-          "stack_column": "entry_type",
-          "precision": "2"
+          "visualization": {
+            "default_view": "Table"
+          },
+          "precision": "",
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "==",
+              "value": "833",
+              "icon": "icons-play-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-stop-circle"
+            }
+          ],
+          "quick_filters": [
+             {
+               "type": "text", 
+               "column": "program",
+               "field": "quick_filter_8_s8xp_hq5q_1",
+               "values": ["Athletics"],
+               "operator": "="
+             }
+           ]
         }
       ],
       "filter_by_entries": [
         {
           "column": "fund",
           "name": "Fund"
+        },
+        {
+          "column": "program",
+          "name": "Program"
+        },
+        {
+          "column": "category",
+          "name": "Category"
+        },
+        {
+          "column": "department",
+          "name": "Department"
         }
       ],
       "leaf_page_entries": [
@@ -1026,17 +1404,30 @@
         }
       ],
       "quick_filter_entries": [
-        
+        {
+          "column": "fund",
+          "name": "Fund",
+          "renderType": "text"
+        },
+        {
+          "column": "program",
+          "name": "Program",
+          "renderType": "text"
+        },
+        {
+          "column": "category",
+          "name": "Category",
+          "renderType": "text"
+        },
+        {
+          "column": "department",
+          "name": "Department",
+          "renderType": "text"
+        }
       ],
-      "map": {
-        
-      },
-      "shape_datasets": [
-        
-      ],
-      "shape_outline_dataset_entries": [
-        
-      ]
+      "map": {},
+      "shape_datasets": [],
+      "shape_outline_dataset_entries": []
     }
   ]
 }
