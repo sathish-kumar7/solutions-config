@@ -1,399 +1,332 @@
 {
-  "branding": {},
+  "branding": {
+    "browser_title": "Solutions | EnerGov ",
+    "title": "Solutions - EnerGov"
+  },
+  "tag_list": [
+    "Community Development",
+    "Business Services",
+    "Code Enforcement"
+  ],
+  "show_share_via_email": true,
+  "is_private": "false",
   "template_entries": [
     {
-      "name": "Opex Budget",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "s8xp-hq5q",
-      "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
+      "name": "Community Development",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "amhj-22i6",
       "fields": {
-        "date_column": "fiscal_year"
+        "date_column": "applicationdate"
       },
       "dimension_entries": [
         {
-          "column": "service",
-          "name": "Service"
+          "column": "projectname",
+          "name": "Project"
         },
         {
-          "column": "department",
-          "name": "Department"
+          "column": "permitstatus",
+          "name": "Permit Status"
         },
         {
-          "column": "program",
-          "name": "Program"
+          "column": "permitworkclass",
+          "name": "Permit Class"
         },
         {
-          "column": "category",
-          "name": "Category"
+          "column": "permittype",
+          "name": "Permit Type"
         }
       ],
       "group_by_entries": [
         {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
-          "column": "fiscal_year",
-          "name": "Year"
+          "column": "district",
+          "name": "District"
         }
       ],
       "view_entries": [
         {
-          "name": "Funds",
-          "column": "entry_type",
+          "name": "Permits Issued",
+          "column": "permitid",
           "aggregate_type": "count",
-          "stack_column": "entry_type"
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "permits",
+          "tags": [
+            "Community Development"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+        {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": ">",
+              "value": "30",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ]
         },
         {
-          "name": "Total amount spent",
-          "column": "actual_amount",
-          "aggregate_type": "sum",
-          "stack_column": "entry_type",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        },
-        {
-          "name": "Total amount approved",
-          "column": "approved_amount",
+          "name": "Open Applications",
+          "column": "case(isstatuscompleted='False', 1, true, 0)",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        }
-      ],
-      "filter_by_entries": [
-        {
-          "column": "fund",
-          "name": "Fund"
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Business Services"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
         },
-        {
-          "column": "fiscal_year",
-          "name": "Year"
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": "<",
+                  "value": "200",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
       ],
       "leaf_page_entries": [
         {
-          "column": "service",
-          "name": "Service"
+          "column": "projectname",
+          "name": "Project"
         },
         {
-          "column": "department",
-          "name": "Department"
+          "column": "permitstatus",
+          "name": "Permit Status"
         },
         {
-          "column": "program",
-          "name": "Program"
+          "column": "permitworkclass",
+          "name": "Permit Class"
         },
         {
-          "column": "fund",
-          "name": "Fund"
+          "column": "permittype",
+          "name": "Permit Type"
         },
         {
-          "column": "category",
-          "name": "Category"
+          "column": "district",
+          "name": "District"
         }
-      ],
-      "quick_filter_entries": [
+      ]
+    },
         {
-          "column": "service",
-          "name": "Service",
-          "renderType": "text"
-        },
-        {
-          "column": "department",
-          "name": "Department",
-          "renderType": "text"
-        },
-        {
-          "column": "program",
-          "name": "Program",
-          "renderType": "text"
-        },
-        {
-          "column": "fund",
-          "name": "Fund",
-          "renderType": "number"
-        },
-        {
-          "column": "category",
-          "name": "Category",
-          "renderType": "text"
-        }
-      ],
-      "map": {
-        "centerLat": "38.760910",
-        "centerLng": "-121.302611",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
+      "name": "Code Enforcement",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "vnvd-qqjp",
+      "fields": {
+        "date_column": "requestdatetime"
       },
-      "shape_datasets": [
+      "dimension_entries": [
         {
-          "shape_dataset_domain": "tylertech.demo.socrata.com",
-          "shape_name": "Elgin Police Beats",
-          "dataset_id": "r52y-uc86",
-          "fields": {
-            "shape": "multipolygon",
-            "shape_id": "_feature_id"
-          },
-          "color": "#ffff66"
+          "column": "inspectiontypename",
+          "name": "Inspection"
+        },
+        {
+          "column": "inspectionstatusname",
+          "name": "Inspection Status"
+        },
+        {
+          "column": "inspectionlinktypename",
+          "name": "Inspection Link Name"
+        },
+        {
+          "column": "balancedue",
+          "name": "Balance due"
         }
       ],
-      "shape_outline_dataset_entries": [
+      "view_entries": [
         {
-          "shape_outline_dataset_domain": "rosevillepd.data.socrata.com",
-          "outline_name": "Beats",
-          "shape_outline_dataset_id": "ujv7-87d7",
-          "fields": {
-            "shape": "the_geom"
-          },
-          "color": "#d73b70",
-          "show_by_default": "true"
+          "name": "Open Inspections",
+          "column": "case(isstatusindicatesuccess='False', 1, true, 0)",
+          "aggregate_type": "sum",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Code Enforcement"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": "<",
+                  "value": "5000",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         },
         {
-          "shape_outline_dataset_domain": "rosevillepd.data.socrata.com",
-          "outline_name": "Parks & Recreation",
-          "shape_outline_dataset_id": "pn3p-r56a",
-          "fields": {
-            "shape": "the_geom"
-          },
-          "color": "#0b19b3",
-          "show_by_default": "false"
+          "name": "Completed Inspections",
+          "column": "case(isstatusindicatesuccess='True', 1, true, 0)",
+          "aggregate_type": "sum",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Code Enforcement"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": ">",
+                  "value": "100000",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "inspectiontypename",
+          "name": "Inspection"
         },
         {
-          "shape_outline_dataset_domain": "rosevillepd.data.socrata.com",
-          "outline_name": "City Boundary",
-          "shape_outline_dataset_id": "79cn-t7i2",
-          "fields": {
-            "shape": "the_geom"
-          },
-          "color": "#299c0c",
-          "show_by_default": "false"
+          "column": "inspectionstatusname",
+          "name": "Inspection Status"
+        },
+        {
+          "column": "inspectionlinktypename",
+          "name": "Inspection Link Name"
+        },
+        {
+          "column": "balancedue",
+          "name": "Balance due"
         }
       ]
     },
     {
-      "name": "Opex Revenue",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "mik7-qbhe",
-      "default_view": "Over Time",
+      "name": "Business Services",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "sb4f-xivi",
       "fields": {
-        "date_column": "fiscal_year"
+        "date_column": "applicationdate"
       },
       "dimension_entries": [
         {
-          "column": "department",
-          "name": "Department"
+          "column": "doingbusinessas",
+          "name": "Business"
         },
         {
-          "column": "source",
-          "name": "Source"
+          "column": "licensestatus",
+          "name": "License Status"
+        },
+        {
+          "column": "licenseclass",
+          "name": "License Class"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "district",
+          "name": "District"
         }
       ],
       "view_entries": [
         {
-          "name": "Total Revenue",
-          "column": "actual_amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
+          "name": "License Applications",
+          "column": "licenseid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Business Services"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
         },
-        {
-          "name": "Total Projections",
-          "column": "projected_amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#110cde",
+                  "operator": ">",
+                  "value": "1300",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
       ],
-      "map": {
-        "centerLat": "42.038333",
-        "centerLng": "-88.322778",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Capex Budget",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "dszp-jd2s",
-      "default_view": "Pie Chart",
-      "fields": {
-        "date_column": "fiscal_year"
-      },
-      "dimension_entries": [
+      "leaf_page_entries": [
         {
-          "column": "service",
-          "name": "Service"
+          "column": "doingbusinessas",
+          "name": "Business"
         },
         {
-          "column": "department",
-          "name": "Department"
+          "column": "licensestatus",
+          "name": "License Status"
         },
         {
-          "column": "project",
-          "name": "Project"
+          "column": "licenseclass",
+          "name": "License Class"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
+        },
+        {
+          "column": "district",
+          "name": "District"
         }
-      ],
-      "view_entries": [
-        {
-          "column": "approved_amount",
-          "name": "Approved Amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        },
-        {
-          "column": "actual_amount",
-          "name": "Actual Amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        }
-      ],
-      "map": {
-        "centerLat": "38.760910",
-        "centerLng": "-121.302611",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Payroll",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "qu7r-i9cv",
-      "default_view": "Scatterplot",
-      "fields": {
-        "date_column": "fiscal_year"
-      },
-      "dimension_entries": [
-        {
-          "column": "department",
-          "name": "Department"
-        },
-        {
-          "column": "position_title",
-          "name": "Job"
-        },
-        {
-          "column": "position_type",
-          "name": "Position Type"
-        }
-      ],
-      "view_entries": [
-        {
-          "name": "Annual Total",
-          "column": "pay_total",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        }
-      ],
-      "map": {
-        "centerLat": "42.038333",
-        "centerLng": "-88.322778",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
+      ]
     }
   ]
 }
