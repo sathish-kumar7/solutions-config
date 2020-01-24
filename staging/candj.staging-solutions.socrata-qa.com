@@ -49,7 +49,7 @@
           "suffix": "cases",
           "comparison_column_entires": [
               { 
-              "column": "casecategorykey",
+              "column": "casetypecodedescription",
               "name": "Category",
               "aggregate_type": "",
               "render_type": "stack",
