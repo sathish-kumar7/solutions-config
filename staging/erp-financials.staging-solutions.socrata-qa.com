@@ -219,10 +219,6 @@
           "name": "Organisation"
         },
         {
-          "column": "licensestatus",
-          "name": "License Status"
-        },
-        {
           "column": "accountstatus",
           "name": "Account status"
         },
