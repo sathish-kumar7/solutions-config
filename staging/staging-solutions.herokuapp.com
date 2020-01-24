@@ -52,7 +52,6 @@
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
-          "stack_column": "entry_type",
           "visualization": {
             "default_view": "Snapshot"
           },
@@ -112,7 +111,6 @@
           "name": "Total amount spent",
           "column": "actual_amount",
           "aggregate_type": "sum",
-          "stack_column": "entry_type",
           "prefix": "$",
           "precision": "2",
           "suffix": "Total",
@@ -131,7 +129,7 @@
             },
             {
               "column": "recommneded_amount",
-              "name": "Recommendad Amount",
+              "name": "Recommended Amount",
               "aggregate_type": "sum",
               "render_type": "bullet",
               "precision": "2",
@@ -170,7 +168,6 @@
           "name": "Amount spent on Salary And Wages",
           "column": "actual_amount",
           "aggregate_type": "sum",
-          "stack_column": "entry_type",
           "prefix": "$",
           "precision": "2",
           "visualization": {
@@ -365,9 +362,6 @@
           "aggregate_type": "sum",
           "prefix": "$",
           "precision": "2",
-          "name_1": "Projected Amount",
-          "column_1": "projected_amount",
-          "aggregate_type_1": "sum",
           "visualization": {
             "default_view": "Snapshot"
           },
@@ -643,7 +637,6 @@
           "name": "Mean ratio",
           "column": "(market_total/case(sale_price == 0,1, true, sale_price))",
           "aggregate_type": "avg",
-          "use_dimension_value": "true",
           "precision": "2",
           "tags": [
             "Cases",
@@ -691,7 +684,6 @@
           "name": "Building value",
           "column": "building_value",
           "aggregate_type": "sum",
-          "use_dimension_value": "true",
           "precision": "2",
           "prefix": "$",
           "visualization": {
@@ -824,7 +816,6 @@
           "name": "Incidents",
           "column": "occurred_incident_type",
           "aggregate_type": "count",
-          "use_dimension_value": "true",
           "precision": "",
           "visualization": {
             "default_view": "Snapshot",
@@ -1056,7 +1047,6 @@
           "name": "Mean Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "aggregate_type": "avg",
-          "use_dimension_value": "true",
           "precision": "2",
           "visualization": {
             "default_view": "Map",
@@ -1083,7 +1073,6 @@
           "name": "Median Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
           "aggregate_type": "median",
-          "use_dimension_value": "true",
           "precision": "2",
           "visualization": {
             "default_view": "Map",
@@ -1096,7 +1085,6 @@
           "name": "Estimated Total Market Value",
           "column": "estimated_total_market_value",
           "aggregate_type": "sum",
-          "stack_column": "land_use_type",
           "precision": "2",
           "prefix": "$",
           "visualization": {
@@ -1213,7 +1201,6 @@
           "name": "Average Absolute Deviation",
           "column": "asr_deviation_from_median",
           "aggregate_type": "avg",
-          "use_dimension_value": "true",
           "precision": "2",
           "visualization": {
             "default_view": "Snapshot",
@@ -1226,7 +1213,6 @@
           "name": "Coefficient of Dispersion",
           "column": "avg(asr_deviation_from_median)/avg(median_asr)",
           "aggregate_type": "",
-          "use_dimension_value": "true",
           "precision": "2",
           "visualization": {
             "default_view": "Snapshot",
@@ -1253,7 +1239,6 @@
           "name": "Price Relative Differential",
           "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
           "aggregate_type": "",
-          "use_dimension_value": "true",
           "precision": "2",
           "visualization": {
             "default_view": "Snapshot",
@@ -1357,7 +1342,6 @@
           "name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
-          "stack_column": "entry_type",
           "visualization": {
             "default_view": "Table"
           },
