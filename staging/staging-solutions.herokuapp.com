@@ -97,12 +97,24 @@
           "stack_column": "entry_type",
           "prefix": "$",
           "precision": "2",
+          "suffix": "",
           "name_1": "Total amount approved",
           "column_1": "approved_amount",
           "aggregate_type_1": "sum",
           "visualization": {
             "default_view": "Snapshot"
           },
+           "comparison_column_entires": [
+            {
+              "column": "department",
+              "name": "Department",
+              "aggregate_type": "count",
+              "render_type": "bullet",
+              "precision": "0",
+              "prefix": "",
+              "suffix": "departments"
+            }
+          ],
           "quick_filters": [
             {
               "column": "program",
