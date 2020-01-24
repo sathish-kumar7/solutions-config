@@ -594,7 +594,7 @@
           "column": "sale_type",
           "aggregate_type": "count",
           "stacked_column": "sale_type",
-          "precision": "2",
+          "precision": "",
           "tags": [
             "Cases",
             "Districts and counties"
@@ -744,7 +744,7 @@
           "column": "occurred_incident_type",
           "aggregate_type": "count",
           "use_dimension_value": "true",
-          "precision": "2",
+          "precision": "",
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
@@ -1269,7 +1269,7 @@
           "visualization": {
             "default_view": "Table"
           },
-          "precision": "2",
+          "precision": "",
           "target_entries": [
             {
               "name": "On track",
