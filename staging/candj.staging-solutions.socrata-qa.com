@@ -79,9 +79,6 @@
           "precision": "2",
           "prefix": "",
           "suffix": "%",
-          "name_1": "Count of cases",
-          "column_1": "caseid",
-          "aggregate_type_1": "count",
           "tags": [
             "Clearance Rates"
           ],
