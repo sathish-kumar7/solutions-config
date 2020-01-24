@@ -97,22 +97,28 @@
           "stack_column": "entry_type",
           "prefix": "$",
           "precision": "2",
-          "suffix": "",
-          "name_1": "Total amount approved",
-          "column_1": "approved_amount",
-          "aggregate_type_1": "sum",
+          "suffix": "Total",
           "visualization": {
             "default_view": "Snapshot"
           },
            "comparison_column_entires": [
             {
-              "column": "department",
-              "name": "Department",
-              "aggregate_type": "count",
+              "column": "approved_amount",
+              "name": "Approved Amount",
+              "aggregate_type": "sum",
               "render_type": "bullet",
-              "precision": "0",
-              "prefix": "",
-              "suffix": "departments"
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Approved"
+            },
+            {
+              "column": "recommneded_amount",
+              "name": "Recommendad Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Recommended"
             }
           ],
           "quick_filters": [
@@ -347,6 +353,26 @@
           "visualization": {
             "default_view": "Snapshot"
           },
+          "comparison_column_entires": [
+            {
+              "column": "recommneded_amount",
+              "name": "Recommended Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Recommended"
+            },
+            {
+              "column": "actual_amount",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Actual"
+            }
+          ],
           "tags": [
             "Cases",
             "Judges"
@@ -441,6 +467,17 @@
           "tags": [
             "Cases",
             "Clearence rates"
+          ],
+          "comparison_column_entires": [
+            {
+              "column": "actual_amount",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
+              "precision": "2",
+              "prefix": "$",
+              "suffix": "Actual"
+            }
           ]
         },
         {
