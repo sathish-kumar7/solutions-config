@@ -49,8 +49,8 @@
           "suffix": "cases",
           "comparison_column_entires": [
               { 
-              "column": "case(opened == 1, 'Open', true, 'Closed')",
-              "name": "Status",
+              "column": "casecategorykey",
+              "name": "Category",
               "aggregate_type": "",
               "prefix": "",
               "suffix": "",
