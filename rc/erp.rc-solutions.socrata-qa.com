@@ -1,399 +1,244 @@
 {
-  "branding": {},
+  "branding": {
+    "delimiter": ",",
+    "browser_title": "Solutions | ERP | Financials ",
+    "title": "Solutions - ERP Financials"
+  },
+  "tag_list": [
+    "Budget"
+  ],
+  "show_share_via_email": true,
+  "is_private": "false",
   "template_entries": [
     {
-      "name": "Opex Budget",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "s8xp-hq5q",
-      "default_view": "Snapshot",
-      "visualization": {
-        "snapshot": {
-          "chart_type": "groupChart"
-        }
-      },
+      "name": "ERP - Financials",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "darw-mart",
       "fields": {
-        "date_column": "fiscal_year"
+        "date_column": "fiscalmonth"
       },
       "dimension_entries": [
-        {
-          "column": "service",
-          "name": "Service"
-        },
-        {
-          "column": "department",
-          "name": "Department"
-        },
-        {
-          "column": "program",
-          "name": "Program"
-        },
-        {
-          "column": "category",
-          "name": "Category"
-        }
-      ],
-      "group_by_entries": [
         {
           "column": "fund",
           "name": "Fund"
         },
         {
-          "column": "fiscal_year",
-          "name": "Year"
+          "column": "organization",
+          "name": "Organisation"
+        },
+        {
+          "column": "accountstatus",
+          "name": "Account status"
+        },
+        {
+          "column": "fiscalyear",
+          "name": "Fiscal year"
+        },
+        {
+          "column": "accounttype",
+          "name": "Account type"
         }
       ],
       "view_entries": [
         {
-          "name": "Funds",
-          "column": "entry_type",
-          "aggregate_type": "count",
-          "stack_column": "entry_type"
-        },
-        {
-          "name": "Total amount spent",
-          "column": "actual_amount",
+          "name": "Original Budget vs Actuals",
+          "column": "ltdoriginalbudget",
           "aggregate_type": "sum",
-          "stack_column": "entry_type",
-          "precision": "2",
           "prefix": "$",
-          "suffix": ""
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "comparison_column_entires": [
+              {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              }
+           ]
         },
         {
-          "name": "Total amount approved",
-          "column": "approved_amount",
+          "name": "Revised Budget vs Actuals",
+          "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
-          "use_dimension_value": "true",
-          "precision": "2",
           "prefix": "$",
-          "suffix": ""
-        }
-      ],
-      "filter_by_entries": [
-        {
-          "column": "fund",
-          "name": "Fund"
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "comparison_column_entires": [
+              {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              }
+           ]
         },
         {
-          "column": "fiscal_year",
-          "name": "Year"
+          "name": "Budget - Operating",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "between",
+              "value": "1200000000",
+              "to": "1250000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "quick_filters": [
+            {
+              "column": "accounttype",
+              "type": "text",
+              "field": "quick_filter_0_darw_mart_0",
+              "values": [
+                "Expense"
+              ],
+              "operator": "="
+            }
+          ]
+        },
+        {
+          "name": "Budget - Revenue",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "<",
+              "value": "1500000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "quick_filters": [
+            {
+              "column": "accounttype",
+              "type": "text",
+              "field": "quick_filter_0_darw_mart_0",
+              "values": [
+                "Revenue"
+              ],
+              "operator": "="
+            }
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          }
+        },
+        {
+          "name": "Budget - Cash Accounts",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#110cde",
+              "operator": "<",
+              "value": "2000000000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "quick_filters": [
+            {
+              "column": "accounttype",
+              "type": "text",
+              "field": "quick_filter_0_darw_mart_0",
+              "values": [
+                "Balance Sheet"
+              ],
+              "operator": "="
+            }
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          }
         }
       ],
       "leaf_page_entries": [
         {
-          "column": "service",
-          "name": "Service"
-        },
-        {
-          "column": "department",
-          "name": "Department"
-        },
-        {
-          "column": "program",
-          "name": "Program"
-        },
-        {
           "column": "fund",
           "name": "Fund"
         },
         {
-          "column": "category",
-          "name": "Category"
+          "column": "organization",
+          "name": "Organisation"
+        },
+        {
+          "column": "accountstatus",
+          "name": "Account status"
+        },
+        {
+          "column": "accounttype",
+          "name": "Account type"
         }
       ],
       "quick_filter_entries": [
         {
-          "column": "service",
-          "name": "Service",
+          "column": "accounttype",
+          "name": "Account Type",
           "renderType": "text"
         },
         {
-          "column": "department",
-          "name": "Department",
-          "renderType": "text"
-        },
-        {
-          "column": "program",
-          "name": "Program",
-          "renderType": "text"
-        },
-        {
-          "column": "fund",
-          "name": "Fund",
-          "renderType": "number"
-        },
-        {
-          "column": "category",
-          "name": "Category",
-          "renderType": "text"
-        }
-      ],
-      "map": {
-        "centerLat": "38.760910",
-        "centerLng": "-121.302611",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      },
-      "shape_datasets": [
-        {
-          "shape_dataset_domain": "tylertech.demo.socrata.com",
-          "shape_name": "Elgin Police Beats",
-          "dataset_id": "r52y-uc86",
-          "fields": {
-            "shape": "multipolygon",
-            "shape_id": "_feature_id"
-          },
-          "color": "#ffff66"
-        }
-      ],
-      "shape_outline_dataset_entries": [
-        {
-          "shape_outline_dataset_domain": "rosevillepd.data.socrata.com",
-          "outline_name": "Beats",
-          "shape_outline_dataset_id": "ujv7-87d7",
-          "fields": {
-            "shape": "the_geom"
-          },
-          "color": "#d73b70",
-          "show_by_default": "true"
-        },
-        {
-          "shape_outline_dataset_domain": "rosevillepd.data.socrata.com",
-          "outline_name": "Parks & Recreation",
-          "shape_outline_dataset_id": "pn3p-r56a",
-          "fields": {
-            "shape": "the_geom"
-          },
-          "color": "#0b19b3",
-          "show_by_default": "false"
-        },
-        {
-          "shape_outline_dataset_domain": "rosevillepd.data.socrata.com",
-          "outline_name": "City Boundary",
-          "shape_outline_dataset_id": "79cn-t7i2",
-          "fields": {
-            "shape": "the_geom"
-          },
-          "color": "#299c0c",
-          "show_by_default": "false"
+          "column": "fiscalmonth",
+          "name": "Fiscal Month",
+          "renderType": "date"
         }
       ]
-    },
-    {
-      "name": "Opex Revenue",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "mik7-qbhe",
-      "default_view": "Over Time",
-      "fields": {
-        "date_column": "fiscal_year"
-      },
-      "dimension_entries": [
-        {
-          "column": "department",
-          "name": "Department"
-        },
-        {
-          "column": "source",
-          "name": "Source"
-        }
-      ],
-      "view_entries": [
-        {
-          "name": "Total Revenue",
-          "column": "actual_amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        },
-        {
-          "name": "Total Projections",
-          "column": "projected_amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "",
-          "suffix": "$"
-        }
-      ],
-      "map": {
-        "centerLat": "42.038333",
-        "centerLng": "-88.322778",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Capex Budget",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "dszp-jd2s",
-      "default_view": "Pie Chart",
-      "fields": {
-        "date_column": "fiscal_year"
-      },
-      "dimension_entries": [
-        {
-          "column": "service",
-          "name": "Service"
-        },
-        {
-          "column": "department",
-          "name": "Department"
-        },
-        {
-          "column": "project",
-          "name": "Project"
-        }
-      ],
-      "view_entries": [
-        {
-          "column": "approved_amount",
-          "name": "Approved Amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        },
-        {
-          "column": "actual_amount",
-          "name": "Actual Amount",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        }
-      ],
-      "map": {
-        "centerLat": "38.760910",
-        "centerLng": "-121.302611",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Payroll",
-      "dataset_domain": "evergreen.data.socrata.com",
-      "dataset_id": "qu7r-i9cv",
-      "default_view": "Scatterplot",
-      "fields": {
-        "date_column": "fiscal_year"
-      },
-      "dimension_entries": [
-        {
-          "column": "department",
-          "name": "Department"
-        },
-        {
-          "column": "position_title",
-          "name": "Job"
-        },
-        {
-          "column": "position_type",
-          "name": "Position Type"
-        }
-      ],
-      "view_entries": [
-        {
-          "name": "Annual Total",
-          "column": "pay_total",
-          "aggregate_type": "sum",
-          "precision": "2",
-          "prefix": "$",
-          "suffix": ""
-        }
-      ],
-      "map": {
-        "centerLat": "42.038333",
-        "centerLng": "-88.322778",
-        "zoom": "10",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
     }
   ]
 }
