@@ -115,7 +115,18 @@
             "snapshot": {
                 "chart_type": "groupChart"
             }
-         }
+         },
+         "comparison_column_entires": [
+              {
+              "column": "caseid",
+              "name": "Count of cases",
+              "aggregate_type": "count",
+              "prefix": "",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              }
+           ]
         }
       ],
       "filter_by_entries": [
