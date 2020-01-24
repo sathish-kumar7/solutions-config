@@ -52,10 +52,10 @@
               "column": "casecategorykey",
               "name": "Category",
               "aggregate_type": "",
+              "render_type": "stack",
               "prefix": "",
               "suffix": "",
-              "precision": "",
-              "render_type": "stack"
+              "precision": ""
               }
            ],
           "tags": [
