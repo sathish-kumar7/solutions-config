@@ -93,17 +93,6 @@
           "tags": [
             "Clearance Rates"
           ],
-          "quick_filters": [
-            {
-             "column": "statusdate",
-             "type": "date",
-             "field": "quick_filter_0_mhwy_h4pu_0",
-             "dateRange": {
-                "start_date": "2006-07-01",
-                "end_date": "2006-09-30"
-                }
-            }
-          ],
           "target_entries": [
             {
               "name": "On track",
