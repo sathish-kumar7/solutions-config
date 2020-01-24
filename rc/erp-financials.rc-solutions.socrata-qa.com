@@ -50,7 +50,7 @@
           "tags": [
             "Budget"
           ],
-          "visualization\n": {
+          "visualization": {
             "default_view": "Snapshot"
           },
           "comparison_column_entires": [
