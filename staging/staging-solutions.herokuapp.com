@@ -1357,7 +1357,16 @@
               "color": "#e31219",
               "icon": "icons-stop-circle"
             }
-          ]
+          ],
+          "quick_filters": [
+             {
+               "type": "text", 
+               "column": "program",
+               "field": "quick_filter_8_s8xp_hq5q_1",
+               "values": ["Athletics"],
+               "operator": "="
+             }
+           ]
         }
       ],
       "filter_by_entries": [
