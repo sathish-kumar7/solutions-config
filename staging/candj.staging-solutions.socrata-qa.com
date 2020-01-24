@@ -50,7 +50,7 @@
           "comparison_column_entires": [
               { 
               "column": "case(opened == 1, 'Open', true, 'Closed')",
-              "name": "",
+              "name": "Status",
               "aggregate_type": "",
               "prefix": "",
               "suffix": "",
