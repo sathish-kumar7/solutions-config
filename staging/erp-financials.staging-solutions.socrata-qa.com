@@ -25,7 +25,7 @@
         {
           "column": "organization",
           "name": "Organisation"
-        },   
+        },
         {
           "column": "accountstatus",
           "name": "Account status"
@@ -47,13 +47,23 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
-          "name_1": "Actual amount",
-          "column_1": "actual",
-          "aggregate_type_1": "sum",
-          "visualization": {
+          "tags": [
+            "Budget"
+          ],
+          "visualization\n": {
             "default_view": "Snapshot"
-          }
+          },
+          "comparison_column_entires": [
+              {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              }
+           ]
         },
         {
           "name": "Revised Budget vs Actuals",
@@ -62,13 +72,23 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
-          "name_1": "Actual amount",
-          "column_1": "actual",
-          "aggregate_type_1": "sum",
+          "tags": [
+            "Budget"
+          ],
           "visualization": {
             "default_view": "Snapshot"
-          }
+          },
+          "comparison_column_entires": [
+              {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              }
+           ]
         },
         {
           "name": "Budget - Operating",
@@ -77,7 +97,9 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
+          "tags": [
+            "Budget"
+          ],
           "target_entries": [
             {
               "name": "On track",
@@ -97,12 +119,14 @@
             "default_view": "Snapshot"
           },
           "quick_filters": [
-          {
-            "column": "accounttype",
-            "type": "text",
-            "field": "quick_filter_0_darw_mart_0",
-            "values": ["Expense"],
-            "operator": "="
+            {
+              "column": "accounttype",
+              "type": "text",
+              "field": "quick_filter_0_darw_mart_0",
+              "values": [
+                "Expense"
+              ],
+              "operator": "="
             }
           ]
         },
@@ -113,7 +137,9 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
+          "tags": [
+            "Budget"
+          ],
           "target_entries": [
             {
               "name": "On track",
@@ -129,12 +155,14 @@
             }
           ],
           "quick_filters": [
-          {
-            "column": "accounttype",
-            "type": "text",
-            "field": "quick_filter_0_darw_mart_0",
-            "values": ["Revenue"],
-            "operator": "="
+            {
+              "column": "accounttype",
+              "type": "text",
+              "field": "quick_filter_0_darw_mart_0",
+              "values": [
+                "Revenue"
+              ],
+              "operator": "="
             }
           ],
           "visualization": {
@@ -148,7 +176,9 @@
           "prefix": "$",
           "suffix": "",
           "precision": "2",
-          "tags": ["Budget"],
+          "tags": [
+            "Budget"
+          ],
           "target_entries": [
             {
               "name": "On track",
@@ -164,12 +194,14 @@
             }
           ],
           "quick_filters": [
-          {
-            "column": "accounttype",
-            "type": "text",
-            "field": "quick_filter_0_darw_mart_0",
-            "values": ["Balance Sheet"],
-            "operator": "="
+            {
+              "column": "accounttype",
+              "type": "text",
+              "field": "quick_filter_0_darw_mart_0",
+              "values": [
+                "Balance Sheet"
+              ],
+              "operator": "="
             }
           ],
           "visualization": {
@@ -187,6 +219,10 @@
           "name": "Organisation"
         },
         {
+          "column": "licensestatus",
+          "name": "License Status"
+        },
+        {
           "column": "accountstatus",
           "name": "Account status"
         },
@@ -202,11 +238,11 @@
           "renderType": "text"
         },
         {
-        "column": "fiscalmonth",
+          "column": "fiscalmonth",
           "name": "Fiscal Month",
           "renderType": "date"
         }
       ]
     }
   ]
-}   
+}
