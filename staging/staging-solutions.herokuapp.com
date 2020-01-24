@@ -814,6 +814,17 @@
               "chart_type": "groupChart"
             }
           },
+          "comparison_column_entires": [
+            {
+              "column": "status",
+              "name": "Status",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "precision": "",
+              "prefix": "",
+              "suffix": ""
+            }
+          ],
           "quick_filters": [
             {
               "type": "date",
