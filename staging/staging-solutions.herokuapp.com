@@ -68,10 +68,28 @@
               "column": "department",
               "name": "Department",
               "aggregate_type": "count",
-              "render_type": "bullet",
+              "render_type": "bar",
               "precision": "0",
               "prefix": "",
               "suffix": "departments"
+            },
+            {
+              "column": "entry_type",
+              "name": "Entry type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "precision": "0",
+              "prefix": "",
+              "suffix": ""
+            },
+            {
+              "column": "category",
+              "name": "Category",
+              "aggregate_type": "count",
+              "render_type": "bullet",
+              "precision": "0",
+              "prefix": "",
+              "suffix": "categories"
             }
           ],
           "target_entries": [
