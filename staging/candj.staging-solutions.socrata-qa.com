@@ -122,8 +122,8 @@
               "name": "Count of cases",
               "aggregate_type": "count",
               "prefix": "",
-              "suffix": "",
-              "precision": "2",
+              "suffix": "cases",
+              "precision": "0",
               "render_type": "bullet"
               }
            ]
@@ -246,7 +246,7 @@
       ],
       "view_entries": [
         {
-          "name": "Case Certainity",
+          "name": "Trial Certainity",
           "column": "sum(certainity_count)/count(*)",
           "aggregate_type": "",
           "precision": "1",
