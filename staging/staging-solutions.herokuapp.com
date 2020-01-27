@@ -84,16 +84,16 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-time-circle"
             }
           ]
         },
@@ -141,16 +141,16 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-time-circle"
             }
           ]
         },
@@ -641,15 +641,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "==",
               "value": "30000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-time-circle"
             }
           ]
         },
@@ -863,15 +863,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": ">=",
               "value": "1000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-time-circle"
             }
           ]
         }
@@ -1072,15 +1072,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "<=",
               "value": "9",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-time-circle"
             }
           ]
         },
@@ -1238,15 +1238,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": ">",
               "value": "30000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-time-circle"
             }
           ]
         },
@@ -1364,15 +1364,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "==",
               "value": "833",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-time-circle"
             }
           ],
           "quick_filters": [
