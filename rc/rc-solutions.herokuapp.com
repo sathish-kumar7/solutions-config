@@ -63,8 +63,8 @@
               "suffix": "departments"
             },
             {
-              "column": "entry_type",
-              "name": "Entry type",
+              "column": "program",
+              "name": "Program",
               "aggregate_type": "",
               "render_type": "stack",
               "precision": "0",
@@ -84,16 +84,16 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -107,7 +107,7 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-           "comparison_column_entires": [
+          "comparison_column_entires": [
             {
               "column": "approved_amount",
               "name": "Approved Amount",
@@ -141,16 +141,16 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -382,16 +382,16 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -641,15 +641,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "==",
               "value": "30000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -714,6 +714,13 @@
         {
           "column": "year_built_1",
           "name": "Year"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "sale_date",
+          "name": "Sales date",
+          "renderType": "date"
         }
       ],
       "map": {
@@ -856,15 +863,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": ">=",
               "value": "1000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         }
@@ -1065,21 +1072,21 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "<=",
               "value": "9",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
         {
           "name": "Median Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
+          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, mktval) , true, price)",
           "aggregate_type": "median",
           "precision": "2",
           "visualization": {
@@ -1231,15 +1238,15 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": ">",
               "value": "30000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -1357,26 +1364,28 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "==",
               "value": "833",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ],
           "quick_filters": [
-             {
-               "type": "text", 
-               "column": "program",
-               "field": "quick_filter_8_s8xp_hq5q_1",
-               "values": ["Athletics"],
-               "operator": "="
-             }
-           ]
+            {
+              "type": "text",
+              "column": "program",
+              "field": "quick_filter_8_s8xp_hq5q_1",
+              "values": [
+                "Athletics"
+              ],
+              "operator": "="
+            }
+          ]
         }
       ],
       "filter_by_entries": [
