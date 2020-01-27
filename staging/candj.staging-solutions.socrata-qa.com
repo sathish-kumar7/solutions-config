@@ -64,7 +64,7 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": ">",
               "value": "120000",
               "icon": "icons-check-circle"
@@ -96,7 +96,7 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": ">=",
               "value": "100",
               "icon": "icons-check-circle"
