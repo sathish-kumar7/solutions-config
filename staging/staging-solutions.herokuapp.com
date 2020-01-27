@@ -1086,7 +1086,7 @@
         },
         {
           "name": "Median Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
+          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, mktval) , true, price)",
           "aggregate_type": "median",
           "precision": "2",
           "visualization": {
