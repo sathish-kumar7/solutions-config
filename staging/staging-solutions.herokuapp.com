@@ -63,8 +63,8 @@
               "suffix": "departments"
             },
             {
-              "column": "entry_type",
-              "name": "Entry type",
+              "column": "category",
+              "name": "Category",
               "aggregate_type": "",
               "render_type": "stack",
               "precision": "0",
