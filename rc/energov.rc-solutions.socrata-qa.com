@@ -63,7 +63,7 @@
         "target_entries": [
         {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": ">",
               "value": "30",
               "icon": "icons-check-circle"
@@ -95,7 +95,7 @@
         "target_entries": [
                 {
                   "name": "On track",
-                  "color": "#110cde",
+                  "color": "#259652",
                   "operator": "<",
                   "value": "200",
                   "icon": "icons-check-circle"
@@ -176,7 +176,7 @@
         "target_entries": [
                 {
                   "name": "On track",
-                  "color": "#110cde",
+                  "color": "#259652",
                   "operator": "<",
                   "value": "5000",
                   "icon": "icons-check-circle"
@@ -208,7 +208,7 @@
         "target_entries": [
                 {
                   "name": "On track",
-                  "color": "#110cde",
+                  "color": "#259652",
                   "operator": ">",
                   "value": "100000",
                   "icon": "icons-check-circle"
@@ -292,7 +292,7 @@
         "target_entries": [
                 {
                   "name": "On track",
-                  "color": "#110cde",
+                  "color": "#259652",
                   "operator": ">",
                   "value": "1300",
                   "icon": "icons-check-circle"
