@@ -63,8 +63,8 @@
               "suffix": "departments"
             },
             {
-              "column": "category",
-              "name": "Category",
+              "column": "program",
+              "name": "Program",
               "aggregate_type": "",
               "render_type": "stack",
               "precision": "0",
