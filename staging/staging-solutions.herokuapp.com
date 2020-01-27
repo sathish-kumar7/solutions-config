@@ -93,7 +93,7 @@
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-time-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -150,7 +150,7 @@
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-time-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -382,16 +382,16 @@
           "target_entries": [
             {
               "name": "On track",
-              "color": "#110cde",
+              "color": "#259652",
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-play-circle"
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-stop-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -649,7 +649,7 @@
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-time-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -871,7 +871,7 @@
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-time-circle"
+              "icon": "icons-times-circle"
             }
           ]
         }
@@ -1080,7 +1080,7 @@
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-time-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -1246,7 +1246,7 @@
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-time-circle"
+              "icon": "icons-times-circle"
             }
           ]
         },
@@ -1372,7 +1372,7 @@
             {
               "name": "Off track",
               "color": "#e31219",
-              "icon": "icons-time-circle"
+              "icon": "icons-times-circle"
             }
           ],
           "quick_filters": [
