@@ -815,6 +815,8 @@
           "column": "occurred_incident_type",
           "aggregate_type": "count",
           "precision": "",
+          "prefix": "",
+          "suffix": "incidents",
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
