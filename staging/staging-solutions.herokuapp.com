@@ -597,7 +597,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3hre-b49k",
       "fields": {
-        "date_column": "sale_date",
+        "date_column": "tax_year",
         "incident_type": "class",
         "location": "geocoded_column",
         "73f8-h8ah": ":@computed_region_73f8_h8ah"
