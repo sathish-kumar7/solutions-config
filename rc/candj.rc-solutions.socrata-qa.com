@@ -130,6 +130,18 @@
         {
           "column": "judgename",
           "name": "Judge"
+        },
+        {
+          "column": "casetypecode",
+          "name": "Case Type Code"
+        },
+        {
+          "column": "zipcode",
+          "name": "Zip Code"
+        },
+        {
+          "column": "nodename",
+          "name": "Court Name"
         }
       ],
       "leaf_page_entries": [
