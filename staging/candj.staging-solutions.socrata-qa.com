@@ -172,9 +172,9 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "statusdate",
-          "name": "Status Date",
-          "renderType": "date"
+          "column": "casecategorykey",
+          "name": "Case category",
+          "renderType": "text"
         }
       ],
       "bench_mark_entries": [
