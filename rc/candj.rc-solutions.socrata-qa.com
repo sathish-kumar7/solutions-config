@@ -286,7 +286,7 @@
           "name": "Case Category Mapping Description"
         }  
       ],
-      "filter_entries":[
+      "filter_by_entries":[
         {
           "column": "case_type_description",
           "name": "Case Type Description"
