@@ -12,29 +12,28 @@
       "name": "Courts and Justice",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "mhwy-h4pu",
+      "dataset_id": "a333-rfhs",
       "fields": {
         "date_column": "statusdate",
         "incident_type": "casetypecodedescription",
-        "location": "geocoded_column"
       },
       "dimension_entries": [
         {
-          "column": "judgename",
-          "name": "Judge"
+          "column": "judgeid",
+          "name": "Judge ID"
         },
         {
-          "column": "casetypecode",
-          "name": "Case Type Code"
+          "column": "casetypemappingcodedescription",
+          "name": "Case Mapping Descrption"
         },
         {
-          "column": "zipcode",
-          "name": "Zip Code"
+          "column": "nodedescription",
+          "name": "Court Name"
         }
       ],
       "group_by_entries": [
         {
-          "column": "nodename",
+          "column": "nodedescription",
           "name": "Court Name"
         }
       ],
@@ -49,8 +48,8 @@
           "suffix": "cases",
           "comparison_column_entires": [
               { 
-              "column": "casetypecodedescription",
-              "name": "Case Category",
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
               "prefix": "",
@@ -84,7 +83,7 @@
         },
         {
           "name": "Clearance Rate",
-          "column": "(sum(closed)/case(sum(opened) == 0, 1, true, sum(opened))*100)",
+          "column": "(sum(isclosed)/case(sum(isopen) == 0, 1, true, sum(isopen))*100)",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
@@ -128,14 +127,14 @@
       ],
       "filter_by_entries": [
         {
-          "column": "judgename",
-          "name": "Judge"
+          "column": "judgeid",
+          "name": "Judge ID"
         }
       ],
       "leaf_page_entries": [
         {
-          "column": "judgename",
-          "name": "Judge"
+          "column": "judgeid",
+          "name": "Judge ID"
         },
         {
           "column": "caseid",
@@ -146,33 +145,25 @@
           "name": "Status Date"
         },
         {
-          "column": "opened",
+          "column": "isopen",
           "name": "Opened"
         },
         {
-          "column": "closed",
+          "column": "isclosed",
           "name": "Closed"
         },
         {
-          "column": "nodename",
+          "column": "nodedescription",
           "name": "Court Name"
         },
         {
-          "column": "zipcode",
-          "name": "Zip Code"
-        },
-        {
-          "column": "casetypecode",
-          "name": "Case Type Code"
-        },
-        {
-          "column": "casetypecodedescription",
-          "name": "Case Description"
+          "column": "casetypemappingcodedescription",
+          "name": "Case Type Description"
         }
       ],
       "quick_filter_entries": [
         {
-          "column": "casecategorykey",
+          "column": "casecategorymappingcoded",
           "name": "Case category",
           "renderType": "text"
         }
@@ -180,7 +171,7 @@
       "bench_mark_entries": [
         {
           "view_column": "caseid",
-          "dimension_column": "judgename",
+          "dimension_column": "judgeid",
           "display_name": "State Standard",
           "value": "50"
         }
