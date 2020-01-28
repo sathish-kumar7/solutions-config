@@ -225,7 +225,7 @@
         "date_column": "hearingdate"
       },
       "parent_queries": [
-        "select count(hearingdate) as total_hearing_dates, casenumber, min(hearingdate) as first_hearing, max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as case_category_description, min(casecategorymappingdescription) as case_category_mapping_description group by casenumber |> select total_hearing_dates,casenumber, first_hearing, last_hearing, case_type_description, case_category_description, case_category_mapping_description, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainity_count"
+        "select count(hearingdate) as total_hearing_dates,casenumber,min(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as case_category_description, min(casecategorymappingdescription) as case_category_mapping_description group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, case_type_description, case_category_description, case_category_mapping_description, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainity_count"
       ],
       "dimension_entries": [
         {
