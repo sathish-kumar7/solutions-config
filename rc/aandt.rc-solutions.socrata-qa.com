@@ -70,10 +70,10 @@
           "tags": [
             "Tax & Appraisals"
           ],
-          "visualization": {   
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart"
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
             }
           }
         },
@@ -89,9 +89,9 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
             }
           }
         },
@@ -107,9 +107,9 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
             }
           }
         },
@@ -125,9 +125,9 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
             }
           }
         },
@@ -142,10 +142,10 @@
           "tags": [
             "Tax & Appraisals"
           ],
-          "visualization": { 
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart"
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
             }
           }
         },
@@ -161,9 +161,9 @@
             "Courts & Justice"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
             }
           }
         }
@@ -172,6 +172,18 @@
         {
           "column": "style",
           "name": "style"
+        },
+        {
+          "column": "cityname",
+          "name": "City"
+        },
+        {
+          "column": "land_use_type",
+          "name": "Land Use Type"
+        },
+        {
+          "column": "taxdist",
+          "name": "Taxdist"
         }
       ],
       "leaf_page_entries": [
