@@ -286,6 +286,20 @@
           "name": "Case Category Mapping Description"
         }  
       ],
+      "filter_entries":[
+        {
+          "column": "case_type_description",
+          "name": "Case Type Description"
+        },
+        {
+          "column": "case_category_description",
+          "name": "Case Category Description"
+        },
+        {
+          "column": "case_category_mapping_description",
+          "name": "Case Category Mapping Description"
+        }
+      ],
       "map": {
         "centerLat": "42.038333",
         "centerLng": "-88.322778",
