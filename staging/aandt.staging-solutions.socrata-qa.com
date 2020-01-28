@@ -198,9 +198,9 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "saledt",
-          "name": "Sale Date",
-          "renderType": "date"
+          "column": "style",
+          "name": "Style",
+          "renderType": "text"
         }
       ],
       "bench_mark_entries": [
