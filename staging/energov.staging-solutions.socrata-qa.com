@@ -169,7 +169,8 @@
       "fields": {
         "date_column": "requestdatetime",
         "incident_type": "inspectiontypename",
-        "location": "location"
+        "location": "location",
+        "9y4y-shqr": ":@computed_region_9y4y_shqr"
       },
       "dimension_entries": [
         {
@@ -299,7 +300,21 @@
             "style": "mapbox://styles/mapbox/outdoors-v10"
           }
         ]
-      }
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "9y4y-shqr",
+          "shape_name": "Counties",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "name",
+            "shape_description": "name"
+          },
+          "color": "#32a889"
+        }
+      ]
     },
     {
       "name": "Business Services",
@@ -392,8 +407,8 @@
         }
       ],
         "map": {
-        "centerLat": "32.20410409773211",
-        "centerLng": "-82.38302461163329",
+        "centerLat": "38.9822",
+        "centerLng": "-94.6708",
         "zoom": "5",
         "mini_map_zoom": "4",
         "shapes_outline_highlight_width": "4",
