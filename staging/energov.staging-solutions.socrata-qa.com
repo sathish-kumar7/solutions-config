@@ -75,36 +75,7 @@
               "color": "#e31219",
               "icon": "icons-times-circle"
             }
-          ],
-        "map": {
-        "centerLat": "32.20410409773211",
-        "centerLng": "-82.38302461163329",
-        "zoom": "5",
-        "mini_map_zoom": "4",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      }
+          ]
         },
         {
           "name": "Open Applications",
@@ -160,7 +131,36 @@
           "column": "district",
           "name": "District"
         }
-      ]
+      ],
+      "map": {
+        "centerLat": "32.20410409773211",
+        "centerLng": "-82.38302461163329",
+        "zoom": "5",
+        "mini_map_zoom": "4",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     },
     {
       "name": "Code Enforcement",
