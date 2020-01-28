@@ -17,7 +17,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "dimension_entries": [
         {
@@ -333,7 +333,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "mik7-qbhe",
       "fields": {
-        "date_column": "fiscal_year"
+       
       },
       "dimension_entries": [
         {
@@ -441,7 +441,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "dszp-jd2s",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "dimension_entries": [
         {
@@ -532,7 +532,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "qu7r-i9cv",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "dimension_entries": [
         {
@@ -1341,7 +1341,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "parent_queries": [
         "select * where service = 'Education'"
