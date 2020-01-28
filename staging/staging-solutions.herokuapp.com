@@ -817,9 +817,7 @@
           "precision": "",
           "visualization": {
             "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
+            "showCompareDropDown": "true"
           },
           "comparison_column_entires": [
             {
