@@ -15,7 +15,7 @@
       "dataset_id": "a333-rfhs",
       "fields": {
         "date_column": "statusdate",
-        "incident_type": "casetypecodedescription",
+        "incident_type": "casetypecodedescription"
       },
       "dimension_entries": [
         {
