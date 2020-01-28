@@ -16,8 +16,10 @@
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "amhj-22i6",
       "fields": {
-        "date_column": "applicationdate"
-      },
+        "date_column": "applicationdate",
+        "incident_type": "permittype",
+        "location": "location"
+        },
       "dimension_entries": [
         {
           "column": "projectname",
@@ -131,12 +133,14 @@
         }
       ]
     },
-        {
+    {
       "name": "Code Enforcement",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "vnvd-qqjp",
       "fields": {
-        "date_column": "requestdatetime"
+        "date_column": "requestdatetime",
+        "incident_type": "inspectiontypename",
+        "location": "location"
       },
       "dimension_entries": [
         {
@@ -244,7 +248,9 @@
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "sb4f-xivi",
       "fields": {
-        "date_column": "applicationdate"
+        "date_column": "applicationdate",
+        "incident_type": "doingbusinessas",
+        "location": "location"
       },
       "dimension_entries": [
         {
