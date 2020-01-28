@@ -273,8 +273,8 @@
         }
       ],
         "map": {
-        "centerLat": "32.20410409773211",
-        "centerLng": "-82.38302461163329",
+        "centerLat": "43.0481",
+        "centerLng": "-76.1474",
         "zoom": "5",
         "mini_map_zoom": "4",
         "shapes_outline_highlight_width": "4",
@@ -409,8 +409,8 @@
         "map": {
         "centerLat": "38.9822",
         "centerLng": "-94.6708",
-        "zoom": "5",
-        "mini_map_zoom": "4",
+        "zoom": "7",
+        "mini_map_zoom": "6",
         "shapes_outline_highlight_width": "4",
         "style_entries": [
           {
