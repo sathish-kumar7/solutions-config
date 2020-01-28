@@ -817,7 +817,7 @@
           "precision": "",
           "visualization": {
             "default_view": "Snapshot",
-            "showCompareDropDown": "true"
+            "showCompareDropDown": true
           },
           "comparison_column_entires": [
             {
