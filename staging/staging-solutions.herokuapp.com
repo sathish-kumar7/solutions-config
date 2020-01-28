@@ -821,7 +821,7 @@
             "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "showCompareDropDown": "false"
+              "showCompareDropDown": false
             }
           },
           "comparison_column_entires": [
