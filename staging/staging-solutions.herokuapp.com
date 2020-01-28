@@ -400,6 +400,7 @@
           "column": "projected_amount",
           "aggregate_type": "sum",
           "prefix": "$",
+          "suffix": "dollar",
           "visualization": {
             "default_view": "Scatterplot"
           },
