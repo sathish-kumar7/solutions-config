@@ -232,7 +232,6 @@
           "name": "Completed Inspections",
           "column": "case(isstatusindicatesuccess='True', 1, true, 0)",
           "aggregate_type": "sum",
-          "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
           "suffix": "",
@@ -242,7 +241,7 @@
        "visualization": {
           "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "barChart"
             }
         },
         "target_entries": [
