@@ -18,6 +18,28 @@
       "fields": {
         "date_column": "applicationdate"
       },
+      "filter_by_entries": [
+        {
+          "column": "projectname",
+          "name": "Project"
+        },
+        {
+          "column": "permitstatus",
+          "name": "Permit Status"
+        },
+        {
+          "column": "permitworkclass",
+          "name": "Permit Class"
+        },
+        {
+          "column": "permittype",
+          "name": "Permit Type"    
+        },
+        {
+          "column": "district",
+          "name": "District"
+        }
+      ],
       "dimension_entries": [
         {
           "column": "projectname",
@@ -131,13 +153,31 @@
         }
       ]
     },
-        {
+    {
       "name": "Code Enforcement",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "vnvd-qqjp",
       "fields": {
         "date_column": "requestdatetime"
       },
+      "filter_by_entries": [
+        {
+          "column": "inspectiontypename",
+          "name": "Inspection"
+        },
+        {
+          "column": "inspectionstatusname",
+          "name": "Inspection Status"
+        },
+        {
+          "column": "inspectionlinktypename",
+          "name": "Inspection Link Name"
+        },
+        {
+          "column": "balancedue",
+          "name": "Balance due"
+        }
+      ],
       "dimension_entries": [
         {
           "column": "inspectiontypename",
@@ -247,6 +287,28 @@
       "fields": {
         "date_column": "applicationdate"
       },
+      "filter_by_entries": [
+        {
+          "column": "doingbusinessas",
+          "name": "Business"
+        },
+        {
+          "column": "licensestatus",
+          "name": "License Status"
+        },
+        {
+          "column": "licenseclass",
+          "name": "License Class"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
+        },
+        {
+          "column": "district",
+          "name": "District"
+        }
+      ],
       "dimension_entries": [
         {
           "column": "doingbusinessas",
