@@ -19,16 +19,16 @@
       },
       "dimension_entries": [
         {
-          "column": "judgeid",
-          "name": "Judge ID"
-        },
-        {
           "column": "casetypemappingcodedescription",
           "name": "Case Mapping Descrption"
         },
         {
           "column": "nodedescription",
           "name": "Court Name"
+        },
+        {
+          "column": "judgeid",
+          "name": "Judge ID"
         }
       ],
       "group_by_entries": [
