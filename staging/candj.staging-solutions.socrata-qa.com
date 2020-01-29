@@ -238,7 +238,7 @@
       ],
       "view_entries": [
         {
-          "name": "Trial Certainity",
+          "name": "Trial Date Certainity",
           "column": "sum(certainity_count)/count(*)",
           "aggregate_type": "",
           "precision": "1",
