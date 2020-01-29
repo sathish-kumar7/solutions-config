@@ -23,12 +23,12 @@
           "name": "Case Mapping Descrption"
         },
         {
-          "column": "nodedescription",
-          "name": "Court Name"
-        },
-        {
           "column": "judgeid",
           "name": "Judge ID"
+        },
+        {
+          "column": "nodedescription",
+          "name": "Court Name"
         }
       ],
       "group_by_entries": [
