@@ -7,6 +7,10 @@
     "Clearance Rates",
     "Cases"
   ],
+  "date": {
+      "startDate": "1990-10-23",
+      "endDate": "2020-1-28"
+  },
   "template_entries": [
     {
       "name": "Courts and Justice",
