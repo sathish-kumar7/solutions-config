@@ -21,7 +21,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
       "fields": {
-        "date_column": "year"
+        
       },
       "dimension_entries": [
         {
