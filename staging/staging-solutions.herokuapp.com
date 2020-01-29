@@ -11,6 +11,10 @@
   ],
   "show_share_via_email": "false",
   "is_private": "false",
+  "date": {
+      "startDate": "2019-10-23",
+      "endDate": "2020-1-28"
+  },
   "template_entries": [
     {
       "name": "Opex Budget",
