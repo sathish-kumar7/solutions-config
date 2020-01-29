@@ -12,8 +12,8 @@
   "show_share_via_email": "false",
   "is_private": "false",
   "date": {
-      "startDate": "2019-10-23",
-      "endDate": "2020-1-28"
+      "startDate": "2019-10-01",
+      "endDate": "2019-12-31"
   },
   "template_entries": [
     {
