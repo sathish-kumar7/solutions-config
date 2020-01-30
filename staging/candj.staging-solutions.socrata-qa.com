@@ -55,7 +55,7 @@
            ],
           "fields": {
             "date_column": "last_closed_date"
-          }
+          },
           "comparison_column_entires": [
               { 
               "column": "casetypemappingcodedescription",
