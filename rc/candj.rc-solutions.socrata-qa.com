@@ -7,34 +7,37 @@
     "Clearance Rates",
     "Cases"
   ],
+  "date": {
+      "startDate": "1990-1-23",
+      "endDate": "2020-1-28"
+  },
   "template_entries": [
     {
       "name": "Courts and Justice",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "mhwy-h4pu",
+      "dataset_id": "a333-rfhs",
       "fields": {
         "date_column": "statusdate",
-        "incident_type": "casetypecodedescription",
-        "location": "geocoded_column"
+        "incident_type": "casetypecodedescription"
       },
       "dimension_entries": [
         {
-          "column": "judgename",
-          "name": "Judge"
+          "column": "casetypemappingcodedescription",
+          "name": "Case Mapping Descrption"
         },
         {
-          "column": "casetypecode",
-          "name": "Case Type Code"
+          "column": "judgeid",
+          "name": "Judge ID"
         },
         {
-          "column": "zipcode",
-          "name": "Zip Code"
+          "column": "nodedescription",
+          "name": "Court Name"
         }
       ],
       "group_by_entries": [
         {
-          "column": "nodename",
+          "column": "nodedescription",
           "name": "Court Name"
         }
       ],
@@ -47,10 +50,16 @@
           "precision": "0",
           "prefix": "",
           "suffix": "cases",
+          "parent_queries": [
+              "select distinct casenumber, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+           ],
+          "fields": {
+            "date_column": "last_closed_date"
+          },
           "comparison_column_entries": [
               { 
-              "column": "casetypecodedescription",
-              "name": "Case Category",
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
               "prefix": "",
@@ -84,7 +93,7 @@
         },
         {
           "name": "Clearance Rate",
-          "column": "(sum(closed)/case(sum(opened) == 0, 1, true, sum(opened))*100)",
+          "column": "(sum(isclosed)/case(sum(isopen) == 0, 1, true, sum(isopen))*100)",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
@@ -128,26 +137,14 @@
       ],
       "filter_by_entries": [
         {
-          "column": "judgename",
-          "name": "Judge"
-        },
-        {
-          "column": "casetypecode",
-          "name": "Case Type Code"
-        },
-        {
-          "column": "zipcode",
-          "name": "Zip Code"
-        },
-        {
-          "column": "nodename",
-          "name": "Court Name"
+          "column": "judgeid",
+          "name": "Judge ID"
         }
       ],
       "leaf_page_entries": [
         {
-          "column": "judgename",
-          "name": "Judge"
+          "column": "judgeid",
+          "name": "Judge ID"
         },
         {
           "column": "caseid",
@@ -158,41 +155,33 @@
           "name": "Status Date"
         },
         {
-          "column": "opened",
+          "column": "isopen",
           "name": "Opened"
         },
         {
-          "column": "closed",
+          "column": "isclosed",
           "name": "Closed"
         },
         {
-          "column": "nodename",
+          "column": "nodedescription",
           "name": "Court Name"
         },
         {
-          "column": "zipcode",
-          "name": "Zip Code"
-        },
-        {
-          "column": "casetypecode",
-          "name": "Case Type Code"
-        },
-        {
-          "column": "casetypecodedescription",
-          "name": "Case Description"
+          "column": "casetypemappingcodedescription",
+          "name": "Case Type Description"
         }
       ],
       "quick_filter_entries": [
         {
-          "column": "statusdate",
-          "name": "Status Date",
-          "renderType": "date"
+          "column": "casecategorymappingcoded",
+          "name": "Case category",
+          "renderType": "text"
         }
       ],
       "bench_mark_entries": [
         {
           "view_column": "caseid",
-          "dimension_column": "judgename",
+          "dimension_column": "judgeid",
           "display_name": "State Standard",
           "value": "50"
         }
@@ -234,10 +223,10 @@
       "dataset_id": "6nic-t5bv",
       "default_view": "Snapshot",
       "fields": {
-        "date_column": "hearingdate"
+        "date_column": "hearing_date"
       },
       "parent_queries": [
-        "select count(hearingdate) as total_hearing_dates, casenumber, min(hearingdate) as first_hearing, max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as case_category_description, min(casecategorymappingdescription) as case_category_mapping_description group by casenumber |> select total_hearing_dates,casenumber, first_hearing, last_hearing, case_type_description, case_category_description, case_category_mapping_description, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainity_count"
+        "select count(hearingdate) as total_hearing_dates,casenumber,min(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as case_category_description, min(casecategorymappingdescription) as case_category_mapping_description group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, case_type_description, case_category_description, case_category_mapping_description, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainity_count"
       ],
       "dimension_entries": [
         {
@@ -255,7 +244,7 @@
       ],
       "view_entries": [
         {
-          "name": "Trial Certainity",
+          "name": "Trial Date Certainity",
           "column": "sum(certainity_count)/count(*)",
           "aggregate_type": "",
           "precision": "1",
@@ -285,20 +274,6 @@
           "column": "case_category_mapping_description",
           "name": "Case Category Mapping Description"
         }  
-      ],
-      "filter_by_entries":[
-        {
-          "column": "case_type_description",
-          "name": "Case Type Description"
-        },
-        {
-          "column": "case_category_description",
-          "name": "Case Category Description"
-        },
-        {
-          "column": "case_category_mapping_description",
-          "name": "Case Category Mapping Description"
-        }
       ],
       "map": {
         "centerLat": "42.038333",
