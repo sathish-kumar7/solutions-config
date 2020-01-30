@@ -41,7 +41,7 @@
       ],
       "view_entries": [
         {
-          "name": "Original Budget vs Actuals",
+          "name": "Original Budget",
           "column": "ltdoriginalbudget",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -56,17 +56,26 @@
           "comparison_column_entries": [
               {
               "column": "actual",
-              "name": "Actual Amount",
+              "name": "vs Actuals",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
+              },
+              {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
               }
            ]
         },
         {
-          "name": "Revised Budget vs Actuals",
+          "name": "Revised Budget",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -81,12 +90,21 @@
           "comparison_column_entries": [
               {
               "column": "actual",
-              "name": "Actual Amount",
+              "name": "vs Actuals",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
+              },
+              {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
               }
            ]
         },
