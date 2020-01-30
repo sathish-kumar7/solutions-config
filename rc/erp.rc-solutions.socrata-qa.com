@@ -17,28 +17,6 @@
       "fields": {
         "date_column": "fiscalmonth"
       },
-      "filter_by_entries": [
-        {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
-          "column": "organization",
-          "name": "Organisation"
-        },
-        {
-          "column": "accountstatus",
-          "name": "Account status"
-        },
-        {
-          "column": "fiscalyear",
-          "name": "Fiscal year"
-        },
-        {
-          "column": "accounttype",
-          "name": "Account type"
-        }
-      ],
       "dimension_entries": [
         {
           "column": "fund",
@@ -254,11 +232,6 @@
           "column": "accounttype",
           "name": "Account Type",
           "renderType": "text"
-        },
-        {
-          "column": "fiscalmonth",
-          "name": "Fiscal Month",
-          "renderType": "date"
         }
       ]
     }
