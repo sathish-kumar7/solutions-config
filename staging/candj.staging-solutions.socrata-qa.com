@@ -19,7 +19,7 @@
       "dataset_id": "a333-rfhs",
       "fields": {
         "date_column": "statusdate",
-        "incident_type": "casetypecodedescription"
+        "incident_type": "casecategorydescription"
       },
       "dimension_entries": [
         {
@@ -28,7 +28,7 @@
         },
         {
           "column": "casetypemappingcodedescription",
-          "name": "Case Mapping"
+          "name": "Case Type"
         },
         {
           "column": "judgeid",
@@ -55,7 +55,7 @@
           "prefix": "",
           "suffix": "cases",
           "parent_queries": [
-              "select distinct casenumber, judgeid, casecategorymappingcoded, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+              "select distinct casenumber, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
            ],
           "fields": {
             "date_column": "last_closed_date"
@@ -171,7 +171,7 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "casecategorymappingcoded",
+          "column": "casecategorydescription",
           "name": "Case category",
           "renderType": "text"
         }
