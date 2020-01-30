@@ -46,6 +46,55 @@
         }
       ],
       "view_entries": [
+         {
+          "name": "Count of Opened Cases",
+          "column": "casenumber",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "cases",
+          "parent_queries": [
+              "select distinct casenumber, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+           ],
+          "fields": {
+            "date_column": "last_opened_date"
+          },
+          "comparison_column_entries": [
+              { 
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+              }
+           ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "120000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+         }
+        },
         {
           "name": "Count of Closed Cases",
           "column": "casenumber",
