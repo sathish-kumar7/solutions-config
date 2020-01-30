@@ -121,11 +121,11 @@
             "snapshot": {
                 "chart_type": "groupChart",
                 "default_chart_view": "pieChart",
-                "show_pie_chart": true
+                "show_pie_chart": "true"
             },
             "overtime": {
-              "show_area_chart": true,
-              "show_timeline_total": false
+              "show_area_chart": "true",
+              "show_timeline_total": "false"
             }
          },
          "comparison_column_entries": [
