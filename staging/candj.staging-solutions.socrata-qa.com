@@ -47,7 +47,7 @@
       ],
       "view_entries": [
         {
-          "name": "Count of Unique Cases",
+          "name": "Count of Closed Cases",
           "column": "casenumber",
           "aggregate_type": "count",
           "use_dimension_value": "true",
