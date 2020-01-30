@@ -14,7 +14,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "rf3x-u64k",
       "parent_queries": [
-        "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
+        "select *,:@computed_region_5ynq_aczk,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
       "fields": {
         "date_column": "saledt",
@@ -70,10 +70,10 @@
           "tags": [
             "Tax & Appraisals"
           ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart"
+          "visualization": {   
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
             }
           }
         },
@@ -89,9 +89,9 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart"
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
             }
           }
         },
@@ -107,9 +107,9 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart"
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
             }
           }
         },
@@ -125,9 +125,9 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart"
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
             }
           }
         },
@@ -142,10 +142,10 @@
           "tags": [
             "Tax & Appraisals"
           ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart"
+          "visualization": { 
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
             }
           }
         },
@@ -161,9 +161,9 @@
             "Courts & Justice"
           ],
           "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart"
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart"
             }
           }
         }
@@ -172,18 +172,6 @@
         {
           "column": "style",
           "name": "style"
-        },
-        {
-          "column": "cityname",
-          "name": "City"
-        },
-        {
-          "column": "land_use_type",
-          "name": "Land Use Type"
-        },
-        {
-          "column": "taxdist",
-          "name": "Taxdist"
         }
       ],
       "leaf_page_entries": [
@@ -210,9 +198,9 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "saledt",
-          "name": "Sale Date",
-          "renderType": "date"
+          "column": "style",
+          "name": "Style",
+          "renderType": "text"
         }
       ],
       "bench_mark_entries": [
