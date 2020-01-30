@@ -1198,7 +1198,7 @@
         "date_column": "saledt",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
-        "73f8-h8ah": ":@computed_region_73f8_h8ah"
+        "5ynq-aczk": ":@computed_region_5ynq_aczk"
       },
       "parent_queries": [
         "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
