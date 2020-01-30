@@ -50,6 +50,12 @@
           "precision": "0",
           "prefix": "",
           "suffix": "cases",
+          "parent_queries": [
+              "select distinct casenumber, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+           ],
+          "fields": {
+            "date_column": "last_closed_date"
+          }
           "comparison_column_entires": [
               { 
               "column": "casetypemappingcodedescription",
