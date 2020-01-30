@@ -56,7 +56,7 @@
           "fields": {
             "date_column": "last_closed_date"
           },
-          "comparison_column_entires": [
+          "comparison_column_entries": [
               { 
               "column": "casetypemappingcodedescription",
               "name": "Case Type",
@@ -122,7 +122,7 @@
                 "chart_type": "groupChart"
             }
          },
-         "comparison_column_entires": [
+         "comparison_column_entries": [
               {
               "column": "caseid",
               "name": "Count of cases",

@@ -53,7 +53,7 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "comparison_column_entires": [
+          "comparison_column_entries": [
               {
               "column": "actual",
               "name": "Actual Amount",
@@ -78,7 +78,7 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "comparison_column_entires": [
+          "comparison_column_entries": [
               {
               "column": "actual",
               "name": "Actual Amount",

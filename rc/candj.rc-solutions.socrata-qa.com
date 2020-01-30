@@ -47,7 +47,7 @@
           "precision": "0",
           "prefix": "",
           "suffix": "cases",
-          "comparison_column_entires": [
+          "comparison_column_entries": [
               { 
               "column": "casetypecodedescription",
               "name": "Case Category",
@@ -113,7 +113,7 @@
                 "chart_type": "groupChart"
             }
          },
-         "comparison_column_entires": [
+         "comparison_column_entries": [
               {
               "column": "caseid",
               "name": "Count of cases",

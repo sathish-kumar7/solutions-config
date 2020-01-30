@@ -52,7 +52,7 @@
             "Cases",
             "Clearence rates"
           ],
-          "comparison_column_entires": [
+          "comparison_column_entries": [
             {
               "column": "department",
               "name": "Department",
@@ -107,7 +107,7 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "comparison_column_entires": [
+          "comparison_column_entries": [
             {
               "column": "approved_amount",
               "name": "Approved Amount",
@@ -355,7 +355,7 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "comparison_column_entires": [
+          "comparison_column_entries": [
             {
               "column": "recommneded_amount",
               "name": "Recommended Amount",
@@ -470,7 +470,7 @@
             "Cases",
             "Clearence rates"
           ],
-          "comparison_column_entires": [
+          "comparison_column_entries": [
             {
               "column": "actual_amount",
               "name": "Actual Amount",
@@ -820,7 +820,7 @@
               "chart_type": "groupChart"
             }
           },
-          "comparison_column_entires": [
+          "comparison_column_entries": [
             {
               "column": "status",
               "name": "Status",
