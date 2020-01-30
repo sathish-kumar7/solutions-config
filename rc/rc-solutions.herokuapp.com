@@ -11,13 +11,17 @@
   ],
   "show_share_via_email": "false",
   "is_private": "false",
+  "date": {
+      "startDate": "2019-10-01",
+      "endDate": "2019-12-31"
+  },
   "template_entries": [
     {
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "dimension_entries": [
         {
@@ -333,7 +337,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "mik7-qbhe",
       "fields": {
-        "date_column": "fiscal_year"
+       
       },
       "dimension_entries": [
         {
@@ -400,6 +404,7 @@
           "column": "projected_amount",
           "aggregate_type": "sum",
           "prefix": "$",
+          "suffix": "dollar",
           "visualization": {
             "default_view": "Scatterplot"
           },
@@ -440,7 +445,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "dszp-jd2s",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "dimension_entries": [
         {
@@ -531,7 +536,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "qu7r-i9cv",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "dimension_entries": [
         {
@@ -597,7 +602,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3hre-b49k",
       "fields": {
-        "date_column": "sale_date",
+        "date_column": "tax_year",
         "incident_type": "class",
         "location": "geocoded_column",
         "73f8-h8ah": ":@computed_region_73f8_h8ah"
@@ -814,10 +819,13 @@
           "column": "occurred_incident_type",
           "aggregate_type": "count",
           "precision": "",
+          "prefix": "",
+          "suffix": "incidents",
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "showCompareDropDown": false
             }
           },
           "comparison_column_entries": [
@@ -1190,7 +1198,7 @@
         "date_column": "saledt",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
-        "73f8-h8ah": ":@computed_region_73f8_h8ah"
+        "5ynq-aczk": ":@computed_region_5ynq_aczk"
       },
       "parent_queries": [
         "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
@@ -1340,7 +1348,7 @@
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
       "fields": {
-        "date_column": "fiscal_year"
+        
       },
       "parent_queries": [
         "select * where service = 'Education'"
