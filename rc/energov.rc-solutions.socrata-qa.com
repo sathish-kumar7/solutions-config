@@ -16,30 +16,10 @@
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "amhj-22i6",
       "fields": {
-        "date_column": "applicationdate"
-      },
-      "filter_by_entries": [
-        {
-          "column": "projectname",
-          "name": "Project"
+        "date_column": "applicationdate",
+        "incident_type": "permittype",
+        "location": "location"
         },
-        {
-          "column": "permitstatus",
-          "name": "Permit Status"
-        },
-        {
-          "column": "permitworkclass",
-          "name": "Permit Class"
-        },
-        {
-          "column": "permittype",
-          "name": "Permit Type"    
-        },
-        {
-          "column": "district",
-          "name": "District"
-        }
-      ],
       "dimension_entries": [
         {
           "column": "projectname",
@@ -151,33 +131,47 @@
           "column": "district",
           "name": "District"
         }
-      ]
+      ],
+      "map": {
+        "centerLat": "32.20410409773211",
+        "centerLng": "-82.38302461163329",
+        "zoom": "5",
+        "mini_map_zoom": "4",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     },
     {
       "name": "Code Enforcement",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "vnvd-qqjp",
       "fields": {
-        "date_column": "requestdatetime"
+        "date_column": "requestdatetime",
+        "incident_type": "inspectiontypename",
+        "location": "location",
+        "9y4y-shqr": ":@computed_region_9y4y_shqr"
       },
-      "filter_by_entries": [
-        {
-          "column": "inspectiontypename",
-          "name": "Inspection"
-        },
-        {
-          "column": "inspectionstatusname",
-          "name": "Inspection Status"
-        },
-        {
-          "column": "inspectionlinktypename",
-          "name": "Inspection Link Name"
-        },
-        {
-          "column": "balancedue",
-          "name": "Balance due"
-        }
-      ],
       "dimension_entries": [
         {
           "column": "inspectiontypename",
@@ -277,6 +271,49 @@
           "column": "balancedue",
           "name": "Balance due"
         }
+      ],
+        "map": {
+        "centerLat": "43.0481",
+        "centerLng": "-76.1474",
+        "zoom": "5",
+        "mini_map_zoom": "4",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "9y4y-shqr",
+          "shape_name": "Counties",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "name",
+            "shape_description": "name"
+          },
+          "color": "#32a889"
+        }
       ]
     },
     {
@@ -284,30 +321,11 @@
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "sb4f-xivi",
       "fields": {
-        "date_column": "applicationdate"
+        "date_column": "applicationdate",
+        "incident_type": "doingbusinessas",
+        "location": "location",
+        "uz8n-ghcn": ":@computed_region_uz8n_ghcn"
       },
-      "filter_by_entries": [
-        {
-          "column": "doingbusinessas",
-          "name": "Business"
-        },
-        {
-          "column": "licensestatus",
-          "name": "License Status"
-        },
-        {
-          "column": "licenseclass",
-          "name": "License Class"
-        },
-        {
-          "column": "licensetype",
-          "name": "License Type"
-        },
-        {
-          "column": "district",
-          "name": "District"
-        }
-      ],
       "dimension_entries": [
         {
           "column": "doingbusinessas",
@@ -386,6 +404,49 @@
         {
           "column": "district",
           "name": "District"
+        }
+      ],
+        "map": {
+        "centerLat": "38.9822",
+        "centerLng": "-94.6708",
+        "zoom": "10",
+        "mini_map_zoom": "9",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      },
+        "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "uz8n-ghcn",
+          "shape_name": "Wards",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "ward_label",
+            "shape_description": "ward_label"
+          },
+          "color": "#32a889"
         }
       ]
     }
