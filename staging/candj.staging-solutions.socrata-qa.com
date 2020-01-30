@@ -47,7 +47,7 @@
       ],
       "view_entries": [
         {
-          "name": "Count of Cases",
+          "name": "Count of Unique Cases",
           "column": "caseid",
           "aggregate_type": "count",
           "use_dimension_value": "true",
