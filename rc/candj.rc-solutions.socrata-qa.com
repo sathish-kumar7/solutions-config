@@ -51,7 +51,7 @@
           "prefix": "",
           "suffix": "cases",
           "parent_queries": [
-              "select distinct casenumber, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+              "select distinct casenumber, statusdate, isopen, judgeid, isclosed, casecategorymappingcoded, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
            ],
           "fields": {
             "date_column": "last_closed_date"
@@ -119,7 +119,13 @@
           "visualization": {
           "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "default_chart_view": "pieChart",
+                "show_pie_chart": "true"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_timeline_total": "false"
             }
          },
          "comparison_column_entries": [
