@@ -23,12 +23,12 @@
       },
       "dimension_entries": [
         {
-          "column": "casetypemappingcodedescription",
-          "name": "Case Mapping Descrption"
-        },
-        {
           "column": "casecategorydescription",
           "name": "Case Category"
+        },
+        {
+          "column": "casetypemappingcodedescription",
+          "name": "Case Mapping Descrption"
         },
         {
           "column": "judgeid",
