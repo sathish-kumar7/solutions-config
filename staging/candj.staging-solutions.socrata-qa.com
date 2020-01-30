@@ -23,8 +23,12 @@
       },
       "dimension_entries": [
         {
+          "column": "casecategorydescription",
+          "name": "Case Category"
+        },
+        {
           "column": "casetypemappingcodedescription",
-          "name": "Case Mapping Descrption"
+          "name": "Case Mapping"
         },
         {
           "column": "judgeid",
@@ -51,7 +55,7 @@
           "prefix": "",
           "suffix": "cases",
           "parent_queries": [
-              "select distinct casenumber, statusdate, isopen, judgeid, isclosed, casecategorymappingcoded, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+              "select distinct casenumber, statusdate, judgeid, casecategorymappingcoded, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
            ],
           "fields": {
             "date_column": "last_closed_date"
@@ -130,7 +134,7 @@
          },
          "comparison_column_entries": [
               {
-              "column": "caseid",
+              "column": "casenumber",
               "name": "Count of cases",
               "aggregate_type": "count",
               "prefix": "",
@@ -153,20 +157,8 @@
           "name": "Judge ID"
         },
         {
-          "column": "caseid",
-          "name": "Case ID"
-        },
-        {
-          "column": "statusdate",
-          "name": "Status Date"
-        },
-        {
-          "column": "isopen",
-          "name": "Opened"
-        },
-        {
-          "column": "isclosed",
-          "name": "Closed"
+          "column": "casenumber",
+          "name": "Case Number"
         },
         {
           "column": "nodedescription",
