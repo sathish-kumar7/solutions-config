@@ -834,7 +834,7 @@
             "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "showCompareDropDown": false
+              "showCompareDropDown": "true"
             },
             "overtime": {
               "show_area_chart": "true",
