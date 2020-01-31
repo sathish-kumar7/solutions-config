@@ -296,7 +296,7 @@
           "aggregate_type": "",
           "precision": "1",
           "prefix": "",
-          "suffix": "",
+          "suffix": "%",
           "tags": [
             "Cases"
           ],
@@ -319,7 +319,7 @@
           "aggregate_type": "count",
           "precision": "0",
           "prefix": "",
-          "suffix": "",
+          "suffix": "hearings",
           "tags": [
             "Cases"
           ],
