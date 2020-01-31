@@ -211,10 +211,10 @@
           }
         },
         {
+          "name": "Unadjusted Net Income",
           "parent_queries": [
               "select *, case(accounttype == 'Revenue', revisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', revisedbudget, true, 0) as expenditures_amount"
           ],
-          "name": "Unadjusted Net Income",
           "column": "sum(revenue_amount) - sum(expenditures_amount)",
           "aggregate_type": "",
           "prefix": "$",
