@@ -136,7 +136,7 @@
               },              
               {
               "column": "actual",
-              "name": "Revised vs Actual Amount",
+              "name": "Expense Budget vs Actual Amount",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
@@ -154,7 +154,7 @@
               },  
               {
               "column": "ltdoriginalbudget",
-              "name": "Revised vs Original budget",
+              "name": "Expense Budget vs Original budget",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
@@ -206,7 +206,7 @@
               },              
               {
               "column": "actual",
-              "name": "Revised vs Actual Amount",
+              "name": "Revenue Budget vs Actual Amount",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
@@ -224,7 +224,7 @@
               },  
               {
               "column": "ltdoriginalbudget",
-              "name": "Revised vs Original budget",
+              "name": "Revenue Budget vs Original budget",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
