@@ -274,15 +274,15 @@
       },
       "dimension_entries": [
         {
-          "column": "casetypedescription",
+          "column": "last_casetypedescription",
           "name": "Case Type Description"
         },
         {
-          "column": "casecategorydescription",
+          "column": "last_casecategorydescription",
           "name": "Case Category Description"
         },
         {
-          "column": "casecategorymappingdescription",
+          "column": last_casecategorymappingdescription",
           "name": "Case Category Mapping Description"
         }
       ],
@@ -291,7 +291,7 @@
           "name": "Trial Date Certainty",
           "column": "sum(certainty_count)/count(*)",
           "parent_queries": [
-            "select count(hearingdate) as total_hearing_dates,casenumber,min(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as casecategorydescription, min(casecategorymappingdescription) as casecategorymappingdescription group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, casetypedescription, casecategorydescription, case_categorymappingdescription, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
+            "select count(hearingdate) as total_hearing_dates,casenumber,min(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypedescription) as last_casetypedescription, min(casecategorydescription) as last_casecategorydescription, min(casecategorymappingdescription) as last_casecategorymappingdescription group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_casecategorydescription, last_casecategorymappingdescription, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
           ],
           "aggregate_type": "",
           "precision": "1",
@@ -311,7 +311,7 @@
           "name": "Count of Hearings",
           "column": "hearingid",
           "parent_queries": [
-            "select distinct hearingid,casecategorydescription, casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date"
+            "select distinct hearingid,casecategorydescription, casetypedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date"
           ],
           "fields": {
             "date_column": "last_hearing_date"
@@ -333,11 +333,11 @@
       ],
       "leaf_page_entries": [
         {
-          "column": "casetypedescription",
+          "column": "last_casetypedescription",
           "name": "Case Type Description"
         },
         {
-          "column": "casecategorydescription",
+          "column": "last_casecategorydescription",
           "name": "Case Category Description"
         }  
       ],
