@@ -826,6 +826,10 @@
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": false
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_timeline_total": "true"
             }
           },
           "comparison_column_entries": [
