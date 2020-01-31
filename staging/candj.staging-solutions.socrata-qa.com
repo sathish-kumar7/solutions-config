@@ -402,7 +402,7 @@
          }
        },
        {
-          "name": "Percentage Time To Disposition < 180 Days",
+          "name": "Percentage of Cases With Time To Disposition < 180 Days",
           "column": "sum(timetodisposition_flag)/count(*)*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -449,7 +449,56 @@
                 "chart_type": "groupChart"
             }
          }
-       }         
+       },
+        {
+          "name": "Percentage of Cases With Time To Disposition < 365 Days",
+          "column": "sum(timetodisposition_flag)/count(*)*100",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "1",
+          "prefix": "",
+          "suffix": "%",
+          "parent_queries": [
+              "select  *, case(timetodisposition < 365, 1) as timetodisposition_flag"
+           ],
+          "fields": {
+            "date_column": "lastopeneddate"
+          },
+          "comparison_column_entries": [
+              { 
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+              }
+           ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": "<",
+              "value": "10",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+         }
+       }            
       ],
       "filter_by_entries": [
         {
