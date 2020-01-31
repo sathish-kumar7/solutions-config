@@ -313,6 +313,9 @@
           "parent_queries": [
             "select distinct hearingid,casecategorydescription, casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date"
           ],
+          "fields": {
+            "date_column": "last_hearing_date"
+          },
           "aggregate_type": "count",
           "precision": "1",
           "prefix": "",
