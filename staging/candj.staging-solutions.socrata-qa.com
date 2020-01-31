@@ -316,9 +316,9 @@
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
-          "suffix": "cdays",
+          "suffix": "days",
           "fields": {
-            "date_column": "last_opened_date"
+            "date_column": "lastopeneddate"
           },
           "comparison_column_entries": [
               { 
