@@ -354,7 +354,53 @@
                 "chart_type": "groupChart"
             }
          }
-       }
+       },
+       {
+          "name": "Median Time To Disposition",
+          "column": "timetodisposition",
+          "aggregate_type": "median",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "days",
+          "fields": {
+            "date_column": "lastopeneddate"
+          },
+          "comparison_column_entries": [
+              { 
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+              }
+           ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": "<",
+              "value": "10",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+         }
+       }       
       ],
       "filter_by_entries": [
         {
