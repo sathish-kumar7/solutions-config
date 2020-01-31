@@ -264,6 +264,168 @@
       "shape_dataset_entries": [],
       "shape_outline_dataset_entries": []
     },
+     {
+      "name": "Courts and Justice",
+      "description": "",
+      "dataset_domain": "courtsandjustice.demo.socrata.com",
+      "dataset_id": "93x4-9x8r",
+      "fields": {
+        "date_column": "lastcloseddate",
+      },
+      "dimension_entries": [
+        {
+          "column": "casetypemappingcodedescription",
+          "name": "Case Type"
+        },
+        {
+          "column": "judgeid",
+          "name": "Judge ID"
+        },
+        {
+          "column": "nodedescription",
+          "name": "Court Name"
+        },
+        {
+          "column": "casenumber",
+          "name": "Case Number"
+        },
+      ],
+      "group_by_entries": [
+        {
+          "column": "casetypemappingcodedescription",
+          "name": "Case Type"
+        },
+        {
+          "column": "judgeid",
+          "name": "Judge ID"
+        },
+        {
+          "column": "nodedescription",
+          "name": "Court Name"
+        },
+        {
+          "column": "casenumber",
+          "name": "Case Number"
+        }
+      ],
+      "view_entries": [
+         {
+          "name": "Mean Time To Disposition",
+          "column": "timetodisposition",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "cdays",
+          "fields": {
+            "date_column": "last_opened_date"
+          },
+          "comparison_column_entries": [
+              { 
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+              }
+           ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": "<",
+              "value": "10",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+         }
+       }
+      ],
+      "filter_by_entries": [
+        {
+          "column": "judgeid",
+          "name": "Judge ID"
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "judgeid",
+          "name": "Judge ID"
+        },
+        {
+          "column": "casenumber",
+          "name": "Case Number"
+        },
+        {
+          "column": "nodedescription",
+          "name": "Court Name"
+        },
+        {
+          "column": "casetypemappingcodedescription",
+          "name": "Case Type Description"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "casecategorydescription",
+          "name": "Case category",
+          "renderType": "text"
+        }
+      ],
+      "bench_mark_entries": [
+        {
+          "view_column": "caseid",
+          "dimension_column": "judgeid",
+          "display_name": "State Standard",
+          "value": "50"
+        }
+      ],
+      "map": {
+        "centerLat": "44.40861110588011",
+        "centerLng": "-115.16737594966821",
+        "zoom": "3",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      },
+      "shape_dataset_entries": [],
+      "shape_outline_dataset_entries": []
+    },    
     {
       "name": "Court Operations",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
