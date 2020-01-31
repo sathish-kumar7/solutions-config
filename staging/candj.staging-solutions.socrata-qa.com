@@ -41,12 +41,12 @@
       ],
       "group_by_entries": [
         {
-          "column": "casecategorydescription",
-          "name": "Case Category"
-        },
-        {
           "column": "casetypemappingcodedescription",
           "name": "Case Type"
+        },
+        {
+          "column": "casecategorydescription",
+          "name": "Case Category"
         },
         {
           "column": "judgeid",
