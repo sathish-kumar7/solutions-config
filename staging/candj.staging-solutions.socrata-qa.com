@@ -282,7 +282,7 @@
           "name": "Case Category Description"
         },
         {
-          "column": last_casecategorymappingdescription",
+          "column": "last_casecategorymappingdescription",
           "name": "Case Category Mapping Description"
         }
       ],
