@@ -265,7 +265,7 @@
       "shape_outline_dataset_entries": []
     },
      {
-      "name": "Courts and Justice",
+      "name": "Time to Disposition",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
       "dataset_id": "93x4-9x8r",
