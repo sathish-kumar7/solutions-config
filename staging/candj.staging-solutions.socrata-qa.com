@@ -270,7 +270,7 @@
       "dataset_domain": "courtsandjustice.demo.socrata.com",
       "dataset_id": "93x4-9x8r",
       "fields": {
-        "date_column": "lastcloseddate",
+        "date_column": "lastcloseddate"
       },
       "dimension_entries": [
         {
@@ -288,7 +288,7 @@
         {
           "column": "casenumber",
           "name": "Case Number"
-        },
+        }
       ],
       "group_by_entries": [
         {
