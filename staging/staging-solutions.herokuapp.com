@@ -47,7 +47,8 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "show_pie_chart": "true"
           },
           "precision": "0",
           "prefix": "",
@@ -109,7 +110,8 @@
           "precision": "2",
           "suffix": "Total",
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "show_pie_chart": "true"
           },
           "comparison_column_entries": [
             {
@@ -165,7 +167,8 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Pie Chart"
+            "default_view": "Pie Chart",
+            "show_pie_chart": false
           },
           "quick_filters": [
             {
