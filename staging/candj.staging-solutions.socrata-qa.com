@@ -406,7 +406,7 @@
           "column": "sum(timetodisposition_flag)/count(*)*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
-          "precision": "0",
+          "precision": "1",
           "prefix": "",
           "suffix": "%",
           "parent_queries": [
