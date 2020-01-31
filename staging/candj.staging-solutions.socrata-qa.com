@@ -403,12 +403,12 @@
        },
        {
           "name": "Percentage Time To Disposition < 180 Days",
-          "column": "sum(timetodisposition_flag)/count(*)",
+          "column": "sum(timetodisposition_flag)/count(*)*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
-          "suffix": "days",
+          "suffix": "%",
           "parent_queries": [
               "select  *, case(timetodisposition < 180, 1) as timetodisposition_flag"
            ],
