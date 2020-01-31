@@ -73,7 +73,8 @@
           "visualization": {   
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -91,7 +92,8 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -109,7 +111,8 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -127,14 +130,15 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
         {
           "name": "Median Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, market_total) , true, price)",
-          "aggregate_type": "median",
+          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
+          "aggregate_type": "avg",
           "use_dimension_value": "true",
           "precision": "2",
           "prefix": "",
@@ -145,7 +149,8 @@
           "visualization": { 
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -163,7 +168,8 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         }
