@@ -272,9 +272,6 @@
       "fields": {
         "date_column": "hearing_date"
       },
-      "parent_queries": [
-        "select count(hearingdate) as total_hearing_dates,casenumber,min(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as case_category_description, min(casecategorymappingdescription) as case_category_mapping_description group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, case_type_description, case_category_description, case_category_mapping_description, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
-      ],
       "dimension_entries": [
         {
           "column": "case_type_description",
@@ -293,6 +290,9 @@
         {
           "name": "Trial Date Certainty",
           "column": "sum(certainty_count)/count(*)",
+          "parent_queries": [
+            "select count(hearingdate) as total_hearing_dates,casenumber,min(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypedescription) as case_type_description, min(casecategorydescription) as case_category_description, min(casecategorymappingdescription) as case_category_mapping_description group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, case_type_description, case_category_description, case_category_mapping_description, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
+          ],
           "aggregate_type": "",
           "precision": "1",
           "prefix": "",
@@ -305,21 +305,37 @@
             "snapshot": {
                 "chart_type": "barChart"
             }
-        }
-        }
+          }
+        }, 
+        {
+          "name": "Count of Hearings",
+          "column": "hearingid",
+          "parent_queries": [
+            "select distinct hearingid,casecategorydescription, casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date"
+          ],
+          "aggregate_type": "count",
+          "precision": "1",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Cases"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+          }
+        }        
       ],
       "leaf_page_entries": [
         {
-          "column": "case_type_description",
+          "column": "casetypedescription",
           "name": "Case Type Description"
         },
         {
-          "column": "case_category_description",
+          "column": "casecategorydescription",
           "name": "Case Category Description"
-        },
-        {
-          "column": "case_category_mapping_description",
-          "name": "Case Category Mapping Description"
         }  
       ],
       "map": {
