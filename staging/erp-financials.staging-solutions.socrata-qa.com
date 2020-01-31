@@ -41,40 +41,6 @@
       ],
       "view_entries": [
         {
-          "name": "Original Budget",
-          "column": "ltdoriginalbudget",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Budget"
-          ],
-          "visualization": {
-            "default_view": "Snapshot"
-          },
-          "comparison_column_entries": [
-              {
-              "column": "actual",
-              "name": "vs Actuals",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-              },
-              {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "barChart"
-              }
-           ]
-        },
-        {
           "name": "Revised Budget",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
@@ -89,8 +55,17 @@
           },
           "comparison_column_entries": [
               {
-              "column": "actual",
-              "name": "vs Actuals",
+              "column": "ltdoriginalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
+              },  
+              {
+              "column": "ltdoriginalbudget",
+              "name": "Revised vs Original budget",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
@@ -105,6 +80,15 @@
               "suffix": "",
               "precision": "2",
               "render_type": "barChart"
+              },              
+              {
+              "column": "actual",
+              "name": "Revised vs Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
               }
            ]
         },
