@@ -317,7 +317,7 @@
             "date_column": "last_hearing_date"
           },
           "aggregate_type": "count",
-          "precision": "1",
+          "precision": "0",
           "prefix": "",
           "suffix": "",
           "tags": [
