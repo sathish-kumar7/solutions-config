@@ -231,6 +231,25 @@
                 "chart_type": "barChart"
             }
           }
+        },
+        {
+          "name": "Total Payroll",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "target_entries": [
+              ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+          }
         }
       ],
       "leaf_page_entries": [
