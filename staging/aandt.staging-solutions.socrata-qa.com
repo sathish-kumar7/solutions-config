@@ -73,7 +73,8 @@
           "visualization": {   
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -91,7 +92,8 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -109,7 +111,8 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -127,7 +130,8 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -145,7 +149,8 @@
           "visualization": { 
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         },
@@ -163,7 +168,8 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
             }
           }
         }
