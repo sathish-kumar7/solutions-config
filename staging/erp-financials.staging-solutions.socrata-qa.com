@@ -41,7 +41,7 @@
       ],
       "view_entries": [
         {
-          "name": "Revised Budget",
+          "name": "Budget",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -208,6 +208,28 @@
           ],
           "visualization": {
             "default_view": "Snapshot"
+          }
+        },
+        {
+          "parent_queries": [
+              "select *, case(accounttype == 'Revenue', revisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', revisedbudget, true, 0) as expenditures_amount"
+          ],
+          "name": "Unadjusted Net Income",
+          "column": "sum(revenue_amount) - sum(expenditures_amount)",
+          "aggregate_type": "",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "target_entries": [
+              ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
           }
         }
       ],
