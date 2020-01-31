@@ -400,7 +400,56 @@
                 "chart_type": "groupChart"
             }
          }
-       }       
+       },
+       {
+          "name": Percentage Time To Disposition < 180 Days",
+          "column": "sum(timetodisposition_flag)/count(*)",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "days",
+          "parent_queries": [
+              "select  *, case(timetodisposition < 180, 1) as timetodisposition_flag"
+           ],
+          "fields": {
+            "date_column": "lastopeneddate"
+          },
+          "comparison_column_entries": [
+              { 
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+              }
+           ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": "<",
+              "value": "10",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+         }
+       }         
       ],
       "filter_by_entries": [
         {
