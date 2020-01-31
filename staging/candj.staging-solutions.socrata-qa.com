@@ -402,7 +402,7 @@
          }
        },
        {
-          "name": Percentage Time To Disposition < 180 Days",
+          "name": "Percentage Time To Disposition < 180 Days",
           "column": "sum(timetodisposition_flag)/count(*)",
           "aggregate_type": "",
           "use_dimension_value": "true",
