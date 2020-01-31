@@ -41,32 +41,7 @@
       ],
       "view_entries": [
         {
-          "name": "Original Budget vs Actuals",
-          "column": "ltdoriginalbudget",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Budget"
-          ],
-          "visualization": {
-            "default_view": "Snapshot"
-          },
-          "comparison_column_entries": [
-              {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-              }
-           ]
-        },
-        {
-          "name": "Revised Budget vs Actuals",
+          "name": "Budget vs Actuals",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -79,9 +54,36 @@
             "default_view": "Snapshot"
           },
           "comparison_column_entries": [
-              {
+                            {
               "column": "actual",
               "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
+              },              
+              {
+              "column": "actual",
+              "name": "Revised vs Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              },
+              {
+              "column": "ltdoriginalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
+              },  
+              {
+              "column": "ltdoriginalbudget",
+              "name": "Revised vs Original budget",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
@@ -91,8 +93,9 @@
            ]
         },
         {
-          "name": "Budget - Operating",
-          "column": "actual",
+          "name": "Operating Budget vs Actuals",
+          "parentqueries": "Select * where accounttype = 'Expense'",
+          "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -119,20 +122,51 @@
             "default_view": "Snapshot"
           },
           "quick_filters": [
-            {
-              "column": "accounttype",
-              "type": "text",
-              "field": "quick_filter_0_darw_mart_0",
-              "values": [
-                "Expense"
-              ],
-              "operator": "="
-            }
-          ]
+            
+          ],
+          "comparison_column_entries": [
+                            {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
+              },              
+              {
+              "column": "actual",
+              "name": "Expense Budget vs Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              },
+              {
+              "column": "ltdoriginalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
+              },  
+              {
+              "column": "ltdoriginalbudget",
+              "name": "Expense Budget vs Original budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              }
+           ]
         },
         {
-          "name": "Budget - Revenue",
+          "name": "Revenue Budget vs Actuals",
           "column": "actual",
+          "parentqueries": "Select * where accounttype = 'Revenue'",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -155,19 +189,49 @@
             }
           ],
           "quick_filters": [
-            {
-              "column": "accounttype",
-              "type": "text",
-              "field": "quick_filter_0_darw_mart_0",
-              "values": [
-                "Revenue"
-              ],
-              "operator": "="
-            }
+
           ],
           "visualization": {
             "default_view": "Snapshot"
-          }
+          },
+          "comparison_column_entries": [
+                            {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
+              },              
+              {
+              "column": "actual",
+              "name": "Revenue Budget vs Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              },
+              {
+              "column": "ltdoriginalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "barChart"
+              },  
+              {
+              "column": "ltdoriginalbudget",
+              "name": "Revenue Budget vs Original budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+              }
+           ]
         },
         {
           "name": "Budget - Cash Accounts",
@@ -206,6 +270,47 @@
           ],
           "visualization": {
             "default_view": "Snapshot"
+          }
+        },
+        {
+          "name": "Unadjusted Net Income",
+          "parent_queries": [
+              "select *, case(accounttype == 'Revenue', revisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', revisedbudget, true, 0) as expenditures_amount"
+          ],
+          "column": "sum(revenue_amount) - sum(expenditures_amount)",
+          "aggregate_type": "",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "target_entries": [
+              ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+          }
+        },
+        {
+          "name": "Total Payroll",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "target_entries": [
+              ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
           }
         }
       ],
