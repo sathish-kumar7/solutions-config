@@ -274,15 +274,15 @@
       },
       "dimension_entries": [
         {
-          "column": "case_type_description",
+          "column": "casetypedescription",
           "name": "Case Type Description"
         },
         {
-          "column": "case_category_description",
+          "column": "casecategorydescription",
           "name": "Case Category Description"
         },
         {
-          "column": "case_category_mapping_description",
+          "column": "casecategorymappingdescription",
           "name": "Case Category Mapping Description"
         }
       ],
