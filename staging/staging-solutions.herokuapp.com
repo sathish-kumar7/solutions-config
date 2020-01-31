@@ -48,7 +48,9 @@
           "aggregate_type": "count",
           "visualization": {
             "default_view": "Snapshot",
-            "show_pie_chart": "true"
+             "snapshot": {
+                "show_pie_chart": "true"
+            }
           },
           "precision": "0",
           "prefix": "",
@@ -111,7 +113,9 @@
           "suffix": "Total",
           "visualization": {
             "default_view": "Snapshot",
-            "show_pie_chart": "true"
+            "snapshot": {
+                "show_pie_chart": "true"
+            }
           },
           "comparison_column_entries": [
             {
@@ -168,7 +172,9 @@
           "precision": "2",
           "visualization": {
             "default_view": "Pie Chart",
-            "show_pie_chart": false
+            "snapshot": {
+                "show_pie_chart": "true"
+            }
           },
           "quick_filters": [
             {
