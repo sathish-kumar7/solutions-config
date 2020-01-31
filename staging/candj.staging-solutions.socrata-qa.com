@@ -526,7 +526,7 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "casecategorydescription",
+          "column": "casetypemappingcodedescription",
           "name": "Case category",
           "renderType": "text"
         }
