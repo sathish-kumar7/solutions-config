@@ -382,6 +382,37 @@
                   "icon": "icons-times-circle"
                 }
             ]
+        },
+        {
+          "name": "Balance Due",
+          "column": "balancedue",
+          "aggregate_type": "sum",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Business Services"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#259652",
+                  "operator": ">",
+                  "value": "1300",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
       ],
       "leaf_page_entries": [
