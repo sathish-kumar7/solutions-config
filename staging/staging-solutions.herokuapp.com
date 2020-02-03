@@ -49,7 +49,7 @@
           "visualization": {
             "default_view": "Snapshot",
              "snapshot": {
-                "show_pie_chart": false
+                "show_pie_chart": "true"
             }
           },
           "precision": "0",
