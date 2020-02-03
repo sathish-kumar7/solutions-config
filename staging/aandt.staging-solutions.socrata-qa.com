@@ -5,7 +5,7 @@
     "delimiter": ","
   },
   "tag_list": [
-    "Tax & Appraisals"
+    "Sales"
   ],
   "template_entries": [
     {
@@ -68,7 +68,7 @@
           "suffix": "",
           "use_dimension_value": "true",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {   
              "default_view": "Snapshot",
@@ -106,7 +106,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {
              "default_view": "Snapshot",
@@ -125,7 +125,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {
              "default_view": "Snapshot",
@@ -144,7 +144,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": { 
              "default_view": "Snapshot",
@@ -163,7 +163,7 @@
           "prefix": "$",
           "suffix": "",
           "tags": [
-            "Courts & Justice"
+            "Sales"
           ],
           "visualization": {
              "default_view": "Snapshot",
