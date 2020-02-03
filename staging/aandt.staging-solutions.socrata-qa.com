@@ -280,6 +280,10 @@
       },
       "dimension_entries": [
         {
+          "column": "class",
+          "name": "Class"
+        },
+        {
           "column": "heartyp",
           "name": "Hearing Type"
         },
@@ -297,10 +301,7 @@
         }
       ],
       "group_by_entries": [
-        {
-          "column": "class",
-          "name": "Class"
-        }
+
       ],
       "view_entries": [
         {
@@ -316,7 +317,7 @@
           "visualization": {
              "default_view": "Snapshot",
              "snapshot": {
-                "chart_type": "groupChart",
+                "chart_type": "barChart",
                 "show_pie_chart": "true"
             }
           }
