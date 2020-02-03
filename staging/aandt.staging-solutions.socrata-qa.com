@@ -5,7 +5,8 @@
     "delimiter": ","
   },
   "tag_list": [
-    "Sales"
+    "Sales",
+    "Appeals"
   ],
   "template_entries": [
     {
@@ -263,6 +264,93 @@
           },
           "color": "#32a889"
         }
+      ]
+    },
+    {
+      "name": "Appeals",
+      "description": "Tax and Appraisals",
+      "dataset_domain": "appraisalandtax.demo.socrata.com",
+      "dataset_id": "snjj-se4g",
+      "parent_queries": [
+        
+      ],
+      "fields": {
+        "date_column": "decision_date",
+        "incident_type": "own1"
+      },
+      "dimension_entries": [
+        {
+          "column": "heartyp",
+          "name": "Hearing Type"
+        },
+        {
+          "column": "attorney",
+          "name": "Attorney"
+        },
+        {
+          "column": "case_status",
+          "name": "Case Status"
+        },
+        {
+          "column": "reason_for_appeal",
+          "name": "Reason For Appeal"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "% Appealed Value Upheld",
+          "column": "sum(decision_value) / sum(county_value)",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "heartyp",
+          "name": "Hearing Type"
+        },
+        {
+          "column": "attorney",
+          "name": "Attorney"
+        },
+        {
+          "column": "case_status",
+          "name": "Case Status"
+        },
+        {
+          "column": "reason_for_appeal",
+          "name": "Reason For Appeal"
+        }
+      ],
+      "quick_filter_entries": [
+
+      ],
+      "bench_mark_entries": [
+
+      ],
+      "map": {
+
+      },
+      "shape_dataset_entries": [
+
       ]
     }
   ]
