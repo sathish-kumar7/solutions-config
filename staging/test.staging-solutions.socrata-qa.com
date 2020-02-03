@@ -103,7 +103,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_group_by_entry_column": "nodedescription"
             }
           }
         },
@@ -152,7 +153,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_group_by_entry_column": "nodedescription"
             }
           }
         },
@@ -186,7 +188,8 @@
             "snapshot": {
               "chart_type": "groupChart",
               "default_chart_view": "pieChart",
-              "show_pie_chart": "true"
+              "show_pie_chart": "true",
+              "default_group_by_entry_column": "nodedescription"
             },
             "overtime": {
               "show_area_chart": "true",
@@ -363,7 +366,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_group_by_entry_column": "judgeid"
             }
           }
         },
@@ -409,7 +413,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_group_by_entry_column": "judgeid"
             }
           }
         },
@@ -458,7 +463,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_group_by_entry_column": "judgeid"
             }
           }
         },
@@ -507,7 +513,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_group_by_entry_column": "judgeid"
             }
           }
         }
@@ -621,7 +628,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "barChart"
+              "chart_type": "barChart",
+              "default_group_by_entry_column": "last_casecategorydescription"
             }
           }
         },
@@ -644,7 +652,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "barChart"
+              "chart_type": "barChart",
+              "default_group_by_entry_column": "last_casecategorydescription"
             }
           }
         }
