@@ -208,6 +208,10 @@
       ],
       "filter_by_entries": [
         {
+          "column": "isactive",
+          "name": "Active Case?"
+        },
+        {
           "column": "judgeid",
           "name": "Judge ID"
         }
