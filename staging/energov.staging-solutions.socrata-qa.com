@@ -348,6 +348,10 @@
         {
           "column": "district",
           "name": "District"
+        },
+        {
+          "column": "licensetype",
+          "name": "License Type"
         }
       ],
       "view_entries": [
@@ -396,7 +400,8 @@
        "visualization": {
           "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart"
+                "chart_type": "groupChart",
+                "default_group_by_entry_column": "licensetype"
             }
         },
         "target_entries": [
