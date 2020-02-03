@@ -212,8 +212,8 @@
           "name": "Active Case?"
         },
         {
-          "column": "judgeid",
-          "name": "Judge ID"
+          "column": "eventstatusmappingcodedescription",
+          "name": "Disposition"
         }
       ],
       "leaf_page_entries": [
