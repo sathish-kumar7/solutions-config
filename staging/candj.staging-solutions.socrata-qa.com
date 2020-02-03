@@ -172,7 +172,7 @@
               "name": "On track",
               "color": "#259652",
               "operator": ">=",
-              "value": "100",
+              "value": "80",
               "icon": "icons-check-circle"
             },
             {
@@ -354,8 +354,8 @@
             {
               "name": "On track",
               "color": "#259652",
-              "operator": "<",
-              "value": "10",
+              "operator": "<=",
+              "value": "30",
               "icon": "icons-check-circle"
             },
             {
@@ -400,8 +400,8 @@
             {
               "name": "On track",
               "color": "#259652",
-              "operator": "<",
-              "value": "10",
+              "operator": "<=",
+              "value": "30",
               "icon": "icons-check-circle"
             },
             {
@@ -449,8 +449,8 @@
             {
               "name": "On track",
               "color": "#259652",
-              "operator": "<",
-              "value": "10",
+              "operator": ">=",
+              "value": "75",
               "icon": "icons-check-circle"
             },
             {
@@ -498,8 +498,8 @@
             {
               "name": "On track",
               "color": "#259652",
-              "operator": "<",
-              "value": "10",
+              "operator": ">=",
+              "value": "90",
               "icon": "icons-check-circle"
             },
             {
