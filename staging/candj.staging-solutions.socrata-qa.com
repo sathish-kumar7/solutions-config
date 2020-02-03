@@ -136,18 +136,6 @@
             "Cases"
           ],
           "target_entries": [
-            {
-              "name": "On track",
-              "color": "#259652",
-              "operator": ">",
-              "value": "120000",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
           ],
           "visualization": {
           "default_view": "Snapshot",
