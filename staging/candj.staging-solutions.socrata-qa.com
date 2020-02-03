@@ -8,8 +8,8 @@
     "Cases"
   ],
   "date": {
-      "startDate": "1990-1-1",
-      "endDate": "2020-1-28"
+    "startDate": "1990-1-1",
+    "endDate": "2020-1-28"
   },
   "template_entries": [
     {
@@ -58,92 +58,6 @@
         }
       ],
       "view_entries": [
-         {
-          "name": "Count of Opened Cases",
-          "column": "casenumber",
-          "aggregate_type": "count",
-          "use_dimension_value": "true",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "cases",
-          "parent_queries": [
-              "select distinct casenumber, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
-           ],
-          "fields": {
-            "date_column": "last_opened_date"
-          },
-          "comparison_column_entries": [
-              { 
-              "column": "casetypemappingcodedescription",
-              "name": "Case Type",
-              "aggregate_type": "",
-              "render_type": "stack",
-              "prefix": "",
-              "suffix": "",
-              "precision": ""
-              }
-           ],
-          "tags": [
-            "Cases"
-          ],
-          "target_entries": [
-            {
-              "name": "On track",
-              "color": "#259652",
-              "operator": ">",
-              "value": "120000",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ],
-          "visualization": {
-          "default_view": "Snapshot",
-            "snapshot": {
-                "chart_type": "groupChart"
-            }
-         }
-        },
-        {
-          "name": "Count of Closed Cases",
-          "column": "casenumber",
-          "aggregate_type": "count",
-          "use_dimension_value": "true",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "cases",
-          "parent_queries": [
-              "select distinct casenumber, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
-           ],
-          "fields": {
-            "date_column": "last_closed_date"
-          },
-          "comparison_column_entries": [
-              { 
-              "column": "casetypemappingcodedescription",
-              "name": "Case Type",
-              "aggregate_type": "",
-              "render_type": "stack",
-              "prefix": "",
-              "suffix": "",
-              "precision": ""
-              }
-           ],
-          "tags": [
-            "Cases"
-          ],
-          "target_entries": [
-          ],
-          "visualization": {
-          "default_view": "Snapshot",
-            "snapshot": {
-                "chart_type": "groupChart"
-            }
-         }
-        },
         {
           "name": "Clearance Rate",
           "column": "(sum(isclosed)/case(sum(isopen) == 0, 1, true, sum(isopen))*100)",
@@ -170,19 +84,19 @@
             }
           ],
           "visualization": {
-          "default_view": "Snapshot",
+            "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart",
-                "default_chart_view": "pieChart",
-                "show_pie_chart": "true"
+              "chart_type": "groupChart",
+              "default_chart_view": "pieChart",
+              "show_pie_chart": "true"
             },
             "overtime": {
               "show_area_chart": "true",
               "show_timeline_total": "false"
             }
-         },
-         "comparison_column_entries": [
-              {
+          },
+          "comparison_column_entries": [
+            {
               "column": "casenumber",
               "name": "Count of cases",
               "aggregate_type": "count",
@@ -190,8 +104,94 @@
               "suffix": "cases",
               "precision": "0",
               "render_type": "bullet"
-              }
-           ]
+            }
+          ]
+        },
+        {
+          "name": "Count of Opened Cases",
+          "column": "casenumber",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "cases",
+          "parent_queries": [
+            "select distinct casenumber, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+          ],
+          "fields": {
+            "date_column": "last_opened_date"
+          },
+          "comparison_column_entries": [
+            {
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+            }
+          ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "120000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Count of Closed Cases",
+          "column": "casenumber",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "cases",
+          "parent_queries": [
+            "select distinct casenumber, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+          ],
+          "fields": {
+            "date_column": "last_closed_date"
+          },
+          "comparison_column_entries": [
+            {
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+            }
+          ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -268,7 +268,7 @@
       "shape_dataset_entries": [],
       "shape_outline_dataset_entries": []
     },
-     {
+    {
       "name": "Time to Disposition",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
@@ -313,7 +313,7 @@
         }
       ],
       "view_entries": [
-         {
+        {
           "name": "Mean Time To Disposition",
           "column": "timetodisposition",
           "aggregate_type": "avg",
@@ -325,7 +325,7 @@
             "date_column": "lastopeneddate"
           },
           "comparison_column_entries": [
-              { 
+            {
               "column": "casetypemappingcodedescription",
               "name": "Case Type",
               "aggregate_type": "",
@@ -333,8 +333,8 @@
               "prefix": "",
               "suffix": "",
               "precision": ""
-              }
-           ],
+            }
+          ],
           "tags": [
             "Cases"
           ],
@@ -353,13 +353,13 @@
             }
           ],
           "visualization": {
-          "default_view": "Snapshot",
+            "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart"
+              "chart_type": "groupChart"
             }
-         }
-       },
-       {
+          }
+        },
+        {
           "name": "Median Time To Disposition",
           "column": "timetodisposition",
           "aggregate_type": "median",
@@ -371,7 +371,7 @@
             "date_column": "lastopeneddate"
           },
           "comparison_column_entries": [
-              { 
+            {
               "column": "casetypemappingcodedescription",
               "name": "Case Type",
               "aggregate_type": "",
@@ -379,8 +379,8 @@
               "prefix": "",
               "suffix": "",
               "precision": ""
-              }
-           ],
+            }
+          ],
           "tags": [
             "Cases"
           ],
@@ -399,13 +399,13 @@
             }
           ],
           "visualization": {
-          "default_view": "Snapshot",
+            "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart"
+              "chart_type": "groupChart"
             }
-         }
-       },
-       {
+          }
+        },
+        {
           "name": "Percentage of Cases With Time To Disposition < 180 Days",
           "column": "sum(timetodisposition_flag)/count(*)*100",
           "aggregate_type": "",
@@ -414,13 +414,13 @@
           "prefix": "",
           "suffix": "%",
           "parent_queries": [
-              "select  *, case(timetodisposition < 180, 1) as timetodisposition_flag"
-           ],
+            "select  *, case(timetodisposition < 180, 1) as timetodisposition_flag"
+          ],
           "fields": {
             "date_column": "lastopeneddate"
           },
           "comparison_column_entries": [
-              { 
+            {
               "column": "casetypemappingcodedescription",
               "name": "Case Type",
               "aggregate_type": "",
@@ -428,8 +428,8 @@
               "prefix": "",
               "suffix": "",
               "precision": ""
-              }
-           ],
+            }
+          ],
           "tags": [
             "Cases"
           ],
@@ -448,12 +448,12 @@
             }
           ],
           "visualization": {
-          "default_view": "Snapshot",
+            "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart"
+              "chart_type": "groupChart"
             }
-         }
-       },
+          }
+        },
         {
           "name": "Percentage of Cases With Time To Disposition < 365 Days",
           "column": "sum(timetodisposition_flag)/count(*)*100",
@@ -463,13 +463,13 @@
           "prefix": "",
           "suffix": "%",
           "parent_queries": [
-              "select  *, case(timetodisposition < 365, 1) as timetodisposition_flag"
-           ],
+            "select  *, case(timetodisposition < 365, 1) as timetodisposition_flag"
+          ],
           "fields": {
             "date_column": "lastopeneddate"
           },
           "comparison_column_entries": [
-              { 
+            {
               "column": "casetypemappingcodedescription",
               "name": "Case Type",
               "aggregate_type": "",
@@ -477,8 +477,8 @@
               "prefix": "",
               "suffix": "",
               "precision": ""
-              }
-           ],
+            }
+          ],
           "tags": [
             "Cases"
           ],
@@ -497,12 +497,12 @@
             }
           ],
           "visualization": {
-          "default_view": "Snapshot",
+            "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart"
+              "chart_type": "groupChart"
             }
-         }
-       }            
+          }
+        }
       ],
       "filter_by_entries": [
         {
@@ -573,7 +573,7 @@
       },
       "shape_dataset_entries": [],
       "shape_outline_dataset_entries": []
-    },    
+    },
     {
       "name": "Court Operations",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
@@ -594,7 +594,7 @@
         {
           "column": "casenumber",
           "name": "Case Number"
-        }         
+        }
       ],
       "view_entries": [
         {
@@ -610,13 +610,13 @@
           "tags": [
             "Cases"
           ],
-       "visualization": {
-          "default_view": "Snapshot",
+          "visualization": {
+            "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           }
-        }, 
+        },
         {
           "name": "Count of Hearings",
           "column": "hearingid",
@@ -633,13 +633,13 @@
           "tags": [
             "Cases"
           ],
-       "visualization": {
-          "default_view": "Snapshot",
+          "visualization": {
+            "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           }
-        }        
+        }
       ],
       "leaf_page_entries": [
         {
@@ -653,7 +653,7 @@
         {
           "column": "casenumber",
           "name": "Case Number"
-        }       
+        }
       ],
       "map": {
         "centerLat": "42.038333",
