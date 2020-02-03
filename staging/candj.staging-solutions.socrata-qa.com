@@ -212,7 +212,7 @@
           "name": "Active Case?"
         },
         {
-          "column": "eventstatusmappingcodedescription",
+          "column": "eventstatusmappingcodede",
           "name": "Disposition"
         }
       ],
