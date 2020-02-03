@@ -104,7 +104,7 @@
             "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "default_group_by_entry_column": "nodedescription"
+              "default_group_by_entry_column": "casecategorydescription"
             }
           }
         },
@@ -189,7 +189,7 @@
               "chart_type": "groupChart",
               "default_chart_view": "pieChart",
               "show_pie_chart": "true",
-              "default_group_by_entry_column": "nodedescription"
+              "default_group_by_entry_column": "casetypemappingcodedescription"
             },
             "overtime": {
               "show_area_chart": "true",
