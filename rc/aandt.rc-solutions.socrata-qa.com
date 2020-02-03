@@ -5,7 +5,7 @@
     "delimiter": ","
   },
   "tag_list": [
-    "Tax & Appraisals"
+    "Sales"
   ],
   "template_entries": [
     {
@@ -33,7 +33,7 @@
         },
         {
           "column": "taxdist",
-          "name": "Taxdist"
+          "name": "Tax district"
         },
         {
           "column": "cityname",
@@ -55,12 +55,12 @@
         },
         {
           "column": "taxdist",
-          "name": "Taxdist"
+          "name": "Tax district"
         }
       ],
       "view_entries": [
         {
-          "name": "Mean Ratio",
+          "name": "Average Sales Ratio",
           "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
           "aggregate_type": "avg",
           "precision": "2",
@@ -68,7 +68,7 @@
           "suffix": "",
           "use_dimension_value": "true",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {   
              "default_view": "Snapshot",
@@ -106,7 +106,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {
              "default_view": "Snapshot",
@@ -125,7 +125,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {
              "default_view": "Snapshot",
@@ -144,7 +144,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": { 
              "default_view": "Snapshot",
@@ -163,7 +163,7 @@
           "prefix": "$",
           "suffix": "",
           "tags": [
-            "Courts & Justice"
+            "Sales"
           ],
           "visualization": {
              "default_view": "Snapshot",
