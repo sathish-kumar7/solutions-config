@@ -116,7 +116,7 @@
           ]
         },
         {
-          "name": "Count of Opened Cases",
+          "name": "Count of Opened or Reopened Cases",
           "column": "casenumber",
           "aggregate_type": "count",
           "use_dimension_value": "true",
@@ -152,6 +152,43 @@
             }
           }
         },
+        {
+          "name": "Count of New Filings",
+          "column": "casenumber",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "cases",
+          "parent_queries": [
+            "select distinct casenumber, county, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+          ],
+          "fields": {
+            "date_column": "last_opened_date"
+          },
+          "comparison_column_entries": [
+            {
+              "column": "casetypemappingcodedescription",
+              "name": "Case Type",
+              "aggregate_type": "",
+              "render_type": "stack",
+              "prefix": "",
+              "suffix": "",
+              "precision": ""
+            }
+          ],
+          "tags": [
+            "Cases"
+          ],
+          "target_entries": [
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },        
         {
           "name": "Count of Closed Cases",
           "column": "casenumber",
