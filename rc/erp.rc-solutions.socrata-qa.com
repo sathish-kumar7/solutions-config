@@ -5,7 +5,8 @@
     "title": "Solutions - ERP Financials"
   },
   "tag_list": [
-    "Budget"
+    "Budget",
+    "Payroll"
   ],
   "show_share_via_email": true,
   "is_private": "false",
@@ -220,7 +221,7 @@
         {
           "name": "Unadjusted Net Income",
           "parent_queries": [
-              "select *, case(accounttype == 'Revenue', revisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', revisedbudget, true, 0) as expenditures_amount"
+              "select *, case(accounttype == 'Revenue', ltdrevisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', ltdrevisedbudget, true, 0) as expenditures_amount"
           ],
           "column": "sum(revenue_amount) - sum(expenditures_amount)",
           "aggregate_type": "",
@@ -262,6 +263,105 @@
         {
           "column": "accounttype",
           "name": "Account Type",
+          "renderType": "text"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Payroll",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "dfmt-x4an",
+      "fields": {
+        "date_column": "checkdate"
+      },
+      "dimension_entries": [
+        {
+          "column": "jobclass",
+          "name": "Job"
+        },
+        {
+          "column": "firstname",
+          "name": "Employee"
+        },
+        {
+          "column": "paycategory",
+          "name": "Pay Type"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Total Payroll",
+          "column": "payamount",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Payroll"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "comparison_column_entries": [ 
+              {
+              "column": "paycategory",
+              "name": "Pay Type",
+              "aggregate_type": "",
+              "prefix": "",
+              "suffix": "",
+              "precision": "",
+              "render_type": "stack"
+              }
+           ]
+        },
+        {
+          "name": "Total Overtime",
+          "column": "payamount",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Payroll"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "quick_filters": [
+            {
+              "column": "paycategory",
+              "field": "quick_filter_1_dfmt_x4an_0",
+              "type": "text",
+              "values": [
+                "OVERTIME"
+              ],
+              "operator": "="
+            }
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
+          "column": "paycategory",
+          "name": "Pay Type"
+        },
+        {
+          "column": "firstname",
+          "name": "Employee"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "paycategory",
+          "name": "Pay Type",
           "renderType": "text"
         }
       ]
