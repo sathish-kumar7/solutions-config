@@ -288,6 +288,10 @@
           "name": "Account status"
         },
         {
+          "column": "paycategory",
+          "name": "Pay Type"
+        },
+        {
           "column": "firstname",
           "name": "Employee"
         }
