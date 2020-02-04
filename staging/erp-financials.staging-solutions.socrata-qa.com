@@ -280,12 +280,12 @@
           "name": "Job"
         },
         {
-          "column": "paycategory",
-          "name": "Pay Type"
-        },
-        {
           "column": "firstname",
           "name": "Employee"
+        },
+        {
+          "column": "paycategory",
+          "name": "Pay Type"
         }
       ],
       "view_entries": [
@@ -330,6 +330,7 @@
           "quick_filters": [
             {
               "column": "paycategory",
+              "field": "quick_filter_1_dfmt_x4an_0",
               "type": "text",
               "values": [
                 "OVERTIME"
