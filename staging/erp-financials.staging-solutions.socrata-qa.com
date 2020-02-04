@@ -284,10 +284,6 @@
           "name": "Job Class"
         },
         {
-          "column": "accountstatus",
-          "name": "Account status"
-        },
-        {
           "column": "paycategory",
           "name": "Pay Type"
         },
@@ -333,8 +329,8 @@
           "name": "Job Class"
         },
         {
-          "column": "accountstatus",
-          "name": "Account status"
+          "column": "paycategory",
+          "name": "Pay Type"
         },
         {
           "column": "firstname",
