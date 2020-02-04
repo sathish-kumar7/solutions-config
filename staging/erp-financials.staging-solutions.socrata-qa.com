@@ -42,7 +42,7 @@
       ],
       "view_entries": [
         {
-          "name": "Revised Budget",
+          "name": "Budget vs. Actuals",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -54,8 +54,8 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "comparison_column_entries": [ 
-              {
+          "comparison_column_entries": [
+            {
               "column": "actual",
               "name": "Actual Amount",
               "aggregate_type": "sum",
@@ -63,63 +63,8 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              }, 
-              {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-              }
-           ]
-        },
-        {
-          "name": "Operating Budget",
-          "parent_queries": [
-              "select * where accounttype = 'Expense'"
-          ],
-          "column": "ltdrevisedbudget",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Budget"
-          ],
-          "target_entries": [
-            {
-              "name": "On track",
-              "color": "#259652",
-              "operator": "between",
-              "value": "1200000000",
-              "to": "1250000000",
-              "icon": "icons-check-circle"
             },
             {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ],
-          "visualization": {
-            "default_view": "Snapshot"
-          },
-          "quick_filters": [
-            
-          ],
-          "comparison_column_entries": [            
-              {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-              },  
-              {
               "column": "ltdoriginalbudget",
               "name": "Original budget",
               "aggregate_type": "sum",
@@ -127,11 +72,11 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              }
-           ]
+            }
+          ]
         },
         {
-          "name": "Revenue Budget",
+          "name": "Estimated vs. Actual Revenue",
           "column": "ltdrevisedbudget",
           "parent_queries": [
             "select * where accounttype = 'Revenue'"
@@ -163,8 +108,8 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "comparison_column_entries": [              
-              {
+          "comparison_column_entries": [
+            {
               "column": "actual",
               "name": "Actual Amount",
               "aggregate_type": "sum",
@@ -172,8 +117,8 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              },  
-              {
+            },
+            {
               "column": "ltdoriginalbudget",
               "name": "Original budget",
               "aggregate_type": "sum",
@@ -181,11 +126,11 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              }
-           ]
+            }
+          ]
         },
         {
-          "name": "Budget - Cash Accounts",
+          "name": "Cash Balance",
           "parent_queries": [
             "select * where accounttype = 'Balance Sheet'"
           ],
@@ -221,7 +166,7 @@
         {
           "name": "Unadjusted Net Income",
           "parent_queries": [
-              "select *, case(accounttype == 'Revenue', ltdrevisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', ltdrevisedbudget, true, 0) as expenditures_amount"
+            "select *, case(accounttype == 'Revenue', ltdrevisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', ltdrevisedbudget, true, 0) as expenditures_amount"
           ],
           "column": "sum(revenue_amount) - sum(expenditures_amount)",
           "aggregate_type": "",
@@ -232,11 +177,11 @@
             "Budget"
           ],
           "target_entries": [
-              ],
+          ],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           }
         }
@@ -302,8 +247,8 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "comparison_column_entries": [ 
-              {
+          "comparison_column_entries": [
+            {
               "column": "paycategory",
               "name": "Pay Type",
               "aggregate_type": "",
@@ -311,8 +256,8 @@
               "suffix": "",
               "precision": "",
               "render_type": "stack"
-              }
-           ]
+            }
+          ]
         },
         {
           "name": "Total Overtime",
