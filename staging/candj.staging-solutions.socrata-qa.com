@@ -23,10 +23,6 @@
       },
       "dimension_entries": [
         {
-          "column": "county",
-          "name": "County"
-        },
-        {
           "column": "casecategorydescription",
           "name": "Case Category"
         },
@@ -41,14 +37,14 @@
         {
           "column": "nodedescription",
           "name": "Court Name"
+        },
+        {
+          "column": "county",
+          "name": "County"
         }
       ],
       "group_by_entries": [
         {
-          "column": "county",
-          "name": "County"
-        },
-        {
           "column": "casetypemappingcodedescription",
           "name": "Case Type"
         },
@@ -63,6 +59,10 @@
         {
           "column": "nodedescription",
           "name": "Court Name"
+        },
+        {
+          "column": "county",
+          "name": "County"
         }
       ],
       "view_entries": [
