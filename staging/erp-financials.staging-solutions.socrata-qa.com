@@ -76,7 +76,9 @@
         },
         {
           "name": "Operating Budget",
-          "parentqueries": "Select * where accounttype = 'Expense'",
+          "parentqueries": [
+              "Select * where accounttype = 'Expense'"
+          ],
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -130,7 +132,9 @@
         {
           "name": "Revenue Budget",
           "column": "actual",
-          "parentqueries": "Select * where accounttype = 'Revenue'",
+          "parentqueries": [
+            "Select * where accounttype = 'Revenue'"
+          ],
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -181,6 +185,9 @@
         },
         {
           "name": "Budget - Cash Accounts",
+          "parentqueries": [
+            "Select * where accounttype = 'Balance Sheet'"
+          ],
           "column": "actual",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -204,15 +211,7 @@
             }
           ],
           "quick_filters": [
-            {
-              "column": "accounttype",
-              "type": "text",
-              "field": "quick_filter_0_darw_mart_0",
-              "values": [
-                "Balance Sheet"
-              ],
-              "operator": "="
-            }
+
           ],
           "visualization": {
             "default_view": "Snapshot"
