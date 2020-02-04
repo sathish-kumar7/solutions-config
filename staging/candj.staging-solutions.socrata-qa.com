@@ -641,7 +641,7 @@
           "name": "Judge ID"
         },
         {
-          "column": "nodedescription",
+          "column": "last_nodedescription",
           "name": "Court Name"
         },
         {
