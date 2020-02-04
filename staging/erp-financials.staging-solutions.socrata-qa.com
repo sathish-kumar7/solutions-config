@@ -76,7 +76,7 @@
         },
         {
           "name": "Operating Budget",
-          "parentqueries": [
+          "parent_queries": [
               "Select * where accounttype = 'Expense'"
           ],
           "column": "ltdrevisedbudget",
@@ -132,7 +132,7 @@
         {
           "name": "Revenue Budget",
           "column": "actual",
-          "parentqueries": [
+          "parent_queries": [
             "Select * where accounttype = 'Revenue'"
           ],
           "aggregate_type": "sum",
@@ -185,7 +185,7 @@
         },
         {
           "name": "Budget - Cash Accounts",
-          "parentqueries": [
+          "parent_queries": [
             "Select * where accounttype = 'Balance Sheet'"
           ],
           "column": "actual",
