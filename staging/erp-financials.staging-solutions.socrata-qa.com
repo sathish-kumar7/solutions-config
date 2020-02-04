@@ -5,7 +5,8 @@
     "title": "Solutions - ERP Financials"
   },
   "tag_list": [
-    "Budget"
+    "Budget",
+    "Payroll"
   ],
   "show_share_via_email": true,
   "is_private": "false",
@@ -262,6 +263,84 @@
         {
           "column": "accounttype",
           "name": "Account Type",
+          "renderType": "text"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Payroll",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "dfmt-x4an",
+      "fields": {
+        "date_column": "checkdate"
+      },
+      "dimension_entries": [
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
+          "column": "accountstatus",
+          "name": "Account status"
+        },
+        {
+          "column": "firstname",
+          "name": "Employee"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Total Payroll",
+          "column": "payamount",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "comparison_column_entries": [ 
+              {
+              "column": "paycategory",
+              "name": "Pay Type",
+              "aggregate_type": "",
+              "prefix": "",
+              "suffix": "",
+              "precision": "",
+              "render_type": "stack"
+              }
+           ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
+          "column": "accountstatus",
+          "name": "Account status"
+        },
+        {
+          "column": "firstname",
+          "name": "Employee"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "paycategory",
+          "name": "Pay Type",
           "renderType": "text"
         }
       ]
