@@ -47,7 +47,9 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "show_pie_chart": "true"
+              "show_pie_chart": "true",
+              "default_comparison_column_entry": "program"
+              
             }
           },
           "precision": "0",
@@ -112,7 +114,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "show_pie_chart": "true"
+              "show_pie_chart": "true",
+              "default_comparison_column_entry": "approved_amount"
             }
           },
           "comparison_column_entries": [
@@ -826,7 +829,9 @@
             "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "showCompareDropDown": "true"
+              "showCompareDropDown": "true",
+              "default_group_by_entry_column": "agency_name",
+              "default_comparison_column_entry": "case_disposition" 
             },
             "overtime": {
               "show_area_chart": "true",
