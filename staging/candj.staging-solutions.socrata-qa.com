@@ -260,7 +260,7 @@
       "name": "Time to Disposition",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "93x4-9x8r",
+      "dataset_id": "8jhs-9dry",
       "fields": {
         "date_column": "lastcloseddate"
       },
@@ -565,7 +565,7 @@
     {
       "name": "Court Operations",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "6nic-t5bv",
+      "dataset_id": "russ-uuj3",
       "default_view": "Snapshot",
       "fields": {
         "date_column": "hearing_date"
