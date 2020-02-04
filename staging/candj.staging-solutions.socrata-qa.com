@@ -87,7 +87,7 @@
             "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "default_chart_view": "pieChart",
+              "default_comparison_column_entry": "casenumber",
               "show_pie_chart": "true"
             },
             "overtime": {
