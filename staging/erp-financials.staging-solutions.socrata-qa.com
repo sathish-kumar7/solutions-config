@@ -276,12 +276,8 @@
       },
       "dimension_entries": [
         {
-          "column": "position",
-          "name": "Position"
-        },
-        {
           "column": "jobclass",
-          "name": "Job Class"
+          "name": "Job"
         },
         {
           "column": "paycategory",
@@ -301,7 +297,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Payroll"
           ],
           "visualization": {
             "default_view": "Snapshot"
@@ -317,6 +313,30 @@
               "render_type": "stack"
               }
            ]
+        },
+        {
+          "name": "Total Overtime",
+          "column": "payamount",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Payroll"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "quick_filters": [
+            {
+              "column": "paycategory",
+              "type": "text",
+              "values": [
+                "OVERTIME"
+              ],
+              "operator": "="
+            }
+          ]
         }
       ],
       "leaf_page_entries": [
