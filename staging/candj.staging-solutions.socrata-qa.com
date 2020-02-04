@@ -678,7 +678,7 @@
           "name": "Count of Hearings",
           "column": "hearingid",
           "parent_queries": [
-            "select distinct hearingid, casenumber, casecategorydescription as last_casecategorydescription, casetypemappingcodedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date,  min(hearingjudgeid) as last_hearingjudgeid, min(nodedescription) as last_nodedescription, min(county) as last_county"
+            "select distinct hearingid, casenumber, casecategorydescription as last_casecategorydescription, casetypemappingcodedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date, hearingjudgeid as last_hearingjudgeid, nodedescription as last_nodedescription, county as last_county"
           ],
           "fields": {
             "date_column": "last_hearing_date"
