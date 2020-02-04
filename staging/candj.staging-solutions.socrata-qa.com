@@ -645,7 +645,7 @@
           "name": "Court Name"
         },
         {
-          "column": "county",
+          "column": "last_county",
           "name": "County"
         },
         {
@@ -678,7 +678,7 @@
           "name": "Count of Hearings",
           "column": "hearingid",
           "parent_queries": [
-            "select distinct hearingid, casenumber, casecategorydescription as last_casecategorydescription, casetypemappingcodedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date"
+            "select distinct hearingid, casenumber, casecategorydescription as last_casecategorydescription, casetypemappingcodedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date,  min(hearingjudgeid) as last_hearingjudgeid, min(nodedescription) as last_nodedescription, min(county) as last_county"
           ],
           "fields": {
             "date_column": "last_hearing_date"
@@ -706,6 +706,18 @@
         {
           "column": "last_casecategorydescription",
           "name": "Case Category"
+        },
+        {
+          "column": "last_hearingjudgeid",
+          "name": "Judge ID"
+        },
+        {
+          "column": "nodedescription",
+          "name": "Court Name"
+        },
+        {
+          "column": "last_county",
+          "name": "County"
         },
         {
           "column": "casenumber",
