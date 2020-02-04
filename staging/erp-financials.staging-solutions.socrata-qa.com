@@ -131,7 +131,7 @@
         },
         {
           "name": "Revenue Budget",
-          "column": "actual",
+          "column": "ltdrevisedbudget",
           "parent_queries": [
             "Select * where accounttype = 'Revenue'"
           ],
@@ -188,7 +188,7 @@
           "parent_queries": [
             "Select * where accounttype = 'Balance Sheet'"
           ],
-          "column": "actual",
+          "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -224,25 +224,6 @@
           ],
           "column": "sum(revenue_amount) - sum(expenditures_amount)",
           "aggregate_type": "",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Budget"
-          ],
-          "target_entries": [
-              ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-                "chart_type": "barChart"
-            }
-          }
-        },
-        {
-          "name": "Total Payroll",
-          "column": "actual",
-          "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
           "precision": "2",
