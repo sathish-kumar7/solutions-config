@@ -188,9 +188,9 @@
               "chart_type": "groupChart"
             }
           }
-        },        
+        },
         {
-          "name": "Count of Closed Cases",
+          "name": "Count of Closed or Inactivated Cases",
           "column": "casenumber",
           "aggregate_type": "count",
           "use_dimension_value": "true",
@@ -315,6 +315,10 @@
           "name": "Case Type"
         },
         {
+          "column": "casecategorydescription",
+          "name": "Case Category"
+        },
+        {
           "column": "judgeid",
           "name": "Judge ID"
         },
@@ -323,8 +327,8 @@
           "name": "Court Name"
         },
         {
-          "column": "casenumber",
-          "name": "Case Number"
+          "column": "county",
+          "name": "County"
         }
       ],
       "group_by_entries": [
@@ -333,6 +337,10 @@
           "name": "Case Type"
         },
         {
+          "column": "casecategorydescription",
+          "name": "Case Category"
+        },
+        {
           "column": "judgeid",
           "name": "Judge ID"
         },
@@ -341,8 +349,8 @@
           "name": "Court Name"
         },
         {
-          "column": "casenumber",
-          "name": "Case Number"
+          "column": "county",
+          "name": "County"
         }
       ],
       "view_entries": [
@@ -545,20 +553,24 @@
       ],
       "leaf_page_entries": [
         {
-          "column": "judgeid",
-          "name": "Judge ID"
+          "column": "casetypemappingcodedescription",
+          "name": "Case Type"
         },
         {
-          "column": "casenumber",
-          "name": "Case Number"
+          "column": "casecategorydescription",
+          "name": "Case Category"
+        },
+        {
+          "column": "judgeid",
+          "name": "Judge ID"
         },
         {
           "column": "nodedescription",
           "name": "Court Name"
         },
         {
-          "column": "casetypemappingcodedescription",
-          "name": "Case Type"
+          "column": "county",
+          "name": "County"
         }
       ],
       "quick_filter_entries": [
@@ -625,6 +637,18 @@
           "name": "Case Category"
         },
         {
+          "column": "last_hearingjudgeid",
+          "name": "Judge ID"
+        },
+        {
+          "column": "nodedescription",
+          "name": "Court Name"
+        },
+        {
+          "column": "county",
+          "name": "County"
+        },
+        {
           "column": "casenumber",
           "name": "Case Number"
         }
@@ -634,7 +658,7 @@
           "name": "Trial Date Certainty",
           "column": "sum(certainty_count)/count(*)*100",
           "parent_queries": [
-            "select count(hearingdate) as total_hearing_dates,casenumber,max(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypemappingcodedescription) as last_casetypedescription, min(casecategorydescription) as last_casecategorydescription, min(casecategorymappingcoded) as last_casecategorymappingdescription group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_casecategorydescription, last_casecategorymappingdescription, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
+            "select count(hearingdate) as total_hearing_dates,casenumber,max(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypemappingcodedescription) as last_casetypedescription, min(casecategorydescription) as last_casecategorydescription, min(casecategorymappingcoded) as last_casecategorymappingdescription, min(hearingjudgeid) as last_hearingjudgeid, min(nodedescription) as last_nodedescription, min(county) as last_county group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_casecategorydescription, last_casecategorymappingdescription, last_hearingjudgeid, last_nodedescription, last_county, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
           ],
           "aggregate_type": "",
           "precision": "1",
