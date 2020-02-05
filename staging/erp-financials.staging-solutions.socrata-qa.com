@@ -403,15 +403,7 @@
             }
           },
           "comparison_column_entries": [
-            {
-              "column": "recurringannualsalary",
-              "name": "Annual Salary",
-              "aggregate_type": "sum",
-              "prefix": "",
-              "suffix": "",
-              "precision": "",
-              "render_type": "bullet"
-            }
+         
           ]
         }
       ],
