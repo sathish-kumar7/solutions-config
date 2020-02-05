@@ -490,7 +490,7 @@
         },
         {
           "name": "MBE|WBE Bid %",
-          "column": "count(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)",
+          "column": "sum(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)",
           "aggregate_type": "",
           "prefix": "",
           "suffix": "",
