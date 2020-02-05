@@ -185,7 +185,7 @@
         "date_column": "requestdatetime",
         "incident_type": "inspectiontypename",
         "location": "location",
-        "8t69-jvh8": ":@computed_region_8t69-jvh8"
+        "8t69-jvh8": ":@computed_region_8t69_jvh8"
       },
       "dimension_entries": [
         {
