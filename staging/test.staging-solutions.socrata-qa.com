@@ -787,7 +787,7 @@
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
                 "parent_queries": [
-          "select min(positionopendate) as positionopen_date, min(jobopening) as job_opening, min(city) as city, min(offeredposition) as offered_position, min(acceptedposition) as accepted_position, count(applicantid) as applicant_id, jobopeningrequisitionnumber group by jobopeningrequisitionnumber"
+          "select min(positionopendate) as positionopen_date, min(jobopening) as job_opening, min(city) as city, count(applicantid) as applicant_id, jobopeningrequisitionnumber group by jobopeningrequisitionnumber"
         ],
       "fields": {
         "date_column": "positionopen_date"
@@ -800,14 +800,6 @@
         {
           "column": "city",
           "name": "City"
-        },
-        {
-          "column": "offered_position",
-          "name": "Offered position"
-        },
-        {
-          "column": "accepted_position",
-          "name": "Accepted position"
         }
       ],
       "view_entries": [
