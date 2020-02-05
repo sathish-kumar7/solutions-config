@@ -487,6 +487,26 @@
           "comparison_column_entries": [
             
           ]
+        },
+        {
+          "name": "MBE|WBE Bid %",
+          "column": "count(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
         }
       ],
       "leaf_page_entries": [
@@ -501,10 +521,6 @@
         {
           "column": "requestingdepartment",
           "name": "Requesting Department"
-        },
-        {
-          "column": "iswomenorminoritybusines",
-          "name": "Is WBE"
         }
       ]
     }
