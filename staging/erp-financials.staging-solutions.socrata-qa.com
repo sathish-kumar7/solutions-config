@@ -5,8 +5,9 @@
     "title": "Solutions - ERP Financials"
   },
   "tag_list": [
-    "Budget",
-    "Payroll"
+    "Financials",
+    "Payroll & HR",
+    "Revenue & Tax"
   ],
   "date": {
     "startDate": "2018-07-01",
@@ -49,7 +50,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Financials"
           ],
           "visualization": {
             "default_view": "Snapshot"
@@ -86,7 +87,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Revenue & Tax"
           ],
           "target_entries": [
             {
@@ -138,7 +139,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Financials"
           ],
           "target_entries": [
             {
@@ -170,7 +171,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Financials"
           ],
           "target_entries": [],
           "visualization": {
@@ -237,7 +238,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Payroll"
+            "Payroll & HR"
           ],
           "visualization": {
             "default_view": "Snapshot"
@@ -262,7 +263,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Payroll"
+            "Payroll & HR"
           ],
           "visualization": {
             "default_view": "Snapshot"
