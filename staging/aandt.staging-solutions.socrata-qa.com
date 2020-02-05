@@ -347,9 +347,6 @@
       "bench_mark_entries": [
 
       ],
-      "map": {
-
-      },
       "shape_dataset_entries": [
 
       ]
