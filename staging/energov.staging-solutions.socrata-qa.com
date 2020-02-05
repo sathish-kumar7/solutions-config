@@ -19,7 +19,7 @@
         "date_column": "applicationdate",
         "incident_type": "permittype",
         "location": "location",
-        "8t69-jvh8": ":@computed_region_8t69-jvh8"
+        "8t69-jvh8": ":@computed_region_8t69_jvh8"
         },
       "dimension_entries": [
         {
