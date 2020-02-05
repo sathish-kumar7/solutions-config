@@ -441,6 +441,72 @@
           "name": "Employee"
         }
       ]
+    },
+    {
+      "name": "ERP - Bids",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "4f5p-ynjv",
+      "fields": {
+        "date_column": "datesubmitted"
+      },
+      "dimension_entries": [
+        {
+          "column": "opportunityname",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "biddername",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requestingdepartment",
+          "name": "Requesting Department"
+        },
+        {
+          "column": "iswomenorminoritybusines",
+          "name": "Is WBE"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Bids per Opportunity",
+          "column": "count(bidder ID) / count(opportunity ID)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "opportunityname",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "biddername",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requestingdepartment",
+          "name": "Requesting Department"
+        },
+        {
+          "column": "iswomenorminoritybusines",
+          "name": "Is WBE"
+        }
+      ]
     }
   ]
 }
