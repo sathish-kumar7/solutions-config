@@ -273,10 +273,6 @@
           "name": "Job"
         },
         {
-          "column": "firstname",
-          "name": "Employee"
-        },
-        {
           "column": "paycategory",
           "name": "Pay Type"
         }
