@@ -273,8 +273,12 @@
           "name": "Job"
         },
         {
-          "column": "paycategory",
-          "name": "Pay Type"
+          "column": "groupbargainingunit",
+          "name": "Bargaining Unit"
+        },
+        {
+          "column": "paytype",
+          "name": "Employment Type"
         }
       ],
       "view_entries": [
@@ -336,7 +340,7 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          "select distinct(employeeid) as distinct_employees, payamount, paycategory, checkdate, position, jobclass, firstname"
+          "select distinct(employeeid) as distinct_employees, payamount, paytype, checkdate, position, jobclass, firstname"
           ],
           "column": "distinct_employees",
           "aggregate_type": "count",
