@@ -343,7 +343,7 @@
           "select distinct(employee_id) as distinct_employees, position, jobclass, paycategory, firstname, paycategory"
           ],
           "column": "distinct_employees",
-          "aggregate_type": "",
+          "aggregate_type": "count",
           "prefix": "",
           "suffix": "employees",
           "precision": "",
