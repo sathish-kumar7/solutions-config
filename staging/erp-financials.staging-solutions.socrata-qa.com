@@ -133,7 +133,7 @@
           "parent_queries": [
             "select * where cashaccount = 'true'"
           ],
-          "column": "ltdrevisedbudget",
+          "column": "actual",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
