@@ -328,6 +328,10 @@
       },
       "dimension_entries": [
         {
+          "column": "licensetype",
+          "name": "License Type"
+        },
+        {
           "column": "doingbusinessas",
           "name": "Business"
         },
@@ -338,10 +342,6 @@
         {
           "column": "licenseclass",
           "name": "License Class"
-        },
-        {
-          "column": "licensetype",
-          "name": "License Type"
         }
       ],
       "group_by_entries": [
@@ -400,8 +400,7 @@
        "visualization": {
           "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "groupChart",
-                "default_group_by_entry_column": "licensetype"
+                "chart_type": "groupChart"
             }
         },
         "target_entries": [
