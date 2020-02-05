@@ -170,7 +170,7 @@
         {
           "name": "Unadjusted Net Income",
           "parent_queries": [
-            "select *, case(accounttype == 'Revenue', ltdrevisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', ltdrevisedbudget, true, 0) as expenditures_amount"
+            "select *, case(accounttype == 'Revenue', actual, true, 0) as revenue_amount, case(accounttype == 'Expense', actual, true, 0) as expenditures_amount"
           ],
           "column": "sum(revenue_amount) - sum(expenditures_amount)",
           "aggregate_type": "",
