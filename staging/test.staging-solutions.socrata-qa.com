@@ -706,7 +706,7 @@
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "4f5p-ynjv",
                 "parent_queries": [
-          "select min(opportunityname) as oppurtunity_name, min(datesubmitted) as date_submitted, min(biddername) as bidder_name, min(requestingdepartment) as requesting_department, min(iswomenorminoritybusines) as is_wbe, count(bidderid) as bidder_count, opportunityid group by opportunityid "
+          "select min(opportunityname) as oppurtunity_name, min(datesubmitted) as date_submitted, min(biddername) as bidder_name, min(requestingdepartment) as requesting_department, count(bidderid) as bidder_count, opportunityid group by opportunityid "
         ],
       "fields": {
         "date_column": "date_submitted"
@@ -723,10 +723,6 @@
         {
           "column": "requesting_department",
           "name": "Requesting Department"
-        },
-        {
-          "column": "is_wbe",
-          "name": "Is WBE"
         }
       ],
       "view_entries": [
