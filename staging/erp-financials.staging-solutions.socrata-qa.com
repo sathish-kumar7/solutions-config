@@ -469,8 +469,11 @@
       ],
       "view_entries": [
         {
+          "parent_queries": [
+          "select *, distinct(opportunityid) as distinct_opportunityid"
+          ],
           "name": "Bids per Opportunity",
-          "column": "count(bidderid) / count(opportunityid)",
+          "column": "count(bidderid) / count(distinct_opportunityid)",
           "aggregate_type": "",
           "prefix": "",
           "suffix": "",
