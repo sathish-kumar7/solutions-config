@@ -745,26 +745,6 @@
           "comparison_column_entries": [
             
           ]
-        },
-        {
-          "name": "Bids per Opportunity",
-          "column": "sum(bidder_count)/count(opportunityid)",
-          "aggregate_type": "",
-          "prefix": "",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            
-          ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-            "chart_type": "barChart"
-            }
-          },
-          "comparison_column_entries": [
-            
-          ]
         }
       ],
       "leaf_page_entries": [
