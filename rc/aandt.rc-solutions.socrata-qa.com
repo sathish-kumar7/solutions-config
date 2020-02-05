@@ -5,7 +5,8 @@
     "delimiter": ","
   },
   "tag_list": [
-    "Sales"
+    "Sales",
+    "Appeals"
   ],
   "template_entries": [
     {
@@ -264,6 +265,120 @@
           "color": "#32a889"
         }
       ]
+    },
+    {
+      "name": "Appeals",
+      "description": "Tax and Appraisals",
+      "dataset_domain": "appraisalandtax.demo.socrata.com",
+      "dataset_id": "snjj-se4g",
+      "parent_queries": [
+        
+      ],
+      "fields": {
+        "date_column": "decision_date",
+        "incident_type": "own1"
+      },
+      "dimension_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "heartyp",
+          "name": "Hearing Type"
+        },
+        {
+          "column": "attorney",
+          "name": "Attorney"
+        },
+        {
+          "column": "case_status",
+          "name": "Case Status"
+        },
+        {
+          "column": "reason_for_appeal",
+          "name": "Reason For Appeal"
+        }
+      ],
+      "group_by_entries": [
+
+      ],
+      "view_entries": [
+        {
+          "name": "% Appealed Value Upheld",
+          "column": "sum(decision_value) / sum(county_value)",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "heartyp",
+          "name": "Hearing Type"
+        },
+        {
+          "column": "attorney",
+          "name": "Attorney"
+        },
+        {
+          "column": "case_status",
+          "name": "Case Status"
+        },
+        {
+          "column": "reason_for_appeal",
+          "name": "Reason For Appeal"
+        }
+      ],
+      "quick_filter_entries": [
+
+      ],
+      "bench_mark_entries": [
+
+      ],
+      "shape_dataset_entries": [
+
+      ],
+      "map": {
+        "centerLat": "39.018425261608655",
+        "centerLng": "-84.00102962486125",
+        "zoom": "7",
+        "mini_map_zoom": "7",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     }
   ]
 }
