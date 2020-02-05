@@ -342,8 +342,8 @@
           "parent_queries": [
           
           ],
-          "column": "employee_id",
-          "aggregate_type": "distinct",
+          "column": "distinct(employee_id)",
+          "aggregate_type": "",
           "prefix": "",
           "suffix": "employees",
           "precision": "",
@@ -488,29 +488,6 @@
         }
       ],
       "view_entries": [
-        {
-          "parent_queries": [
-          "select *, distinct(opportunityid) as distinct_opportunityid"
-          ],
-          "name": "Bids per Opportunity",
-          "column": "count(bidderid) / count(distinct_opportunityid)",
-          "aggregate_type": "",
-          "prefix": "",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            
-          ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-            "chart_type": "barChart"
-            }
-          },
-          "comparison_column_entries": [
-            
-          ]
-        },
         {
           "name": "MBE|WBE Bid %",
           "column": "sum(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)",
