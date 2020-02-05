@@ -340,9 +340,9 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          "select distinct(employee_id) as distinct_employee"
+          
           ],
-          "column": "distinct_employee",
+          "column": "distinct(employee_id)",
           "aggregate_type": "count",
           "prefix": "",
           "suffix": "employees",
@@ -354,15 +354,7 @@
             "default_view": "Snapshot"
           },
           "quick_filters": [
-            {
-              "column": "paycategory",
-              "field": "quick_filter_1_dfmt_x4an_0",
-              "type": "text",
-              "values": [
-                "OVERTIME"
-              ],
-              "operator": "="
-            }
+              
           ]
         }
       ],
