@@ -63,6 +63,9 @@
                 "chart_type": "groupChart"
             }
         },
+         "fields": {
+        "date_column": "issueddate"
+        },
         "target_entries": [
         {
               "name": "On track",
