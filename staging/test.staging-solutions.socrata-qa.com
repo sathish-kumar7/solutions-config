@@ -745,6 +745,26 @@
           "comparison_column_entries": [
             
           ]
+        },
+        {
+          "name": "Bids per Opportunity",
+          "column": "sum(bidder_count)/count(opportunityid)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
         }
       ],
       "leaf_page_entries": [
@@ -759,6 +779,75 @@
         {
           "column": "requesting_department",
           "name": "Requesting Department"
+        }
+      ]
+    },
+        {
+      "name": "ERP - Applicants",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "n5zv-gf3k",
+                "parent_queries": [
+          "select min(positionopendate) as positionopen_date, min(jobopening) as job_opening, min(city) as city, min(offeredposition) as offered_position, min(acceptedposition) as accepted_position, count(applicantid) as applicant_id, jobopeningrequisitionnumber group by jobopeningrequisitionnumber"
+        ],
+      "fields": {
+        "date_column": "positionopen_date"
+      },
+      "dimension_entries": [
+        {
+          "column": "job_opening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
+        },
+        {
+          "column": "offered_position",
+          "name": "Offered position"
+        },
+        {
+          "column": "accepted_position",
+          "name": "Accepted position"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Applicants per Open Position",
+          "column": "sum(applicant_id)/count(jobopeningrequisitionnumber)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "job_opening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
+        },
+        {
+          "column": "offered_position",
+          "name": "Offered position"
+        },
+        {
+          "column": "accepted_position",
+          "name": "Accepted position"
         }
       ]
     }
