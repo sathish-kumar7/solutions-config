@@ -363,6 +363,72 @@
           "renderType": "text"
         }
       ]
+    },
+    {
+      "name": "ERP - Personnel",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "57n2-v5cf",
+      "fields": {
+        "date_column": "effectivedate"
+      },
+      "dimension_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "employeename",
+          "name": "Employee"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Internal Transfers",
+          "column": "case(isdepartmentchanged = 'True', 1, true, 0)",
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "recurringannualsalary",
+              "name": "Annual Salary",
+              "aggregate_type": "sum",
+              "prefix": "",
+              "suffix": "",
+              "precision": "",
+              "render_type": "bullet"
+            }
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "employeename",
+          "name": "Employee"
+        }
+      ]
     }
   ]
 }
