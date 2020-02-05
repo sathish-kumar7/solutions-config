@@ -336,6 +336,26 @@
               "operator": "="
             }
           ]
+        },
+        {
+          "name": "Headcount",
+          "parent_queries": [
+          "select distinct(employeeid) as distinct_employees, payamount, paycategory, checkdate, position, jobclass, firstname"
+          ],
+          "column": "distinct_employees",
+          "aggregate_type": "count",
+          "prefix": "",
+          "suffix": "employees",
+          "precision": "",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "quick_filters": [
+              
+          ]
         }
       ],
       "leaf_page_entries": [
@@ -361,6 +381,146 @@
           "column": "paycategory",
           "name": "Pay Type",
           "renderType": "text"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Personnel",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "57n2-v5cf",
+      "fields": {
+        "date_column": "effectivedate"
+      },
+      "dimension_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "action",
+          "name": "Action"
+        },
+        {
+          "column": "reason",
+          "name": "Reason"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Internal Transfers",
+          "column": "case(isdepartmentchanged = 'True', 1, true, 0)",
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "action",
+          "name": "Action"
+        },
+        {
+          "column": "reason",
+          "name": "Reason"
+        },
+        {
+          "column": "employeename",
+          "name": "Employee"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Bids",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "4f5p-ynjv",
+      "fields": {
+        "date_column": "datesubmitted"
+      },
+      "dimension_entries": [
+        {
+          "column": "opportunityname",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "biddername",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requestingdepartment",
+          "name": "Requesting Department"
+        },
+        {
+          "column": "iswomenorminoritybusines",
+          "name": "Is WBE"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "MBE|WBE Bid %",
+          "column": "sum(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "opportunityname",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "biddername",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requestingdepartment",
+          "name": "Requesting Department"
         }
       ]
     }
