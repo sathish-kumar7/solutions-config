@@ -398,6 +398,130 @@
           }
         ]
       }
+    },
+    {
+      "name": "New Construction",
+      "description": "Tax and Appraisals",
+      "dataset_domain": "appraisalandtax.demo.socrata.com",
+      "dataset_id": "3sa7-53ay",
+      "parent_queries": [
+        
+      ],
+      "fields": {
+        "date_column": "tax_year",
+        "incident_type": "own1"
+      },
+      "dimension_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "nbhd",
+          "name": "Neighborhood"
+        }
+      ],
+      "group_by_entries": [
+
+      ],
+      "view_entries": [
+        {
+          "name": "Total Parcels with New Construction",
+          "column": "count(new_constr_amount)",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Total Value of New Construction",
+          "column": "sum(new_constr_amount)",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "nbhd",
+          "name": "Neighborhood"
+        },
+        {
+          "column": "new_constr_amount",
+          "name": "New Construction Value"
+        }
+      ],
+      "quick_filter_entries": [
+
+      ],
+      "bench_mark_entries": [
+
+      ],
+      "shape_dataset_entries": [
+
+      ],
+      "map": {
+        "centerLat": "39.018425261608655",
+        "centerLng": "-84.00102962486125",
+        "zoom": "7",
+        "mini_map_zoom": "7",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     }
   ]
 }
