@@ -12,17 +12,15 @@
   "show_share_via_email": "false",
   "is_private": "false",
   "date": {
-      "startDate": "2019-10-01",
-      "endDate": "2019-12-31"
+    "startDate": "2019-10-01",
+    "endDate": "2019-12-31"
   },
   "template_entries": [
     {
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "fields": {
-        
-      },
+      "fields": {},
       "dimension_entries": [
         {
           "column": "service",
@@ -48,8 +46,10 @@
           "aggregate_type": "count",
           "visualization": {
             "default_view": "Snapshot",
-             "snapshot": {
-                "show_pie_chart": false
+            "snapshot": {
+              "show_pie_chart": "true",
+              "default_comparison_column_entry": "program"
+              
             }
           },
           "precision": "0",
@@ -114,7 +114,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-                "show_pie_chart": "true"
+              "show_pie_chart": "true",
+              "default_comparison_column_entry": "approved_amount"
             }
           },
           "comparison_column_entries": [
@@ -173,7 +174,7 @@
           "visualization": {
             "default_view": "Pie Chart",
             "snapshot": {
-                "show_pie_chart": "true"
+              "show_pie_chart": "true"
             }
           },
           "quick_filters": [
@@ -345,9 +346,7 @@
       "name": "Opex Revenue",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "mik7-qbhe",
-      "fields": {
-       
-      },
+      "fields": {},
       "dimension_entries": [
         {
           "column": "department",
@@ -453,9 +452,7 @@
       "name": "Capex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "dszp-jd2s",
-      "fields": {
-        
-      },
+      "fields": {},
       "dimension_entries": [
         {
           "column": "service",
@@ -544,9 +541,7 @@
       "name": "Payroll",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "qu7r-i9cv",
-      "fields": {
-        
-      },
+      "fields": {},
       "dimension_entries": [
         {
           "column": "department",
@@ -834,7 +829,9 @@
             "default_view": "Snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "showCompareDropDown": false
+              "showCompareDropDown": "true",
+              "default_group_by_entry_column": "agency_name",
+              "default_comparison_column_entry": "case_disposition" 
             },
             "overtime": {
               "show_area_chart": "true",
@@ -1360,9 +1357,7 @@
       "name": "ERP metrics",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "fields": {
-        
-      },
+      "fields": {},
       "parent_queries": [
         "select * where service = 'Education'"
       ],
