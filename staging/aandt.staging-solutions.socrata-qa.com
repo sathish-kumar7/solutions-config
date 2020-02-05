@@ -6,7 +6,8 @@
   },
   "tag_list": [
     "Sales",
-    "Appeals"
+    "Appeals",
+    "New Construction"
   ],
   "template_entries": [
     {
@@ -433,11 +434,11 @@
           "name": "Total Parcels with New Construction",
           "column": "count(new_constr_amount)",
           "aggregate_type": "",
-          "precision": "2",
+          "precision": "0",
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Appeals"
+            "New Construction"
           ],
           "visualization": {
              "default_view": "Snapshot",
@@ -451,11 +452,11 @@
           "name": "Total Value of New Construction",
           "column": "sum(new_constr_amount)",
           "aggregate_type": "",
-          "precision": "2",
-          "prefix": "",
+          "precision": "0",
+          "prefix": "$",
           "suffix": "",
           "tags": [
-            "Appeals"
+            "New Construction"
           ],
           "visualization": {
              "default_view": "Snapshot",
