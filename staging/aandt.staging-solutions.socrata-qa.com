@@ -349,7 +349,36 @@
       ],
       "shape_dataset_entries": [
 
-      ]
+      ],
+      "map": {
+        "centerLat": "39.018425261608655",
+        "centerLng": "-84.00102962486125",
+        "zoom": "7",
+        "mini_map_zoom": "7",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     }
   ]
 }
