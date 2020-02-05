@@ -336,6 +336,34 @@
               "operator": "="
             }
           ]
+        },
+        {
+          "name": "Headcount",
+          "parent_queries": [
+          "select distinct(employee_id) as distinct_employee"
+          ],
+          "column": "distinct_employee",
+          "aggregate_type": "count",
+          "prefix": "",
+          "suffix": "employees",
+          "precision": "",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "quick_filters": [
+            {
+              "column": "paycategory",
+              "field": "quick_filter_1_dfmt_x4an_0",
+              "type": "text",
+              "values": [
+                "OVERTIME"
+              ],
+              "operator": "="
+            }
+          ]
         }
       ],
       "leaf_page_entries": [
