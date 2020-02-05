@@ -36,10 +36,6 @@
           "name": "Account status"
         },
         {
-          "column": "fiscalyear",
-          "name": "Fiscal year"
-        },
-        {
           "column": "accounttype",
           "name": "Account type"
         }
@@ -106,9 +102,7 @@
               "icon": "icons-times-circle"
             }
           ],
-          "quick_filters": [
-
-          ],
+          "quick_filters": [],
           "visualization": {
             "default_view": "Snapshot"
           },
@@ -136,7 +130,7 @@
         {
           "name": "Cash Balance",
           "parent_queries": [
-            "select * where accounttype = 'Balance Sheet'"
+            "select * where cashaccount = 'true'"
           ],
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
@@ -160,9 +154,7 @@
               "icon": "icons-times-circle"
             }
           ],
-          "quick_filters": [
-
-          ],
+          "quick_filters": [],
           "visualization": {
             "default_view": "Snapshot"
           }
@@ -180,8 +172,7 @@
           "tags": [
             "Budget"
           ],
-          "target_entries": [
-          ],
+          "target_entries": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
