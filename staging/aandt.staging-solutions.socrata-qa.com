@@ -306,7 +306,7 @@
       "view_entries": [
         {
           "name": "% Appealed Value Upheld",
-          "column": "sum(decision_value) / sum(county_value)",
+          "column": "(sum(decision_value) / sum(county_value))*100",
           "aggregate_type": "",
           "precision": "2",
           "prefix": "",
