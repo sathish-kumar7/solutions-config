@@ -340,9 +340,9 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          
+          "select distinct(employee_id) as distinct_employees, position, jobclass, paycategory, firstname, paycategory"
           ],
-          "column": "distinct(employee_id)",
+          "column": "distinct_employees",
           "aggregate_type": "",
           "prefix": "",
           "suffix": "employees",
