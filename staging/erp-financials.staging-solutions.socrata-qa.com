@@ -612,7 +612,7 @@
           "aggregate_type": "",
           "prefix": "",
           "suffix": "",
-          "precision": "2",
+          "precision": "0",
           "tags": [
             
           ],
