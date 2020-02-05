@@ -5,9 +5,14 @@
     "title": "Solutions - ERP Financials"
   },
   "tag_list": [
-    "Budget",
-    "Payroll"
+    "Financials",
+    "Payroll & HR",
+    "Revenue & Tax"
   ],
+  "date": {
+    "startDate": "2018-07-01",
+    "endDate": "2019-06-30"
+  },
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
@@ -32,30 +37,31 @@
           "name": "Account status"
         },
         {
-          "column": "fiscalyear",
-          "name": "Fiscal year"
-        },
-        {
           "column": "accounttype",
           "name": "Account type"
         }
       ],
       "view_entries": [
         {
-          "name": "Revised Budget",
+          "name": "Budget vs. Actuals",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Financials"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "actual"
+            }
           },
-          "comparison_column_entries": [ 
-              {
+          "comparison_column_entries": [
+            {
               "column": "actual",
               "name": "Actual Amount",
               "aggregate_type": "sum",
@@ -63,63 +69,8 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              }, 
-              {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-              }
-           ]
-        },
-        {
-          "name": "Operating Budget",
-          "parent_queries": [
-              "select * where accounttype = 'Expense'"
-          ],
-          "column": "ltdrevisedbudget",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Budget"
-          ],
-          "target_entries": [
-            {
-              "name": "On track",
-              "color": "#259652",
-              "operator": "between",
-              "value": "1200000000",
-              "to": "1250000000",
-              "icon": "icons-check-circle"
             },
             {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ],
-          "visualization": {
-            "default_view": "Snapshot"
-          },
-          "quick_filters": [
-            
-          ],
-          "comparison_column_entries": [            
-              {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-              },  
-              {
               "column": "ltdoriginalbudget",
               "name": "Original budget",
               "aggregate_type": "sum",
@@ -127,11 +78,53 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              }
-           ]
+            }
+          ]
         },
         {
-          "name": "Revenue Budget",
+          "name": "Payroll vs. Budgeted",
+          "column": "ltdrevisedbudget",
+          "parent_queries": [
+            "select * where charactercodedescription = 'FRINGE BENEFITS' OR charactercodedescription = 'SALARY & WAGES'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "actual"
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "ltdoriginalbudget",
+              "name": "Original budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            }
+          ]
+        },
+        {
+          "name": "Estimated vs. Actual Revenue",
           "column": "ltdrevisedbudget",
           "parent_queries": [
             "select * where accounttype = 'Revenue'"
@@ -141,7 +134,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Revenue & Tax"
           ],
           "target_entries": [
             {
@@ -157,14 +150,17 @@
               "icon": "icons-times-circle"
             }
           ],
-          "quick_filters": [
-
-          ],
+          "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "actual"
+            }
           },
-          "comparison_column_entries": [              
-              {
+          "comparison_column_entries": [
+            {
               "column": "actual",
               "name": "Actual Amount",
               "aggregate_type": "sum",
@@ -172,8 +168,8 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              },  
-              {
+            },
+            {
               "column": "ltdoriginalbudget",
               "name": "Original budget",
               "aggregate_type": "sum",
@@ -181,21 +177,21 @@
               "suffix": "",
               "precision": "2",
               "render_type": "bullet"
-              }
-           ]
+            }
+          ]
         },
         {
-          "name": "Budget - Cash Accounts",
+          "name": "Cash Balance",
           "parent_queries": [
-            "select * where accounttype = 'Balance Sheet'"
+            "select * where cashaccount = 'true'"
           ],
-          "column": "ltdrevisedbudget",
+          "column": "actual",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Financials"
           ],
           "target_entries": [
             {
@@ -211,9 +207,7 @@
               "icon": "icons-times-circle"
             }
           ],
-          "quick_filters": [
-
-          ],
+          "quick_filters": [],
           "visualization": {
             "default_view": "Snapshot"
           }
@@ -221,7 +215,7 @@
         {
           "name": "Unadjusted Net Income",
           "parent_queries": [
-              "select *, case(accounttype == 'Revenue', ltdrevisedbudget, true, 0) as revenue_amount, case(accounttype == 'Expense', ltdrevisedbudget, true, 0) as expenditures_amount"
+            "select *, case(accounttype == 'Revenue', actual, true, 0) as revenue_amount, case(accounttype == 'Expense', actual, true, 0) as expenditures_amount"
           ],
           "column": "sum(revenue_amount) - sum(expenditures_amount)",
           "aggregate_type": "",
@@ -229,14 +223,13 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget"
+            "Financials"
           ],
-          "target_entries": [
-              ],
+          "target_entries": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-                "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           }
         }
@@ -297,13 +290,18 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Payroll"
+            "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "paycategory"
+            }
           },
-          "comparison_column_entries": [ 
-              {
+          "comparison_column_entries": [
+            {
               "column": "paycategory",
               "name": "Pay Type",
               "aggregate_type": "",
@@ -311,8 +309,8 @@
               "suffix": "",
               "precision": "",
               "render_type": "stack"
-              }
-           ]
+            }
+          ]
         },
         {
           "name": "Total Overtime",
@@ -322,7 +320,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Payroll"
+            "Payroll & HR"
           ],
           "visualization": {
             "default_view": "Snapshot"
