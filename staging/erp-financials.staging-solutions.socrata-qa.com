@@ -340,7 +340,7 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          "select distinct(employee_id) as distinct_employees, payamount, paycategory, checkdate, position, jobclass, firstname"
+          "select distinct(employeeid) as distinct_employees, payamount, paycategory, checkdate, position, jobclass, firstname"
           ],
           "column": "distinct_employees",
           "aggregate_type": "count",
