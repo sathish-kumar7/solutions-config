@@ -53,7 +53,12 @@
             "Financials"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "actual"
+            }
           },
           "comparison_column_entries": [
             {
@@ -90,7 +95,12 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "actual"
+            }
           },
           "comparison_column_entries": [
             {
@@ -142,7 +152,12 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "actual"
+            }
           },
           "comparison_column_entries": [
             {
