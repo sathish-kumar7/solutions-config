@@ -170,7 +170,7 @@
         "date_column": "requestdatetime",
         "incident_type": "inspectiontypename",
         "location": "location",
-        "9y4y-shqr": ":@computed_region_9y4y_shqr"
+        "8t69-jvh8": ":@computed_region_8t69-jvh8"
       },
       "dimension_entries": [
         {
@@ -304,13 +304,13 @@
       "shape_dataset_entries": [
         {
           "shape_dataset_domain": "tyler.partner.socrata.com",
-          "shape_dataset_id": "9y4y-shqr",
-          "shape_name": "Counties",
+          "shape_dataset_id": "8t69-jvh8",
+          "shape_name": "City Council Districts",
           "fields": {
             "shape": "the_geom",
-            "shape_id": "_feature_id",
-            "shape_name": "name",
-            "shape_description": "name"
+            "shape_id": "_feature_i",
+            "shape_name": "repname",
+            "shape_description": "repname"
           },
           "color": "#32a889"
         }
