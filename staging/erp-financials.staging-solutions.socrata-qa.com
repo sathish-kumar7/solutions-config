@@ -470,7 +470,7 @@
       "view_entries": [
         {
           "name": "Bids per Opportunity",
-          "column": "count(bidderid) / count(opportunityid)",
+          "column": "count(bidderid) / count(distinct((opportunityid))",
           "aggregate_type": "",
           "prefix": "",
           "suffix": "",
