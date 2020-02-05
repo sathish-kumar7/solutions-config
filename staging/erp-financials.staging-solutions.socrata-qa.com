@@ -77,6 +77,43 @@
           ]
         },
         {
+          "name": "Payroll vs. Budgeted",
+          "column": "ltdrevisedbudget",
+          "parent_queries": [
+            "select * where charactercodedescription = 'FRINGE BENEFITS' OR charactercodedescription = 'SALARY & WAGES'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "visualization": {
+            "default_view": "Snapshot"
+          },
+          "comparison_column_entries": [
+            {
+              "column": "actual",
+              "name": "Actual Amount",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "ltdoriginalbudget",
+              "name": "Original budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            }
+          ]
+        },
+        {
           "name": "Estimated vs. Actual Revenue",
           "column": "ltdrevisedbudget",
           "parent_queries": [
