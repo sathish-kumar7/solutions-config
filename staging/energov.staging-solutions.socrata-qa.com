@@ -19,6 +19,7 @@
         "date_column": "applicationdate",
         "incident_type": "permittype",
         "location": "location"
+        "8t69-jvh8": ":@computed_region_8t69-jvh8"
         },
       "dimension_entries": [
         {
@@ -160,7 +161,21 @@
             "style": "mapbox://styles/mapbox/outdoors-v10"
           }
         ]
-      }
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "8t69-jvh8",
+          "shape_name": "City Council Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_i",
+            "shape_name": "repname",
+            "shape_description": "repname"
+          },
+          "color": "#32a889"
+        }
+      ]
     },
     {
       "name": "Code Enforcement",
