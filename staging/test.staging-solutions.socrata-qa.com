@@ -762,7 +762,7 @@
         }
       ]
     },
-        {
+    {
       "name": "ERP - Applicants",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
@@ -812,14 +812,6 @@
         {
           "column": "city",
           "name": "City"
-        },
-        {
-          "column": "offered_position",
-          "name": "Offered position"
-        },
-        {
-          "column": "accepted_position",
-          "name": "Accepted position"
         }
       ]
     }
