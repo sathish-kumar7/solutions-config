@@ -342,8 +342,8 @@
           "parent_queries": [
           
           ],
-          "column": "distinct(employee_id)",
-          "aggregate_type": "count",
+          "column": "employee_id",
+          "aggregate_type": "distinct",
           "prefix": "",
           "suffix": "employees",
           "precision": "",
