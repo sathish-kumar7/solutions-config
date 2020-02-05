@@ -173,6 +173,25 @@
                 "show_pie_chart": "true"
             }
           }
+        },
+        {
+          "name": "Total Sales",
+          "column": "saledt",
+          "aggregate_type": "count",
+          "stack_column": "land_use_type",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Sales"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
+            }
+          }
         }
       ],
       "filter_by_entries": [
