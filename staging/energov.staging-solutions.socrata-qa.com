@@ -338,9 +338,8 @@
       "fields": {
         "date_column": "applicationdate",
         "incident_type": "doingbusinessas",
-        "location": "location",
-        "uz8n-ghcn": ":@computed_region_uz8n_ghcn"
-      },
+        "location": "location"
+              },
       "dimension_entries": [
         {
           "column": "licensetype",
@@ -484,21 +483,7 @@
             "style": "mapbox://styles/mapbox/outdoors-v10"
           }
         ]
-      },
-        "shape_dataset_entries": [
-        {
-          "shape_dataset_domain": "tyler.partner.socrata.com",
-          "shape_dataset_id": "uz8n-ghcn",
-          "shape_name": "Wards",
-          "fields": {
-            "shape": "the_geom",
-            "shape_id": "_feature_id",
-            "shape_name": "ward_label",
-            "shape_description": "ward_label"
-          },
-          "color": "#32a889"
-        }
-      ]
+      }
     }
   ]
 }
