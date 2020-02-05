@@ -87,7 +87,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Financials"
+            "Payroll & HR"
           ],
           "visualization": {
             "default_view": "Snapshot"
