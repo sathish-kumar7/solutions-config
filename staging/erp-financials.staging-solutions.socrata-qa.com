@@ -293,7 +293,12 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "paycategory"
+            }
           },
           "comparison_column_entries": [
             {
