@@ -700,6 +700,71 @@
           }
         ]
       }
+    },
+    {
+      "name": "ERP - Bids",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "4f5p-ynjv",
+                "parent_queries": [
+          "select min(opportunityname) as oppurtunity_name, min(datesubmitted) as date_submitted, min(biddername) as bidder_name, min(requestingdepartment) as requesting_department, min(iswomenorminoritybusines) as is_wbe, count(bidderid) as bidder_count, opportunityid group by opportunityid "
+        ],
+      "fields": {
+        "date_column": "date_submitted"
+      },
+      "dimension_entries": [
+        {
+          "column": "oppurtunity_name",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "bidder_name",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requesting_department",
+          "name": "Requesting Department"
+        },
+        {
+          "column": "is_wbe",
+          "name": "Is WBE"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Bids per Opportunity",
+          "column": "sum(bidder_count)/count(opportunityid)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "oppurtunity_name",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "bidder_name",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requesting_department",
+          "name": "Requesting Department"
+        }
+      ]
     }
   ]
 }
