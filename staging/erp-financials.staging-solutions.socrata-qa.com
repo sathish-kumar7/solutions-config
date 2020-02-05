@@ -377,12 +377,20 @@
           "name": "Department"
         },
         {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
           "column": "position",
           "name": "Position"
         },
         {
-          "column": "employeename",
-          "name": "Employee"
+          "column": "action",
+          "name": "Action"
+        },
+        {
+          "column": "reason",
+          "name": "Reason"
         }
       ],
       "view_entries": [
@@ -403,7 +411,7 @@
             }
           },
           "comparison_column_entries": [
-         
+            
           ]
         }
       ],
@@ -413,8 +421,20 @@
           "name": "Department"
         },
         {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
           "column": "position",
           "name": "Position"
+        },
+        {
+          "column": "action",
+          "name": "Action"
+        },
+        {
+          "column": "reason",
+          "name": "Reason"
         },
         {
           "column": "employeename",
