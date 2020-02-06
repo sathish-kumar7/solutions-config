@@ -41,6 +41,10 @@
       ],
       "group_by_entries": [
         {
+          "column": "permittype",
+          "name": "Permit Type"
+        },
+        {
           "column": "district",
           "name": "District"
         }
@@ -142,6 +146,38 @@
                   "color": "#259652",
                   "operator": "<",
                   "value": "200",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
+        },
+        {
+          "name": "Average # Days from Application to Issuance",
+          "column": "avg(applied_to_issued)",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " days",
+          "tags": [
+            "Community Development"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#259652",
+                  "operator": "<",
+                  "value": "30",
                   "icon": "icons-check-circle"
                 },
                 {
