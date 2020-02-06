@@ -364,7 +364,7 @@
           ],
           "fields": {
           "date_column": "first_checkdate",
-          "date_column_secondary:" "last_checkdate"
+          "date_column_secondary": "last_checkdate"
           },
           "column": "employeeid",
           "aggregate_type": "count",
