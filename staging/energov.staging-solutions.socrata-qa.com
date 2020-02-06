@@ -122,7 +122,7 @@
         },
         {
           "name": "Permits issued Within 90 days",
-          "column": "(count(case(applied_to_issued <=90,1)) / count(case(isstatusissued='true', 1)))*100",
+          "column": "sum(case(applied_to_issued  < 90, 1)) as count_less_than_90, count(*) as total, count_less_than_90/total*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
