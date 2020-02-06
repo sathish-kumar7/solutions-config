@@ -8,8 +8,8 @@
     "Cases"
   ],
   "date": {
-    "startDate": "1990-1-1",
-    "endDate": "1991-12-31"
+    "startDate": "2018-1-1",
+    "endDate": "2020-02-01"
   },
   "template_entries": [
     {
