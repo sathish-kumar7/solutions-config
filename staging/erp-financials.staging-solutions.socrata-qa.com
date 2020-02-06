@@ -363,7 +363,8 @@
           "select employeeid, max(checkdate) as first_checkdate, min(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as jobclass, max(groupbargainingunit) as groupbargainingunit, max(paycategory) as paycategory, max(paytype) as paytype group by employeeid"
           ],
           "fields": {
-          "date_column": "last_checkdate"
+          "date_column": "first_checkdate",
+          "date_column_secondary:" "last_checkdate"
           },
           "column": "employeeid",
           "aggregate_type": "count",
