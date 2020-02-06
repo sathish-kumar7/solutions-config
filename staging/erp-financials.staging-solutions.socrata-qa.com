@@ -667,10 +667,6 @@
       },
       "dimension_entries": [
         {
-          "column": "claimanttype",
-          "name": "Claimant Type"
-        },
-        {
           "column": "claimantcity",
           "name": "Claimant City"
         },       
@@ -733,10 +729,6 @@
       },
       "dimension_entries": [
         {
-          "column": "claimanttype",
-          "name": "Claimant Type"
-        },
-        {
           "column": "claimantcity",
           "name": "Claimant City"
         },         
@@ -798,10 +790,6 @@
         "date_column": "claimdate"
       },
       "dimension_entries": [
-        {
-          "column": "claimanttype",
-          "name": "Claimant Type"
-        },
         {
           "column": "claimantcity",
           "name": "Claimant City"
