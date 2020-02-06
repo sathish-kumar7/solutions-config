@@ -365,7 +365,10 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot":{
+               "show_pie_chart": "true"
+            }
           },
           "comparison_column_entries": [
             {
@@ -831,7 +834,8 @@
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
               "default_group_by_entry_column": "agency_name",
-              "default_comparison_column_entry": "case_disposition" 
+              "default_comparison_column_entry": "case_disposition",
+              "show_pie_chart": "true"
             },
             "overtime": {
               "show_area_chart": "true",
