@@ -84,7 +84,7 @@
         {
           "name": "Total Applications Received",
           "column": "permitid",
-          "aggregate_type": "sum",
+          "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
@@ -118,7 +118,7 @@
         },
         {
           "name": "Permits issued Within 30 days",
-          "column": "(count(case(issued_to_expired > 1, 1, 0)) / count(case(isstatusissued is true, 1, 0)))*100",
+          "column": "(count(case(issued_to_expired > 1, 1,true, 0)) / count(case(isstatusissued='true', 1, true, 0)))*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
