@@ -362,6 +362,9 @@
           "parent_queries": [
           "select employeeid, max(checkdate) as first_checkdate, min(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as last_jobclass, max(groupbargainingunit) as last_groupbargainingunit, max(paycategory) as last_paycategory group by employeeid"
           ],
+          "fields": {
+          "date_column": "last_checkdate"
+          },
           "column": "employeeid",
           "aggregate_type": "count",
           "prefix": "",
