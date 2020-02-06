@@ -82,21 +82,59 @@
           ]
         },
         {
-          "name": "Open Applications",
-          "column": "case(isstatuscompleted='False', 1, true, 0)",
+          "name": "Total Applications Received",
+          "column": "permitid",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Business Services"
+            "Community Development"
           ],
        "visualization": {
           "default_view": "Snapshot",
             "snapshot": {
                 "chart_type": "groupChart"
             }
+        },
+        "fields": {
+        "date_column": "applicationdate"
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#259652",
+                  "operator": "<",
+                  "value": "200",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
+        },
+        {
+          "name": "Permits issued Within 30 days",
+          "column": "(count(case(issued_to_expired > 1, 1, 0)) / count(case(isstatusissued is true, 1, 0)))*100",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Community Development"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        },
+        "fields": {
+        "date_column": "applicationdate"
         },
         "target_entries": [
                 {
