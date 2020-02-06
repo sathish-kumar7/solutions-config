@@ -360,9 +360,12 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          "select distinct(employeeid) as distinct_employees, payamount, paytype, checkdate, position, jobclass, firstname, groupbargainingunit"
+          "select select employeeid, max(checkdate) as first_checkdate, min(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as last_jobclass, max(groupbargainingunit) as last_groupbargainingunit, max(paycategory) as last_paycategory group by employeeid"
           ],
-          "column": "distinct_employees",
+          "fields": {
+          "date_column": "last_checkdate"
+          },
+          "column": "employeeid",
           "aggregate_type": "count",
           "prefix": "",
           "suffix": "employees",
@@ -380,25 +383,21 @@
       ],
       "leaf_page_entries": [
         {
-          "column": "position",
+          "column": "last_position",
           "name": "Position"
         },
         {
-          "column": "jobclass",
+          "column": "last_jobclass",
           "name": "Job Class"
         },
         {
-          "column": "paycategory",
+          "column": "last_paycategory",
           "name": "Pay Type"
-        },
-        {
-          "column": "firstname",
-          "name": "Employee"
         }
       ],
       "quick_filter_entries": [
         {
-          "column": "paycategory",
+          "column": "last_paycategory",
           "name": "Pay Type",
           "renderType": "text"
         }
