@@ -122,7 +122,7 @@
         },
         {
           "name": "Permits issued Within 90 days",
-          "column": "(count(case(applied_to_issued <=90, 1,true, 0)) / count(case(isstatusissued='true', 1, true, 0)))*100",
+          "column": "(count(case(applied_to_issued <=90,1)) / count(case(isstatusissued='true', 1)))*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "name": "Code Enforcement",
+      "name": "Inspections",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "vnvd-qqjp",
       "fields": {
@@ -316,8 +316,8 @@
         },
         {
           "name": "Completed Inspections",
-          "column": "case(isstatusindicatesuccess='True', 1, true, 0)",
-          "aggregate_type": "sum",
+          "column": "inspectionid",
+          "aggregate_type": "count",
           "precision": "0",
           "prefix": "",
           "suffix": "",
@@ -329,6 +329,9 @@
             "snapshot": {
                 "chart_type": "barChart"
             }
+        },
+        "fields": {
+        "date_column": "actualenddatetime"
         },
         "target_entries": [
                 {
