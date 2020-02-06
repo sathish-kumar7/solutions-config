@@ -78,7 +78,21 @@
                 "chart_type": "groupChart",
                 "show_pie_chart": "true"
             }
-          }
+          },
+        "target_entries": [
+        {
+              "name": "Meets Standard",
+              "color": "#259652",
+              "operator": "<",
+              "value": "1.2",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Does Not Meet Standard",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ]
         },
         {
           "name": "Average Absolute Deviation",
