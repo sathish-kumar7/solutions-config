@@ -639,7 +639,7 @@
       ]
     },
     {
-      "name": "ERP - Vehicle Claims",
+      "name": "ERP - Vehicle Injury Claims",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "fuzc-99cp",
       "fields": {
@@ -662,6 +662,122 @@
       "view_entries": [
         {
           "name": "Vehicle Injury Claims Cost",
+          "column": "totalrecoveryamount",
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "incidenttype",
+          "name": "Incident Type"
+        },
+        {
+          "column": "status",
+          "name": "Status"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Property Injury Claims",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "vfai-azfy",
+      "fields": {
+        "date_column": "claimdate"
+      },
+      "dimension_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "incidenttype",
+          "name": "Incident Type"
+        },
+        {
+          "column": "status",
+          "name": "Status"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Property Injury Claim Cost",
+          "column": "totalrecoveryamount",
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": [
+            
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "incidenttype",
+          "name": "Incident Type"
+        },
+        {
+          "column": "status",
+          "name": "Status"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Personal Injury Claims",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "x44h-hbun",
+      "fields": {
+        "date_column": "claimdate"
+      },
+      "dimension_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "incidenttype",
+          "name": "Incident Type"
+        },
+        {
+          "column": "status",
+          "name": "Status"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Personal Injury Claim Cost",
           "column": "totalrecoveryamount",
           "aggregate_type": "sum",
           "prefix": "",
