@@ -8,15 +8,15 @@
     "Cases"
   ],
   "date": {
-    "startDate": "1990-1-1",
-    "endDate": "1991-12-31"
+    "startDate": "2018-1-1",
+    "endDate": "2020-02-01"
   },
   "template_entries": [
     {
       "name": "Courts and Justice",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "3fz4-iqab",
+      "dataset_id": "xzug-disn",
       "fields": {
         "date_column": "statusdate",
         "incident_type": "casecategorydescription"
@@ -305,7 +305,7 @@
       "name": "Time to Disposition",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "8jhs-9dry",
+      "dataset_id": "x3q2-qjbe",
       "fields": {
         "date_column": "lastcloseddate"
       },
@@ -622,7 +622,7 @@
     {
       "name": "Court Operations",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "russ-uuj3",
+      "dataset_id": "hqva-gm7v",
       "default_view": "Snapshot",
       "fields": {
         "date_column": "hearing_date"
