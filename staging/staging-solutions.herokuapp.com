@@ -15,6 +15,10 @@
     "startDate": "2019-10-01",
     "endDate": "2019-12-31"
   },
+  "date_options": {
+    "type": "custom_range",
+    "year_start_month": "3"
+  },
   "template_entries": [
     {
       "name": "Opex Budget",
@@ -49,7 +53,6 @@
             "snapshot": {
               "show_pie_chart": "true",
               "default_comparison_column_entry": "program"
-              
             }
           },
           "precision": "0",
@@ -366,8 +369,8 @@
           "precision": "2",
           "visualization": {
             "default_view": "Snapshot",
-            "snapshot":{
-               "show_pie_chart": "true"
+            "snapshot": {
+              "show_pie_chart": "true"
             }
           },
           "comparison_column_entries": [
