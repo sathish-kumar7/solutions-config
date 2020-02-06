@@ -15,6 +15,10 @@
     "startDate": "2019-10-01",
     "endDate": "2019-12-31"
   },
+  "date_options": {
+    "type": "yearly",
+    "year_start_month": "5"
+  },
   "template_entries": [
     {
       "name": "Opex Budget",
