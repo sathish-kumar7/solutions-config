@@ -58,6 +58,11 @@
             "chart_type": "barChart",
             "show_pie_chart": "false",
             "default_comparison_column_entry": "actual"
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true"
             }
           },
           "comparison_column_entries": [
@@ -100,6 +105,11 @@
             "chart_type": "barChart",
             "show_pie_chart": "false",
             "default_comparison_column_entry": "actual"
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true"
             }
           },
           "comparison_column_entries": [
@@ -157,6 +167,11 @@
             "chart_type": "barChart",
             "show_pie_chart": "false",
             "default_comparison_column_entry": "actual"
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true"
             }
           },
           "comparison_column_entries": [
@@ -209,7 +224,11 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "false"
+            }
           }
         },
         {
