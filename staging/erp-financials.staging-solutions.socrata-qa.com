@@ -13,10 +13,6 @@
     "Payroll & HR",
     "Revenue & Tax"
   ],
-  "date": {
-    "startDate": "2018-07-01",
-    "endDate": "2019-06-30"
-  },
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
