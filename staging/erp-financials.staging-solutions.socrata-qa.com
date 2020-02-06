@@ -5,7 +5,7 @@
     "title": "Solutions - ERP Financials"
   },
   "date_options": {
-    "date_type": "yearly",
+    "type": "yearly",
     "year_start_month": "10"
   },
   "tag_list": [
