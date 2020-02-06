@@ -17,7 +17,7 @@
   },
   "date_options": {
     "type": "yearly",
-    "year_start_month": "4"
+    "year_start_month": "0"
   },
   "template_entries": [
     {
