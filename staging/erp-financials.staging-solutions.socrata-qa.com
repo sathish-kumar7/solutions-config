@@ -667,6 +667,14 @@
       },
       "dimension_entries": [
         {
+          "column": "claimanttype",
+          "name": "Claimant Type"
+        },
+        {
+          "column": "claimantcity",
+          "name": "Claimant City"
+        },       
+        {
           "column": "department",
           "name": "Department"
         },
@@ -725,6 +733,14 @@
       },
       "dimension_entries": [
         {
+          "column": "claimanttype",
+          "name": "Claimant Type"
+        },
+        {
+          "column": "claimantcity",
+          "name": "Claimant City"
+        },         
+        {
           "column": "department",
           "name": "Department"
         },
@@ -782,6 +798,14 @@
         "date_column": "claimdate"
       },
       "dimension_entries": [
+        {
+          "column": "claimanttype",
+          "name": "Claimant Type"
+        },
+        {
+          "column": "claimantcity",
+          "name": "Claimant City"
+        },        
         {
           "column": "department",
           "name": "Department"
