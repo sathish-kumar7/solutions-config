@@ -6,7 +6,6 @@
   },
   "date_options": {
     "type": "yearly",
-    default_year: "2018",
     "year_start_month": "10"
   },
   "tag_list": [
