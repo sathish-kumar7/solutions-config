@@ -360,7 +360,7 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          "select employeeid, max(checkdate) as first_checkdate, min(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as last_jobclass, max(groupbargainingunit) as last_groupbargainingunit, max(paycategory) as last_paycategory group by employeeid"
+          "select employeeid, max(checkdate) as first_checkdate, min(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as jobclass, max(groupbargainingunit) as groupbargainingunit, max(paycategory) as paycategory group by employeeid"
           ],
           "fields": {
           "date_column": "last_checkdate"
@@ -383,15 +383,15 @@
       ],
       "leaf_page_entries": [
         {
-          "column": "last_position",
+          "column": "position",
           "name": "Position"
         },
         {
-          "column": "last_jobclass",
+          "column": "jobclass",
           "name": "Job Class"
         },
         {
-          "column": "last_paycategory",
+          "column": "paycategory",
           "name": "Pay Type"
         }
       ],
