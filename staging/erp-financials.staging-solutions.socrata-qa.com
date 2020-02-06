@@ -4,6 +4,10 @@
     "browser_title": "Solutions | ERP | Financials ",
     "title": "Solutions - ERP Financials"
   },
+  "date_options": {
+    "date_type": "yearly",
+    "year_start_month": "10"
+  },
   "tag_list": [
     "Financials",
     "Payroll & HR",
