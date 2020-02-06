@@ -121,8 +121,8 @@
             ]
         },
         {
-          "name": "Permits issued Within 30 days",
-          "column": "(count(case(issued_to_expired > 1, 1,true, 0)) / count(case(isstatusissued='true', 1, true, 0)))*100",
+          "name": "Permits issued Within 90 days",
+          "column": "(count(case(applied_to_issued <=90, 1,true, 0)) / count(case(isstatusissued='true', 1, true, 0)))*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
@@ -144,8 +144,8 @@
                 {
                   "name": "On track",
                   "color": "#259652",
-                  "operator": "<",
-                  "value": "200",
+                  "operator": ">",
+                  "value": "75",
                   "icon": "icons-check-circle"
                 },
                 {
