@@ -242,6 +242,11 @@
           "column": "style",
           "name": "Style",
           "renderType": "text"
+        },
+        {
+          "column": "asr",
+          "name": "ASR",
+          "renderType": "number"
         }
       ],
       "bench_mark_entries": [
