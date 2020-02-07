@@ -122,7 +122,7 @@
         },
         {
           "name": "Permits issued Within 90 days",
-          "column": "sum(less_than_90_count) as less_than_90_sum, count(*) as total, less_than_90_sum::double/total::double*100",
+          "column": "sum(less_than_90_count)/count(*)",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
@@ -141,7 +141,7 @@
         "date_column": "applicationdate"
         },
         "parent_queries": [
-            "select applicationdate, permitnumber, permittype, permitstatus, permitworkclass, projectname, district, applied_to_issued, case(applied_to_issued+<+90,+1) as less_than_90_count where isstatusissued='true'"
+            "select applicationdate, permitnumber, permittype, permitstatus, permitworkclass, projectname, district, applied_to_issued, case(applied_to_issued < 90, 1) as less_than_90_count where isstatusissued='true'"
           ],
         "target_entries": [
                 {
