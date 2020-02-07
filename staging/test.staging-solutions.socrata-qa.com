@@ -1,6 +1,6 @@
 {
   "branding": {
-    "browser_title": "Solutions | QA ",
+    "browser_title": "Solutions | QA - Test",
     "title": "Solutions - QA"
   },
   "tag_list": [
@@ -17,16 +17,14 @@
   },
   "date_options": {
     "type": "yearly",
-    "year_start_month": "0"
+    "year_start_month": "4"
   },
   "template_entries": [
     {
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "fields": {
-          "date_column": "fiscal_year"
-      },
+      "fields": {},
       "dimension_entries": [
         {
           "column": "service",
@@ -370,7 +368,10 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "show_pie_chart": "true"
+            }
           },
           "comparison_column_entries": [
             {
@@ -650,6 +651,11 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true"
             }
           },
           "target_entries": [
@@ -681,6 +687,11 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true"
             }
           }
         },
@@ -836,10 +847,12 @@
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
               "default_group_by_entry_column": "agency_name",
-              "default_comparison_column_entry": "case_disposition"
+              "default_comparison_column_entry": "case_disposition",
+              "show_pie_chart": "true"
             },
-            "overtime": {
+           "overtime": {
               "show_area_chart": "true",
+              "show_burn_up_chart": "true",
               "show_timeline_total": "true"
             }
           },
@@ -1090,6 +1103,11 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true"
             }
           },
           "target_entries": [
