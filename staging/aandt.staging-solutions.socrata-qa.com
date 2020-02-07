@@ -76,7 +76,8 @@
              "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart",
-                "show_pie_chart": "true"
+                "show_pie_chart": "true",
+                "show_scatterplot_range_bar": "true"
             }
           },
         "target_entries": [
@@ -109,7 +110,8 @@
              "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart",
-                "show_pie_chart": "true"
+                "show_pie_chart": "true",
+                "show_scatterplot_range_bar": "true"
             }
           }
         },
@@ -166,7 +168,8 @@
              "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart",
-                "show_pie_chart": "true"
+                "show_pie_chart": "true",
+                "show_scatterplot_range_bar": "true"
             }
           }
         },
