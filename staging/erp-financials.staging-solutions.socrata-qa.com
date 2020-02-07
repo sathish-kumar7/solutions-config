@@ -63,7 +63,35 @@
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "timeline": {
+              "bench_mark_entries": [
+                    {
+                      "column": "ltdrevisedbudget",
+                      "name": "Total revised budget",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Total original budget",
+                      "aggregate_type": "count"
+                    }
+                ]
+              },
+              "burn_up": {
+              "bench_mark_entries": [
+                    {
+                      "column": "ltdrevisedbudget",
+                      "name": "Total revised budget",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Total original budget",
+                      "aggregate_type": "count"
+                    }
+                ]
+              }
             }
           },
           "comparison_column_entries": [
@@ -111,6 +139,34 @@
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true"
+              "timeline": {
+              "bench_mark_entries": [
+                    {
+                      "column": "ltdrevisedbudget",
+                      "name": "Total revised budget",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Total original budget",
+                      "aggregate_type": "count"
+                    }
+                ]
+              },
+              "burn_up": {
+              "bench_mark_entries": [
+                    {
+                      "column": "ltdrevisedbudget",
+                      "name": "Total revised budget",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Total original budget",
+                      "aggregate_type": "count"
+                    }
+                ]
+              }
             }
           },
           "comparison_column_entries": [
@@ -317,7 +373,25 @@
             "snapshot": {
             "chart_type": "barChart",
             "show_pie_chart": "false",
-            "default_comparison_column_entry": "paycategory"
+            "default_comparison_column_entry": "paycategory",
+            "timeline": {
+              "bench_mark_entries": [
+                    {
+                      "column": "payamount",
+                      "name": "Total payroll",
+                      "aggregate_type": "sum"
+                    }
+                ]
+              },
+              "burn_up": {
+              "bench_mark_entries": [
+                    {
+                      "column": "payamount",
+                      "name": "Total payroll",
+                      "aggregate_type": "sum"
+                    }
+                ]
+              }
             }
           },
           "comparison_column_entries": [
