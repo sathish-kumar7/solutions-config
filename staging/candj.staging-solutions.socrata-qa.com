@@ -190,7 +190,7 @@
           }
         },
         {
-          "name": "Count of Closed or Inactivated Cases",
+          "name": "Count of Closed or Inactivate Cases",
           "column": "casenumber",
           "aggregate_type": "count",
           "use_dimension_value": "true",
