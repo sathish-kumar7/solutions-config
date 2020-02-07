@@ -122,7 +122,7 @@
         },
         {
           "name": "Permits issued Within 90 days",
-          "column": "sum(case(applied_to_issued  < 90, 1)) as count_less_than_90, count(case(issueddate is not null,1)) as total, count_less_than_90/total*100",
+          "column": "(count(case(applied_to_issued <=90,1)) / count(*)*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
@@ -140,6 +140,9 @@
         "fields": {
         "date_column": "applicationdate"
         },
+        "parent_queries": [
+            "select * where isstatusissued='true'"
+          ],
         "target_entries": [
                 {
                   "name": "On track",
