@@ -138,7 +138,7 @@
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
               "timeline": {
               "bench_mark_entries": [
                     {
