@@ -122,7 +122,7 @@
         },
         {
           "name": "Permits issued Within 90 days",
-          "column": "((sum(less_than_90_count)/count(*))::double)",
+          "column": "((sum(less_than_90_count)/count(*))::double)*100.00",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
