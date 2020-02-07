@@ -1,6 +1,6 @@
 {
   "branding": {
-    "browser_title": "Solutions | QA - Test",
+    "browser_title": "Solutions | QA ",
     "title": "Solutions - QA"
   },
   "tag_list": [
@@ -651,11 +651,6 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
-            },
-            "overtime": {
-              "show_area_chart": "false",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
             }
           },
           "target_entries": [
@@ -687,11 +682,6 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
-            },
-            "overtime": {
-              "show_area_chart": "false",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
             }
           }
         },
@@ -850,23 +840,9 @@
               "default_comparison_column_entry": "case_disposition",
               "show_pie_chart": "true"
             },
-           "overtime": {
+            "overtime": {
               "show_area_chart": "true",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true",
-              "timeline": {
-                "bench_mark_entries": [
-                    {
-                      "column": "status",
-                      "name": "status",
-                      "aggregate_type": "count"
-                    },
-                    {
-                      "column": "occurred_incident_type",
-                      "name": "occurred_incident_type",
-                      "aggregate_type": "count"
-                    }
-                ]
+              "show_timeline_total": "true"
             }
           },
           "comparison_column_entries": [
@@ -1116,11 +1092,6 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
-            },
-            "overtime": {
-              "show_area_chart": "false",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
             }
           },
           "target_entries": [
