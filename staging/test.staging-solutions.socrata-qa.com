@@ -853,7 +853,20 @@
            "overtime": {
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "timeline": {
+                "bench_mark_entries": [
+                    {
+                      "column": "status",
+                      "name": "status",
+                      "aggregate_type": "count"
+                    },
+                    {
+                      "column": "occurred_incident_type",
+                      "name": "occurred_incident_type",
+                      "aggregate_type": "count"
+                    }
+                ]
             }
           },
           "comparison_column_entries": [
