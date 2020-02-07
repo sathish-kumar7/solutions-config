@@ -23,8 +23,8 @@
         },
       "dimension_entries": [
         {
-          "column": "projectname",
-          "name": "Project"
+          "column": "permittype",
+          "name": "Permit Type"
         },
         {
           "column": "permitstatus",
@@ -35,8 +35,8 @@
           "name": "Permit Class"
         },
         {
-          "column": "permittype",
-          "name": "Permit Type"
+          "column": "projectname",
+          "name": "Project"
         }
       ],
       "group_by_entries": [
