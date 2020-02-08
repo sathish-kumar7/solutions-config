@@ -6,8 +6,8 @@
   },
   "date_options": {
     "type": "yearly",
-    "default_year": "2018",
-    "year_start_month": "8"
+    "default_year": "2020",
+    "year_start_month": "7"
   },
   "tag_list": [
     "Financials",
