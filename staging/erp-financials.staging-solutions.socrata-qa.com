@@ -457,8 +457,8 @@
               "precision": "2",
               "render_type": "bullet"
             }
-          ],
-        },
+          ]
+        }
       ],
       "leaf_page_entries": [
         {
