@@ -380,7 +380,7 @@
       "view_entries": [
         {
           "name": "Actuals vs. Budget",
-          "column": "actuals",
+          "column": "actual",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -419,7 +419,7 @@
         },
         {
           "name": "Payroll Expenses vs. Budget",
-          "column": "actuals",
+          "column": "actual",
           "parent_queries": [
             "select * where segment6 = 'Salary&Benefit Expenditures'"
           ],
