@@ -391,15 +391,57 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "false",
-              "default_comparison_column_entry": "revisedbudget"
+            "chart_type": "barChart",
+            "show_pie_chart": "false",
+            "default_comparison_column_entry": "revisedbudget"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+              "bench_mark_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum"
+                    }
+                ]
+              },
+              "burn_up": {
+              "bench_mark_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum"
+                    }
+                ]
+              }
             }
           },
           "comparison_column_entries": [
             {
               "column": "revisedbudget",
               "name": "Revised Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "actual",
+              "name": "Actuals",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
@@ -442,6 +484,15 @@
             {
               "column": "revisedbudget",
               "name": "Revised Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "actual",
+              "name": "Actuals",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
