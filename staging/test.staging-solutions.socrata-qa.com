@@ -1137,8 +1137,9 @@
               "name": "Off track",
               "color": "#e31219",
               "icon": "icons-times-circle"
-            }
-          ]
+              }
+            ]
+          }
         },
         {
           "name": "Median Ratio",
