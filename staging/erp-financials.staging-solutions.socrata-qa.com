@@ -457,9 +457,35 @@
               "precision": "2",
               "render_type": "bullet"
             }
-          ]
+          ],
         },
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "organization",
+          "name": "Organisation"
+        },
+        {
+          "column": "accountstatus",
+          "name": "Account status"
+        },
+        {
+          "column": "accounttype",
+          "name": "Account type"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "accounttype",
+          "name": "Account Type",
+          "renderType": "text"
+        }
       ]
+    },
     {
       "name": "ERP - Payroll",
       "dataset_domain": "erpinsights.demo.socrata.com",
