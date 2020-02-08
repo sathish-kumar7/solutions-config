@@ -1121,8 +1121,10 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
-            }
-          },
+            },
+            "overtime": {
+              "show_area_chart": "true"
+           },
           "target_entries": [
             {
               "name": "On track",
