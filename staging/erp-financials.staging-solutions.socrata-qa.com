@@ -269,8 +269,8 @@
             {
               "name": "On track",
               "color": "#259652",
-              "operator": "<",
-              "value": "2000000000",
+              "operator": ">",
+              "value": "0",
               "icon": "icons-check-circle"
             },
             {
