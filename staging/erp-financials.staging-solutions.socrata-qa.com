@@ -337,6 +337,130 @@
       ]
     },
     {
+      "name": "Budget Expenses",
+      "dataset_domain": "murfreesboro.data.socrata.com",
+      "dataset_id": "tdpw-ufv6",
+      "fields": {
+        "date_column": "fiscalmonth"
+      },
+      "dimension_entries": [
+        {
+          "column": "entity",
+          "name": "Entity"
+        },
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "segment1",
+          "name": "Major Function"
+        },
+        {
+          "column": "segment2",
+          "name": "Department"
+        },
+        {
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "object",
+          "name": "Budget Object"
+        },
+        {
+          "column": "organization",
+          "name": "Organization"
+        },
+        {
+          "column": "accounttype",
+          "name": "Account type"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Actuals vs. Budget",
+          "column": "actuals",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "default_comparison_column_entry": "revisedbudget"
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "revisedbudget",
+              "name": "Revised Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "originalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            }
+          ]
+        },
+        {
+          "name": "Payroll Expenses vs. Budget",
+          "column": "actuals",
+          "parent_queries": [
+            "select * where segment6 = 'Salary&Benefit Expenditures'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "default_comparison_column_entry": "revisedbudget"
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "revisedbudget",
+              "name": "Revised Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "originalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            }
+          ]
+        },
+      ]
+    {
       "name": "ERP - Payroll",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "dfmt-x4an",
