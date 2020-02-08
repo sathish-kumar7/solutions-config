@@ -353,11 +353,11 @@
           "name": "Fund"
         },
         {
-          "column": "segment1",
+          "column": "segment2",
           "name": "Major Function"
         },
         {
-          "column": "segment2",
+          "column": "segment3",
           "name": "Department"
         },
         {
@@ -470,12 +470,12 @@
           "name": "Organisation"
         },
         {
-          "column": "accountstatus",
-          "name": "Account status"
+          "column": "segment2",
+          "name": "Major Function"
         },
         {
-          "column": "accounttype",
-          "name": "Account type"
+          "column": "segment3",
+          "name": "Department"
         }
       ],
       "quick_filter_entries": [
