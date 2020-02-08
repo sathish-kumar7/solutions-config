@@ -847,13 +847,13 @@
               "timeline": {
                  "bench_mark_entries": [
                     {
-                      "column": "ltdrevisedbudget",
-                      "name": "Total revised budget",
+                      "column": "case_id",
+                      "name": "Cases",
                       "aggregate_type": "sum"
                     },
                     {
-                      "column": "ltdoriginalbudget",
-                      "name": "Total original budget",
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
                       "aggregate_type": "count"
                     }
                  ]
@@ -861,16 +861,16 @@
               "burn_up": {
                  "bench_mark_entries": [
                     {
-                      "column": "ltdrevisedbudget",
-                      "name": "Total revised budget",
+                      "column": "case_id",
+                      "name": "Cases",
                       "aggregate_type": "sum"
                     },
                     {
-                      "column": "ltdoriginalbudget",
-                      "name": "Total original budget",
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
                       "aggregate_type": "count"
                     }
-                 ]
+                ]
               }
             }
           },
