@@ -68,7 +68,7 @@
       "view_entries": [
         {
           "name": "Clearance Rate",
-          "column": "(sum(case(isclosed='true', 1, isclosed='false' , 0))/case(sum(case(isopen='true', 1, isopen='false' , 0)) == 0, 1, true, sum(case(isopen='true', 1, isopen='false' , 0)))*100)",
+          "column": "sum(case(isactive='false', 1))/sum(case(isactive='true', 1))*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
