@@ -117,7 +117,7 @@
         },
         {
           "name": "Incoming Cases",
-          "column": "sum(case(isactive='true', 1))*100",
+          "column": "sum(case(isactive='true', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
