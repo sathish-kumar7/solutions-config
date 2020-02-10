@@ -23,7 +23,7 @@
         },
       "dimension_entries": [
         {
-          "column": "permittype",
+          "column": "permittypegroup",
           "name": "Permit Type"
         },
         {
