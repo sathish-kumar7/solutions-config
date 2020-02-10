@@ -40,6 +40,14 @@
         {
           "column": "cityname",
           "name": "City"
+        },
+        {
+          "column": "grade",
+          "name": "Grade"
+        },
+        {
+          "column": "stories",
+          "name": "Stories"
         }
       ],
       "group_by_entries": [
@@ -58,6 +66,14 @@
         {
           "column": "taxdist",
           "name": "Tax district"
+        },
+        {
+          "column": "grade",
+          "name": "Grade"
+        },
+        {
+          "column": "stories",
+          "name": "Stories"
         }
       ],
       "view_entries": [
@@ -216,6 +232,10 @@
         {
           "column": "style",
           "name": "style"
+        },
+                {
+          "column": "com_use",
+          "name": "Commercial Use Type"
         }
       ],
       "leaf_page_entries": [
