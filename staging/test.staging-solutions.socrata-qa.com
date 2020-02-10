@@ -843,7 +843,37 @@
             },
             "overtime": {
               "show_area_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "show_timeline_total": "true",
+              "show_burn_up_chart": "true",
+              "timeline": {
+                 "bench_mark_entries": [
+                    {
+                      "column": "case_id",
+                      "name": "Cases",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
+                      "aggregate_type": "count"
+                    }
+                 ]
+               },
+              "burn_up": {
+                 "bench_mark_entries": [
+                    {
+                      "column": "case_id",
+                      "name": "Cases",
+                      "aggregate_type": "sum"
+                    },
+                    {
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
+                      "aggregate_type": "count"
+                    }
+                ]
+              }
             }
           },
           "comparison_column_entries": [
