@@ -17,7 +17,8 @@
   },
   "date_options": {
     "type": "yearly",
-    "year_start_month": "4"
+    "year_start_month": "4",
+    "data_end_date": "2019-02-10"
   },
   "template_entries": [
     {
@@ -842,36 +843,7 @@
             },
             "overtime": {
               "show_area_chart": "true",
-              "show_timeline_total": "true",
-              "show_burn_up_chart": "true",
-              "timeline": {
-                 "bench_mark_entries": [
-                    {
-                      "column": "case_id",
-                      "name": "Cases",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "case_disposition",
-                      "name": "Case Disposition",
-                      "aggregate_type": "count"
-                    }
-                 ]
-               },
-              "burn_up": {
-                 "bench_mark_entries": [
-                    {
-                      "column": "case_id",
-                      "name": "Cases",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "case_disposition",
-                      "name": "Case Disposition",
-                      "aggregate_type": "count"
-                    }
-                ]
-              }
+              "show_timeline_total": "true"
             }
           },
           "comparison_column_entries": [
@@ -1121,10 +1093,8 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
-            },
-            "overtime": {
-              "show_area_chart": "true"
-           },
+            }
+          },
           "target_entries": [
             {
               "name": "On track",
@@ -1137,9 +1107,8 @@
               "name": "Off track",
               "color": "#e31219",
               "icon": "icons-times-circle"
-              }
-            ]
-          }
+            }
+          ]
         },
         {
           "name": "Median Ratio",
