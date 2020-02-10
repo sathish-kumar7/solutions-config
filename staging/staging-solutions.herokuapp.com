@@ -52,7 +52,27 @@
             "default_view": "Snapshot",
             "snapshot": {
               "show_pie_chart": "true",
-              "default_comparison_column_entry": "program"
+              "default_comparison_column_entry": "program",
+              "scatterplot": {
+                "secondary_metric_entries":[
+                  {
+                    "column": "department",
+                    "name": "Department",
+                    "aggregate_type": "count",
+                    "precision": "0",
+                    "prefix": "",
+                    "suffix": "departments"
+                  },
+                  {
+                    "column": "category",
+                    "name": "Category",
+                    "aggregate_type": "count",
+                    "precision": "0",
+                    "prefix": "",
+                    "suffix": "categories"
+                  }
+                ]
+              }
             }
           },
           "precision": "0",
