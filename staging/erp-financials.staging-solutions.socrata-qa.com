@@ -45,7 +45,6 @@
       "view_entries": [
         {
           "name": "Budget vs. Actuals",
-          "primary_metric_name": "Revised budget",
           "column": "ltdrevisedbudget",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -118,7 +117,6 @@
         },
         {
           "name": "Payroll vs. Budgeted",
-          "primary_metric_name": "Revised budget",
           "column": "ltdrevisedbudget",
           "parent_queries": [
             "select * where charactercodedescription = 'FRINGE BENEFITS' OR charactercodedescription = 'SALARY & WAGES'"
@@ -194,7 +192,6 @@
         },
         {
           "name": "Estimated vs. Actual Revenue",
-          "primary_metric_name": "Revised budget",
           "column": "ltdrevisedbudget",
           "parent_queries": [
             "select * where accounttype = 'Revenue'"
