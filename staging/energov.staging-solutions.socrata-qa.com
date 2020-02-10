@@ -6,7 +6,8 @@
   "tag_list": [
     "Community Development",
     "Business Services",
-    "Code Enforcement"
+    "Code Enforcement",
+    "Inspections"
   ],
   "date": {
     "startDate": "2018-1-1",
@@ -330,7 +331,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Code Enforcement"
+            "Inspections"
           ],
        "visualization": {
           "default_view": "Snapshot",
@@ -361,7 +362,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Code Enforcement"
+            "Inspections"
           ],
        "visualization": {
           "default_view": "Snapshot",
@@ -395,7 +396,7 @@
           "prefix": "",
           "suffix": " days",
           "tags": [
-            "Code Enforcement"
+            "Inspections"
           ],
        "visualization": {
           "default_view": "Snapshot",
@@ -553,71 +554,6 @@
                   "icon": "icons-times-circle"
                 }
             ]
-        },
-        {
-          "name": "Business License Revenue",
-          "column": "balancedue",
-          "aggregate_type": "sum",
-          "precision": "0",
-          "prefix": "$",
-          "suffix": "",
-          "tags": [
-            "Business Services"
-          ],
-       "visualization": {
-          "default_view": "Snapshot",
-            "snapshot": {
-                "chart_type": "groupChart"
-            }
-        },
-        "target_entries": [
-                {
-                  "name": "On track",
-                  "color": "#259652",
-                  "operator": ">",
-                  "value": "1300",
-                  "icon": "icons-check-circle"
-                },
-                {
-                  "name": "Off track",
-                  "color": "#e31219",
-                  "icon": "icons-times-circle"
-                }
-            ]
-        },
-        {
-          "name": "% of Licenses Renewed On Time",
-          "column": "((sum(renewed_on_time)/count(*))::double)*100",
-          "aggregate_type": "",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "%",
-          "tags": [
-            "Business Services"
-          ],
-       "visualization": {
-          "default_view": "Snapshot",
-            "snapshot": {
-                "chart_type": "groupChart"
-            },
-        "parent_queries": [
-            "select *, case(LastRenewalDate < ExpirationDate, 1) as renewed_on_time where LastRenewalDate is not null"
-          ]
-        },
-        "target_entries": [
-                {
-                  "name": "SLA Met",
-                  "color": "#259652",
-                  "operator": ">",
-                  "value": "1300",
-                  "icon": "icons-check-circle"
-                },
-                {
-                  "name": "SLA Not Met",
-                  "color": "#e31219",
-                  "icon": "icons-times-circle"
-                }
-            ]
         }
       ],
       "leaf_page_entries": [
@@ -640,6 +576,119 @@
         {
           "column": "district",
           "name": "District"
+        }
+      ],
+        "map": {
+        "centerLat": "43.539349",
+        "centerLng": "-96.730926",
+        "zoom": "10",
+        "mini_map_zoom": "9",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Code Cases",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "sukz-2bfa",
+      "fields": {
+        "date_column": "openeddate",
+        "incident_type": "codecaseid",
+        "location": "location"
+              },
+      "dimension_entries": [
+        {
+          "column": "codecasetypename",
+          "name": "Code Case Type"
+        },
+        {
+          "column": "codecasestatusname",
+          "name": "Code Case Status"
+        },
+        {
+          "column": "districtname",
+          "name": "District"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "codecasetypename",
+          "name": "Code Case Type"
+        },
+        {
+          "column": "codecasestatusname",
+          "name": "Code Case Status"
+        },
+        {
+          "column": "districtname",
+          "name": "District"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Cases Opened",
+          "column": "codecaseid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Code Enforcement"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        }
+      }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "codecasetypename",
+          "name": "Code Case Type"
+        },
+        {
+          "column": "codecasestatusname",
+          "name": "Code Case Status"
+        },
+        {
+          "column": "districtname",
+          "name": "District"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
         }
       ],
         "map": {
