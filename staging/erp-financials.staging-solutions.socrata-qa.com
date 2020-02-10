@@ -61,7 +61,7 @@
             "default_comparison_column_entry": "actual"
             },
             "overtime": {
-              "show_area_chart": "false",
+              "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
               "timeline": {
