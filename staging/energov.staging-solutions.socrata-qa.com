@@ -76,10 +76,10 @@
         },
         "target_entries": [
         {
-              "name": "On track",
-              "color": "#259652",
+              "name": "Measuring",
+              "color": "#2B8FC2",
               "operator": ">",
-              "value": "30",
+              "value": "0",
               "icon": "icons-check-circle"
             },
             {
@@ -111,10 +111,10 @@
         },
         "target_entries": [
                 {
-                  "name": "On track",
-                  "color": "#259652",
-                  "operator": "<",
-                  "value": "200",
+                  "name": "Measuring",
+                  "color": "#2B8FC2",
+                  "operator": ">",
+                  "value": "0",
                   "icon": "icons-check-circle"
                 },
                 {
@@ -209,7 +209,21 @@
           "default_view": "Snapshot",
             "snapshot": {
                 "chart_type": "groupChart"
-            }
+            },
+        "target_entries": [
+                {
+                  "name": "Measuring",
+                  "color": "#2B8FC2",
+                  "operator": "<",
+                  "value": "110",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "SLA Not Met",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
         }
       ],
@@ -322,7 +336,21 @@
           "default_view": "Snapshot",
             "snapshot": {
                 "chart_type": "barChart"
-            }
+            },
+        "target_entries": [
+                {
+                  "name": "Measuring",
+                  "color": "#2B8FC2",
+                  "operator": ">",
+                  "value": "0",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
         },
         {
@@ -346,10 +374,10 @@
         },
         "target_entries": [
                 {
-                  "name": "On track",
-                  "color": "#259652",
+                  "name": "Measuring",
+                  "color": "#2B8FC2",
                   "operator": ">",
-                  "value": "100000",
+                  "value": "0",
                   "icon": "icons-check-circle"
                 },
                 {
@@ -513,10 +541,10 @@
         },
         "target_entries": [
                 {
-                  "name": "On track",
-                  "color": "#259652",
+                  "name": "Measuring",
+                  "color": "#2B8FC2",
                   "operator": ">",
-                  "value": "1300",
+                  "value": "0",
                   "icon": "icons-check-circle"
                 },
                 {
@@ -578,14 +606,14 @@
         },
         "target_entries": [
                 {
-                  "name": "On track",
+                  "name": "SLA Met",
                   "color": "#259652",
                   "operator": ">",
                   "value": "1300",
                   "icon": "icons-check-circle"
                 },
                 {
-                  "name": "Off track",
+                  "name": "SLA Not Met",
                   "color": "#e31219",
                   "icon": "icons-times-circle"
                 }
