@@ -189,6 +189,24 @@
                   "icon": "icons-times-circle"
                 }
             ]
+        },
+        {
+          "name": "Total Estimated Value of Permitted Construction",
+          "column": "sum(permitvaluation)",
+          "aggregate_type": "",
+          "use_dimension_value": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Community Development"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            }
+        }
         }
       ],
       "leaf_page_entries": [
