@@ -652,7 +652,12 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
-            }
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "false"
+              }
           },
           "target_entries": [
             {
