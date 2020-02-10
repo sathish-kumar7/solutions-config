@@ -18,7 +18,8 @@
   "date_options": {
     "type": "yearly",
     "year_start_month": "4",
-    "data_end_date": "2019-02-10"
+    "data_end_date": "2019-02-10",
+    "default_year": "2018"
   },
   "template_entries": [
     {
