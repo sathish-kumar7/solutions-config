@@ -17,7 +17,7 @@
       "dataset_id": "amhj-22i6",
       "fields": {
         "date_column": "applicationdate",
-        "incident_type": "permittype",
+        "incident_type": "permittypegroup",
         "location": "location",
         "8t69-jvh8": ":@computed_region_8t69_jvh8"
         },
@@ -41,7 +41,7 @@
       ],
       "group_by_entries": [
         {
-          "column": "permittype",
+          "column": "permittypegroup",
           "name": "Permit Type"
         },
         {
@@ -141,7 +141,7 @@
         "date_column": "applicationdate"
         },
         "parent_queries": [
-            "select applicationdate, permitnumber, permittype, permitstatus, permitworkclass, projectname, district, applied_to_issued, case(applied_to_issued < 90, 1) as less_than_90_count where isstatusissued='true'"
+            "select applicationdate, permitnumber, permittypegroup, permitstatus, permitworkclass, projectname, district, applied_to_issued, case(applied_to_issued < 90, 1) as less_than_90_count where isstatusissued='true'"
           ],
         "target_entries": [
                 {
@@ -205,7 +205,7 @@
           "name": "Permit Class"
         },
         {
-          "column": "permittype",
+          "column": "permittypegroup",
           "name": "Permit Type"
         },
         {
