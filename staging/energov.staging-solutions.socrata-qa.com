@@ -503,7 +503,7 @@
             ]
         },
         {
-          "name": "Balance Due",
+          "name": "Business License Revenue",
           "column": "balancedue",
           "aggregate_type": "sum",
           "precision": "0",
@@ -517,6 +517,40 @@
             "snapshot": {
                 "chart_type": "groupChart"
             }
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#259652",
+                  "operator": ">",
+                  "value": "1300",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
+        },
+        {
+          "name": "% of Licenses Renewed On Time",
+          "column": "((sum(renewed_on_time)/count(*))::double)*100",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Business Services"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "groupChart"
+            },
+        "parent_queries": [
+            "select *, case(LastRenewalDate < ExpirationDate, 1) as renewed_on_time where LastRenewalDate is not null"
+          ]
         },
         "target_entries": [
                 {
