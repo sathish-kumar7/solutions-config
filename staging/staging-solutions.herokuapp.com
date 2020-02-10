@@ -16,7 +16,7 @@
     "endDate": "2019-12-31"
   },
   "date_options": {
-    "type": "yearly",
+    "type": "custom_range",
     "year_start_month": "4"
   },
   "template_entries": [
