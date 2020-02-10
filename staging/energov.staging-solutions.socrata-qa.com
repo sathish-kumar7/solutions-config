@@ -368,6 +368,40 @@
                   "icon": "icons-times-circle"
                 }
             ]
+        },
+        {
+          "name": "Average Delay in Inspection Start Time",
+          "column": "avg(actual_start_to_scheduled_start)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " days",
+          "tags": [
+            "Code Enforcement"
+          ],
+       "visualization": {
+          "default_view": "Snapshot",
+            "snapshot": {
+                "chart_type": "barChart"
+            }
+        },
+        "fields": {
+        "date_column": "actualenddatetime"
+        },
+        "target_entries": [
+                {
+                  "name": "On track",
+                  "color": "#259652",
+                  "operator": ">",
+                  "value": "10",
+                  "icon": "icons-check-circle"
+                },
+                {
+                  "name": "Off track",
+                  "color": "#e31219",
+                  "icon": "icons-times-circle"
+                }
+            ]
         }
       ],
       "leaf_page_entries": [
