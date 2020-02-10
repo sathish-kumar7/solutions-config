@@ -673,29 +673,6 @@
               "chart_type": "barChart"
             }
           }
-        },
-        {
-          "name": "Count of Hearings",
-          "column": "hearingid",
-          "parent_queries": [
-            "select distinct hearingid, casenumber, casecategorydescription as last_casecategorydescription, casetypemappingcodedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date, hearingjudgeid as last_hearingjudgeid, nodedescription as last_nodedescription, county as last_county"
-          ],
-          "fields": {
-            "date_column": "last_hearing_date"
-          },
-          "aggregate_type": "count",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "hearings",
-          "tags": [
-            "Cases"
-          ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "barChart"
-            }
-          }
         }
       ],
       "leaf_page_entries": [
