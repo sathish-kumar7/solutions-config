@@ -116,6 +116,104 @@
           ]
         },
         {
+          "name": "Incoming Cases",
+          "column": "sum(case(isactive='true', 1))*100",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "cases",
+          "tags": [
+            "Clearance Rates"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">=",
+              "value": "80",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "default_comparison_column_entry": "casenumber",
+              "show_pie_chart": "true"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_timeline_total": "false"
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "casenumber",
+              "name": "Count of cases",
+              "aggregate_type": "count",
+              "prefix": "",
+              "suffix": "cases",
+              "precision": "0",
+              "render_type": "bullet"
+            }
+          ]
+        },
+        {
+          "name": "Outgoing Cases",
+          "column": "sum(case(isactive='false', 1))",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "cases",
+          "tags": [
+            "Clearance Rates"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">=",
+              "value": "80",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "default_comparison_column_entry": "casenumber",
+              "show_pie_chart": "true"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_timeline_total": "false"
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "casenumber",
+              "name": "Count of cases",
+              "aggregate_type": "count",
+              "prefix": "",
+              "suffix": "cases",
+              "precision": "0",
+              "render_type": "bullet"
+            }
+          ]
+        },
+        {
           "name": "Count of Opened or Reopened Cases",
           "column": "casenumber",
           "aggregate_type": "count",
