@@ -8,6 +8,10 @@
     "Business Services",
     "Code Enforcement"
   ],
+  "date": {
+    "startDate": "2018-1-1",
+    "endDate": "2020-02-01"
+  },
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
