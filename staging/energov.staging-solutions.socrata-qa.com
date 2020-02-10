@@ -149,14 +149,14 @@
           ],
         "target_entries": [
                 {
-                  "name": "On track",
+                  "name": "SLA Met",
                   "color": "#259652",
                   "operator": ">",
-                  "value": "75",
+                  "value": "50",
                   "icon": "icons-check-circle"
                 },
                 {
-                  "name": "Off track",
+                  "name": "SLA Not Met",
                   "color": "#e31219",
                   "icon": "icons-times-circle"
                 }
@@ -181,14 +181,14 @@
         },
         "target_entries": [
                 {
-                  "name": "On track",
+                  "name": "SLA Met",
                   "color": "#259652",
                   "operator": "<",
-                  "value": "30",
+                  "value": "110",
                   "icon": "icons-check-circle"
                 },
                 {
-                  "name": "Off track",
+                  "name": "SLA Not Met",
                   "color": "#e31219",
                   "icon": "icons-times-circle"
                 }
@@ -323,21 +323,7 @@
             "snapshot": {
                 "chart_type": "barChart"
             }
-        },
-        "target_entries": [
-                {
-                  "name": "On track",
-                  "color": "#259652",
-                  "operator": "<",
-                  "value": "5000",
-                  "icon": "icons-check-circle"
-                },
-                {
-                  "name": "Off track",
-                  "color": "#e31219",
-                  "icon": "icons-times-circle"
-                }
-            ]
+        }
         },
         {
           "name": "Completed Inspections",
@@ -394,14 +380,14 @@
         },
         "target_entries": [
                 {
-                  "name": "On track",
+                  "name": "SLA Met",
                   "color": "#259652",
                   "operator": ">",
                   "value": "10",
                   "icon": "icons-check-circle"
                 },
                 {
-                  "name": "Off track",
+                  "name": "SLA Not Met",
                   "color": "#e31219",
                   "icon": "icons-times-circle"
                 }
