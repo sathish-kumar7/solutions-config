@@ -96,6 +96,16 @@
                 "show_scatterplot_range_bar": "true"
             }
           },
+           "comparison_column_entries": [
+            {
+              "column": "parid",
+              "name": "Number of Sales",
+              "aggregate_type": "count",
+              "prefix": "",
+              "suffix": "",
+              "precision": "0",
+              "render_type": "bullet"
+            }],
         "target_entries": [
         {
               "name": "Meets Standard",
@@ -418,6 +428,24 @@
           "aggregate_type": "",
           "precision": "0",
           "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Total Appeals",
+          "column": "count(parid)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
           "suffix": "",
           "tags": [
             "Appeals"
