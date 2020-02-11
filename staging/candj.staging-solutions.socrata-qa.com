@@ -122,7 +122,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
@@ -171,7 +171,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
@@ -220,7 +220,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
@@ -269,7 +269,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
@@ -318,7 +318,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
@@ -367,7 +367,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
@@ -416,7 +416,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
@@ -465,7 +465,7 @@
                "use_dimension_value":"true",
                "precision":"0",
                "prefix":"",
-               "suffix":"cases",
+               "suffix":"events",
                "tags":[ 
                   "Clearance Rates (Double Counting)"
                ],
