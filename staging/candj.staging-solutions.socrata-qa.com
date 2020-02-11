@@ -5,6 +5,7 @@
    },
    "tag_list":[ 
       "Clearance Rates (Double Counting)",
+      "Clearance Rates (No Double Counting)",
       "Cases"
    ],
    "date":{ 
@@ -436,27 +437,15 @@
                "prefix":"",
                "suffix":"cases",
                "parent_queries":[ 
-                  "select distinct casenumber, county, judgeid, casecategorymappingcoded, casetypemappingcodedescription, caseid, nodedescription, max(case(isactive='true', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(isactive='true', statusdate)) over (partition by casenumber)  as last_closed_date"
+                 "max(eventstatusmappingcodede) as last_eventstatusmappingcodede, max(statusdate) as last_statusdate, casenumber, max(casetypemappingcodedescription) as last_casetypemappingcodedescription, max(casecategorymappingcoded) as last_casecategorymappingcoded, max(judgeid) as last_judgeid, max(nodedescription) as last_nodedescription, max(county) as last_county where (eventstatusmappingcodede='New Filing' or eventstatusmappingcodede='Reopened' or eventstatusmappingcodede='Reactivated') group by casenumber"
                ],
                "fields":{ 
-                  "date_column":"last_opened_date"
+                  "date_column":"last_statusdate"
                },
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (No Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
