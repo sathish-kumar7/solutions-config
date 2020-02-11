@@ -18,7 +18,7 @@
   "is_private": "false",
   "template_entries": [
     {
-      "name": "ERP - Financials",
+      "name": "Core Financials",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "darw-mart",
       "fields": {
@@ -43,155 +43,6 @@
         }
       ],
       "view_entries": [
-        {
-          "name": "Budget vs. Actuals",
-          "primary_metric_name": "Revised budget",
-          "column": "ltdrevisedbudget",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Financials"
-          ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
-            },
-            "overtime": {
-              "show_area_chart": "false",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true",
-              "timeline": {
-              "bench_mark_entries": [
-                    {
-                      "column": "ltdrevisedbudget",
-                      "name": "Total revised budget",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "ltdoriginalbudget",
-                      "name": "Total original budget",
-                      "aggregate_type": "count"
-                    }
-                ]
-              },
-              "burn_up": {
-              "bench_mark_entries": [
-                    {
-                      "column": "ltdrevisedbudget",
-                      "name": "Total revised budget",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "ltdoriginalbudget",
-                      "name": "Total original budget",
-                      "aggregate_type": "count"
-                    }
-                ]
-              }
-            }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
-        },
-        {
-          "name": "Payroll vs. Budgeted",
-          "primary_metric_name": "Revised budget",
-          "column": "ltdrevisedbudget",
-          "parent_queries": [
-            "select * where charactercodedescription = 'FRINGE BENEFITS' OR charactercodedescription = 'SALARY & WAGES'"
-          ],
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Payroll & HR"
-          ],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
-            },
-            "overtime": {
-              "show_area_chart": "false",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true",
-              "timeline": {
-              "bench_mark_entries": [
-                    {
-                      "column": "ltdrevisedbudget",
-                      "name": "Total revised budget",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "ltdoriginalbudget",
-                      "name": "Total original budget",
-                      "aggregate_type": "count"
-                    }
-                ]
-              },
-              "burn_up": {
-              "bench_mark_entries": [
-                    {
-                      "column": "ltdrevisedbudget",
-                      "name": "Total revised budget",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "ltdoriginalbudget",
-                      "name": "Total original budget",
-                      "aggregate_type": "count"
-                    }
-                ]
-              }
-            }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
-        },
         {
           "name": "Estimated vs. Actual Revenue",
           "primary_metric_name": "Revised budget",
@@ -541,7 +392,7 @@
       ]
     },
     {
-      "name": "ERP - Payroll",
+      "name": "Payroll & Compensation",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "dfmt-x4an",
       "fields": {
@@ -683,7 +534,7 @@
       ]
     },
     {
-      "name": "ERP - Personnel",
+      "name": "Employee Actions",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "57n2-v5cf",
       "fields": {
@@ -761,7 +612,7 @@
       ]
     },
     {
-      "name": "ERP - Bids",
+      "name": "Bids",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "4f5p-ynjv",
       "fields": {
@@ -823,7 +674,7 @@
       ]
     },
     {
-      "name": "ERP - Bids per Oppurtunity",
+      "name": "Bids per Oppurtunity",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "4f5p-ynjv",
                 "parent_queries": [
@@ -884,7 +735,7 @@
       ]
     },
     {
-      "name": "ERP - Applicants",
+      "name": "Hiring & Job Applicants",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
                 "parent_queries": [
@@ -937,7 +788,7 @@
       ]
     },
     {
-      "name": "ERP - Vehicle Injury Claims",
+      "name": "Vehicle Injury Claims",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "fuzc-99cp",
       "fields": {
@@ -999,7 +850,7 @@
       ]
     },
     {
-      "name": "ERP - Property Injury Claims",
+      "name": "Property Injury Claims",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "vfai-azfy",
       "fields": {
@@ -1061,7 +912,7 @@
       ]
     },
     {
-      "name": "ERP - Personal Injury Claims",
+      "name": "Personal Injury Claims",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "x44h-hbun",
       "fields": {
