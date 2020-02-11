@@ -442,7 +442,7 @@
                "prefix":"",
                "suffix":"cases",
                "parent_queries":[ 
-                  "max(eventstatusmappingcodede) as last_eventstatusmappingcodede, max(statusdate) as last_statusdate, casenumber, max(casetypemappingcodedescription) as last_casetypemappingcodedescription, max(casecategorymappingcoded) as last_casecategorymappingcoded, max(judgeid) as last_judgeid, max(nodedescription) as last_nodedescription, max(county) as last_county where (eventstatusmappingcodede='New Filing' or eventstatusmappingcodede='Reopened' or eventstatusmappingcodede='Reactivated') group by casenumber"
+                  "select max(eventstatusmappingcodede) as last_eventstatusmappingcodede, max(statusdate) as last_statusdate, casenumber, max(casetypemappingcodedescription) as last_casetypemappingcodedescription, max(casecategorymappingcoded) as last_casecategorymappingcoded, max(judgeid) as last_judgeid, max(nodedescription) as last_nodedescription, max(county) as last_county where (eventstatusmappingcodede='New Filing' or eventstatusmappingcodede='Reopened' or eventstatusmappingcodede='Reactivated') group by casenumber"
                ],
                "fields":{ 
                   "date_column":"last_statusdate"
