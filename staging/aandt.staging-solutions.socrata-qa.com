@@ -332,7 +332,7 @@
       "name": "Appeals",
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
-      "dataset_id": "snjj-se4g",
+      "dataset_id": "22ci-twx5",
       "parent_queries": [
         
       ],
@@ -344,6 +344,13 @@
         {
           "column": "class",
           "name": "Class"
+        },
+        {
+          "column": "land_use_type",
+          "name": "Land Use Type"
+        },{
+          "column": "com_use",
+          "name": "Commercial Use Type"
         },
         {
           "column": "heartyp",
