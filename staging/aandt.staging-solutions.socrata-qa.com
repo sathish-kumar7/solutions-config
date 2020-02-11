@@ -390,6 +390,42 @@
                 "show_pie_chart": "true"
             }
           }
+        },
+        {
+          "name": "Total Value Under Dispute",
+          "column": "sum(county_value)-sum(taxpayer_opinion_value)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Average Value Under Dispute",
+          "column": "average(county_value-taxpayer_opinion_value)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
         }
       ],
       "leaf_page_entries": [
