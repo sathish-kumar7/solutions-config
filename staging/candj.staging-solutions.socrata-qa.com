@@ -505,23 +505,23 @@
       },
       "dimension_entries": [
         {
-          "column": "casecategorymappingcoded",
+          "column": "last_casecategorymappingcoded",
           "name": "Case Category"
         },
         {
-          "column": "casetypemappingcodedescription",
+          "column": "last_casetypemappingcodedescription",
           "name": "Case Type"
         },
         {
-          "column": "judgeid",
+          "column": "last_judgeid",
           "name": "Judge ID"
         },
         {
-          "column": "nodedescription",
+          "column": "last_nodedescription",
           "name": "Court Name"
         },
         {
-          "column": "county",
+          "column": "last_county",
           "name": "County"
         }
       ],
@@ -562,50 +562,6 @@
           "fields": {
             "date_column": "last_statusdate"
           },
-          "dimension_entries": [
-            {
-              "column": "last_casecategorymappingcoded",
-              "name": "Case Category"
-            },
-            {
-              "column": "last_casetypemappingcodedescription",
-              "name": "Case Type"
-            },
-            {
-              "column": "last_judgeid",
-              "name": "Judge ID"
-            },
-            {
-              "column": "last_nodedescription",
-              "name": "Court Name"
-            },
-            {
-              "column": "last_county",
-              "name": "County"
-            }
-          ],
-          "group_by_entries": [
-            {
-              "column": "last_casetypemappingcodedescription",
-              "name": "Case Type"
-            },
-            {
-              "column": "lasT_casecategorymappingcoded",
-              "name": "Case Category"
-            },
-            {
-              "column": "last_judgeid",
-              "name": "Judge ID"
-            },
-            {
-              "column": "last_nodedescription",
-              "name": "Court Name"
-            },
-            {
-              "column": "last_county",
-              "name": "County"
-            }
-          ],
           "tags": [
             "Clearance Rates (No Double Counting)"
           ],
