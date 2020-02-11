@@ -138,6 +138,15 @@
               "suffix": "events"
             },
             {
+              "name": "Outgoing Cases",
+              "column": "sum(case(isactive='false', 1))",
+              "aggregate_type": "",
+              "render_type": "bullet",
+              "precision": "0",
+              "prefix": "",
+              "suffix": "events"
+            },
+            {
               "name": "Event Status Mapping Code",
               "column": "eventstatusmappingcodede",
               "aggregate_type": "",
