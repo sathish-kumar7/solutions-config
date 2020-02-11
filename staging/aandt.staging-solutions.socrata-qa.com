@@ -351,6 +351,9 @@
         },{
           "column": "com_use",
           "name": "Commercial Use Type"
+        },{
+          "column": "com_name",
+          "name": "Commercial Description"
         },
         {
           "column": "heartyp",
