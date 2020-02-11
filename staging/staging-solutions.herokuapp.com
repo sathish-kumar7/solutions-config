@@ -859,7 +859,27 @@
               "showCompareDropDown": "true",
               "default_group_by_entry_column": "agency_name",
               "default_comparison_column_entry": "case_disposition",
-              "show_pie_chart": "true"
+              "show_pie_chart": "true",
+              "scatterplot": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "disposition"
+                    },
+                    {
+                      "column": "case_id",
+                      "name": "Cases",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "cases"
+                    }
+                ]
+              }
             },
             "overtime": {
               "show_area_chart": "true",
