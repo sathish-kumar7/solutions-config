@@ -130,9 +130,9 @@
               "scatterplot": {
                 "secondary_metric_entries": [
                     {
-                      "column": "case_id",
-                      "name": "Cases",
-                      "aggregate_type": "count",
+                      "column": "approved_amount",
+                      "name": "Approved amount",
+                      "aggregate_type": "sum",
                       "precision": "",
                       "prefix": "",
                       "suffix": ""
