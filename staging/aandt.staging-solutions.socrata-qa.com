@@ -98,11 +98,11 @@
                 "secondary_metric_entries": [
                     {
                       "column": "parid",
-                      "name": "Cases",
+                      "name": "Number of sales",
                       "aggregate_type": "count",
                       "precision": "",
                       "prefix": "",
-                      "suffix": "cases"
+                      "suffix": ""
                     }
                 ]
               }
