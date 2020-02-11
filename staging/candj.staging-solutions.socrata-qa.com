@@ -288,14 +288,14 @@
                   }
                },
                "comparison_column_entries":[ 
-                  { 
-                     "column":"casenumber",
-                     "name":"Count of cases",
-                     "aggregate_type":"count",
-                     "prefix":"",
-                     "suffix":"cases",
-                     "precision":"0",
-                     "render_type":"bullet"
+                  {
+                     "name":"Outgoing Cases (Double Counting)",
+                     "column":"sum(case(isactive='false', 1))",
+                     "aggregate_type":"",
+                      "render_type":"bullet",
+                      "precision":"0",
+                      "prefix":"",
+                      "suffix":"events"
                   }
                ]
             },
@@ -337,14 +337,14 @@
                   }
                },
                "comparison_column_entries":[ 
-                  { 
-                     "column":"casenumber",
-                     "name":"Count of cases",
-                     "aggregate_type":"count",
-                     "prefix":"",
-                     "suffix":"cases",
-                     "precision":"0",
-                     "render_type":"bullet"
+                  {
+                     "name":"Outgoing Cases (Double Counting)",
+                     "column":"sum(case(isactive='false', 1))",
+                     "aggregate_type":"",
+                      "render_type":"bullet",
+                      "precision":"0",
+                      "prefix":"",
+                      "suffix":"events"
                   }
                ]
             },
@@ -386,19 +386,19 @@
                   }
                },
                "comparison_column_entries":[ 
-                  { 
-                     "column":"casenumber",
-                     "name":"Count of cases",
-                     "aggregate_type":"count",
-                     "prefix":"",
-                     "suffix":"cases",
-                     "precision":"0",
-                     "render_type":"bullet"
+                  {
+                     "name":"Outgoing Cases (Double Counting)",
+                     "column":"sum(case(isactive='false', 1))",
+                     "aggregate_type":"",
+                      "render_type":"bullet",
+                      "precision":"0",
+                      "prefix":"",
+                      "suffix":"events"
                   }
                ]
             },
             { 
-               "name":"Incoming Cases: (Double Counting)",
+               "name":"Incoming Cases: Reactivated (Double Counting)",
                "column":"sum(case(eventstatusmappingcodede='Reactivated', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -435,14 +435,14 @@
                   }
                },
                "comparison_column_entries":[ 
-                  { 
-                     "column":"casenumber",
-                     "name":"Count of cases",
-                     "aggregate_type":"count",
-                     "prefix":"",
-                     "suffix":"cases",
-                     "precision":"0",
-                     "render_type":"bullet"
+                  {
+                     "name":"Outgoing Cases (Double Counting)",
+                     "column":"sum(case(isactive='false', 1))",
+                     "aggregate_type":"",
+                      "render_type":"bullet",
+                      "precision":"0",
+                      "prefix":"",
+                      "suffix":"events"
                   }
                ]
             },
