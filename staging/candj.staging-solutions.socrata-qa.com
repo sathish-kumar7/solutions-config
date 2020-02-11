@@ -4,7 +4,7 @@
       "title":"Solutions - Courts and Justice"
    },
    "tag_list":[ 
-      "Clearance Rates",
+      "Clearance Rates (Double Counting)",
       "Cases"
    ],
    "date":{ 
@@ -75,7 +75,7 @@
                "prefix":"",
                "suffix":"%",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -116,7 +116,7 @@
                ]
             },
             { 
-               "name":"Outgoing Case Events (Double Counting)",
+               "name":"Outgoing Cases (Double Counting)",
                "column":"sum(case(isactive='false', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -124,7 +124,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -165,7 +165,7 @@
                ]
             },
             { 
-               "name":"Outgoing Case Event: Entry of Judgement (Double Counting)",
+               "name":"Outgoing Cases: Entry of Judgement (Double Counting)",
                "column":"sum(case(eventstatusmappingcodede='Jury Trial Disposition' or eventstatusmappingcodede='Non-Trial Disposition' or eventstatusmappingcodede='Bench/Non-Jury Trial Disposition' , 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -173,7 +173,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -214,7 +214,7 @@
                ]
             },
             { 
-               "name":"Outgoing Case Event: Reopened Disposition (Double Counting)",
+               "name":"Outgoing Cases: Reopened Disposition (Double Counting)",
                "column":"sum(case(eventstatusmappingcodede='Reopened', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -222,7 +222,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -263,7 +263,7 @@
                ]
             },
             { 
-               "name":"Outgoing Case Event: Placed On Inactive Status (Double Counting)",
+               "name":"Outgoing Cases: Placed On Inactive Status (Double Counting)",
                "column":"sum(case(eventstatusmappingcodede='Placed on Inactive Status', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -271,7 +271,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -312,7 +312,7 @@
                ]
             },
             { 
-               "name":"Incoming Case Events (Double Counting)",
+               "name":"Incoming Cases (Double Counting)",
                "column":"sum(case(isactive='true', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -320,7 +320,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -369,7 +369,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -418,7 +418,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
@@ -467,7 +467,7 @@
                "prefix":"",
                "suffix":"cases",
                "tags":[ 
-                  "Clearance Rates"
+                  "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
                   { 
