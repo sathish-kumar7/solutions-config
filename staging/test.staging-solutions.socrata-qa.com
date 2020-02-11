@@ -647,8 +647,8 @@
         },
         {
           "view_column": "building_value",
-          "display_name": "Building value 500",
-          "value": "500"
+          "display_name": "Building value 2.5B",
+          "value": "2500000000"
         }
       ],
       "view_entries": [
