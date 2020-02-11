@@ -17,7 +17,8 @@
   },
   "date_options": {
     "type": "yearly",
-    "year_start_month": "4"
+    "year_start_month": "4",
+     "data_end_date": "2020-01-10"
   },
   "template_entries": [
     {
