@@ -142,14 +142,14 @@
                   }
                },
                "comparison_column_entries":[ 
-                  { 
-                     "column":"casenumber",
-                     "name":"Count of cases",
-                     "aggregate_type":"count",
-                     "prefix":"",
-                     "suffix":"cases",
-                     "precision":"0",
-                     "render_type":"bullet"
+                  {
+                     "name":"Incoming Cases (Double Counting)",
+                     "column":sum(case(isactive='true', 1))",
+                     "aggregate_type":"",
+                      "render_type":"bullet",
+                      "precision":"0",
+                      "prefix":"",
+                      "suffix":"events"
                   }
                ]
             },
@@ -192,8 +192,8 @@
                },
                "comparison_column_entries":[ 
                   {
-                     "name":"Incoming Cases: New Filing (Double Counting)",
-                     "column":"sum(case(eventstatusmappingcodede='New Filing', 1))",
+                     "name":"Incoming Cases (Double Counting)",
+                     "column":sum(case(isactive='true', 1))",
                      "aggregate_type":"",
                       "render_type":"bullet",
                       "precision":"0",
@@ -240,14 +240,14 @@
                   }
                },
                "comparison_column_entries":[ 
-                  { 
-                     "column":"casenumber",
-                     "name":"Count of cases",
-                     "aggregate_type":"count",
-                     "prefix":"",
-                     "suffix":"cases",
-                     "precision":"0",
-                     "render_type":"bullet"
+                  {
+                     "name":"Incoming Cases (Double Counting)",
+                     "column":sum(case(isactive='true', 1))",
+                     "aggregate_type":"",
+                      "render_type":"bullet",
+                      "precision":"0",
+                      "prefix":"",
+                      "suffix":"events"
                   }
                ]
             },
