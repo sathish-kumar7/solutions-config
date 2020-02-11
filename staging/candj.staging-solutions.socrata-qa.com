@@ -95,7 +95,6 @@
                   "default_view":"Snapshot",
                   "snapshot":{ 
                      "chart_type":"groupChart",
-                     "default_comparison_column_entry":"casenumber",
                      "show_pie_chart":"true"
                   },
                   "overtime":{ 
@@ -144,7 +143,7 @@
                "comparison_column_entries":[ 
                   {
                      "name":"Incoming Cases (Double Counting)",
-                     "column":sum(case(isactive='true', 1))",
+                     "column":"sum(case(isactive='true', 1))",
                      "aggregate_type":"",
                       "render_type":"bullet",
                       "precision":"0",
@@ -193,7 +192,7 @@
                "comparison_column_entries":[ 
                   {
                      "name":"Incoming Cases (Double Counting)",
-                     "column":sum(case(isactive='true', 1))",
+                     "column":"sum(case(isactive='true', 1))",
                      "aggregate_type":"",
                       "render_type":"bullet",
                       "precision":"0",
@@ -242,7 +241,7 @@
                "comparison_column_entries":[ 
                   {
                      "name":"Incoming Cases (Double Counting)",
-                     "column":sum(case(isactive='true', 1))",
+                     "column":"sum(case(isactive='true', 1))",
                      "aggregate_type":"",
                       "render_type":"bullet",
                       "precision":"0",
