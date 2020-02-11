@@ -93,7 +93,19 @@
              "snapshot": {
                 "chart_type": "groupChart",
                 "show_pie_chart": "true",
-                "show_scatterplot_range_bar": "true"
+                "show_scatterplot_range_bar": "true",
+                "scatterplot": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "parid",
+                      "name": "Cases",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "cases"
+                    }
+                ]
+              }
             }
           },
            "comparison_column_entries": [
@@ -105,7 +117,8 @@
               "suffix": "",
               "precision": "0",
               "render_type": "bullet"
-            }],
+            }
+          ],
         "target_entries": [
         {
               "name": "Meets Standard",
