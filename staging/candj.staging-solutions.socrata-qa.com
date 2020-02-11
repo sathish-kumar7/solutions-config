@@ -210,6 +210,7 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -256,6 +257,7 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -302,6 +304,7 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -348,6 +351,7 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -394,6 +398,7 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -437,15 +442,60 @@
                "prefix":"",
                "suffix":"cases",
                "parent_queries":[ 
-                 "max(eventstatusmappingcodede) as last_eventstatusmappingcodede, max(statusdate) as last_statusdate, casenumber, max(casetypemappingcodedescription) as last_casetypemappingcodedescription, max(casecategorymappingcoded) as last_casecategorymappingcoded, max(judgeid) as last_judgeid, max(nodedescription) as last_nodedescription, max(county) as last_county where (eventstatusmappingcodede='New Filing' or eventstatusmappingcodede='Reopened' or eventstatusmappingcodede='Reactivated') group by casenumber"
+                  "max(eventstatusmappingcodede) as last_eventstatusmappingcodede, max(statusdate) as last_statusdate, casenumber, max(casetypemappingcodedescription) as last_casetypemappingcodedescription, max(casecategorymappingcoded) as last_casecategorymappingcoded, max(judgeid) as last_judgeid, max(nodedescription) as last_nodedescription, max(county) as last_county where (eventstatusmappingcodede='New Filing' or eventstatusmappingcodede='Reopened' or eventstatusmappingcodede='Reactivated') group by casenumber"
                ],
                "fields":{ 
                   "date_column":"last_statusdate"
                },
+               "dimension_entries":[ 
+                  { 
+                     "column":"last_casecategorymappingcoded",
+                     "name":"Case Category"
+                  },
+                  { 
+                     "column":"last_casetypemappingcodedescription",
+                     "name":"Case Type"
+                  },
+                  { 
+                     "column":"last_judgeid",
+                     "name":"Judge ID"
+                  },
+                  { 
+                     "column":"last_nodedescription",
+                     "name":"Court Name"
+                  },
+                  { 
+                     "column":"last_county",
+                     "name":"County"
+                  }
+               ],
+               "group_by_entries":[ 
+                  { 
+                     "column":"last_casetypemappingcodedescription",
+                     "name":"Case Type"
+                  },
+                  { 
+                     "column":"lasT_casecategorymappingcoded",
+                     "name":"Case Category"
+                  },
+                  { 
+                     "column":"last_judgeid",
+                     "name":"Judge ID"
+                  },
+                  { 
+                     "column":"last_nodedescription",
+                     "name":"Court Name"
+                  },
+                  { 
+                     "column":"last_county",
+                     "name":"County"
+                  }
+               ],
                "tags":[ 
                   "Clearance Rates (No Double Counting)"
                ],
                "target_entries":[ 
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
