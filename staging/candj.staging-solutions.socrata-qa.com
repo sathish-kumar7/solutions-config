@@ -4,8 +4,7 @@
     "title": "Solutions - Courts and Justice"
   },
   "tag_list": [
-    "Clearance Rates (Double Counting)",
-    "Clearance Rates (No Double Counting)",
+    "Clearance Rates",
     "Cases"
   ],
   "date": {
@@ -68,7 +67,7 @@
       ],
       "view_entries": [
         {
-          "name": "Clearance Rate (Double Counting)",
+          "name": "Clearance Rate",
           "column": "sum(case(isactive='false', 1))/sum(case(isactive='true', 1))*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -105,7 +104,7 @@
           }
         },
         {
-          "name": "Outgoing Cases (Double Counting)",
+          "name": "Outgoing Cases",
           "column": "sum(case(isactive='false', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -113,7 +112,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rates"
           ],
           "target_entries": [],
           "visualization": {
@@ -130,7 +129,7 @@
           },
           "comparison_column_entries": [
             {
-              "name": "Incoming Cases (Double Counting)",
+              "name": "Incoming Cases",
               "column": "sum(case(isactive='true', 1))",
               "aggregate_type": "",
               "render_type": "bullet",
@@ -150,7 +149,7 @@
           ]
         },
         {
-          "name": "Outgoing Cases: Entry of Judgement (Double Counting)",
+          "name": "Outgoing Cases: Entry of Judgement",
           "column": "sum(case(eventstatusmappingcodede='Jury Trial Disposition' or eventstatusmappingcodede='Non-Trial Disposition' or eventstatusmappingcodede='Bench/Non-Jury Trial Disposition' , 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -158,7 +157,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rates"
           ],
           "target_entries": [],
           "visualization": {
@@ -175,7 +174,7 @@
           },
           "comparison_column_entries": [
             {
-              "name": "Incoming Cases (Double Counting)",
+              "name": "Incoming Cases",
               "column": "sum(case(isactive='true', 1))",
               "aggregate_type": "",
               "render_type": "bullet",
@@ -195,7 +194,7 @@
           ]
         },
         {
-          "name": "Outgoing Cases: Placed On Inactive Status (Double Counting)",
+          "name": "Outgoing Cases: Placed On Inactive Status",
           "column": "sum(case(eventstatusmappingcodede='Placed on Inactive Status', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -203,7 +202,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rates"
           ],
           "target_entries": [],
           "visualization": {
@@ -220,7 +219,7 @@
           },
           "comparison_column_entries": [
             {
-              "name": "Incoming Cases (Double Counting)",
+              "name": "Incoming Cases",
               "column": "sum(case(isactive='true', 1))",
               "aggregate_type": "",
               "render_type": "bullet",
@@ -240,7 +239,7 @@
           ]
         },
         {
-          "name": "Incoming Cases (Double Counting)",
+          "name": "Incoming Cases",
           "column": "sum(case(isactive='true', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -248,7 +247,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rates"
           ],
           "target_entries": [],
           "visualization": {
@@ -265,7 +264,7 @@
           },
           "comparison_column_entries": [
             {
-              "name": "Outgoing Cases (Double Counting)",
+              "name": "Outgoing Cases",
               "column": "sum(case(isactive='false', 1))",
               "aggregate_type": "",
               "render_type": "bullet",
@@ -285,7 +284,7 @@
           ]
         },
         {
-          "name": "Incoming Cases: New Filing (Double Counting)",
+          "name": "Incoming Cases: New Filing",
           "column": "sum(case(eventstatusmappingcodede='New Filing', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -293,7 +292,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rates"
           ],
           "target_entries": [],
           "visualization": {
@@ -310,7 +309,7 @@
           },
           "comparison_column_entries": [
             {
-              "name": "Outgoing Cases (Double Counting)",
+              "name": "Outgoing Cases",
               "column": "sum(case(isactive='false', 1))",
               "aggregate_type": "",
               "render_type": "bullet",
@@ -330,7 +329,7 @@
           ]
         },
         {
-          "name": "Incoming Cases: Reopened (Double Counting)",
+          "name": "Incoming Cases: Reopened",
           "column": "sum(case(eventstatusmappingcodede='Reopened', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -338,7 +337,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rates"
           ],
           "target_entries": [],
           "visualization": {
@@ -355,7 +354,7 @@
           },
           "comparison_column_entries": [
             {
-              "name": "Outgoing Cases (Double Counting)",
+              "name": "Outgoing Cases",
               "column": "sum(case(isactive='false', 1))",
               "aggregate_type": "",
               "render_type": "bullet",
@@ -375,7 +374,7 @@
           ]
         },
         {
-          "name": "Incoming Cases: Reactivated (Double Counting)",
+          "name": "Incoming Cases: Reactivated",
           "column": "sum(case(eventstatusmappingcodede='Reactivated', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
@@ -400,7 +399,7 @@
           },
           "comparison_column_entries": [
             {
-              "name": "Outgoing Cases (Double Counting)",
+              "name": "Outgoing Cases",
               "column": "sum(case(isactive='false', 1))",
               "aggregate_type": "",
               "render_type": "bullet",
@@ -459,177 +458,6 @@
         {
           "view_column": "caseid",
           "dimension_column": "judgeid",
-          "display_name": "State Standard",
-          "value": "50"
-        }
-      ],
-      "map": {
-        "centerLat": "44.40861110588011",
-        "centerLng": "-115.16737594966821",
-        "zoom": "3",
-        "shapes_outline_highlight_width": "4",
-        "style_entries": [
-          {
-            "name": "Street",
-            "style": "mapbox://styles/mapbox/streets-v10"
-          },
-          {
-            "name": "Light",
-            "style": "mapbox://styles/mapbox/light-v9"
-          },
-          {
-            "name": "Dark",
-            "style": "mapbox://styles/mapbox/dark-v9"
-          },
-          {
-            "name": "Satelite",
-            "style": "mapbox://styles/mapbox/satellite-v9"
-          },
-          {
-            "name": "Outdoors",
-            "style": "mapbox://styles/mapbox/outdoors-v10"
-          }
-        ]
-      },
-      "shape_dataset_entries": [],
-      "shape_outline_dataset_entries": []
-    },
-    {
-      "name": "Courts and Justice",
-      "description": "",
-      "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": "xzug-disn",
-      "fields": {
-        "date_column": "statusdate",
-        "incident_type": "casecategorydescription"
-      },
-      "dimension_entries": [
-        {
-          "column": "last_casecategorymappingcoded",
-          "name": "Case Category"
-        },
-        {
-          "column": "last_casetypemappingcodedescription",
-          "name": "Case Type"
-        },
-        {
-          "column": "last_judgeid",
-          "name": "Judge ID"
-        },
-        {
-          "column": "last_nodedescription",
-          "name": "Court Name"
-        },
-        {
-          "column": "last_county",
-          "name": "County"
-        }
-      ],
-      "group_by_entries": [
-        {
-          "column": "last_casetypemappingcodedescription",
-          "name": "Case Type"
-        },
-        {
-          "column": "last_casecategorymappingcoded",
-          "name": "Case Category"
-        },
-        {
-          "column": "last_judgeid",
-          "name": "Judge ID"
-        },
-        {
-          "column": "last_nodedescription",
-          "name": "Court Name"
-        },
-        {
-          "column": "last_county",
-          "name": "County"
-        }
-      ],
-      "view_entries": [
-        {
-          "name": "Incoming Cases",
-          "column": "casenumber",
-          "aggregate_type": "count",
-          "use_dimension_value": "true",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "cases",
-          "parent_queries": [
-            "select max(eventstatusmappingcodede) as last_eventstatusmappingcodede, max(isactive) as last_isactive, max(statusdate) as last_statusdate, casenumber, max(casetypemappingcodedescription) as last_casetypemappingcodedescription, max(casecategorymappingcoded) as last_casecategorymappingcoded, max(judgeid) as last_judgeid, max(nodedescription) as last_nodedescription, max(county) as last_county where (eventstatusmappingcodede='New Filing' or eventstatusmappingcodede='Reopened' or eventstatusmappingcodede='Reactivated') group by casenumber"
-          ],
-          "fields": {
-            "date_column": "last_statusdate"
-          },
-          "tags": [
-            "Clearance Rates (No Double Counting)"
-          ],
-          "target_entries": [],
-          "visualization": {
-            "default_view": "Snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "default_comparison_column_entry": "casenumber",
-              "show_pie_chart": "true"
-            },
-            "overtime": {
-              "show_area_chart": "true",
-              "show_timeline_total": "false"
-            }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "casenumber",
-              "name": "Count of cases",
-              "aggregate_type": "count",
-              "prefix": "",
-              "suffix": "cases",
-              "precision": "0",
-              "render_type": "bullet"
-            }
-          ]
-        }
-      ],
-      "filter_by_entries": [
-        {
-          "column": "last_isactive",
-          "name": "Active Case?"
-        },
-        {
-          "column": "last_eventstatusmappingcodede",
-          "name": "Disposition"
-        }
-      ],
-      "leaf_page_entries": [
-        {
-          "column": "last_judgeid",
-          "name": "Judge ID"
-        },
-        {
-          "column": "last_casenumber",
-          "name": "Case Number"
-        },
-        {
-          "column": "last_nodedescription",
-          "name": "Court Name"
-        },
-        {
-          "column": "last_casetypemappingcodedescription",
-          "name": "Case Type "
-        }
-      ],
-      "quick_filter_entries": [
-        {
-          "column": "last_casecategorymappingcoded",
-          "name": "Case Category",
-          "renderType": "text"
-        }
-      ],
-      "bench_mark_entries": [
-        {
-          "view_column": "casenumber",
-          "dimension_column": "last_judgeid",
           "display_name": "State Standard",
           "value": "50"
         }
