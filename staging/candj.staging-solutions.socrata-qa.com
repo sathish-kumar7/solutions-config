@@ -105,9 +105,9 @@
                },
                "comparison_column_entries":[ 
                   { 
-                     "column":"casenumber",
-                     "name":"Count of cases",
-                     "aggregate_type":"count",
+                     "column":"casebacklog",
+                     "name":"Backlog",
+                     "aggregate_type":"sum",
                      "prefix":"",
                      "suffix":"cases",
                      "precision":"0",
