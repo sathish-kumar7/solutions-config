@@ -639,6 +639,18 @@
           "name": "Year"
         }
       ],
+      "bench_mark_entries": [
+        {
+          "view_column": "sale_type",
+          "display_name": "Sales 3.5k",
+          "value": "3500"
+        },
+        {
+          "view_column": "building_value",
+          "display_name": "Building value 500",
+          "value": "500"
+        }
+      ],
       "view_entries": [
         {
           "name": "Mean ratio",
