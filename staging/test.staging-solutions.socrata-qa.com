@@ -121,24 +121,25 @@
             "snapshot": {
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
-              "secondary_metric_entries": [
-                {
-                    "column": "approved_amount",
-                    "name": "Approved amount",
-                    "aggregate_type": "sum",
-                    "precision": "2",
-                    "prefix": "$",
-                    "suffix": ""
-                },
-                {
-                    "column": "recommneded_amount",
-                    "name": "Recommended amount",
-                    "aggregate_type": "sum",
-                    "precision": "2",
-                    "prefix": "$",
-                    "suffix": ""
+              "snapshot": {
+              "chart_type": "groupChart",
+              "showCompareDropDown": "true",
+              "default_group_by_entry_column": "agency_name",
+              "default_comparison_column_entry": "case_disposition",
+              "show_pie_chart": "true",
+              "scatterplot": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "case_id",
+                      "name": "Cases",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": ""
+                    }
+                  ]
                 }
-              ]
+              }
             }
           },
           "comparison_column_entries": [
@@ -876,15 +877,8 @@
               "default_group_by_entry_column": "agency_name",
               "default_comparison_column_entry": "case_disposition",
               "show_pie_chart": "true",
-              "secondary_metric_entries": [
-                    {
-                      "column": "case_disposition",
-                      "name": "Disposirion",
-                      "aggregate_type": "count",
-                      "precision": "",
-                      "prefix": "",
-                      "suffix": ""
-                    },
+              "scatterplot": {
+                "secondary_metric_entries": [
                     {
                       "column": "case_id",
                       "name": "Cases",
@@ -894,6 +888,7 @@
                       "suffix": ""
                     }
                 ]
+              }
             },
             "overtime": {
               "show_area_chart": "true",
