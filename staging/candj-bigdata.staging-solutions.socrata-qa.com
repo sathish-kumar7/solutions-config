@@ -19,15 +19,15 @@
       "dataset_id": "ar5k-xxsj",
       "fields": {
         "date_column": "statusdate",
-        "incident_type": "casecategorydescription"
+        "incident_type": "odysseycasecategorydescription"
       },
       "dimension_entries": [
         {
-          "column": "casecategorydescription",
+          "column": "odysseycasecategorydescription",
           "name": "Case Category"
         },
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
@@ -45,11 +45,11 @@
       ],
       "group_by_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorydescription",
+          "column": "odysseycasecategorydescription",
           "name": "Case Category"
         },
         {
@@ -124,14 +124,14 @@
           "prefix": "",
           "suffix": "cases",
           "parent_queries": [
-            "select distinct casenumber, county, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+            "select distinct casenumber, county, judgeid, odysseycasecategorydescription, casetypedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
           ],
           "fields": {
             "date_column": "last_opened_date"
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -161,14 +161,14 @@
           "prefix": "",
           "suffix": "cases",
           "parent_queries": [
-            "select distinct casenumber, county, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+            "select distinct casenumber, county, judgeid, odysseycasecategorydescription, casetypedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
           ],
           "fields": {
             "date_column": "last_opened_date"
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -198,14 +198,14 @@
           "prefix": "",
           "suffix": "cases",
           "parent_queries": [
-            "select distinct casenumber, county, judgeid, casecategorydescription, casetypemappingcodedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
+            "select distinct casenumber, county, judgeid, odysseycasecategorydescription, casetypedescription, caseid, nodedescription, max(case(eventstatusmappingcode='CTES_NF' or eventstatusmappingcode='CTES_RO', statusdate)) over (partition by casenumber) as last_opened_date,  max(case(eventstatusmappingcode='CTES_NTD', statusdate)) over (partition by casenumber)  as last_closed_date"
           ],
           "fields": {
             "date_column": "last_closed_date"
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -251,13 +251,13 @@
           "name": "Court Name"
         },
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type "
         }
       ],
       "quick_filter_entries": [
         {
-          "column": "casecategorydescription",
+          "column": "odysseycasecategorydescription",
           "name": "Case Category",
           "renderType": "text"
         }
@@ -311,11 +311,11 @@
       },
       "dimension_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorydescription",
+          "column": "odysseycasecategorydescription",
           "name": "Case Category"
         },
         {
@@ -333,11 +333,11 @@
       ],
       "group_by_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorydescription",
+          "column": "odysseycasecategorydescription",
           "name": "Case Category"
         },
         {
@@ -367,7 +367,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -413,7 +413,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -462,7 +462,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -511,7 +511,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -553,11 +553,11 @@
       ],
       "leaf_page_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorydescription",
+          "column": "odysseycasecategorydescription",
           "name": "Case Category"
         },
         {
@@ -575,7 +575,7 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type",
           "renderType": "text"
         }
@@ -633,7 +633,7 @@
           "name": "Case Type"
         },
         {
-          "column": "last_casecategorydescription",
+          "column": "last_odysseycasecategorydescription",
           "name": "Case Category"
         },
         {
@@ -658,7 +658,7 @@
           "name": "Trial Date Certainty",
           "column": "sum(certainty_count)/count(*)*100",
           "parent_queries": [
-            "select count(hearingdate) as total_hearing_dates,casenumber,max(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypemappingcodedescription) as last_casetypedescription, min(casecategorydescription) as last_casecategorydescription, min(casecategorymappingcoded) as last_casecategorymappingdescription, min(hearingjudgeid) as last_hearingjudgeid, min(nodedescription) as last_nodedescription, min(county) as last_county group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_casecategorydescription, last_casecategorymappingdescription, last_hearingjudgeid, last_nodedescription, last_county, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
+            "select count(hearingdate) as total_hearing_dates,casenumber,max(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, min(casetypedescription) as last_casetypedescription, min(odysseycasecategorydescription) as last_odysseycasecategorydescription, min(casecategorydescription) as last_casecategorymappingdescription, min(hearingjudgeid) as last_hearingjudgeid, min(nodedescription) as last_nodedescription, min(county) as last_county group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_odysseycasecategorydescription, last_casecategorymappingdescription, last_hearingjudgeid, last_nodedescription, last_county, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
           ],
           "aggregate_type": "",
           "precision": "1",
@@ -678,7 +678,7 @@
           "name": "Count of Hearings",
           "column": "hearingid",
           "parent_queries": [
-            "select distinct hearingid, casenumber, casecategorydescription as last_casecategorydescription, casetypemappingcodedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date, hearingjudgeid as last_hearingjudgeid, nodedescription as last_nodedescription, county as last_county"
+            "select distinct hearingid, casenumber, odysseycasecategorydescription as last_odysseycasecategorydescription, casetypedescription as last_casetypedescription,  max(hearingdate) over (partition by hearingid) as last_hearing_date, hearingjudgeid as last_hearingjudgeid, nodedescription as last_nodedescription, county as last_county"
           ],
           "fields": {
             "date_column": "last_hearing_date"
@@ -704,7 +704,7 @@
           "name": "Case Type"
         },
         {
-          "column": "last_casecategorydescription",
+          "column": "last_odysseycasecategorydescription",
           "name": "Case Category"
         },
         {

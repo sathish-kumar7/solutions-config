@@ -19,15 +19,15 @@
       "dataset_id": "xzug-disn",
       "fields": {
         "date_column": "statusdate",
-        "incident_type": "casecategorydescription"
+        "incident_type": "odysseycasecategorydescription"
       },
       "dimension_entries": [
         {
-          "column": "casecategorymappingcoded",
+          "column": "casecategorydescription",
           "name": "Case Category"
         },
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
@@ -45,11 +45,11 @@
       ],
       "group_by_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorymappingcoded",
+          "column": "casecategorydescription",
           "name": "Case Category"
         },
         {
@@ -497,13 +497,13 @@
           "name": "Court Name"
         },
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type "
         }
       ],
       "quick_filter_entries": [
         {
-          "column": "casecategorymappingcoded",
+          "column": "casecategorydescription",
           "name": "Case Category",
           "renderType": "text"
         }
@@ -557,11 +557,11 @@
       },
       "dimension_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorymappingcoded",
+          "column": "casecategorydescription",
           "name": "Case Category"
         },
         {
@@ -579,11 +579,11 @@
       ],
       "group_by_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorymappingcoded",
+          "column": "casecategorydescription",
           "name": "Case Category"
         },
         {
@@ -613,7 +613,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -659,7 +659,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -708,7 +708,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -757,7 +757,7 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypemappingcodedescription",
+              "column": "casetypedescription",
               "name": "Case Type",
               "aggregate_type": "",
               "render_type": "stack",
@@ -799,11 +799,11 @@
       ],
       "leaf_page_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type"
         },
         {
-          "column": "casecategorymappingcoded",
+          "column": "casecategorydescription",
           "name": "Case Category"
         },
         {
@@ -821,7 +821,7 @@
       ],
       "quick_filter_entries": [
         {
-          "column": "casetypemappingcodedescription",
+          "column": "casetypedescription",
           "name": "Case Type",
           "renderType": "text"
         }
@@ -879,7 +879,7 @@
           "name": "Case Type"
         },
         {
-          "column": "last_casecategorymappingcoded",
+          "column": "last_casecategorydescription",
           "name": "Case Category"
         },
         {
@@ -904,7 +904,7 @@
           "name": "Trial Date Certainty",
           "column": "sum(certainty_count)/count(*)*100",
           "parent_queries": [
-            "select count(hearingdate) as total_hearing_dates,casenumber,max(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, max(casetypemappingcodedescription) as last_casetypedescription, max(casecategorymappingcoded) as last_casecategorymappingcoded, max(casecategorymappingcoded) as last_casecategorymappingdescription, max(hearingjudgeid) as last_hearingjudgeid, max(nodedescription) as last_nodedescription, max(county) as last_county group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_casecategorymappingcoded, last_casecategorymappingdescription, last_hearingjudgeid, last_nodedescription, last_county, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
+            "select count(hearingdate) as total_hearing_dates,casenumber,max(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, max(casetypedescription) as last_casetypedescription, max(casecategorydescription) as last_casecategorydescription, max(casecategorydescription) as last_casecategorymappingdescription, max(hearingjudgeid) as last_hearingjudgeid, max(nodedescription) as last_nodedescription, max(county) as last_county group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_casecategorydescription, last_casecategorymappingdescription, last_hearingjudgeid, last_nodedescription, last_county, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
           ],
           "aggregate_type": "",
           "precision": "1",
@@ -927,7 +927,7 @@
           "name": "Case Type"
         },
         {
-          "column": "last_casecategorymappingcoded",
+          "column": "last_casecategorydescription",
           "name": "Case Category"
         },
         {
