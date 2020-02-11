@@ -115,18 +115,7 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -141,23 +130,23 @@
                   }
                },
                "comparison_column_entries":[ 
-                  {
+                  { 
                      "name":"Incoming Cases (Double Counting)",
                      "column":"sum(case(isactive='true', 1))",
                      "aggregate_type":"",
-                      "render_type":"bullet",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   },
-                                    {
+                  { 
                      "name":"Event Status Mapping Code",
                      "column":"eventstatusmappingcodede",
                      "aggregate_type":"",
-                      "render_type":"stack",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   }
                ]
             },
@@ -173,18 +162,7 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
+
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -199,14 +177,23 @@
                   }
                },
                "comparison_column_entries":[ 
-                  {
+                  { 
                      "name":"Incoming Cases (Double Counting)",
                      "column":"sum(case(isactive='true', 1))",
                      "aggregate_type":"",
-                      "render_type":"bullet",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   }
                ]
             },
@@ -222,18 +209,6 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -248,14 +223,23 @@
                   }
                },
                "comparison_column_entries":[ 
-                  {
+                  { 
                      "name":"Incoming Cases (Double Counting)",
                      "column":"sum(case(isactive='true', 1))",
                      "aggregate_type":"",
-                      "render_type":"bullet",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   }
                ]
             },
@@ -271,18 +255,6 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -297,14 +269,23 @@
                   }
                },
                "comparison_column_entries":[ 
-                  {
+                  { 
                      "name":"Outgoing Cases (Double Counting)",
                      "column":"sum(case(isactive='false', 1))",
                      "aggregate_type":"",
-                      "render_type":"bullet",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   }
                ]
             },
@@ -320,18 +301,6 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -346,14 +315,23 @@
                   }
                },
                "comparison_column_entries":[ 
-                  {
+                  { 
                      "name":"Outgoing Cases (Double Counting)",
                      "column":"sum(case(isactive='false', 1))",
                      "aggregate_type":"",
-                      "render_type":"bullet",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   }
                ]
             },
@@ -369,18 +347,6 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -395,14 +361,23 @@
                   }
                },
                "comparison_column_entries":[ 
-                  {
+                  { 
                      "name":"Outgoing Cases (Double Counting)",
                      "column":"sum(case(isactive='false', 1))",
                      "aggregate_type":"",
-                      "render_type":"bullet",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   }
                ]
             },
@@ -418,18 +393,6 @@
                   "Clearance Rates (Double Counting)"
                ],
                "target_entries":[ 
-                  { 
-                     "name":"On track",
-                     "color":"#259652",
-                     "operator":">=",
-                     "value":"80",
-                     "icon":"icons-check-circle"
-                  },
-                  { 
-                     "name":"Off track",
-                     "color":"#e31219",
-                     "icon":"icons-times-circle"
-                  }
                ],
                "visualization":{ 
                   "default_view":"Snapshot",
@@ -444,14 +407,23 @@
                   }
                },
                "comparison_column_entries":[ 
-                  {
+                  { 
                      "name":"Outgoing Cases (Double Counting)",
                      "column":"sum(case(isactive='false', 1))",
                      "aggregate_type":"",
-                      "render_type":"bullet",
-                      "precision":"0",
-                      "prefix":"",
-                      "suffix":"events"
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
                   }
                ]
             },
