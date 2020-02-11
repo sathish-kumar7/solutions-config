@@ -149,6 +149,15 @@
                       "precision":"0",
                       "prefix":"",
                       "suffix":"events"
+                  },
+                                    {
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                      "render_type":"stack",
+                      "precision":"0",
+                      "prefix":"",
+                      "suffix":"events"
                   }
                ]
             },
