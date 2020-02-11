@@ -165,7 +165,7 @@
                ]
             },
             { 
-               "name":"Entry of Judgement (Double Counting)",
+               "name":"Outgoing Case Event: Entry of Judgement (Double Counting)",
                "column":"sum(case(eventstatusmappingcodede='Jury Trial Disposition' or eventstatusmappingcodede='Non-Trial Disposition' or eventstatusmappingcodede='Bench/Non-Jury Trial Disposition' , 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -214,7 +214,7 @@
                ]
             },
             { 
-               "name":"Reopened Disposition (Double Counting)",
+               "name":"Outgoing Case Event: Reopened Disposition (Double Counting)",
                "column":"sum(case(eventstatusmappingcodede='Reopened', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -263,7 +263,7 @@
                ]
             },
             { 
-               "name":"Placed On Inactive Status (Double Counting)",
+               "name":"Outgoing Case Event: Placed On Inactive Status (Double Counting)",
                "column":"sum(case(eventstatusmappingcodede='Placed on Inactive Status', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
@@ -312,8 +312,155 @@
                ]
             },
             { 
-               "name":"Incoming Cases (Double Counting)",
+               "name":"Incoming Case Events (Double Counting)",
                "column":"sum(case(isactive='true', 1))",
+               "aggregate_type":"",
+               "use_dimension_value":"true",
+               "precision":"0",
+               "prefix":"",
+               "suffix":"cases",
+               "tags":[ 
+                  "Clearance Rates"
+               ],
+               "target_entries":[ 
+                  { 
+                     "name":"On track",
+                     "color":"#259652",
+                     "operator":">=",
+                     "value":"80",
+                     "icon":"icons-check-circle"
+                  },
+                  { 
+                     "name":"Off track",
+                     "color":"#e31219",
+                     "icon":"icons-times-circle"
+                  }
+               ],
+               "visualization":{ 
+                  "default_view":"Snapshot",
+                  "snapshot":{ 
+                     "chart_type":"groupChart",
+                     "default_comparison_column_entry":"casenumber",
+                     "show_pie_chart":"true"
+                  },
+                  "overtime":{ 
+                     "show_area_chart":"true",
+                     "show_timeline_total":"false"
+                  }
+               },
+               "comparison_column_entries":[ 
+                  { 
+                     "column":"casenumber",
+                     "name":"Count of cases",
+                     "aggregate_type":"count",
+                     "prefix":"",
+                     "suffix":"cases",
+                     "precision":"0",
+                     "render_type":"bullet"
+                  }
+               ]
+            },
+            { 
+               "name":"Incoming Cases: New Filing (Double Counting)",
+               "column":"sum(case(eventstatusmappingcodede='New Filing', 1))",
+               "aggregate_type":"",
+               "use_dimension_value":"true",
+               "precision":"0",
+               "prefix":"",
+               "suffix":"cases",
+               "tags":[ 
+                  "Clearance Rates"
+               ],
+               "target_entries":[ 
+                  { 
+                     "name":"On track",
+                     "color":"#259652",
+                     "operator":">=",
+                     "value":"80",
+                     "icon":"icons-check-circle"
+                  },
+                  { 
+                     "name":"Off track",
+                     "color":"#e31219",
+                     "icon":"icons-times-circle"
+                  }
+               ],
+               "visualization":{ 
+                  "default_view":"Snapshot",
+                  "snapshot":{ 
+                     "chart_type":"groupChart",
+                     "default_comparison_column_entry":"casenumber",
+                     "show_pie_chart":"true"
+                  },
+                  "overtime":{ 
+                     "show_area_chart":"true",
+                     "show_timeline_total":"false"
+                  }
+               },
+               "comparison_column_entries":[ 
+                  { 
+                     "column":"casenumber",
+                     "name":"Count of cases",
+                     "aggregate_type":"count",
+                     "prefix":"",
+                     "suffix":"cases",
+                     "precision":"0",
+                     "render_type":"bullet"
+                  }
+               ]
+            },
+            { 
+               "name":"Incoming Cases: Reopened (Double Counting)",
+               "column":"sum(case(eventstatusmappingcodede='Reopened', 1))",
+               "aggregate_type":"",
+               "use_dimension_value":"true",
+               "precision":"0",
+               "prefix":"",
+               "suffix":"cases",
+               "tags":[ 
+                  "Clearance Rates"
+               ],
+               "target_entries":[ 
+                  { 
+                     "name":"On track",
+                     "color":"#259652",
+                     "operator":">=",
+                     "value":"80",
+                     "icon":"icons-check-circle"
+                  },
+                  { 
+                     "name":"Off track",
+                     "color":"#e31219",
+                     "icon":"icons-times-circle"
+                  }
+               ],
+               "visualization":{ 
+                  "default_view":"Snapshot",
+                  "snapshot":{ 
+                     "chart_type":"groupChart",
+                     "default_comparison_column_entry":"casenumber",
+                     "show_pie_chart":"true"
+                  },
+                  "overtime":{ 
+                     "show_area_chart":"true",
+                     "show_timeline_total":"false"
+                  }
+               },
+               "comparison_column_entries":[ 
+                  { 
+                     "column":"casenumber",
+                     "name":"Count of cases",
+                     "aggregate_type":"count",
+                     "prefix":"",
+                     "suffix":"cases",
+                     "precision":"0",
+                     "render_type":"bullet"
+                  }
+               ]
+            },
+            { 
+               "name":"Incoming Cases: (Double Counting)",
+               "column":"sum(case(eventstatusmappingcodede='Reactivated', 1))",
                "aggregate_type":"",
                "use_dimension_value":"true",
                "precision":"0",
