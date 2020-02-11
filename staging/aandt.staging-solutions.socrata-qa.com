@@ -414,7 +414,7 @@
         },
         {
           "name": "Average Value Under Dispute",
-          "column": "average(county_value-taxpayer_opinion_value)",
+          "column": "avg(county_value-taxpayer_opinion_value)",
           "aggregate_type": "",
           "precision": "0",
           "prefix": "$",
