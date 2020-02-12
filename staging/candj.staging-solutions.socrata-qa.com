@@ -711,12 +711,12 @@
           },
           "comparison_column_entries": [
             {
-              "column": "casetypedescription",
-              "name": "Case Type",
-              "aggregate_type": "",
-              "render_type": "stack",
+              "column": "timetodisposition_flag",
+              "name": "Cases",
+              "aggregate_type": "sum",
+              "render_type": "bullet",
               "prefix": "",
-              "suffix": "",
+              "suffix": "cases",
               "precision": ""
             }
           ],
