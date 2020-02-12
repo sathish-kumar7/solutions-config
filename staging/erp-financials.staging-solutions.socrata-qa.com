@@ -11,6 +11,7 @@
   },
   "tag_list": [
     "Financials",
+    "Budget & Expenditures",
     "Payroll & HR",
     "Revenue & Tax"
   ],
@@ -240,7 +241,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Financials"
+            "Budget & Expenditures"
           ],
           "visualization": {
             "default_view": "Snapshot",
@@ -324,7 +325,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Financials"
+            "Budget & Expenditures"
           ],
           "visualization": {
             "default_view": "Snapshot",
@@ -347,6 +348,207 @@
             {
               "column": "actual",
               "name": "Actuals",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "originalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            }
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "organization",
+          "name": "Organisation"
+        },
+        {
+          "column": "segment2",
+          "name": "Major Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "accounttype",
+          "name": "Account Type",
+          "renderType": "text"
+        }
+      ]
+    },
+    {
+      "name": "Budgeted Revenues",
+      "dataset_domain": "murfreesboro.data.socrata.com",
+      "dataset_id": "wiba-zbm5",
+      "fields": {
+        "date_column": "fiscalmonth"
+      },
+      "dimension_entries": [
+        {
+          "column": "entity",
+          "name": "Entity"
+        },
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "segment2",
+          "name": "Major Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        },
+        {
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "object",
+          "name": "Budget Object"
+        },
+        {
+          "column": "organization",
+          "name": "Organization"
+        },
+        {
+          "column": "accounttype",
+          "name": "Account type"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Revenue vs. Budget",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "default_comparison_column_entry": "revisedbudget"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              },
+              "burn_up": {
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              }
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "revisedbudget",
+              "name": "Revised Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "actual",
+              "name": "Actuals",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "originalbudget",
+              "name": "Original Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            }
+          ]
+        },
+        {
+          "name": "Tax Revenue vs. Budget",
+          "column": "actual",
+          "parent_queries": [
+            "select * where charactercodedesription = 'Local Taxes'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Revenue & Tax"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "default_comparison_column_entry": "revisedbudget"
+            }
+          },
+          "comparison_column_entries": [
+            {
+              "column": "revisedbudget",
+              "name": "Revised Budget",
+              "aggregate_type": "sum",
+              "prefix": "$",
+              "suffix": "",
+              "precision": "2",
+              "render_type": "bullet"
+            },
+            {
+              "column": "actual",
+              "name": "Actual Revenue",
               "aggregate_type": "sum",
               "prefix": "$",
               "suffix": "",
