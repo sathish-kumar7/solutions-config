@@ -6,7 +6,7 @@
   },
   "date_options": {
     "type": "yearly",
-    "default_year": "2020",
+    "default_year": "2019",
     "year_start_month": "7"
   },
   "tag_list": [
