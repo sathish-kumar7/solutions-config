@@ -4,7 +4,7 @@
     "title": "Solutions - Courts and Justice"
   },
   "tag_list": [
-    "Overview"
+    "Overview",
     "Clearance Rate",
     "Age of Active Pending",
     "Time to Disposition",
