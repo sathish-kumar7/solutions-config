@@ -7,7 +7,8 @@
   "tag_list": [
     "Sales",
     "Appeals",
-    "New Construction"
+    "New Construction",
+    "Commercial"
   ],
   "template_entries": [
     {
@@ -612,6 +613,115 @@
         {
           "column": "new_constr_amount",
           "name": "New Construction Value"
+        }
+      ],
+      "quick_filter_entries": [
+
+      ],
+      "bench_mark_entries": [
+
+      ],
+      "shape_dataset_entries": [
+
+      ],
+      "map": {
+        "centerLat": "39.018425261608655",
+        "centerLng": "-84.00102962486125",
+        "zoom": "7",
+        "mini_map_zoom": "7",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Comp Finder",
+      "description": "Tax and Appraisals",
+      "dataset_domain": "appraisalandtax.demo.socrata.com",
+      "dataset_id": "3hre-b49k",
+      "parent_queries": [
+        
+      ],
+      "fields": {
+        "date_column": "sale_date",
+        "incident_type": "parcel_id"
+      },
+      "dimension_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "building_use",
+          "name": "Building Use"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "building_use",
+          "name": "Building Use"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Comp Finder Fake Tile",
+          "column": "parcel_id",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " parcels to compare",
+          "tags": [
+            "Commercial"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
         }
       ],
       "quick_filter_entries": [
