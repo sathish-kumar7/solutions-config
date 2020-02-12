@@ -1290,7 +1290,7 @@
          "dataset_id":"hqva-gm7v",
          "default_view":"Snapshot",
          "fields":{ 
-            "date_column":"hearing_date"
+            "date_column":"disposition_date"
          },
          "dimension_entries":[ 
             { 
