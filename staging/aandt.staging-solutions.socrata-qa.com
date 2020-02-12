@@ -668,8 +668,8 @@
       },
       "dimension_entries": [
         {
-          "column": "class",
-          "name": "Class"
+          "column": "county",
+          "name": "County"
         },
         {
           "column": "land_use_code",
