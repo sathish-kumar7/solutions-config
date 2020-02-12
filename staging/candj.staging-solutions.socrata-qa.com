@@ -1320,24 +1320,28 @@
          ],
          "group_by_entries":[ 
             { 
-               "column":"casetypedescription",
+               "column":"last_casetypedescription",
                "name":"Case Type"
             },
             { 
-               "column":"casecategorydescription",
+               "column":"last_casecategorydescription",
                "name":"Case Category"
             },
             { 
-               "column":"judgeid",
+               "column":"last_hearingjudgeid",
                "name":"Judge ID"
             },
             { 
-               "column":"nodedescription",
+               "column":"last_nodedescription",
                "name":"Court Name"
             },
             { 
-               "column":"county",
+               "column":"last_county",
                "name":"County"
+            },
+            { 
+               "column":"casenumber",
+               "name":"Case Number"
             }
          ],
          "view_entries":[ 
