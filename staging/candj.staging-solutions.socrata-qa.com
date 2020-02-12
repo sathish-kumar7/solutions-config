@@ -4,8 +4,11 @@
     "title": "Solutions - Courts and Justice"
   },
   "tag_list": [
-    "Clearance Rates",
-    "Cases"
+    "Overview"
+    "Clearance Rate",
+    "Age of Active Pending",
+    "Time to Disposition",
+    "Trial Date Certainty"
   ],
   "date": {
     "startDate": "2018-1-1",
@@ -75,7 +78,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rate"
           ],
           "target_entries": [
             {
@@ -112,7 +115,7 @@
           "prefix": "",
           "suffix": "pending events",
           "tags": [
-            "Clearance Rates"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -166,7 +169,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -211,7 +214,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -256,7 +259,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -301,7 +304,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -346,7 +349,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -391,7 +394,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -436,7 +439,7 @@
           "prefix": "",
           "suffix": "events",
           "tags": [
-            "Clearance Rates (Double Counting)"
+            "Clearance Rate"
           ],
           "target_entries": [],
           "visualization": {
@@ -623,7 +626,7 @@
             }
           ],
           "tags": [
-            "Cases"
+            "Time to Disposition"
           ],
           "target_entries": [
             {
@@ -718,7 +721,7 @@
             }
           ],
           "tags": [
-            "Cases"
+            "Time to Disposition"
           ],
           "target_entries": [
             {
@@ -767,7 +770,7 @@
             }
           ],
           "tags": [
-            "Cases"
+            "Time to Disposition"
           ],
           "target_entries": [
             {
@@ -911,7 +914,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Cases"
+            "Trial Date Certainty"
           ],
           "visualization": {
             "default_view": "Snapshot",
