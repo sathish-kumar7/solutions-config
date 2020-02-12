@@ -104,13 +104,13 @@
           }
         },
         {
-          "name": "Pending Backlog",
+          "name": "Active Pending Backlog",
           "column": "casebacklog",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
-          "suffix": "events",
+          "suffix": "pending events",
           "tags": [
             "Clearance Rates"
           ],
@@ -135,7 +135,7 @@
               "render_type": "bullet",
               "precision": "0",
               "prefix": "",
-              "suffix": "events"
+              "suffix": "incoming events"
             },
             {
               "name": "Outgoing Cases",
@@ -144,7 +144,7 @@
               "render_type": "bullet",
               "precision": "0",
               "prefix": "",
-              "suffix": "events"
+              "suffix": "outgoing events"
             },
             {
               "name": "Event Status Mapping Code",
