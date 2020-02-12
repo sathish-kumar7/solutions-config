@@ -128,15 +128,6 @@
             }
           },
           "comparison_column_entries": [
-              {
-              "name": "Incoming - Outgoing Cases",
-              "column": "sum(case(isactive='true', 1))-sum(case(isactive='false', 1))",
-              "aggregate_type": "",
-              "render_type": "bullet",
-              "precision": "0",
-              "prefix": "",
-              "suffix": "incoming events"
-            },
             {
               "name": "Incoming Cases",
               "column": "sum(case(isactive='true', 1))",
