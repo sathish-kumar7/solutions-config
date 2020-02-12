@@ -23,6 +23,10 @@
       },
       "dimension_entries": [
         {
+          "column": "county",
+          "name": "County"
+        },  
+        {
           "column": "casecategorydescription",
           "name": "Case Category"
         },
@@ -31,20 +35,20 @@
           "name": "Case Type"
         },
         {
-          "column": "judgeid",
-          "name": "Judge ID"
-        },
-        {
           "column": "nodedescription",
           "name": "Court Name"
         },
         {
-          "column": "county",
-          "name": "County"
+          "column": "judgeid",
+          "name": "Judge ID"
         }
       ],
       "group_by_entries": [
         {
+          "column": "county",
+          "name": "County"
+        }, 
+        {
           "column": "casetypedescription",
           "name": "Case Type"
         },
@@ -53,16 +57,12 @@
           "name": "Case Category"
         },
         {
-          "column": "judgeid",
-          "name": "Judge ID"
-        },
-        {
           "column": "nodedescription",
           "name": "Court Name"
         },
         {
-          "column": "county",
-          "name": "County"
+          "column": "judgeid",
+          "name": "Judge ID"
         }
       ],
       "view_entries": [
