@@ -107,7 +107,7 @@
           }
         },
         {
-          "name": "Active Pending Backlog",
+          "name": "Current Active Pending Backlog",
           "column": "casebacklog",
           "aggregate_type": "sum",
           "use_dimension_value": "true",
