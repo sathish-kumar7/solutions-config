@@ -894,7 +894,7 @@
         {
           "name": "Number of Cases With Time To Disposition < 365 Days",
           "column": "timetodisposition_flag",
-          "aggregate_type": "",
+          "aggregate_type": "sum",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
