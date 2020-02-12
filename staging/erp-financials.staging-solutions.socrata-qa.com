@@ -139,7 +139,7 @@
             "default_view": "Snapshot",
             "overtime": {
               "show_area_chart": "false",
-              "show_burn_up_chart": "false"
+              "show_burn_up_chart": "true"
             }
           }
         },
