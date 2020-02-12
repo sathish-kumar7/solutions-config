@@ -15,6 +15,11 @@
     "startDate": "2019-10-01",
     "endDate": "2019-12-31"
   },
+  "date_options": {
+    "type": "yearly",
+    "year_start_month": "4",
+     "data_end_date": "2020-01-10"
+  },
   "template_entries": [
     {
       "name": "Opex Budget",
@@ -48,8 +53,27 @@
             "default_view": "Snapshot",
             "snapshot": {
               "show_pie_chart": "true",
-              "default_comparison_column_entry": "program"
-              
+              "default_comparison_column_entry": "program",
+              "scatterplot": {
+                "secondary_metric_entries":[
+                  {
+                    "column": "department",
+                    "name": "Department",
+                    "aggregate_type": "count",
+                    "precision": "0",
+                    "prefix": "",
+                    "suffix": "departments"
+                  },
+                  {
+                    "column": "category",
+                    "name": "Category",
+                    "aggregate_type": "count",
+                    "precision": "0",
+                    "prefix": "",
+                    "suffix": "categories"
+                  }
+                ]
+              }
             }
           },
           "precision": "0",
@@ -365,7 +389,10 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "show_pie_chart": "true"
+            }
           },
           "comparison_column_entries": [
             {
@@ -831,7 +858,28 @@
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
               "default_group_by_entry_column": "agency_name",
-              "default_comparison_column_entry": "case_disposition" 
+              "default_comparison_column_entry": "case_disposition",
+              "show_pie_chart": "true",
+              "scatterplot": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "disposition"
+                    },
+                    {
+                      "column": "case_id",
+                      "name": "Cases",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "cases"
+                    }
+                ]
+              }
             },
             "overtime": {
               "show_area_chart": "true",
