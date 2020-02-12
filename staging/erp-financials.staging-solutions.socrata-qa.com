@@ -519,7 +519,7 @@
           "name": "Tax Revenue vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where charactercodedesription = 'Local Taxes'"
+            "select * where charactercodedescription = 'Local Taxes'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
