@@ -581,8 +581,11 @@
         },
         {
           "name": "Retirements & Resignations",
-          "column": "count * where action contains 'resignation'",
-          "aggregate_type": "sum",
+          "parent_queries": [
+            "select * where action contains 'resignation'"
+          ],
+          "column": "actionhistoryid",
+          "aggregate_type": "count",
           "prefix": "",
           "suffix": "",
           "precision": "",
