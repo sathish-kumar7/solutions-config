@@ -1364,6 +1364,26 @@
                      "chart_type":"barChart"
                   }
                }
+            },
+            { 
+               "name":"Average Number of Settings",
+               "column":"sum(total_hearing_dates)",
+               "parent_queries":[ 
+                  "select count(hearingdate) as total_hearing_dates,casenumber,max(hearingdate) as hearing_date,min(hearingdate) as first_hearing,max(hearingdate) as last_hearing, max(casetypedescription) as last_casetypedescription, max(casecategorydescription) as last_casecategorydescription, max(casecategorydescription) as last_casecategorymappingdescription, max(hearingjudgeid) as last_hearingjudgeid, max(nodedescription) as last_nodedescription, max(county) as last_county group by casenumber |> select hearing_date,total_hearing_dates,casenumber,first_hearing,last_hearing, last_casetypedescription, last_casecategorydescription, last_casecategorymappingdescription, last_hearingjudgeid, last_nodedescription, last_county, case(total_hearing_dates < 3, 1, total_hearing_dates >= 3, 0) as certainty_count"
+               ],
+               "aggregate_type":"avg",
+               "precision":"1",
+               "prefix":"",
+               "suffix":"settings",
+               "tags":[ 
+                  "Trial Date Certainty"
+               ],
+               "visualization":{ 
+                  "default_view":"Snapshot",
+                  "snapshot":{ 
+                     "chart_type":"barChart"
+                  }
+               }
             }
          ],
          "leaf_page_entries":[ 
