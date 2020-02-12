@@ -48,6 +48,7 @@
       "view_entries": [
         {
           "name": "Funds",
+          "primary_metric_name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
           "visualization": {
@@ -111,6 +112,7 @@
         },
         {
           "name": "Total amount spent",
+          "primary_metric_name": "Total amount",
           "column": "actual_amount",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -123,17 +125,17 @@
               "default_comparison_column_entry": "approved_amount",
               "scatterplot": {
                 "secondary_metric_entries": [
-                    {
-                      "column": "approved_amount",
-                      "name": "Approved amount",
-                      "aggregate_type": "sum",
-                      "precision": "",
-                      "prefix": "",
-                      "suffix": ""
-                    }
-                  ]
-                }
+                  {
+                    "column": "approved_amount",
+                    "name": "Approved amount",
+                    "aggregate_type": "sum",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
+                ]
               }
+            }
           },
           "comparison_column_entries": [
             {
@@ -682,7 +684,7 @@
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "false"
-              }
+            }
           },
           "target_entries": [
             {
@@ -872,14 +874,14 @@
               "show_pie_chart": "true",
               "scatterplot": {
                 "secondary_metric_entries": [
-                    {
-                      "column": "case_id",
-                      "name": "Cases",
-                      "aggregate_type": "count",
-                      "precision": "",
-                      "prefix": "",
-                      "suffix": ""
-                    }
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
                 ]
               }
             },
@@ -888,31 +890,31 @@
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
               "timeline": {
-                 "bench_mark_entries": [
-                    {
-                      "column": "case_id",
-                      "name": "Cases",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "case_disposition",
-                      "name": "Case Disposition",
-                      "aggregate_type": "count"
-                    }
-                 ]
-               },
+                "bench_mark_entries": [
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "case_disposition",
+                    "name": "Case Disposition",
+                    "aggregate_type": "count"
+                  }
+                ]
+              },
               "burn_up": {
-                 "bench_mark_entries": [
-                    {
-                      "column": "case_id",
-                      "name": "Cases",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "case_disposition",
-                      "name": "Case Disposition",
-                      "aggregate_type": "count"
-                    }
+                "bench_mark_entries": [
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "case_disposition",
+                    "name": "Case Disposition",
+                    "aggregate_type": "count"
+                  }
                 ]
               }
             }
