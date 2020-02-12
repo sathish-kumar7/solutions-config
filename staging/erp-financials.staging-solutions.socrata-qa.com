@@ -1,7 +1,7 @@
 {
   "branding": {
     "delimiter": ",",
-    "browser_title": "Solutions | ERP | Financials ",
+    "browser_title": "Munis Executive Insights",
     "title": "Solutions - ERP Financials"
   },
   "date_options": {
@@ -75,9 +75,9 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "default_comparison_column_entry": "actual"
             },
             "overtime": {
               "show_area_chart": "false",
@@ -245,40 +245,40 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "revisedbudget"
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "default_comparison_column_entry": "revisedbudget"
             },
             "overtime": {
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
               "timeline": {
-              "bench_mark_entries": [
-                    {
-                      "column": "revisedbudget",
-                      "name": "Revised Budget",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "originalbudget",
-                      "name": "Original Budget",
-                      "aggregate_type": "sum"
-                    }
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
                 ]
               },
               "burn_up": {
-              "bench_mark_entries": [
-                    {
-                      "column": "revisedbudget",
-                      "name": "Revised Budget",
-                      "aggregate_type": "sum"
-                    },
-                    {
-                      "column": "originalbudget",
-                      "name": "Original Budget",
-                      "aggregate_type": "sum"
-                    }
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
                 ]
               }
             }
@@ -426,25 +426,25 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "paycategory",
-            "timeline": {
-              "bench_mark_entries": [
-                    {
-                      "column": "payamount",
-                      "name": "Total payroll",
-                      "aggregate_type": "sum"
-                    }
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "default_comparison_column_entry": "paycategory",
+              "timeline": {
+                "bench_mark_entries": [
+                  {
+                    "column": "payamount",
+                    "name": "Total payroll",
+                    "aggregate_type": "sum"
+                  }
                 ]
               },
               "burn_up": {
-              "bench_mark_entries": [
-                    {
-                      "column": "payamount",
-                      "name": "Total payroll",
-                      "aggregate_type": "sum"
-                    }
+                "bench_mark_entries": [
+                  {
+                    "column": "payamount",
+                    "name": "Total payroll",
+                    "aggregate_type": "sum"
+                  }
                 ]
               }
             }
@@ -489,11 +489,11 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          "select employeeid, min(checkdate) as first_checkdate, max(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as jobclass, max(groupbargainingunit) as groupbargainingunit, max(paycategory) as paycategory, max(paytype) as paytype group by employeeid"
+            "select employeeid, min(checkdate) as first_checkdate, max(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as jobclass, max(groupbargainingunit) as groupbargainingunit, max(paycategory) as paycategory, max(paytype) as paytype group by employeeid"
           ],
           "fields": {
-          "date_column": "first_checkdate",
-          "date_column_secondary": "last_checkdate"
+            "date_column": "first_checkdate",
+            "date_column_secondary": "last_checkdate"
           },
           "column": "employeeid",
           "aggregate_type": "count",
@@ -506,9 +506,7 @@
           "visualization": {
             "default_view": "Snapshot"
           },
-          "quick_filters": [
-              
-          ]
+          "quick_filters": []
         }
       ],
       "leaf_page_entries": [
@@ -576,12 +574,28 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": [
-            
-          ]
+          "comparison_column_entries": []
+        },
+        {
+          "name": "Retirements & Resignations",
+          "column": "count * where action contains 'resignation'",
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
@@ -644,18 +658,14 @@
           "prefix": "",
           "suffix": "",
           "precision": "2",
-          "tags": [
-            
-          ],
+          "tags": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": [
-            
-          ]
+          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
@@ -677,9 +687,9 @@
       "name": "Bids per Oppurtunity",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "4f5p-ynjv",
-                "parent_queries": [
-          "select min(opportunityname) as oppurtunity_name, min(datesubmitted) as date_submitted, min(biddername) as bidder_name, min(requestingdepartment) as requesting_department, count(bidderid) as bidder_count, opportunityid group by opportunityid "
-        ],
+      "parent_queries": [
+        "select min(opportunityname) as oppurtunity_name, min(datesubmitted) as date_submitted, min(biddername) as bidder_name, min(requestingdepartment) as requesting_department, count(bidderid) as bidder_count, opportunityid group by opportunityid "
+      ],
       "fields": {
         "date_column": "date_submitted"
       },
@@ -705,18 +715,14 @@
           "prefix": "",
           "suffix": "",
           "precision": "2",
-          "tags": [
-            
-          ],
+          "tags": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": [
-            
-          ]
+          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
@@ -738,9 +744,9 @@
       "name": "Hiring & Job Applicants",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
-                "parent_queries": [
-          "select min(positionopendate) as positionopen_date, min(jobopening) as job_opening, min(city) as city, count(applicantid) as applicant_id, jobopeningrequisitionnumber group by jobopeningrequisitionnumber"
-        ],
+      "parent_queries": [
+        "select min(positionopendate) as positionopen_date, min(jobopening) as job_opening, min(city) as city, count(applicantid) as applicant_id, jobopeningrequisitionnumber group by jobopeningrequisitionnumber"
+      ],
       "fields": {
         "date_column": "positionopen_date"
       },
@@ -762,18 +768,14 @@
           "prefix": "",
           "suffix": "",
           "precision": "0",
-          "tags": [
-            
-          ],
+          "tags": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": [
-            
-          ]
+          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
@@ -798,7 +800,7 @@
         {
           "column": "claimantcity",
           "name": "Claimant City"
-        },       
+        },
         {
           "column": "department",
           "name": "Department"
@@ -820,18 +822,14 @@
           "prefix": "",
           "suffix": "",
           "precision": "0",
-          "tags": [
-            
-          ],
+          "tags": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": [
-            
-          ]
+          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
@@ -860,7 +858,7 @@
         {
           "column": "claimantcity",
           "name": "Claimant City"
-        },         
+        },
         {
           "column": "department",
           "name": "Department"
@@ -882,18 +880,14 @@
           "prefix": "",
           "suffix": "",
           "precision": "0",
-          "tags": [
-            
-          ],
+          "tags": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": [
-            
-          ]
+          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
@@ -922,7 +916,7 @@
         {
           "column": "claimantcity",
           "name": "Claimant City"
-        },        
+        },
         {
           "column": "department",
           "name": "Department"
@@ -944,18 +938,14 @@
           "prefix": "",
           "suffix": "",
           "precision": "0",
-          "tags": [
-            
-          ],
+          "tags": [],
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart"
+              "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": [
-            
-          ]
+          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
