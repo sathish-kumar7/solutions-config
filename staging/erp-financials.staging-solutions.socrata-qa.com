@@ -582,7 +582,7 @@
         {
           "name": "Retirements & Resignations",
           "parent_queries": [
-            "select * where action contains 'resignation'"
+            "select * where action like '%RESIGN%'"
           ],
           "column": "actionhistoryid",
           "aggregate_type": "count",
