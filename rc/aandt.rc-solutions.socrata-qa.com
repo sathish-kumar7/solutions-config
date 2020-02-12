@@ -6,7 +6,9 @@
   },
   "tag_list": [
     "Sales",
-    "Appeals"
+    "Appeals",
+    "New Construction",
+    "Commercial"
   ],
   "template_entries": [
     {
@@ -39,6 +41,14 @@
         {
           "column": "cityname",
           "name": "City"
+        },
+        {
+          "column": "grade",
+          "name": "Grade"
+        },
+        {
+          "column": "stories",
+          "name": "Stories"
         }
       ],
       "group_by_entries": [
@@ -57,6 +67,14 @@
         {
           "column": "taxdist",
           "name": "Tax district"
+        },
+        {
+          "column": "grade",
+          "name": "Grade"
+        },
+        {
+          "column": "stories",
+          "name": "Stories"
         }
       ],
       "view_entries": [
@@ -75,9 +93,47 @@
              "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart",
-                "show_pie_chart": "true"
+                "show_pie_chart": "true",
+                "show_scatterplot_range_bar": "true",
+                "scatterplot": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "parid",
+                      "name": "Number of sales",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": ""
+                    }
+                ]
+              }
             }
-          }
+          },
+           "comparison_column_entries": [
+            {
+              "column": "parid",
+              "name": "Number of Sales",
+              "aggregate_type": "count",
+              "prefix": "",
+              "suffix": "",
+              "precision": "0",
+              "render_type": "bullet"
+            }
+          ],
+        "target_entries": [
+        {
+              "name": "Meets Standard",
+              "color": "#259652",
+              "operator": "<",
+              "value": "1.2",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Does Not Meet Standard",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ]
         },
         {
           "name": "Average Absolute Deviation",
@@ -94,7 +150,8 @@
              "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart",
-                "show_pie_chart": "true"
+                "show_pie_chart": "true",
+                "show_scatterplot_range_bar": "true"
             }
           }
         },
@@ -151,7 +208,8 @@
              "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart",
-                "show_pie_chart": "true"
+                "show_pie_chart": "true",
+                "show_scatterplot_range_bar": "true"
             }
           }
         },
@@ -173,12 +231,35 @@
                 "show_pie_chart": "true"
             }
           }
+        },
+        {
+          "name": "Total Sales",
+          "column": "saledt",
+          "aggregate_type": "count",
+          "stack_column": "land_use_type",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Sales"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "groupChart",
+                "show_pie_chart": "true"
+            }
+          }
         }
       ],
       "filter_by_entries": [
         {
           "column": "style",
           "name": "style"
+        },
+                {
+          "column": "com_use",
+          "name": "Commercial Use Type"
         }
       ],
       "leaf_page_entries": [
@@ -208,6 +289,11 @@
           "column": "style",
           "name": "Style",
           "renderType": "text"
+        },
+        {
+          "column": "asr",
+          "name": "ASR",
+          "renderType": "number"
         }
       ],
       "bench_mark_entries": [
@@ -270,7 +356,7 @@
       "name": "Appeals",
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
-      "dataset_id": "snjj-se4g",
+      "dataset_id": "22ci-twx5",
       "parent_queries": [
         
       ],
@@ -282,6 +368,16 @@
         {
           "column": "class",
           "name": "Class"
+        },
+        {
+          "column": "land_use_type",
+          "name": "Land Use Type"
+        },{
+          "column": "com_use",
+          "name": "Commercial Use Type"
+        },{
+          "column": "com_name",
+          "name": "Commercial Description"
         },
         {
           "column": "heartyp",
@@ -306,11 +402,65 @@
       "view_entries": [
         {
           "name": "% Appealed Value Upheld",
-          "column": "sum(decision_value) / sum(county_value)",
+          "column": "(sum(decision_value) / sum(county_value))*100",
           "aggregate_type": "",
           "precision": "2",
           "prefix": "",
           "suffix": "%",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Total Value Under Dispute",
+          "column": "sum(county_value)-sum(taxpayer_opinion_value)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Average Value Under Dispute",
+          "column": "avg(county_value-taxpayer_opinion_value)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Total Appeals",
+          "column": "count(parid)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
           "tags": [
             "Appeals"
           ],
@@ -339,6 +489,239 @@
         {
           "column": "reason_for_appeal",
           "name": "Reason For Appeal"
+        }
+      ],
+      "quick_filter_entries": [
+
+      ],
+      "bench_mark_entries": [
+
+      ],
+      "shape_dataset_entries": [
+
+      ],
+      "map": {
+        "centerLat": "39.018425261608655",
+        "centerLng": "-84.00102962486125",
+        "zoom": "7",
+        "mini_map_zoom": "7",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
+    },
+    {
+      "name": "New Construction",
+      "description": "Tax and Appraisals",
+      "dataset_domain": "appraisalandtax.demo.socrata.com",
+      "dataset_id": "3sa7-53ay",
+      "parent_queries": [
+        
+      ],
+      "fields": {
+        "date_column": "tax_year",
+        "incident_type": "own1"
+      },
+      "dimension_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "nbhd",
+          "name": "Neighborhood"
+        }
+      ],
+      "group_by_entries": [
+
+      ],
+      "view_entries": [
+        {
+          "name": "Total Parcels with New Construction",
+          "column": "count(new_constr_amount)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "New Construction"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Total Value of New Construction",
+          "column": "sum(new_constr_amount)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "New Construction"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "nbhd",
+          "name": "Neighborhood"
+        },
+        {
+          "column": "new_constr_amount",
+          "name": "New Construction Value"
+        }
+      ],
+      "quick_filter_entries": [
+
+      ],
+      "bench_mark_entries": [
+
+      ],
+      "shape_dataset_entries": [
+
+      ],
+      "map": {
+        "centerLat": "39.018425261608655",
+        "centerLng": "-84.00102962486125",
+        "zoom": "7",
+        "mini_map_zoom": "7",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Comp Finder",
+      "description": "Tax and Appraisals",
+      "dataset_domain": "appraisalandtax.demo.socrata.com",
+      "dataset_id": "3hre-b49k",
+      "parent_queries": [
+        
+      ],
+      "fields": {
+        "date_column": "sale_date",
+        "incident_type": "parcel_id"
+      },
+      "dimension_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "building_use",
+          "name": "Building Use"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "building_use",
+          "name": "Building Use"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Comp Finder Fake Tile",
+          "column": "parcel_id",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " parcels to compare",
+          "tags": [
+            "Commercial"
+          ],
+          "visualization": {
+             "default_view": "Snapshot",
+             "snapshot": {
+                "chart_type": "barChart",
+                "show_pie_chart": "true"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
         }
       ],
       "quick_filter_entries": [
