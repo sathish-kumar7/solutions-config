@@ -986,7 +986,7 @@
 					"prefix": "",
 					"suffix": "cases",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 30, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 30, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1036,7 +1036,7 @@
 					"prefix": "",
 					"suffix": "cases",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 60, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 60, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1086,7 +1086,7 @@
 					"prefix": "",
 					"suffix": "cases",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 90, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 90, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1136,7 +1136,7 @@
 					"prefix": "",
 					"suffix": "cases",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 180, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 180, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1286,7 +1286,7 @@
 					"prefix": "",
 					"suffix": "%",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 30, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 30, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1336,7 +1336,7 @@
 					"prefix": "",
 					"suffix": "%",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 60, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 60, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1386,7 +1386,7 @@
 					"prefix": "",
 					"suffix": "%",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 90, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 90, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1436,7 +1436,7 @@
 					"prefix": "",
 					"suffix": "%",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 180, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 180, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1486,7 +1486,7 @@
 					"prefix": "",
 					"suffix": "%",
 					"parent_queries": [
-						"select  *, case(timetodisposition <= 365, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition <= 365, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
@@ -1536,7 +1536,7 @@
 					"prefix": "",
 					"suffix": "%",
 					"parent_queries": [
-						"select  *, case(timetodisposition > 365, 1) as timetodisposition_flag"
+						"select  *, case(timetodisposition > 365, 1, true, 0) as timetodisposition_flag"
 					],
 					"fields": {
 						"date_column": "lastopeneddate"
