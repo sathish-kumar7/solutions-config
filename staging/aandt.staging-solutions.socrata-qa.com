@@ -95,6 +95,19 @@
                 "chart_type": "groupChart",
                 "show_pie_chart": "true",
                 "show_scatterplot_range_bar": "true",
+                "barchart": {
+                "secondary_metric_entries": [
+                        {
+                          "column": "parid",
+                          "name": "Number of Sales",
+                          "aggregate_type": "count",
+                          "prefix": "",
+                          "suffix": "",
+                          "precision": "0",
+                          "render_type": "bullet"
+                        }                
+                    ]
+                },
                 "scatterplot": {
                 "secondary_metric_entries": [
                     {
@@ -109,17 +122,6 @@
               }
             }
           },
-           "comparison_column_entries": [
-            {
-              "column": "parid",
-              "name": "Number of Sales",
-              "aggregate_type": "count",
-              "prefix": "",
-              "suffix": "",
-              "precision": "0",
-              "render_type": "bullet"
-            }
-          ],
         "target_entries": [
         {
               "name": "Meets Standard",
