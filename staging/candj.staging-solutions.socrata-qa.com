@@ -1798,7 +1798,20 @@
                "visualization":{ 
                   "default_view":"Snapshot",
                   "snapshot":{ 
-                     "chart_type":"barChart"
+                     "chart_type":"barChart",
+                    "barchart":{ 
+                        "secondary_metric_entries":[ 
+                           { 
+                              "name":"Average Number of Settings",
+                              "column":"total_hearing_dates",
+                              "aggregate_type":"avg",
+                              "render_type":"bullet",
+                              "precision":"0",
+                              "prefix":"",
+                              "suffix":"settings"
+                           }
+                        ]
+                     }
                   }
                }
             }
