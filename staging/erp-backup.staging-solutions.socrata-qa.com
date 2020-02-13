@@ -413,7 +413,7 @@
                     }
                   ]
                },
-               "burnup": {
+               "burn_up": {
                    "secondary_metric_entries": [
                     {
                       "column": "actual",
