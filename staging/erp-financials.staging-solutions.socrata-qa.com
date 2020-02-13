@@ -99,7 +99,7 @@
                       "render_type": "bullet"
                     }
                 ],
-                "default_secondary_metric": "actual"
+                "default_secondary_metric": "Actual Amount"
               }
             },
             "overtime": {
@@ -320,7 +320,7 @@
                       "render_type": "bullet"
                     }
                 ],
-                "default_secondary_metric": "revisedbudget"
+                "default_secondary_metric": "Revised Budget"
               }
             },
             "overtime": {
@@ -354,7 +354,6 @@
                       "precision": "2"
                     }
                 ],
-                "default_secondary_metric": "revisedbudget",
                 "bench_mark_entries": [
                   {
                     "column": "revisedbudget",
@@ -395,7 +394,6 @@
                       "precision": "2"
                     }
                 ],
-                "default_secondary_metric": "revisedbudget",                  
                 "bench_mark_entries": [
                   {
                     "column": "revisedbudget",
@@ -461,7 +459,7 @@
                       "render_type": "bullet"
                     }
                 ],
-                "default_secondary_metric": "revisedbudget"
+                "default_secondary_metric": "Revised Budget"
               }
             },
             "overtime": {
@@ -494,8 +492,7 @@
                       "suffix": "",
                       "precision": "2"
                     }
-                ],
-                "default_secondary_metric": "revisedbudget"
+                ]
               },
               "burn_up": {
                   "secondary_metric_entries": [
@@ -523,8 +520,7 @@
                       "suffix": "",
                       "precision": "2"
                     }
-                ],
-                "default_secondary_metric": "revisedbudget"
+                ]
               }
             }
           }
@@ -658,8 +654,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "actual",
@@ -667,8 +662,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "originalbudget",
@@ -676,8 +670,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     }                    
                 ],                  
                 "bench_mark_entries": [
@@ -701,8 +694,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "actual",
@@ -710,8 +702,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "originalbudget",
@@ -719,8 +710,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     }                    
                 ],
                 "bench_mark_entries": [
@@ -802,8 +792,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "actual",
@@ -811,8 +800,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "originalbudget",
@@ -820,8 +808,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     }                    
                 ]
               },
@@ -833,8 +820,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "actual",
@@ -842,8 +828,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     },
                     {
                       "column": "originalbudget",
@@ -851,8 +836,7 @@
                       "aggregate_type": "sum",
                       "prefix": "$",
                       "suffix": "",
-                      "precision": "2",
-                      "render_type": "bullet"
+                      "precision": "2"
                     }                    
                 ]
               }
