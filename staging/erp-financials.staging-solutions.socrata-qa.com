@@ -126,7 +126,7 @@
                     }
                 ]
               },
-              "burnup": {
+              "burn_up": {
                 "secondary_metric_entries": [
                 {
                       "column": "actual",
@@ -290,13 +290,71 @@
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
-              "default_comparison_column_entry": "revisedbudget"
+              "barchart": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "actual",
+                      "name": "Actuals",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                ],
+                "default_secondary_metric": "revisedbudget"
+              }
             },
             "overtime": {
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
               "timeline": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "actual",
+                      "name": "Actuals",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                ],
+                "default_secondary_metric": "revisedbudget",
                 "bench_mark_entries": [
                   {
                     "column": "revisedbudget",
@@ -311,6 +369,33 @@
                 ]
               },
               "burn_up": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "actual",
+                      "name": "Actuals",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                ],
+                "default_secondary_metric": "revisedbudget",                  
                 "bench_mark_entries": [
                   {
                     "column": "revisedbudget",
@@ -325,36 +410,7 @@
                 ]
               }
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "revisedbudget",
-              "name": "Revised Budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "actual",
-              "name": "Actuals",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "originalbudget",
-              "name": "Original Budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
+          }
         },
         {
           "name": "Payroll Expenses vs. Budget",
@@ -374,38 +430,104 @@
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
-              "default_comparison_column_entry": "revisedbudget"
-            }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "revisedbudget",
-              "name": "Revised Budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
+              "default_comparison_column_entry": "revisedbudget",
+              "barchart": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "actual",
+                      "name": "Actuals",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                ],
+                "default_secondary_metric": "revisedbudget"
+              }
             },
-            {
-              "column": "actual",
-              "name": "Actuals",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "originalbudget",
-              "name": "Original Budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
+            "overtime": {
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "actual",
+                      "name": "Actuals",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                ],
+                "default_secondary_metric": "revisedbudget"
+              },
+              "burn_up": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "revisedbudget",
+                      "name": "Revised Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "actual",
+                      "name": "Actuals",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "originalbudget",
+                      "name": "Original Budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                ],
+                "default_secondary_metric": "revisedbudget"
+              }
             }
-          ]
+          }
         }
       ],
       "leaf_page_entries": [
