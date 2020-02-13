@@ -1755,7 +1755,7 @@
 					"aggregate_type": "count",
 					"precision": "0",
 					"prefix": "",
-					"suffix": "settings",
+					"suffix": "cases",
 					"tags": [
 						"Trial Date Certainty"
 					],
