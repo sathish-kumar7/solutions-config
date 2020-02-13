@@ -55,9 +55,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-                "default_comparison_column_entry": "actual",
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
                 "barchart": {
                     "secondary_metric_entries": [
                     {
@@ -78,13 +77,55 @@
                       "precision": "2",
                       "render_type": "bullet"
                     }
-                  ]
+                  ],
+                  "default_secondary_metric": "Actual Amount"
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ],
+                  "default_secondary_metric": "Actual Amount"
                 }
             },
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "timeline": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              }
             }
           }
         },
@@ -104,9 +145,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-                "default_comparison_column_entry": "actual",
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
                 "barchart": {
                     "secondary_metric_entries": [
                     {
@@ -127,13 +167,55 @@
                       "precision": "2",
                       "render_type": "bullet"
                     }
-                  ]
+                  ],
+                  "default_secondary_metric": "Actual amount"
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ],
+                  "default_secondary_metric": "Actual amount"
                 }
             },
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "timeline": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              }
             }            
           }
         },
@@ -168,9 +250,8 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-                "default_comparison_column_entry": "actual",
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
                 "barchart": {
                     "secondary_metric_entries": [
                     {
@@ -191,13 +272,55 @@
                       "precision": "2",
                       "render_type": "bullet"
                     }
-                  ]
+                  ],
+                  "default_secondary_metric": "Original budget"
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ],
+                  "default_secondary_metric": "Original budget"
                 }
             },
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "timeline": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+                }
             }
           }
         },
@@ -334,6 +457,32 @@
                       "suffix": "",
                       "precision": "",
                       "render_type": "stack"
+                    }
+                  ]
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "paycategory",
+                      "name": "Pay Type",
+                      "aggregate_type": "",
+                      "prefix": "",
+                      "suffix": "",
+                      "precision": ""
+                    }
+                  ]
+                }
+            },
+            "overtime": {
+                "timeline": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "paycategory",
+                      "name": "Pay Type",
+                      "aggregate_type": "",
+                      "prefix": "",
+                      "suffix": "",
+                      "precision": ""
                     }
                   ]
                 }
