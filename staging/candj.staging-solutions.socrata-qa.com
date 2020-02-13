@@ -1806,7 +1806,7 @@
                               "column":"total_hearing_dates",
                               "aggregate_type":"avg",
                               "render_type":"bullet",
-                              "precision":"0",
+                              "precision":"1",
                               "prefix":"",
                               "suffix":"settings"
                            }
