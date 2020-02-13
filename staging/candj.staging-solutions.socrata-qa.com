@@ -83,12 +83,14 @@
 							"color": "#259652",
 							"operator": ">=",
 							"value": "80",
-							"icon": "icons-check-circle"
+							"icon": "icons-check-circle",
+							"target_entry_description": "Clearance rates are on-track"
 						},
 						{
 							"name": "Off track",
 							"color": "#e31219",
-							"icon": "icons-times-circle"
+							"icon": "icons-times-circle",
+							"target_entry_description": "Clearance rates are off-track"
 						}
 					],
 					"visualization": {
