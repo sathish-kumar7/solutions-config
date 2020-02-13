@@ -1,5 +1,5 @@
 {
-	"branding": {
+    "branding": {
 		"browser_title": "Solutions | C&J ",
 		"title": "Solutions - Courts and Justice"
 	},
@@ -14,7 +14,8 @@
 		"startDate": "2018-1-1",
 		"endDate": "2020-01-31"
 	},
-	"template_entries": [{
+	"template_entries": [
+        {
 			"name": "Courts and Justice",
 			"description": "",
 			"dataset_domain": "courtsandjustice.demo.socrata.com",
@@ -65,7 +66,8 @@
 					"name": "Judge ID"
 				}
 			],
-			"view_entries": [{
+			"view_entries": [
+                {
 					"name": "Clearance Rate",
 					"column": "sum(case(isactive='false', 1))/sum(case(isactive='true', 1))*100",
 					"aggregate_type": "",
@@ -121,42 +123,64 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                						"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "incoming events"
+            						},
+            						{
+            							"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "outgoing events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						} 
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                   {
+                    					"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "incoming events"
+            						},
+            						{
+            							"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "outgoing events"
+            						} 
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Incoming Cases",
-							"column": "sum(case(isactive='true', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "incoming events"
-						},
-						{
-							"name": "Outgoing Cases",
-							"column": "sum(case(isactive='false', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "outgoing events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Current Active Pending Backlog",
@@ -176,42 +200,64 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "incoming events"
+            						},
+            						{
+            							"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "outgoing events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                                    
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "incoming events"
+            						},
+            						{
+            							"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "outgoing events"
+            						}                                   
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Incoming Cases",
-							"column": "sum(case(isactive='true', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "incoming events"
-						},
-						{
-							"name": "Outgoing Cases",
-							"column": "sum(case(isactive='false', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "outgoing events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "End Active Pending Backlog",
@@ -232,42 +278,64 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "incoming events"
+            						},
+            						{
+            							"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "outgoing events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                                
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "incoming events"
+            						},
+            						{
+            							"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "outgoing events"
+            						}                               
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Incoming Cases",
-							"column": "sum(case(isactive='true', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "incoming events"
-						},
-						{
-							"name": "Outgoing Cases",
-							"column": "sum(case(isactive='false', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "outgoing events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Outgoing Cases",
@@ -287,33 +355,47 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                                    
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                                   
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Incoming Cases",
-							"column": "sum(case(isactive='true', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Outgoing Cases: Entry of Judgement",
@@ -333,33 +415,47 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                 "secondary_metric_entries": [
+                                {
+            						"name": "Incoming Cases",
+        							"column": "sum(case(isactive='true', 1))",
+        							"aggregate_type": "",
+        							"render_type": "bullet",
+        							"precision": "0",
+        							"prefix": "",
+        							"suffix": "events"
+        						},
+        						{
+        							"name": "Event Status Mapping Code",
+        							"column": "eventstatusmappingcodede",
+        							"aggregate_type": "",
+        							"render_type": "stack",
+        							"precision": "0",
+        							"prefix": "",
+        							"suffix": "events"
+        						}                                
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                 "secondary_metric_entries": [
+                                {
+                					"name": "Incoming Cases",
+        							"column": "sum(case(isactive='true', 1))",
+        							"aggregate_type": "",
+        							"precision": "0",
+        							"prefix": "",
+        							"suffix": "events"
+        						}                               
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Incoming Cases",
-							"column": "sum(case(isactive='true', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Outgoing Cases: Placed On Inactive Status",
@@ -379,33 +475,47 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                            
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Incoming Cases",
+            							"column": "sum(case(isactive='true', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                           
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Incoming Cases",
-							"column": "sum(case(isactive='true', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Incoming Cases",
@@ -425,33 +535,47 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                            
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                           
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Outgoing Cases",
-							"column": "sum(case(isactive='false', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Incoming Cases: New Filing",
@@ -471,33 +595,48 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                                
+                                ]
+                            }
+                                    
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                               
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Outgoing Cases",
-							"column": "sum(case(isactive='false', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Incoming Cases: Reopened",
@@ -517,33 +656,47 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                                
+                                ]
+                            }                                    
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}                               
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Outgoing Cases",
-							"column": "sum(case(isactive='false', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				},
 				{
 					"name": "Incoming Cases: Reactivated",
@@ -563,33 +716,47 @@
 						"default_view": "Snapshot",
 						"snapshot": {
 							"chart_type": "groupChart",
-							"default_comparison_column_entry": "casenumber",
-							"show_pie_chart": "true"
+							"show_pie_chart": "true",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                						"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"render_type": "bullet",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						},
+            						{
+            							"name": "Event Status Mapping Code",
+            							"column": "eventstatusmappingcodede",
+            							"aggregate_type": "",
+            							"render_type": "stack",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}        
+                                ]
+                            }
 						},
 						"overtime": {
 							"show_area_chart": "true",
-							"show_timeline_total": "false"
+							"show_timeline_total": "false",
+                            "timeline": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"name": "Outgoing Cases",
+            							"column": "sum(case(isactive='false', 1))",
+            							"aggregate_type": "",
+            							"precision": "0",
+            							"prefix": "",
+            							"suffix": "events"
+            						}       
+                                ]
+                            }
 						}
-					},
-					"comparison_column_entries": [{
-							"name": "Outgoing Cases",
-							"column": "sum(case(isactive='false', 1))",
-							"aggregate_type": "",
-							"render_type": "bullet",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						},
-						{
-							"name": "Event Status Mapping Code",
-							"column": "eventstatusmappingcodede",
-							"aggregate_type": "",
-							"render_type": "stack",
-							"precision": "0",
-							"prefix": "",
-							"suffix": "events"
-						}
-					]
+					}
 				}
 			],
 			"filter_by_entries": [{
@@ -713,7 +880,8 @@
 					"name": "County"
 				}
 			],
-			"view_entries": [{
+			"view_entries": [
+                {
 					"name": "Mean Time To Disposition",
 					"column": "timetodisposition",
 					"aggregate_type": "avg",
@@ -724,15 +892,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -752,7 +911,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                    					"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -767,15 +939,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -795,7 +958,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                        				"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -813,15 +989,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -841,7 +1008,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                        				"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -859,15 +1039,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -887,7 +1058,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                        				"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -905,15 +1089,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -933,7 +1108,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                        				"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -951,15 +1139,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -979,7 +1158,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                        				"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -997,15 +1189,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1025,7 +1208,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                        				"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -1043,15 +1239,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1071,7 +1258,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                        				"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -1089,15 +1289,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "timetodisposition_flag",
-						"name": "Cases",
-						"aggregate_type": "sum",
-						"render_type": "bullet",
-						"prefix": "",
-						"suffix": "cases",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1117,7 +1308,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                    {
+                    					"column": "timetodisposition_flag",
+                						"name": "Cases",
+                						"aggregate_type": "sum",
+                						"render_type": "bullet",
+                						"prefix": "",
+                						"suffix": "cases",
+                						"precision": ""
+                					}  
+                                ]
+                            }
 						}
 					}
 				},
@@ -1135,15 +1339,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1163,7 +1358,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                            			"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -1181,15 +1389,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1209,7 +1408,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                            			"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -1227,15 +1439,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1255,7 +1458,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                            			"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -1273,15 +1489,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1301,7 +1508,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                            			"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				},
@@ -1319,15 +1539,6 @@
 					"fields": {
 						"date_column": "lastopeneddate"
 					},
-					"comparison_column_entries": [{
-						"column": "casetypedescription",
-						"name": "Case Type",
-						"aggregate_type": "",
-						"render_type": "stack",
-						"prefix": "",
-						"suffix": "",
-						"precision": ""
-					}],
 					"tags": [
 						"Time to Disposition"
 					],
@@ -1347,7 +1558,20 @@
 					"visualization": {
 						"default_view": "Snapshot",
 						"snapshot": {
-							"chart_type": "groupChart"
+							"chart_type": "groupChart",
+                            "barchart": {
+                                "secondary_metric_entries": [
+                                   {
+                            			"column": "casetypedescription",
+                						"name": "Case Type",
+                						"aggregate_type": "",
+                						"render_type": "stack",
+                						"prefix": "",
+                						"suffix": "",
+                						"precision": ""
+                					}
+                                ]
+                            }
 						}
 					}
 				}
