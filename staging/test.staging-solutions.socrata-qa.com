@@ -18,8 +18,7 @@
   "date_options": {
     "type": "yearly",
     "year_start_month": "4",
-    "data_end_date": "2019-02-10",
-    "default_year": "2018"
+     "data_end_date": "2018-02-10"
   },
   "template_entries": [
     {
@@ -48,14 +47,64 @@
       "view_entries": [
         {
           "name": "Funds",
-          "primary_metric_name": "Funds",
           "column": "entry_type",
           "aggregate_type": "count",
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
               "show_pie_chart": "true",
-              "default_comparison_column_entry": "program"
+              "default_comparison_column_entry": "program",
+              "barchart": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "department",
+                      "name": "Department",
+                      "aggregate_type": "count",
+                      "render_type": "bar",
+                      "precision": "0",
+                      "prefix": "",
+                      "suffix": "departments"
+                    },
+                    {
+                      "column": "program",
+                      "name": "Program",
+                      "aggregate_type": "",
+                      "render_type": "stack",
+                      "precision": "0",
+                      "prefix": "",
+                      "suffix": ""
+                    },
+                    {
+                      "column": "category",
+                      "name": "Category",
+                      "aggregate_type": "count",
+                      "render_type": "bullet",
+                      "precision": "0",
+                      "prefix": "",
+                      "suffix": "categories"
+                    }
+                  ]
+                },
+              "scatterplot": {
+                "secondary_metric_entries":[
+                  {
+                    "column": "department",
+                    "name": "Department",
+                    "aggregate_type": "count",
+                    "precision": "0",
+                    "prefix": "",
+                    "suffix": "departments"
+                  },
+                  {
+                    "column": "category",
+                    "name": "Category",
+                    "aggregate_type": "count",
+                    "precision": "0",
+                    "prefix": "",
+                    "suffix": "categories"
+                  }
+                ]
+              }
             }
           },
           "precision": "0",
@@ -64,36 +113,7 @@
           "tags": [
             "Cases",
             "Clearence rates"
-          ],
-          "comparison_column_entries": [
-            {
-              "column": "department",
-              "name": "Department",
-              "aggregate_type": "count",
-              "render_type": "bar",
-              "precision": "0",
-              "prefix": "",
-              "suffix": "departments"
-            },
-            {
-              "column": "program",
-              "name": "Program",
-              "aggregate_type": "",
-              "render_type": "stack",
-              "precision": "0",
-              "prefix": "",
-              "suffix": ""
-            },
-            {
-              "column": "category",
-              "name": "Category",
-              "aggregate_type": "count",
-              "render_type": "bullet",
-              "precision": "0",
-              "prefix": "",
-              "suffix": "categories"
-            }
-          ],
+          ], 
           "target_entries": [
             {
               "name": "On track",
@@ -112,7 +132,6 @@
         },
         {
           "name": "Total amount spent",
-          "primary_metric_name": "Total amount",
           "column": "actual_amount",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -123,40 +142,30 @@
             "snapshot": {
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
-              "scatterplot": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "approved_amount",
-                    "name": "Approved amount",
-                    "aggregate_type": "sum",
-                    "precision": "",
-                    "prefix": "",
-                    "suffix": ""
-                  }
+              "barchart": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "approved_amount",
+                      "name": "Approved Amount",
+                      "aggregate_type": "sum",
+                      "render_type": "bullet",
+                      "precision": "2",
+                      "prefix": "$",
+                      "suffix": "Approved"
+                    },
+                    {
+                      "column": "recommneded_amount",
+                      "name": "Recommended Amount",
+                      "aggregate_type": "sum",
+                      "render_type": "bullet",
+                      "precision": "2",
+                      "prefix": "$",
+                      "suffix": "Recommended"
+                    }  
                 ]
               }
             }
           },
-          "comparison_column_entries": [
-            {
-              "column": "approved_amount",
-              "name": "Approved Amount",
-              "aggregate_type": "sum",
-              "render_type": "bullet",
-              "precision": "2",
-              "prefix": "$",
-              "suffix": "Approved"
-            },
-            {
-              "column": "recommneded_amount",
-              "name": "Recommended Amount",
-              "aggregate_type": "sum",
-              "render_type": "bullet",
-              "precision": "2",
-              "prefix": "$",
-              "suffix": "Recommended"
-            }
-          ],
           "quick_filters": [
             {
               "column": "program",
@@ -386,29 +395,31 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-              "show_pie_chart": "true"
+              "show_pie_chart": "true",
+              "barchart": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "recommneded_amount",
+                      "name": "Recommended Amount",
+                      "aggregate_type": "sum",
+                      "render_type": "bullet",
+                      "precision": "2",
+                      "prefix": "$",
+                      "suffix": "Recommended"
+                    },
+                    {
+                      "column": "actual_amount",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "render_type": "bullet",
+                      "precision": "2",
+                      "prefix": "$",
+                      "suffix": "Actual"
+                    }
+                  ]
+              }
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "recommneded_amount",
-              "name": "Recommended Amount",
-              "aggregate_type": "sum",
-              "render_type": "bullet",
-              "precision": "2",
-              "prefix": "$",
-              "suffix": "Recommended"
-            },
-            {
-              "column": "actual_amount",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "render_type": "bullet",
-              "precision": "2",
-              "prefix": "$",
-              "suffix": "Actual"
-            }
-          ],
+          }, 
           "tags": [
             "Cases",
             "Judges"
@@ -497,22 +508,26 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Pie Chart"
+            "default_view": "Pie Chart",
+            "snapshot":{
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual_amount",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "render_type": "bullet",
+                      "precision": "2",
+                      "prefix": "$",
+                      "suffix": "Actual"
+                    }
+                  ]
+                }
+            }
           },
           "tags": [
             "Cases",
             "Clearence rates"
-          ],
-          "comparison_column_entries": [
-            {
-              "column": "actual_amount",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "render_type": "bullet",
-              "precision": "2",
-              "prefix": "$",
-              "suffix": "Actual"
-            }
           ]
         },
         {
@@ -653,18 +668,6 @@
           "name": "Year"
         }
       ],
-      "bench_mark_entries": [
-        {
-          "view_column": "sale_type",
-          "display_name": "Sales 3.5k",
-          "value": "3500"
-        },
-        {
-          "view_column": "building_value",
-          "display_name": "Building value 2.5B",
-          "value": "2500000000"
-        }
-      ],
       "view_entries": [
         {
           "name": "Mean ratio",
@@ -679,11 +682,6 @@
             "default_view": "Map",
             "snapshot": {
               "chart_type": "groupChart"
-            },
-            "overtime": {
-              "show_area_chart": "true",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "false"
             }
           },
           "target_entries": [
@@ -872,82 +870,63 @@
               "default_group_by_entry_column": "agency_name",
               "default_comparison_column_entry": "case_disposition",
               "show_pie_chart": "true",
+              "barchart": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "status",
+                      "name": "Status",
+                      "aggregate_type": "",
+                      "render_type": "stack",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": ""
+                    },
+                    {
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
+                      "aggregate_type": "count",
+                      "render_type": "bar",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "disposition"
+                    },
+                    {
+                      "column": "case_id",
+                      "name": "Cases",
+                      "aggregate_type": "count",
+                      "render_type": "bullet",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "cases"
+                    }
+                  ]
+              },
               "scatterplot": {
                 "secondary_metric_entries": [
-                  {
-                    "column": "case_id",
-                    "name": "Cases",
-                    "aggregate_type": "count",
-                    "precision": "",
-                    "prefix": "",
-                    "suffix": ""
-                  }
+                    {
+                      "column": "case_disposition",
+                      "name": "Case Disposition",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "disposition"
+                    },
+                    {
+                      "column": "case_id",
+                      "name": "Cases",
+                      "aggregate_type": "count",
+                      "precision": "",
+                      "prefix": "",
+                      "suffix": "cases"
+                    }
                 ]
               }
             },
             "overtime": {
               "show_area_chart": "true",
-              "show_timeline_total": "true",
-              "show_burn_up_chart": "true",
-              "timeline": {
-                "bench_mark_entries": [
-                  {
-                    "column": "case_id",
-                    "name": "Cases",
-                    "aggregate_type": "sum"
-                  },
-                  {
-                    "column": "case_disposition",
-                    "name": "Case Disposition",
-                    "aggregate_type": "count"
-                  }
-                ]
-              },
-              "burn_up": {
-                "bench_mark_entries": [
-                  {
-                    "column": "case_id",
-                    "name": "Cases",
-                    "aggregate_type": "sum"
-                  },
-                  {
-                    "column": "case_disposition",
-                    "name": "Case Disposition",
-                    "aggregate_type": "count"
-                  }
-                ]
-              }
+              "show_timeline_total": "true"
             }
           },
-          "comparison_column_entries": [
-            {
-              "column": "status",
-              "name": "Status",
-              "aggregate_type": "",
-              "render_type": "stack",
-              "precision": "",
-              "prefix": "",
-              "suffix": ""
-            },
-            {
-              "column": "case_disposition",
-              "name": "Case Disposition",
-              "aggregate_type": "count",
-              "render_type": "bar",
-              "precision": "",
-              "prefix": "",
-              "suffix": "disposition"
-            },
-            {
-              "column": "case_id",
-              "name": "Cases",
-              "aggregate_type": "count",
-              "render_type": "bullet",
-              "precision": "",
-              "prefix": "",
-              "suffix": "cases"
-            }
-          ],
           "quick_filters": [
             {
               "type": "date",
