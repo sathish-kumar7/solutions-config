@@ -107,6 +107,64 @@
                }
             },
             { 
+               "name":"Beginning Active Pending Backlog",
+               "column":"casebacklog",
+               "aggregate_type":"sum",
+               "use_dimension_value":"true",
+               "precision":"0",
+               "prefix":"",
+               "suffix":"pending events",
+               "end_date_override_and_ignore":"true",
+               "start_date_boolean_override":"<",
+               "tags":[ 
+                  "Clearance Rate"
+               ],
+               "target_entries":[ 
+
+               ],
+               "visualization":{ 
+                  "default_view":"Snapshot",
+                  "snapshot":{ 
+                     "chart_type":"groupChart",
+                     "default_comparison_column_entry":"casenumber",
+                     "show_pie_chart":"true"
+                  },
+                  "overtime":{ 
+                     "show_area_chart":"true",
+                     "show_timeline_total":"false"
+                  }
+               },
+               "comparison_column_entries":[ 
+                  { 
+                     "name":"Incoming Cases",
+                     "column":"sum(case(isactive='true', 1))",
+                     "aggregate_type":"",
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"incoming events"
+                  },
+                  { 
+                     "name":"Outgoing Cases",
+                     "column":"sum(case(isactive='false', 1))",
+                     "aggregate_type":"",
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"outgoing events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  }
+               ]
+            },
+            { 
                "name":"Current Active Pending Backlog",
                "column":"casebacklog",
                "aggregate_type":"sum",
@@ -114,6 +172,63 @@
                "precision":"0",
                "prefix":"",
                "suffix":"pending events",
+               "tags":[ 
+                  "Clearance Rate"
+               ],
+               "target_entries":[ 
+
+               ],
+               "visualization":{ 
+                  "default_view":"Snapshot",
+                  "snapshot":{ 
+                     "chart_type":"groupChart",
+                     "default_comparison_column_entry":"casenumber",
+                     "show_pie_chart":"true"
+                  },
+                  "overtime":{ 
+                     "show_area_chart":"true",
+                     "show_timeline_total":"false"
+                  }
+               },
+               "comparison_column_entries":[ 
+                  { 
+                     "name":"Incoming Cases",
+                     "column":"sum(case(isactive='true', 1))",
+                     "aggregate_type":"",
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"incoming events"
+                  },
+                  { 
+                     "name":"Outgoing Cases",
+                     "column":"sum(case(isactive='false', 1))",
+                     "aggregate_type":"",
+                     "render_type":"bullet",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"outgoing events"
+                  },
+                  { 
+                     "name":"Event Status Mapping Code",
+                     "column":"eventstatusmappingcodede",
+                     "aggregate_type":"",
+                     "render_type":"stack",
+                     "precision":"0",
+                     "prefix":"",
+                     "suffix":"events"
+                  }
+               ]
+            },
+            { 
+               "name":"End Active Pending Backlog",
+               "column":"casebacklog",
+               "aggregate_type":"sum",
+               "use_dimension_value":"true",
+               "precision":"0",
+               "prefix":"",
+               "suffix":"pending events",
+               "start_date_override_and_ignore":"true",
                "tags":[ 
                   "Clearance Rate"
                ],
