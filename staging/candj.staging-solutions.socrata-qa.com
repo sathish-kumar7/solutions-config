@@ -1247,8 +1247,8 @@
 					"target_entries": [{
 							"name": "On track",
 							"color": "#259652",
-							"operator": ">=",
-							"value": "90",
+							"operator": "<=",
+							"value": "1",
 							"icon": "icons-check-circle"
 						},
 						{
@@ -1547,8 +1547,8 @@
 					"target_entries": [{
 							"name": "On track",
 							"color": "#259652",
-							"operator": ">=",
-							"value": "90",
+							"operator": "<=",
+							"value": "1",
 							"icon": "icons-check-circle"
 						},
 						{
