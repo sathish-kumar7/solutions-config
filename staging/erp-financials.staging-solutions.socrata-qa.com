@@ -923,38 +923,42 @@
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
-              "default_comparison_column_entry": "paycategory",
-              "timeline": {
-                "bench_mark_entries": [
-                  {
-                    "column": "payamount",
-                    "name": "Total payroll",
-                    "aggregate_type": "sum"
-                  }
-                ]
+              "barchart": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "paycategory",
+                      "name": "Pay Type",
+                      "aggregate_type": "",
+                      "prefix": "",
+                      "suffix": "",
+                      "precision": "",
+                      "render_type": "stack"
+                    }
+               ],
+               "default_secondary_metric": "Pay Type"
               },
-              "burn_up": {
-                "bench_mark_entries": [
-                  {
-                    "column": "payamount",
-                    "name": "Total payroll",
-                    "aggregate_type": "sum"
-                  }
-                ]
+            "overtime": {
+              "timeline": {
+                    "bench_mark_entries": [
+                      {
+                        "column": "payamount",
+                        "name": "Total payroll",
+                        "aggregate_type": "sum"
+                      }
+                    ]
+                  },
+                  "burn_up": {
+                    "bench_mark_entries": [
+                      {
+                        "column": "payamount",
+                        "name": "Total payroll",
+                        "aggregate_type": "sum"
+                      }
+                    ]
+                }
               }
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "paycategory",
-              "name": "Pay Type",
-              "aggregate_type": "",
-              "prefix": "",
-              "suffix": "",
-              "precision": "",
-              "render_type": "stack"
-            }
-          ]
+          }
         },
         {
           "name": "Total Overtime",
