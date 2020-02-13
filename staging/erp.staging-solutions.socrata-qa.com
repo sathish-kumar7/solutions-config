@@ -125,6 +125,26 @@
                       "precision": "2"
                     }
                   ]
+              },
+              "burnup": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
               }
             }
           }
@@ -197,6 +217,26 @@
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
               "timeline": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              },
+              "burnup": {
                   "secondary_metric_entries": [
                     {
                       "column": "actual",
@@ -320,7 +360,27 @@
                       "precision": "2"
                     }
                   ]
-                }
+                },
+                "burnup": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              }
             }
           }
         },
