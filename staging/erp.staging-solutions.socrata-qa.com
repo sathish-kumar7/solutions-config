@@ -57,34 +57,36 @@
             "snapshot": {
             "chart_type": "barChart",
             "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
+                "default_comparison_column_entry": "actual",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                  ]
+                }
             },
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true"
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
+          }
         },
         {
           "name": "Payroll vs. Budgeted",
@@ -104,34 +106,36 @@
             "snapshot": {
             "chart_type": "barChart",
             "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
+                "default_comparison_column_entry": "actual",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                  ]
+                }
             },
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true"
             }            
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
+          }
         },
         {
           "name": "Estimated vs. Actual Revenue",
@@ -166,34 +170,36 @@
             "snapshot": {
             "chart_type": "barChart",
             "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
+                "default_comparison_column_entry": "actual",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                  ]
+                }
             },
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true"
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
+          }
         },
         {
           "name": "Cash Balance",
@@ -315,22 +321,24 @@
           "visualization": {
             "default_view": "Snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "paycategory"
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
+                "default_comparison_column_entry": "paycategory",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "paycategory",
+                      "name": "Pay Type",
+                      "aggregate_type": "",
+                      "prefix": "",
+                      "suffix": "",
+                      "precision": "",
+                      "render_type": "stack"
+                    }
+                  ]
+                }
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "paycategory",
-              "name": "Pay Type",
-              "aggregate_type": "",
-              "prefix": "",
-              "suffix": "",
-              "precision": "",
-              "render_type": "stack"
-            }
-          ]
+          }
         },
         {
           "name": "Total Overtime",
@@ -449,10 +457,7 @@
             "snapshot": {
             "chart_type": "barChart"
             }
-          },
-          "comparison_column_entries": [
-            
-          ]
+          }
         }
       ],
       "leaf_page_entries": [
@@ -523,10 +528,7 @@
             "snapshot": {
             "chart_type": "barChart"
             }
-          },
-          "comparison_column_entries": [
-            
-          ]
+          }
         }
       ],
       "leaf_page_entries": [
@@ -584,10 +586,7 @@
             "snapshot": {
             "chart_type": "barChart"
             }
-          },
-          "comparison_column_entries": [
-            
-          ]
+          }
         }
       ],
       "leaf_page_entries": [
@@ -641,10 +640,7 @@
             "snapshot": {
             "chart_type": "barChart"
             }
-          },
-          "comparison_column_entries": [
-            
-          ]
+          }  
         }
       ],
       "leaf_page_entries": [
