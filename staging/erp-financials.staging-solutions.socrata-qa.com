@@ -78,34 +78,76 @@
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
-              "default_comparison_column_entry": "actual"
+              "barchart": {
+                "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                ],
+                "default_secondary_metric": "actual"
+              }
             },
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "timeline": {
+                "secondary_metric_entries": [
+                {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                ]
+              },
+              "burnup": {
+                "secondary_metric_entries": [
+                {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                ]
+              }
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
+          }
         },
         {
           "name": "Cash Balance",
