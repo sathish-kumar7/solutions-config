@@ -923,6 +923,7 @@
               }
             },
             "overtime": {
+            "show_burn_up_chart": "true",
               "timeline": {
                     "bench_mark_entries": [
                       {
