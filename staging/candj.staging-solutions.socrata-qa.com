@@ -761,17 +761,52 @@
                      }
                   }
                }
+            },
+            { 
+               "name":"Average of Active Pending",
+               "parent_queries": [
+                "select casenumber, statusdate, nextstatusdate,  eventstatusmappingcodede, county as county_, casecategorydescription as casecategorydescription_, casetypedescription as casetypedescription_, nodedescription as nodedescription_, judgeid as judgeid_, max(case( eventstatusmappingcodede in ('New Filing', 'Reopened') , statusdate)) over (partition by casenumber) as last_opened, max(case( eventstatusmappingcodede in ('Bench/Non-Jury Trial Disposition', 'Jury Trial Disposition',  'Non-Trial Disposition',  'Placed on Inactive Status') , statusdate)) over (partition by casenumber) as last_closed, isopen, isactive, casebacklog |> select casenumber, max(county_) as county, max(casecategorydescription_) as casecategorydescription, max(casetypedescription_) as casetypedescription, max(nodedescription_) as nodedescription, max(judgeid_) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d('2020-02-01', max(last_opened)) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber having casebacklogsum  > 0"
+                   ],
+               "column":"days_active_pending",
+               "aggregate_type":"avg",
+               "use_dimension_value":"true",
+               "precision":"1",
+               "prefix":"",
+               "suffix":"days",
+               "tags":[ 
+                  "Age of Active Pending Cases"
+               ],
+               "target_entries":[ 
+                  { 
+                     "name":"On track",
+                     "color":"#259652",
+                     "operator":">=",
+                     "value":"80",
+                     "icon":"icons-check-circle",
+                     "target_entry_description":"Age of Active Pending Cases on Track"
+                  },
+                  { 
+                     "name":"Off track",
+                     "color":"#e31219",
+                     "icon":"icons-times-circle",
+                     "target_entry_description":"Age of Active Pending Cases on Track"
+                  }
+               ],
+               "visualization":{ 
+                  "default_view":"Snapshot",
+                  "snapshot":{ 
+                     "chart_type":"groupChart",
+                     "show_pie_chart":"true"
+                  },
+                  "overtime":{ 
+                     "show_area_chart":"true",
+                     "show_timeline_total":"false"
+                  }
+               }
             }
          ],
          "filter_by_entries":[ 
-            { 
-               "column":"isactive",
-               "name":"Active Case?"
-            },
-            { 
-               "column":"eventstatusmappingcodede",
-               "name":"Disposition"
-            }
+
          ],
          "leaf_page_entries":[ 
             { 
@@ -800,7 +835,7 @@
          ],
          "bench_mark_entries":[ 
             { 
-               "view_column":"caseid",
+               "view_column":"casenumber",
                "dimension_column":"judgeid",
                "display_name":"State Standard",
                "value":"50"
