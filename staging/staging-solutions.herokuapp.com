@@ -83,7 +83,8 @@
                     "prefix": "",
                     "suffix": "categories"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Program"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -103,7 +104,8 @@
                     "prefix": "",
                     "suffix": "categories"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Category"
               }
             }
           },
@@ -162,7 +164,29 @@
                     "prefix": "$",
                     "suffix": "Recommended"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Approved Amount"
+              },
+              "scatterplot": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "approved_amount",
+                    "name": "Approved Amount",
+                    "aggregate_type": "sum",
+                    "precision": "2",
+                    "prefix": "$",
+                    "suffix": "Approved"
+                  },
+                  {
+                    "column": "recommneded_amount",
+                    "name": "Recommended Amount",
+                    "aggregate_type": "sum",
+                    "precision": "2",
+                    "prefix": "$",
+                    "suffix": "Recommended"
+                  }
+                ],
+                "default_secondary_metric": "Approved Amount"
               }
             }
           },
@@ -428,7 +452,29 @@
                     "prefix": "$",
                     "suffix": "Actual"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Actual Amount"
+              },
+              "scatterplot": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "recommneded_amount",
+                    "name": "Recommended Amount",
+                    "aggregate_type": "sum",
+                    "precision": "2",
+                    "prefix": "$",
+                    "suffix": "Recommended"
+                  },
+                  {
+                    "column": "actual_amount",
+                    "name": "Actual Amount",
+                    "aggregate_type": "sum",
+                    "precision": "2",
+                    "prefix": "$",
+                    "suffix": "Actual"
+                  }
+                ],
+                "default_secondary_metric": "Actual Amount"
               }
             }
           },
@@ -534,13 +580,25 @@
                     "suffix": "Actual"
                   }
                 ]
+              },
+              "scatterplot": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "actual_amount",
+                    "name": "Actual Amount",
+                    "aggregate_type": "sum",
+                    "precision": "2",
+                    "prefix": "$",
+                    "suffix": "Actual"
+                  }
+                ]
               }
-            }
-          },
-          "tags": [
-            "Cases",
-            "Clearence rates"
-          ]
+            },
+            "tags": [
+             "Cases",
+             "Clearence rates"
+            ]
+          }
         },
         {
           "column": "actual_amount",
@@ -911,7 +969,8 @@
                     "prefix": "",
                     "suffix": "cases"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Status"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -936,7 +995,48 @@
             },
             "overtime": {
               "show_area_chart": "true",
-              "show_timeline_total": "true"
+              "show_timeline_total": "true",
+              "show_burn_up_chart": "true",
+              "timeline": {
+                  "secondary_metric_entries": [
+                  {
+                    "column": "case_disposition",
+                    "name": "Case Disposition",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": "disposition"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": "cases"
+                  }
+                ]
+              },
+              "burn_up": {
+                  "secondary_metric_entries": [
+                  {
+                    "column": "case_disposition",
+                    "name": "Case Disposition",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": "disposition"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": "cases"
+                  }
+                ]
+              }
             }
           },
           "quick_filters": [
