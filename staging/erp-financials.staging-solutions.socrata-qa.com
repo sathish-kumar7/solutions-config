@@ -920,7 +920,8 @@
                     }
                ],
                "default_secondary_metric": "Pay Type"
-              },
+              }
+            },
             "overtime": {
               "timeline": {
                     "bench_mark_entries": [
@@ -941,7 +942,6 @@
                     ]
                 }
               }
-            }
           }
         },
         {
