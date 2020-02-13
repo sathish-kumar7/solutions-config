@@ -880,7 +880,7 @@
                }
             },
             { 
-               "name":"Numer of Cases With Time To Disposition < 60 Days",
+               "name":"Number of Cases With Time To Disposition < 60 Days",
                "column":"timetodisposition_flag",
                "aggregate_type":"sum",
                "use_dimension_value":"true",
