@@ -1419,7 +1419,18 @@
 
       ],
       "shape_outline_dataset_entries":[
-
+              {
+          "shape_dataset_domain": "courtsandjustice.demo.socrata.com",
+          "shape_dataset_id": "ii6d-e8ub",
+          "shape_name": "County Boundaries",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "name",
+            "shape_description": "affgeoid"
+          },
+          "color": "#32a889"
+        }
       ]
     },
     {
