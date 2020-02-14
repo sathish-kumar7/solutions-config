@@ -22,7 +22,9 @@
       "dataset_id":"w7ey-ag3j",
       "fields":{
         "date_column":"statusdate",
-        "incident_type":"odysseycasecategorydescription"
+        "incident_type":"odysseycasecategorydescription",
+        "location": "countycenterpoint",
+        "ii6d-e8ub": ":@computed_region_ii6d_e8ub"
       },
       "dimension_entries":[
         {
