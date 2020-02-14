@@ -123,7 +123,8 @@
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
+              "target_entry_description": "Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track."
             },
             {
               "name": "Off track",
@@ -208,8 +209,7 @@
               "operator": "between",
               "value": "30000",
               "to": "100000",
-              "icon": "icons-check-circle",
-              "target_entry_description": "Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track."
+              "icon": "icons-check-circle"
             },
             {
               "name": "Off track",
