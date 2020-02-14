@@ -19,7 +19,7 @@
       "name":"Courts and Justice",
       "description":"",
       "dataset_domain":"courtsandjustice.demo.socrata.com",
-      "dataset_id":"xzug-disn",
+      "dataset_id":"w7ey-ag3j",
       "fields":{
         "date_column":"statusdate",
         "incident_type":"odysseycasecategorydescription"
