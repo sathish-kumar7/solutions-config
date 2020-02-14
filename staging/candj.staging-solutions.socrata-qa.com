@@ -869,9 +869,9 @@
           "column":"case(days_active_pending <= 365, 1, true, 0)",
           "aggregate_type":"count",
           "use_dimension_value":"true",
-          "precision":"1",
+          "precision":"0",
           "prefix":"",
-          "suffix":"days",
+          "suffix":"cases",
           "fields":{
             "date_column":"last_statusdate"
           },
@@ -907,7 +907,7 @@
           }
         },
         {
-          "name":"Numbers of Cases Age of Active Pending Cases < 365 Days",
+          "name":"Percentage of Cases Age of Active Pending Cases < 365 Days",
           "parent_queries": [
             "select casenumber, statusdate, nextstatusdate,  eventstatusmappingcodede, county as county_, casecategorydescription as casecategorydescription_, casetypedescription as casetypedescription_, nodedescription as nodedescription_, judgeid as judgeid_, max(case( eventstatusmappingcodede in ('New Filing', 'Reopened') , statusdate)) over (partition by casenumber) as last_opened, max(case( eventstatusmappingcodede in ('Reactivated') , statusdate)) over (partition by casenumber) as last_reactivated, max(case( eventstatusmappingcodede in ('Bench/Non-Jury Trial Disposition', 'Jury Trial Disposition',  'Non-Trial Disposition',  'Placed on Inactive Status') , statusdate)) over (partition by casenumber) as last_closed, isopen, isactive, casebacklog |> select casenumber, max(statusdate) as last_statusdate, max(county_) as county, max(casecategorydescription_) as casecategorydescription, max(casetypedescription_) as casetypedescription, max(nodedescription_) as nodedescription, max(judgeid_) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(last_opened is not null, last_opened, true, last_reactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber having casebacklogsum  > 0"
           ],
@@ -916,7 +916,7 @@
           "use_dimension_value":"true",
           "precision":"1",
           "prefix":"",
-          "suffix":"days",
+          "suffix":"%",
           "fields":{
             "date_column":"last_statusdate"
           },
