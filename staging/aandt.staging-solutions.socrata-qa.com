@@ -109,7 +109,7 @@
                     ],
                       "bench_mark_entries": [
                         {
-                          "name": "Benchmark",
+                          "name": "1.0",
                           "value": "1"
                         }
                       ]
@@ -124,7 +124,13 @@
                       "prefix": "",
                       "suffix": ""
                     }
-                ]
+                ],
+                "bench_mark_entries": [
+                    {
+                      "name": "1.0",
+                      "value": "1"
+                    }
+                  ]
               }
             }
           },
