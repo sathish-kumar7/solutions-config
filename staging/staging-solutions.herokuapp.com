@@ -170,11 +170,13 @@
                 "bench_mark_entries": [
                 {
                   "name": "Bench mark 1",
-                  "value": "10000000"
+                  "value": "10000000",
+                  "value1": "50000000"
                 },
                 {
                   "name": "Bench mark 2",
-                  "value": "110000000"
+                  "value": "110000000",
+                  "value1": "500000000"
                  }
                 ]
               },
