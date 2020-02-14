@@ -1,6 +1,6 @@
 {
   "branding": {
-    "browser_title": "Solutions | QA ",
+    "browser_title": "Solutions | Test",
     "title": "Solutions - QA"
   },
   "tag_list": [
@@ -595,8 +595,8 @@
               }
             },
             "tags": [
-             "Cases",
-             "Clearence rates"
+              "Cases",
+              "Clearence rates"
             ]
           }
         },
@@ -990,7 +990,8 @@
                     "prefix": "",
                     "suffix": "cases"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Status"
               }
             },
             "overtime": {
@@ -998,7 +999,7 @@
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
               "timeline": {
-                  "secondary_metric_entries": [
+                "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
                     "name": "Case Disposition",
@@ -1015,10 +1016,11 @@
                     "prefix": "",
                     "suffix": "cases"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Case Disposition"
               },
               "burn_up": {
-                  "secondary_metric_entries": [
+                "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
                     "name": "Case Disposition",
@@ -1035,7 +1037,8 @@
                     "prefix": "",
                     "suffix": "cases"
                   }
-                ]
+                ],
+                "default_secondary_metric": "Case Disposition"
               }
             }
           },
