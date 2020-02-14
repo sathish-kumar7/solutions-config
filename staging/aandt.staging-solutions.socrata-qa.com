@@ -123,7 +123,8 @@
                       "precision": "",
                       "prefix": "",
                       "suffix": ""
-                    }
+                    },
+                    "default_secondary_metric": "Number of sales"
                 ],
                 "bench_mark_entries": [
                     {
