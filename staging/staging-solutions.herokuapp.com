@@ -1027,7 +1027,7 @@
                     "column": "case_id",
                     "name": "Cases",
                     "value": "100",
-                    "value1": "50",
+                    "value1": "50"
                    },
                    {
                     "column": "case_disposition",
