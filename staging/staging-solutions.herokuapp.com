@@ -1024,14 +1024,16 @@
                 ],
                    "bench_mark_entries": [
                    {
-                    "view_column": "case_id",
-                    "display_name": "Cases",
-                    "value": "100"
+                    "column": "case_id",
+                    "name": "Cases",
+                    "value": "100",
+                    "value1": "50",
                    },
                    {
-                    "view_column": "case_disposition",
-                    "display_name": "Disposition",
-                    "value": "100"
+                    "column": "case_disposition",
+                    "name": "Disposition",
+                    "value": "100",
+                    "value1": "200"
                    }
                 ]
               },
