@@ -109,7 +109,7 @@
                     ],
                       "bench_mark_entries": [
                         {
-                          "display_name": "Benchmark",
+                          "name": "Benchmark",
                           "value": "1"
                         }
                       ]
@@ -201,7 +201,7 @@
                 "barchart": {                
                   "bench_mark_entries": [
                             {
-                              "display_name": "Benchmark",
+                              "name": "Benchmark",
                               "value": "1"
                             }
                       ]
