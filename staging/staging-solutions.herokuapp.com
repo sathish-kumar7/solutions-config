@@ -1018,13 +1018,13 @@
                 ],
                    "bench_mark_entries": [
                    {
-                    "view_column": "case_id",
-                    "display_name": "Cases",
+                    "column": "case_id",
+                    "name": "Cases",
                     "value": "100"
                    },
                    {
-                    "view_column": "case_disposition",
-                    "display_name": "Disposition",
+                    "column": "case_disposition",
+                    "name": "Disposition",
                     "value": "100"
                    }
                 ]
