@@ -209,7 +209,7 @@
               "value": "30000",
               "to": "100000",
               "icon": "icons-check-circle",
-              "target_entry_description": "Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track."
+              "target_entry_description": "Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track. Condition meets this metric on track."
             },
             {
               "name": "Off track",
@@ -496,7 +496,7 @@
               "name": "Off track",
               "color": "#e31219",
               "icon": "icons-times-circle",
-              "target_entry_description": "Condition  failed this metric off track. Condition failed this metric off track. Condition  failed this metric off track. Condition failed this metric off track. Condition  failed this metric off track. Condition failed this metric off track. Condition  failed this metric off track. Condition failed this metric off track."
+              "target_entry_description": "Condition  failed this metric off track. Condition failed this metric off track. Condition  failed this metric off track. Condition failed this metric off track. Condition  failed this metric off track. Condition failed this metric off track. Condition  failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track. Condition failed this metric off track."
             }
           ]
         },
