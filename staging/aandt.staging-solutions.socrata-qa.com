@@ -355,9 +355,9 @@
           "shape_name": "Clermont Township Boundaries",
           "fields": {
             "shape": "the_geom",
-            "shape_id": "_feature_id",
-            "shape_name": "townname",
-            "shape_description": "label"
+            "shape_id": "objectid",
+            "shape_name": "name",
+            "shape_description": "citycode"
           },
           "color": "#32a889"
         }
