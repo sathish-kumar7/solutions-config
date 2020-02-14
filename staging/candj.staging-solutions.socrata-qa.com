@@ -100,7 +100,16 @@
                   "default_view":"Snapshot",
                   "snapshot":{ 
                      "chart_type":"groupChart",
-                     "show_pie_chart":"true"
+                     "show_pie_chart":"true",
+                     "barChart": {
+                      "bench_mark_entries":[ 
+                            { 
+                               "dimension_column":"judgeid",
+                               "display_name":"State Standard",
+                               "value":"50"
+                            }
+                        ]
+                     }
                   },
                   "overtime":{ 
                      "show_area_chart":"true",
@@ -834,14 +843,6 @@
                "column":"casecategorydescription",
                "name":"Case Category",
                "renderType":"text"
-            }
-         ],
-         "bench_mark_entries":[ 
-            { 
-               "view_column":"casenumber",
-               "dimension_column":"judgeid",
-               "display_name":"State Standard",
-               "value":"50"
             }
          ],
          "map":{ 
@@ -1674,14 +1675,6 @@
                "column":"casetypedescription",
                "name":"Case Type",
                "renderType":"text"
-            }
-         ],
-         "bench_mark_entries":[ 
-            { 
-               "view_column":"caseid",
-               "dimension_column":"judgeid",
-               "display_name":"State Standard",
-               "value":"50"
             }
          ],
          "map":{ 
