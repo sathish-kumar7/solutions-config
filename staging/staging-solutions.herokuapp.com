@@ -1015,6 +1015,18 @@
                     "prefix": "",
                     "suffix": "cases"
                   }
+                ],
+                   "bench_mark_entries": [
+                   {
+                    "view_column": "case_id",
+                    "display_name": "Cases",
+                    "value": "100"
+                   },
+                   {
+                    "view_column": "case_disposition",
+                    "display_name": "Disposition",
+                    "value": "100"
+                   }
                 ]
               },
               "burn_up": {
