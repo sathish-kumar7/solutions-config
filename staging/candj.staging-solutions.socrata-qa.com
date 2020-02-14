@@ -104,7 +104,7 @@
               "barChart": {
                 "bench_mark_entries":[
                   {
-                    "dimension_column":"judgeid",
+                    "column":"judgeid",
                     "name":"State Standard",
                     "value":"50"
                   }
