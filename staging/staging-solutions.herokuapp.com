@@ -169,10 +169,13 @@
                 "default_secondary_metric": "Approved Amount",
                 "bench_mark_entries": [
                 {
-                  "column": "actual_amount",
-                  "name": "Actual amount",
+                  "name": "Bench mark 1",
                   "value": "10000000"
-                }
+                },
+                {
+                  "name": "Bench mark 2",
+                  "value": "110000000"
+                 }
                 ]
               },
               "scatterplot": {
@@ -197,15 +200,9 @@
                 "default_secondary_metric": "Approved Amount",
                 "bench_mark_entries": [
                 {
-                  "column": "actual_amount",
-                  "name": "Actual amount",
+                  "name": "Bench mark",
                   "value": "10000000"
-                },
-                {
-                  "column": "actual_amount",
-                  "name": "Actual amount 1",
-                  "value": "110000000"
-                 }
+                }
                 ]
               }
             }
