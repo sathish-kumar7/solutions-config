@@ -106,7 +106,13 @@
                           "precision": "0",
                           "render_type": "bullet"
                         }                
-                    ]
+                    ],
+                      "bench_mark_entries": [
+                        {
+                          "display_name": "Benchmark",
+                          "value": "1"
+                        }
+                      ]
                 },
                 "scatterplot": {
                 "secondary_metric_entries": [
@@ -191,7 +197,15 @@
              "default_view": "Snapshot",
              "snapshot": {
                 "chart_type": "groupChart",
-                "show_pie_chart": "true"
+                "show_pie_chart": "true",
+                "barchart": {                
+                  "bench_mark_entries": [
+                            {
+                              "display_name": "Benchmark",
+                              "value": "1"
+                            }
+                      ]
+                }
             }
           }
         },
@@ -296,18 +310,6 @@
           "column": "asr",
           "name": "ASR",
           "renderType": "number"
-        }
-      ],
-      "bench_mark_entries": [
-        {
-          "view_column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
-          "display_name": "Ratio Benchmark",
-          "value": "1"
-        },
-        {
-          "view_column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
-          "display_name": "Relative Differential Benchmark",
-          "value": "1"
         }
       ],
       "map": {
