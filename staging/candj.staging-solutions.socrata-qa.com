@@ -1355,7 +1355,7 @@
               "show_timeline_total":"false"
             }
           }
-        },
+        }
       ],
       "filter_by_entries":[
 
