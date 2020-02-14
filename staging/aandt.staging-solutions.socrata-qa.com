@@ -123,9 +123,9 @@
                       "precision": "",
                       "prefix": "",
                       "suffix": ""
-                    },
-                    "default_secondary_metric": "Number of sales"
+                    }
                 ],
+                "default_secondary_metric": "Number of sales",
                 "bench_mark_entries": [
                     {
                       "name": "1.0",
