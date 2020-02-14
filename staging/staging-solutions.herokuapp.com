@@ -166,7 +166,19 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount"
+                "default_secondary_metric": "Approved Amount",
+                "bench_mark_entries": [
+                {
+                  "column": "actual_amount",
+                  "name": "Actual amount",
+                  "value": "10000000"
+                },
+                {
+                  "column": "actual_amount",
+                  "name": "Actual amount 1",
+                  "value": "110000000"
+                 }
+                ]
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -187,7 +199,19 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount"
+                "default_secondary_metric": "Approved Amount",
+                "bench_mark_entries": [
+                {
+                  "column": "actual_amount",
+                  "name": "Actual amount",
+                  "value": "10000000"
+                },
+                {
+                  "column": "actual_amount",
+                  "name": "Actual amount 1",
+                  "value": "110000000"
+                 }
+                ]
               }
             }
           },
@@ -252,18 +276,6 @@
           },
           "prefix": "$",
           "precision": "2"
-        }
-      ],
-      "bench_mark_entries": [
-        {
-          "view_column": "actual_amount",
-          "display_name": "Actual amount",
-          "value": "10000000"
-        },
-        {
-          "view_column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
-          "display_name": "Relative Differential Benchmark",
-          "value": "1"
         }
       ],
       "filter_by_entries": [
