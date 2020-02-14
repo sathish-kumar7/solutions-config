@@ -15,15 +15,15 @@
       "name": "Clermont County Property Data",
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
-      "dataset_id": "rf3x-u64k",
+      "dataset_id": "n3pu-983n",
       "parent_queries": [
-        "select *,:@computed_region_5ynq_aczk,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
+        "select *,sua5_m9tm_objectid,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
       "fields": {
         "date_column": "saledt",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
-        "5ynq-aczk": ":@computed_region_5ynq_aczk"
+        "sua5-m9tm": "sua5_m9tm_objectid"
       },
       "dimension_entries": [
         {
@@ -89,54 +89,54 @@
           "tags": [
             "Sales"
           ],
-          "visualization": {   
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true",
-                "show_scatterplot_range_bar": "true",
-                "barchart": {
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true",
+              "barchart": {
                 "secondary_metric_entries": [
-                        {
-                          "column": "parid",
-                          "name": "Number of Sales",
-                          "aggregate_type": "count",
-                          "prefix": "",
-                          "suffix": "",
-                          "precision": "0",
-                          "render_type": "bullet"
-                        }                
-                    ],
-                      "bench_mark_entries": [
-                        {
-                          "name": "1.0",
-                          "value": "1"
-                        }
-                      ]
-                },
-                "scatterplot": {
+                  {
+                    "column": "parid",
+                    "name": "Number of Sales",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "name": "1.0",
+                    "value": "1"
+                  }
+                ]
+              },
+              "scatterplot": {
                 "secondary_metric_entries": [
-                    {
-                      "column": "parid",
-                      "name": "Number of sales",
-                      "aggregate_type": "count",
-                      "precision": "",
-                      "prefix": "",
-                      "suffix": ""
-                    }
+                  {
+                    "column": "parid",
+                    "name": "Number of sales",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
                 ],
                 "default_secondary_metric": "Number of sales",
                 "bench_mark_entries": [
-                    {
-                      "name": "1.0",
-                      "value": "1"
-                    }
-                  ]
+                  {
+                    "name": "1.0",
+                    "value": "1"
+                  }
+                ]
               }
             }
           },
-        "target_entries": [
-        {
+          "target_entries": [
+            {
               "name": "Meets Standard",
               "color": "#259652",
               "operator": "<",
@@ -162,11 +162,11 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true",
-                "show_scatterplot_range_bar": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
             }
           }
         },
@@ -182,10 +182,10 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -201,18 +201,18 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true",
-                "barchart": {                
-                  "bench_mark_entries": [
-                            {
-                              "name": "Benchmark",
-                              "value": "1"
-                            }
-                      ]
-                }
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "barchart": {
+                "bench_mark_entries": [
+                  {
+                    "name": "Benchmark",
+                    "value": "1"
+                  }
+                ]
+              }
             }
           }
         },
@@ -227,12 +227,12 @@
           "tags": [
             "Sales"
           ],
-          "visualization": { 
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true",
-                "show_scatterplot_range_bar": "true"
+          "visualization": {
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
             }
           }
         },
@@ -248,10 +248,10 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -267,10 +267,10 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
             }
           }
         }
@@ -280,7 +280,7 @@
           "column": "style",
           "name": "style"
         },
-                {
+        {
           "column": "com_use",
           "name": "Commercial Use Type"
         }
@@ -351,7 +351,7 @@
       "shape_dataset_entries": [
         {
           "shape_dataset_domain": "appraisalandtax.demo.socrata.com",
-          "shape_dataset_id": "5ynq-aczk",
+          "shape_dataset_id": "sua5-m9tm",
           "shape_name": "Clermont Township Boundaries",
           "fields": {
             "shape": "the_geom",
@@ -369,7 +369,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "22ci-twx5",
       "parent_queries": [
-        
+
       ],
       "fields": {
         "date_column": "decision_date",
@@ -422,10 +422,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -440,10 +440,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -458,10 +458,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -476,10 +476,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         }
@@ -547,7 +547,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3sa7-53ay",
       "parent_queries": [
-        
+
       ],
       "fields": {
         "date_column": "tax_year",
@@ -582,10 +582,10 @@
             "New Construction"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -600,10 +600,10 @@
             "New Construction"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         }
@@ -671,7 +671,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3hre-b49k",
       "parent_queries": [
-        
+
       ],
       "fields": {
         "date_column": "sale_date",
@@ -717,10 +717,10 @@
             "Commercial"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "Snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         }
