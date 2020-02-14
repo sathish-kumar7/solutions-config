@@ -1018,12 +1018,10 @@
                 ],
                    "bench_mark_entries": [
                    {
-                    "column": "case_id",
                     "name": "Cases",
                     "value": "100"
                    },
                    {
-                    "column": "case_disposition",
                     "name": "Disposition",
                     "value": "100"
                    }
