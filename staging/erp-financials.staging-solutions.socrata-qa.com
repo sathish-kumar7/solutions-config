@@ -1272,6 +1272,9 @@
         },
         {
           "name": "Time to Hire",
+          "parent_queries": [
+            "select *"
+          ],
           "column": "date_diff_d(hiredate, positionopendate)",
           "aggregate_type": "avg",
           "prefix": "",
