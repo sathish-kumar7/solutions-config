@@ -105,7 +105,7 @@
                 "bench_mark_entries":[
                   {
                     "dimension_column":"judgeid",
-                    "display_name":"State Standard",
+                    "name":"State Standard",
                     "value":"50"
                   }
                 ]
