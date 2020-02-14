@@ -172,12 +172,7 @@
                   "column": "actual_amount",
                   "name": "Actual amount",
                   "value": "10000000"
-                },
-                {
-                  "column": "actual_amount",
-                  "name": "Actual amount 1",
-                  "value": "110000000"
-                 }
+                }
                 ]
               },
               "scatterplot": {
