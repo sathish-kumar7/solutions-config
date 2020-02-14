@@ -1272,7 +1272,7 @@
         },
         {
           "name": "Time to Hire",
-          "column": "date_diff_d(positionclosedate, positionopendate)",
+          "column": "date_diff_d(hiredate, positionopendate)",
           "aggregate_type": "avg",
           "prefix": "",
           "suffix": "",
