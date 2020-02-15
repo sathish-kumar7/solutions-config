@@ -1,7 +1,7 @@
 {
   "branding": {
-    "browser_title": "Solutions | Test",
-    "title": "Solutions - QA"
+    "browser_title": "Solutions | Test ",
+    "title": "Solutions - Test"
   },
   "tag_list": [
     "Cases",
@@ -18,7 +18,7 @@
   "date_options": {
     "type": "yearly",
     "year_start_month": "4",
-    "data_end_date": "2019-01-10"
+    "data_end_date": "2019-02-10"
   },
   "template_entries": [
     {
@@ -1628,6 +1628,20 @@
       "map": {},
       "shape_datasets": [],
       "shape_outline_dataset_entries": []
+    }
+  ],
+  "exploration_card_entries": [
+    {
+      "name": "1 Opex Budget",
+      "link": "google.com",
+      "image": "/packs/media/images/maps-b3ca5c9872939a829c826fd85423e4e3.jpg",
+      "exploration_content": "For local and neighboring properties"
+    },
+    {
+      "name": "2 Opex Budget",
+      "link": "http://google.com",
+      "image": "",
+      "exploration_content": "local and neighboring properties"
     }
   ]
 }
