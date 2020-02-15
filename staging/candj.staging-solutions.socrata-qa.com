@@ -2283,7 +2283,7 @@
       "name":"Court Operations",
       "dataset_domain":"courtsandjustice.demo.socrata.com",
       "dataset_id":"hqva-gm7v",
-      "default_view":"Snapshot",
+      "default_view":"snapshot",
       "fields":{
         "date_column":"disposition_date"
       },
