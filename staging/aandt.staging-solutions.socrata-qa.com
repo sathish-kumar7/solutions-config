@@ -112,6 +112,11 @@
                   {
                     "name": "1.0",
                     "value": "1"
+                  },
+                  {
+                    "name": "20% Variance",
+                    "value": "1.2",
+                    "value1": "0.8"
                   }
                 ]
               },
@@ -131,6 +136,11 @@
                   {
                     "name": "1.0",
                     "value": "1"
+                  },
+                  {
+                    "name": "20% Variance",
+                    "value": "1.2",
+                    "value1": "0.8"
                   }
                 ]
               }
