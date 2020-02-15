@@ -128,7 +128,7 @@
           }
         },
         {
-          "name":"Clearance Rate (Choropleth view)",
+          "name":"Clearance Rate",
           "column":"sum(case(isactive='false', 1))/sum(case(isactive='true', 1))*100",
           "aggregate_type":"",
           "use_dimension_value":"true",
