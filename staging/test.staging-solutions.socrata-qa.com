@@ -84,7 +84,19 @@
                     "suffix": "categories"
                   }
                 ],
-                "default_secondary_metric": "Program"
+                "default_secondary_metric": "Program",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "4000",
+                    "value1": "5000"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "2500",
+                    "value1": "3500"
+                  }
+                ]
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -105,7 +117,19 @@
                     "suffix": "categories"
                   }
                 ],
-                "default_secondary_metric": "Category"
+                "default_secondary_metric": "Category",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "4000",
+                    "value1": "5000"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "2500",
+                    "value1": "3500"
+                  }
+                ]
               }
             }
           },
@@ -1028,7 +1052,19 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Case Disposition"
+                "default_secondary_metric": "Case Disposition",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "400",
+                    "value1": "500"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "250",
+                    "value1": "350"
+                  }
+                ]
               },
               "burn_up": {
                 "secondary_metric_entries": [
@@ -1049,7 +1085,19 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Case Disposition"
+                "default_secondary_metric": "Cases",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "400",
+                    "value1": "500"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "250",
+                    "value1": "350"
+                  }
+                ]
               }
             }
           },
