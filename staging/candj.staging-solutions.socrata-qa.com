@@ -3,6 +3,14 @@
     "browser_title":"Solutions | C&J ",
     "title":"Solutions - Courts and Justice"
   },
+  "exploration_card_entries": [
+    {
+      "name": "Courts and Justice",
+      "link": "courtsandjustice.demo.socrata.com",
+      "image": "https://www.tylertech.com/Portals/0/Images/Products/ODYSSEY-Courts-Justice-Solution.jpg?ver=2018-09-19-115543-363?format=jpg&quality=80",
+      "exploration_content": "Court Operations"
+    }
+  ],
   "tag_list":[
     "Overview",
     "Clearance Rate",
