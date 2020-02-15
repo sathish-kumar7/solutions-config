@@ -473,6 +473,67 @@
           }
         },
         {
+          "name":"Outgoing Cases",
+          "column":"sum(case(isactive='false', 1))",
+          "aggregate_type":"",
+          "use_dimension_value":"true",
+          "precision":"0",
+          "prefix":"",
+          "suffix":"events",
+          "tags":[
+            "Clearance Rate"
+          ],
+          "target_entries":[
+
+          ],
+          "visualization":{
+            "default_view":"overtime",
+            "snapshot":{
+              "chart_type":"groupChart",
+              "show_pie_chart":"true",
+              "barchart":{
+                "secondary_metric_entries":[
+                  {
+                    "name":"Incoming Cases",
+                    "column":"sum(case(isactive='true', 1))",
+                    "aggregate_type":"",
+                    "render_type":"bullet",
+                    "precision":"0",
+                    "prefix":"",
+                    "suffix":"events"
+                  },
+                  {
+                    "name":"Event Status Mapping Code",
+                    "column":"eventstatusmappingcodede",
+                    "aggregate_type":"",
+                    "render_type":"stack",
+                    "precision":"0",
+                    "prefix":"",
+                    "suffix":"events"
+                  }
+                ]
+              }
+            },
+            "overtime":{
+              "default_view":"timeline",
+              "show_area_chart":"true",
+              "show_timeline_total":"false",
+              "timeline":{
+                "secondary_metric_entries":[
+                  {
+                    "name":"Incoming Cases",
+                    "column":"sum(case(isactive='true', 1))",
+                    "aggregate_type":"",
+                    "precision":"0",
+                    "prefix":"",
+                    "suffix":"events"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
           "name":"Outgoing Cases: Entry of Judgement",
           "column":"sum(case(eventstatusmappingcodede='Jury Trial Disposition' or eventstatusmappingcodede='Non-Trial Disposition' or eventstatusmappingcodede='Bench/Non-Jury Trial Disposition' , 1))",
           "aggregate_type":"",
@@ -635,6 +696,67 @@
               }
             },
             "overtime":{
+              "show_area_chart":"true",
+              "show_timeline_total":"false",
+              "timeline":{
+                "secondary_metric_entries":[
+                  {
+                    "name":"Outgoing Cases",
+                    "column":"sum(case(isactive='false', 1))",
+                    "aggregate_type":"",
+                    "precision":"0",
+                    "prefix":"",
+                    "suffix":"events"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name":"Incoming Cases",
+          "column":"sum(case(isactive='true', 1))",
+          "aggregate_type":"",
+          "use_dimension_value":"true",
+          "precision":"0",
+          "prefix":"",
+          "suffix":"events",
+          "tags":[
+            "Clearance Rate"
+          ],
+          "target_entries":[
+
+          ],
+          "visualization":{
+            "default_view":"overtime",
+            "snapshot":{
+              "chart_type":"groupChart",
+              "show_pie_chart":"true",
+              "barchart":{
+                "secondary_metric_entries":[
+                  {
+                    "name":"Outgoing Cases",
+                    "column":"sum(case(isactive='false', 1))",
+                    "aggregate_type":"",
+                    "render_type":"bullet",
+                    "precision":"0",
+                    "prefix":"",
+                    "suffix":"events"
+                  },
+                  {
+                    "name":"Event Status Mapping Code",
+                    "column":"eventstatusmappingcodede",
+                    "aggregate_type":"",
+                    "render_type":"stack",
+                    "precision":"0",
+                    "prefix":"",
+                    "suffix":"events"
+                  }
+                ]
+              }
+            },
+            "overtime":{
+              "default_view":"timeline",
               "show_area_chart":"true",
               "show_timeline_total":"false",
               "timeline":{
