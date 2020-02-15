@@ -50,7 +50,7 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "show_pie_chart": "true",
               "default_comparison_column_entry": "program",
@@ -140,7 +140,7 @@
           "precision": "2",
           "suffix": "Total",
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
@@ -224,9 +224,10 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Pie Chart",
+            "default_view": "snapshot",
             "snapshot": {
-              "show_pie_chart": "true"
+              "show_pie_chart": "true",
+              "default_view": "piechart"
             }
           },
           "quick_filters": [
@@ -247,22 +248,13 @@
           "aggregate_type": "sum",
           "use_dimension_value": "true",
           "visualization": {
-            "default_view": "Over Time"
+            "default_view": "snapshot",
+            "snapshot": {
+                "default_view": "scatterplot"
+            }
           },
           "prefix": "$",
           "precision": "2"
-        }
-      ],
-      "bench_mark_entries": [
-        {
-          "view_column": "actual_amount",
-          "display_name": "Actual amount",
-          "value": "10000000"
-        },
-        {
-          "view_column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
-          "display_name": "Relative Differential Benchmark",
-          "value": "1"
         }
       ],
       "filter_by_entries": [
@@ -429,7 +421,7 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "show_pie_chart": "true",
               "barchart": {
@@ -505,7 +497,10 @@
           "prefix": "$",
           "suffix": "dollar",
           "visualization": {
-            "default_view": "Scatterplot"
+            "default_view": "snapshot",
+            "snapshot": {
+                "default_view": "scatterplot"
+            }
           },
           "precision": "2"
         }
@@ -566,8 +561,9 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Pie Chart",
+            "default_view": "snapshot",
             "snapshot": {
+              "default_view": "piechart",
               "barchart": {
                 "secondary_metric_entries": [
                   {
@@ -607,7 +603,10 @@
           "prefix": "$",
           "precision": "2",
           "visualization": {
-            "default_view": "Pie Chart"
+            "default_view": "snapshot",
+            "snapshot": {
+                "default_view": "piechart"
+            }
           },
           "tags": [
             "Cases",
@@ -675,7 +674,10 @@
             "Districts and counties"
           ],
           "visualization": {
-            "default_view": "Scatterplot"
+            "default_view": "snapshot",
+            "snapshot": {
+                "default_view": "scatterplot"
+            }
           }
         }
       ],
@@ -749,7 +751,10 @@
             "Districts and counties"
           ],
           "visualization": {
-            "default_view": "Map",
+            "default_view": "map",
+            "map": {
+                "default_view": "point"
+            },
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -780,7 +785,10 @@
             "Districts and counties"
           ],
           "visualization": {
-            "default_view": "Map",
+            "default_view": "map",
+            "map": {
+                "default_view": "choropleth"    
+            },   
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -793,7 +801,10 @@
           "precision": "2",
           "prefix": "$",
           "visualization": {
-            "default_view": "Over Time",
+            "default_view": "overtime",
+            "overtime": {
+                "default_view": "timeline"
+            },
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -933,7 +944,7 @@
           "prefix": "",
           "suffix": "incidents",
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
@@ -1257,7 +1268,10 @@
           "aggregate_type": "avg",
           "precision": "2",
           "visualization": {
-            "default_view": "Map",
+            "default_view": "map",
+            "map": {
+                "default_view": "heat"
+            },
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1283,7 +1297,7 @@
           "aggregate_type": "median",
           "precision": "2",
           "visualization": {
-            "default_view": "Map",
+            "default_view": "map",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1296,7 +1310,10 @@
           "precision": "2",
           "prefix": "$",
           "visualization": {
-            "default_view": "Map",
+            "default_view": "overtime",
+            "overtime": {
+                "default_view": "burn_up"
+            },
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1411,7 +1428,7 @@
           "aggregate_type": "avg",
           "precision": "2",
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1423,7 +1440,10 @@
           "aggregate_type": "",
           "precision": "2",
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "overtime",
+            "overtime": {
+                "default_view": "area"
+            },
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1449,7 +1469,7 @@
           "aggregate_type": "",
           "precision": "2",
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -1549,7 +1569,7 @@
           "column": "entry_type",
           "aggregate_type": "count",
           "visualization": {
-            "default_view": "Table"
+            "default_view": "table"
           },
           "precision": "",
           "target_entries": [
