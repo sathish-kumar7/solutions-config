@@ -17,7 +17,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "n3pu-983n",
       "parent_queries": [
-        "select * where sales_validity='0'",
+        "select * where sale_validity='0'",
         "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
       "fields": {
@@ -81,7 +81,7 @@
       "view_entries": [
         {
           "name": "Average Sales Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
+          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
           "precision": "2",
           "prefix": "",
@@ -192,7 +192,7 @@
         },
         {
           "name": "Price Relative Differential",
-          "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
+          "column": "avg(asr)/(   sum(sale_appr_value)/sum(price)    )",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
@@ -219,7 +219,7 @@
         },
         {
           "name": "Median Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
+          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
           "use_dimension_value": "true",
           "precision": "2",
@@ -239,7 +239,7 @@
         },
         {
           "name": "Estimated Total Market Value",
-          "column": "estimated_total_market_value",
+          "column": "sale_appr_value",
           "aggregate_type": "sum",
           "stack_column": "land_use_type",
           "precision": "0",
@@ -296,7 +296,7 @@
           "name": "Style"
         },
         {
-          "column": "estimated_total_market_value",
+          "column": "sale_appr_value",
           "name": "Estimated Total Market Value"
         },
         {
@@ -305,7 +305,7 @@
         },
         {
           "name": "Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)"
+          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)"
         }
       ],
       "quick_filter_entries": [
