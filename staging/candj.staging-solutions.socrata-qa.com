@@ -107,7 +107,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -144,7 +144,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -221,7 +221,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -299,7 +299,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -376,7 +376,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -436,7 +436,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -496,7 +496,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -556,7 +556,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -616,7 +616,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -676,7 +676,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -736,7 +736,7 @@
 
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
@@ -815,7 +815,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -860,7 +860,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -905,7 +905,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -950,7 +950,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -995,7 +995,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1040,7 +1040,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1085,7 +1085,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1130,7 +1130,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1175,7 +1175,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1220,7 +1220,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1265,7 +1265,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1310,7 +1310,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1355,7 +1355,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true"
@@ -1524,7 +1524,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1572,7 +1572,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1623,7 +1623,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1674,7 +1674,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1725,7 +1725,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1776,7 +1776,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1827,7 +1827,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1878,7 +1878,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1929,7 +1929,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -1980,7 +1980,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -2031,7 +2031,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -2082,7 +2082,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -2133,7 +2133,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -2184,7 +2184,7 @@
             }
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"groupChart",
               "barchart":{
@@ -2354,7 +2354,7 @@
             "Trial Date Certainty"
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"barChart"
             }
@@ -2374,7 +2374,7 @@
             "Trial Date Certainty"
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"barChart"
             }
@@ -2394,7 +2394,7 @@
             "Trial Date Certainty"
           ],
           "visualization":{
-            "default_view":"Snapshot",
+            "default_view":"snapshot",
             "snapshot":{
               "chart_type":"barChart",
               "barchart":{
