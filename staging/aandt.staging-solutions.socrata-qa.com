@@ -17,7 +17,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "n3pu-983n",
       "parent_queries": [
-        "select * where sales_validity='0',
+        "select * where sales_validity='0'",
         "select *,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
       "fields": {
