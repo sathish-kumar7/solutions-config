@@ -99,7 +99,7 @@
             "Sales"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true",
@@ -181,7 +181,7 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true",
@@ -201,7 +201,7 @@
             "Sales"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true"
@@ -220,7 +220,7 @@
             "Sales"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true",
@@ -247,7 +247,7 @@
             "Sales"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true",
@@ -267,7 +267,7 @@
             "Sales"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true"
@@ -286,7 +286,7 @@
             "Sales"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true"
@@ -441,7 +441,7 @@
             "Appeals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "true"
@@ -459,7 +459,7 @@
             "Appeals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "true"
@@ -477,7 +477,7 @@
             "Appeals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "true"
@@ -495,7 +495,7 @@
             "Appeals"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "true"
@@ -601,7 +601,7 @@
             "New Construction"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "true"
@@ -619,7 +619,7 @@
             "New Construction"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "true"
@@ -736,9 +736,9 @@
             "Commercial"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "barChart",
+              "chart_type": "groupChart",
               "show_pie_chart": "true"
             }
           }
