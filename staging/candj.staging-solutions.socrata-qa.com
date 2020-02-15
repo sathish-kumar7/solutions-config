@@ -1390,7 +1390,8 @@
       "map":{
         "centerLat":"44.40861110588011",
         "centerLng":"-115.16737594966821",
-        "zoom":"3",
+        "zoom":"5",
+        "mini_map_zoom": "4",
         "shapes_outline_highlight_width":"4",
         "style_entries":[
           {
