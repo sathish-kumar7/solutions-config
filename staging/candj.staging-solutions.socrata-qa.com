@@ -128,6 +128,57 @@
           }
         },
         {
+          "name":"Clearance Rate",
+          "column":"sum(case(isactive='false', 1))/sum(case(isactive='true', 1))*100",
+          "aggregate_type":"",
+          "use_dimension_value":"true",
+          "precision":"2",
+          "prefix":"",
+          "suffix":"%",
+          "tags":[
+            "Clearance Rate"
+          ],
+          "target_entries":[
+            {
+              "name":"On track",
+              "color":"#259652",
+              "operator":">=",
+              "value":"80",
+              "icon":"icons-check-circle",
+              "target_entry_description":"Clearance rates are on-track"
+            },
+            {
+              "name":"Off track",
+              "color":"#e31219",
+              "icon":"icons-times-circle",
+              "target_entry_description":"Clearance rates are off-track"
+            }
+          ],
+          "visualization":{
+            "default_view":"map",
+            "map":{
+                "default_view":"choropleth"
+            },
+            "snapshot":{
+              "chart_type":"groupChart",
+              "show_pie_chart":"true",
+              "barChart": {
+                "bench_mark_entries":[
+                  {
+                    "column":"judgeid",
+                    "name":"State Standard",
+                    "value":"50"
+                  }
+                ]
+              }
+            },
+            "overtime":{
+              "show_area_chart":"true",
+              "show_timeline_total":"false"
+            }
+          }
+        },
+        {
           "name":"Beginning Active Pending Backlog",
           "column":"casebacklog",
           "aggregate_type":"sum",
