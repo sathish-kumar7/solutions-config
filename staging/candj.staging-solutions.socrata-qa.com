@@ -2237,6 +2237,11 @@
           "column":"casetypedescription",
           "name":"Case Type",
           "renderType":"text"
+        },
+        {
+          "column": "timetodisposition",
+          "name": "Time to Disposition",
+          "renderType": "number"
         }
       ],
       "map":{
