@@ -55,7 +55,7 @@
             "Financials"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
                 "chart_type": "barChart",
                 "show_pie_chart": "false",
@@ -190,7 +190,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
                 "chart_type": "barChart",
                 "show_pie_chart": "false",
@@ -340,7 +340,7 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
                 "chart_type": "barChart",
                 "show_pie_chart": "false",
@@ -465,7 +465,7 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "false"
@@ -487,7 +487,7 @@
           ],
           "target_entries": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -573,7 +573,7 @@
             "Financials"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
                 "chart_type": "barChart",
                 "show_pie_chart": "false",
@@ -740,7 +740,7 @@
             "Financials"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -898,7 +898,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
                 "chart_type": "barChart",
                 "show_pie_chart": "false",
@@ -983,7 +983,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "snapshot"
           },
           "quick_filters": [
             {
@@ -1015,7 +1015,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "snapshot"
           }
         }
         ],
@@ -1082,7 +1082,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
@@ -1153,7 +1153,7 @@
             
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
@@ -1211,7 +1211,7 @@
             
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
@@ -1265,7 +1265,7 @@
             
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
@@ -1320,7 +1320,7 @@
             
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
@@ -1379,7 +1379,7 @@
             
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
@@ -1438,7 +1438,7 @@
             
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
