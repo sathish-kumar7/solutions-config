@@ -67,7 +67,7 @@
             "Community Development"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -102,7 +102,7 @@
             "Community Development"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -137,7 +137,7 @@
             "Community Development"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -175,7 +175,7 @@
             "Community Development"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -207,7 +207,7 @@
             "Community Development"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             },
@@ -334,7 +334,7 @@
             "Inspections"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             },
@@ -365,7 +365,7 @@
             "Inspections"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -399,7 +399,7 @@
             "Inspections"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -535,7 +535,7 @@
             "Business Services"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -567,7 +567,7 @@
             "Business Services"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -584,7 +584,7 @@
             "Business Services"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -701,7 +701,7 @@
             "Code Enforcement"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
             }
