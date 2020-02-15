@@ -1274,6 +1274,11 @@
             },
             "snapshot": {
               "chart_type": "groupChart"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_timeline_total": "true",
+              "show_burn_up_chart": "true"
             }
           },
           "target_entries": [
@@ -1311,11 +1316,14 @@
           "prefix": "$",
           "visualization": {
             "default_view": "overtime",
-            "overtime": {
-                "default_view": "burn_up"
-            },
             "snapshot": {
               "chart_type": "groupChart"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_timeline_total": "true",
+              "show_burn_up_chart": "true",
+              "default_view": "burn_up"
             }
           }
         }
@@ -1441,11 +1449,14 @@
           "precision": "2",
           "visualization": {
             "default_view": "overtime",
-            "overtime": {
-                "default_view": "area"
-            },
             "snapshot": {
               "chart_type": "groupChart"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_timeline_total": "true",
+              "show_burn_up_chart": "true",
+              "default_view": "area"
             }
           },
           "target_entries": [
