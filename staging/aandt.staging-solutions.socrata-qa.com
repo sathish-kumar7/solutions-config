@@ -12,7 +12,7 @@
   ],
   "template_entries": [
     {
-      "name": "Clermont County Property Data",
+      "name": "Cobb County Property Data",
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "n3pu-983n",
@@ -320,10 +320,10 @@
         }
       ],
       "map": {
-        "centerLat": "39.018425261608655",
-        "centerLng": "-84.00102962486125",
-        "zoom": "7",
-        "mini_map_zoom": "7",
+        "centerLat": "33.9123902,",
+        "centerLng": "-84.6976079",
+        "zoom": "10",
+        "mini_map_zoom": "10",
         "shapes_outline_highlight_width": "4",
         "style_entries": [
           {
@@ -352,7 +352,7 @@
         {
           "shape_dataset_domain": "appraisalandtax.demo.socrata.com",
           "shape_dataset_id": "sua5-m9tm",
-          "shape_name": "Clermont Township Boundaries",
+          "shape_name": "Cobb County City Boundaries",
           "fields": {
             "shape": "the_geom",
             "shape_id": "objectid",
