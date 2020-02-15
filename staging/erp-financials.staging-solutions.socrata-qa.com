@@ -74,7 +74,7 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -178,7 +178,7 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true"
@@ -200,7 +200,7 @@
           ],
           "target_entries": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -286,7 +286,7 @@
             "Budget & Expenditures"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -424,7 +424,7 @@
             "Budget & Expenditures"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -605,7 +605,7 @@
             "Financials"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -743,7 +743,7 @@
             "Revenue & Tax"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -903,7 +903,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -956,7 +956,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "snapshot"
           },
           "quick_filters": [
             {
@@ -988,7 +988,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "snapshot"
           },
           "quick_filters": []
         }
@@ -1056,7 +1056,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1077,7 +1077,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1149,7 +1149,7 @@
             "Budget & Expenditures"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1208,7 +1208,7 @@
             "Budget & Expenditures"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1263,7 +1263,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1282,7 +1282,7 @@
           "precision": "0",
           "tags": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1338,7 +1338,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1398,7 +1398,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -1458,7 +1458,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
