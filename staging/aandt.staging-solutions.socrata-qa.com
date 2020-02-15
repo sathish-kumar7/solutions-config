@@ -101,6 +101,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+              "default_view": "scatterplot",
               "chart_type": "groupChart",
               "show_pie_chart": "true",
               "show_scatterplot_range_bar": "true",
@@ -129,6 +130,7 @@
                 ]
               },
               "scatterplot": {
+                "default_show_range": "true",
                 "secondary_metric_entries": [
                   {
                     "column": "parid",
