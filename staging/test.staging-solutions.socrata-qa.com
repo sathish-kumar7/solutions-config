@@ -102,7 +102,8 @@
                     "value": "1100",
                     "value1": "1400"
                   }
-                ]
+                ],
+                "default_bench_mark": "Department"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -141,7 +142,8 @@
                     "value": "1100",
                     "value1": "1400"
                   }
-                ]
+                ],
+                "default_bench_mark": "Department"
               }
             }
           },
@@ -839,13 +841,12 @@
           "visualization": {
             "default_view": "snapshot",
             "overtime": {
-              "default_view": "timeline",
               "timeline": {
                 "show_total": "true",
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year"
+                "default_time_frame": "year-on-year"
                 }
               },
               "snapshot": {
@@ -1042,7 +1043,8 @@
                     "value": "1100",
                     "value1": "1400"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -1081,7 +1083,8 @@
                     "value": "1100",
                     "value1": "1400"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               }
             },
             "overtime": {
@@ -1094,7 +1097,7 @@
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year",
+                "default_time_frame": "year-on-year",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1131,14 +1134,15 @@
                     "value": "1100",
                     "value1": "1400"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               },
               "burn_up": {
                 "show_total": "true",
                 "show_dimensions": "false",
                 "default_show_projection": "false",
                 "default_compare_year": "",
-                "default_time_frame": "Rolling",
+                "default_time_frame": "rolling",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1175,7 +1179,8 @@
                     "value": "1100",
                     "value1": "1400"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               }
             }
           },
@@ -1459,7 +1464,7 @@
                 "show_dimensions": "false",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year"
+                "default_time_frame": "year-on-year"
               }
             }
           }
