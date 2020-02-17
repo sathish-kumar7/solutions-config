@@ -95,6 +95,12 @@
                     "name": "Bench mark 2",
                     "value": "2500",
                     "value1": "3500"
+                  },
+                  {
+                    "column": "department",
+                    "name": "Department",
+                    "value": "1100",
+                    "value1": "1400"
                   }
                 ]
               },
@@ -128,6 +134,12 @@
                     "name": "Bench mark 2",
                     "value": "2500",
                     "value1": "3500"
+                  },
+                  {
+                    "column": "department",
+                    "name": "Department",
+                    "value": "1100",
+                    "value1": "1400"
                   }
                 ]
               }
@@ -1016,6 +1028,12 @@
                     "name": "Bench mark 2",
                     "value": "250",
                     "value1": "350"
+                  },
+                  {
+                    "column": "case_disposition",
+                    "name": "Disposition",
+                    "value": "1100",
+                    "value1": "1400"
                   }
                 ]
               },
@@ -1042,13 +1060,19 @@
                 "bench_mark_entries": [
                   {
                     "name": "Bench mark 1",
-                    "value": "400",
-                    "value1": "500"
+                    "value": "1400",
+                    "value1": "1800"
                   },
                   {
                     "name": "Bench mark 2",
-                    "value": "250",
-                    "value1": "350"
+                    "value": "1250",
+                    "value1": "1350"
+                  },
+                  {
+                    "column": "case_disposition",
+                    "name": "Disposition",
+                    "value": "1100",
+                    "value1": "1400"
                   }
                 ]
               }
@@ -1080,13 +1104,19 @@
                 "bench_mark_entries": [
                   {
                     "name": "Bench mark 1",
-                    "value": "400",
-                    "value1": "500"
+                    "value": "1400",
+                    "value1": "1500"
                   },
                   {
                     "name": "Bench mark 2",
-                    "value": "250",
-                    "value1": "350"
+                    "value": "1250",
+                    "value1": "1350"
+                  },
+                  {
+                    "column": "case_disposition",
+                    "name": "Disposition",
+                    "value": "1100",
+                    "value1": "1400"
                   }
                 ]
               },
@@ -1120,6 +1150,12 @@
                     "name": "Bench mark 2",
                     "value": "250",
                     "value1": "350"
+                  },
+                  {
+                    "column": "case_disposition",
+                    "name": "Disposition",
+                    "value": "1100",
+                    "value1": "1400"
                   }
                 ]
               }
