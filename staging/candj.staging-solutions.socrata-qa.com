@@ -506,8 +506,8 @@
         },
         {
           "name":"Outgoing Cases",
-          "column":"sum(casenumber)",
-          "aggregate_type":"sum",
+          "column":"casenumber",
+          "aggregate_type":"count",
           "use_dimension_value":"true",
           "precision":"0",
           "prefix":"",
@@ -694,7 +694,7 @@
         {
           "name":"Incoming Cases",
           "column":"casenumber",
-          "aggregate_type":"sum",
+          "aggregate_type":"count",
           "use_dimension_value":"true",
           "precision":"0",
           "prefix":"",
