@@ -298,6 +298,24 @@
               "show_pie_chart": "true"
             }
           }
+        },{
+          "name": "% Parcels Sold",
+          "column": "(count(case(saledt is not null,1,0))/(count *))::double*100",
+          "aggregate_type": "",
+          "stack_column": "land_use_type",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Sales"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
         }
       ],
       "filter_by_entries": [
