@@ -141,6 +141,7 @@
                     "suffix": ""
                   }
                 ],
+                "default_bench_mark": "20% Variance",
                 "default_secondary_metric": "Number of sales",
                 "bench_mark_entries": [
                   {
