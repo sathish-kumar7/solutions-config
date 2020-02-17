@@ -837,7 +837,7 @@
           "precision": "2",
           "prefix": "$",
           "visualization": {
-            "default_view": "overtime",
+            "default_view": "snapshot",
             "overtime": {
               "default_view": "timeline",
               "timeline": {
@@ -845,23 +845,13 @@
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year",
-                "secondary_metric_entries": [
-                  {
-                    "column": "county",
-                    "name": "County",
-                    "aggregate_type": "count",
-                    "precision": "",
-                    "prefix": "",
-                    "suffix": "county"
-                  }
-                ],
-                "default_secondary_metric": "County"
+                "default_time_frame": "Year-on-year"
               }
             }
           },
           "snapshot": {
-            "chart_type": "groupChart"
+            "chart_type": "groupChart",
+            "default_view": "scatterplot"
           }
         }
       ],
@@ -998,11 +988,11 @@
           "prefix": "",
           "suffix": "incidents",
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
-              "default_group_by_entry_column": "agency_name"
+              "default_group_by_entry_column": "agency_name",
               "show_pie_chart": "true",
               "barchart": {
                 "secondary_metric_entries": [
@@ -1098,6 +1088,7 @@
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
+              "default_view": "timeline",
               "timeline": {
                 "show_total": "true",
                 "show_dimensions": "true",
@@ -1468,18 +1459,7 @@
                 "show_dimensions": "false",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year",
-                "secondary_metric_entries": [
-                  {
-                    "column": "style",
-                    "name": "Style",
-                    "aggregate_type": "count",
-                    "precision": "",
-                    "prefix": "",
-                    "suffix": ""
-                  }
-                ],
-                "default_secondary_metric": "Style"
+                "default_time_frame": "Year-on-year"
               }
             }
           }
