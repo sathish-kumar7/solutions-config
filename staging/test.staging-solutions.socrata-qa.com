@@ -1002,8 +1002,7 @@
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
-              "default_group_by_entry_column": "agency_name",
-              "default_comparison_column_entry": "case_disposition",
+              "default_group_by_entry_column": "agency_name"
               "show_pie_chart": "true",
               "barchart": {
                 "secondary_metric_entries": [
