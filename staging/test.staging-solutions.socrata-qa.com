@@ -1082,6 +1082,11 @@
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
               "timeline": {
+                "show_total": "true",
+                "show_dimensions": "true",
+                "default_show_projection": "true",
+                "default_compare_year": "2015",
+                "default_time_frame": "Year-on-year",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1121,6 +1126,11 @@
                 ]
               },
               "burn_up": {
+                "show_total": "true",
+                "show_dimensions": "false",
+                "default_show_projection": "false",
+                "default_compare_year": "",
+                "default_time_frame": "Rolling",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1381,7 +1391,11 @@
                 "default_view": "heat"
             },
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "show_scatterplot_range_bar": "true",
+              "scatterplot": {
+                  "default_show_range": "true"
+              }
             },
             "overtime": {
               "show_area_chart": "true",
