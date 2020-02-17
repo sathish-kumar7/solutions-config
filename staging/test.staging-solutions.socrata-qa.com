@@ -837,7 +837,7 @@
           "precision": "2",
           "prefix": "$",
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "overtime": {
               "default_view": "timeline",
               "timeline": {
@@ -845,13 +845,23 @@
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year"
-                }
-            },
-              "snapshot": {
-                "chart_type": "groupChart",
-                "default_view": "scatterplot"
+                "default_time_frame": "Year-on-year",
+                "secondary_metric_entries": [
+                  {
+                    "column": "county",
+                    "name": "County",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": "county"
+                  }
+                ],
+                "default_secondary_metric": "County"
               }
+            }
+          },
+          "snapshot": {
+            "chart_type": "groupChart"
           }
         }
       ],
@@ -988,7 +998,7 @@
           "prefix": "",
           "suffix": "incidents",
           "visualization": {
-            "default_view": "overtime",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
@@ -1089,7 +1099,6 @@
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
-              "default_view": "timeline",
               "timeline": {
                 "show_total": "true",
                 "show_dimensions": "true",
@@ -1186,8 +1195,8 @@
               "column": "reported_date_time",
               "field": "quick_filter_5_qs3a_3222_0",
               "dateRange": {
-                "start_date": "2019-12-01",
-                "end_date": "2019-12-30"
+                "start_date": "2018-10-01",
+                "end_date": "2018-12-30"
               }
             }
           ],
@@ -1460,7 +1469,18 @@
                 "show_dimensions": "false",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year"
+                "default_time_frame": "Year-on-year",
+                "secondary_metric_entries": [
+                  {
+                    "column": "style",
+                    "name": "Style",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
+                ],
+                "default_secondary_metric": "Style"
               }
             }
           }
