@@ -122,7 +122,7 @@
               "barchart": {
                 "secondary_metric_entries": [
                   {
-                    "column": "permitid",
+                    "column": "permitnumber",
                     "name": "Number of Permits",
                     "aggregate_type": "count",
                     "prefix": "",
@@ -142,7 +142,7 @@
                 "default_show_range": "false",
                 "secondary_metric_entries": [
                   {
-                    "column": "permitid",
+                    "column": "permitnumber",
                     "name": "Number of Permits",
                     "aggregate_type": "count",
                     "precision": "",
