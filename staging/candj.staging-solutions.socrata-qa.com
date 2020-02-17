@@ -20,7 +20,7 @@
   ],
   "date":{
     "startDate":"2018-1-1",
-    "endDate":"2020-01-31"
+    "endDate":"2019-12-31"
   },
   "template_entries":[
     {
