@@ -151,6 +151,7 @@
 					"aggregate_type": "sum",
 					"prefix": "$",
 					"suffix": "",
+					"start_date_override_and_ignore":"true",
 					"precision": "2",
 					"tags": [
 						"Financials"
