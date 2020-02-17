@@ -845,14 +845,25 @@
                     "show_dimensions": "true",
                     "default_show_projection": "true",
                     "default_compare_year": "2015",
-                    "default_time_frame": "Year-on-year"
-                }
+                    "default_time_frame": "Year-on-year",
+                    "secondary_metric_entries": [
+                      {
+                        "column": "county",
+                        "name": "County",
+                        "aggregate_type": "count",
+                        "precision": "",
+                        "prefix": "",
+                        "suffix": "county"
+                      }
+                    ],
+                    "default_secondary_metric": "County"
+                  }
+               }
             },
             "snapshot": {
               "chart_type": "groupChart"
             }
           }
-        }
       ],
       "filter_by_entries": [
         {
@@ -1458,7 +1469,18 @@
                   "show_dimensions": "false",
                   "default_show_projection": "true",
                   "default_compare_year": "2015",
-                  "default_time_frame": "Year-on-year"
+                  "default_time_frame": "Year-on-year",
+                  "secondary_metric_entries": [
+                      {
+                        "column": "style",
+                        "name": "Style",
+                        "aggregate_type": "count",
+                        "precision": "",
+                        "prefix": "",
+                        "suffix": ""
+                      }
+                    ],
+                    "default_secondary_metric": "Style"
               }
             }
           }
