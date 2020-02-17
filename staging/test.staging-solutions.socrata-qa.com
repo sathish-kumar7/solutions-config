@@ -846,7 +846,7 @@
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "year-on-year"
+                "default_time_frame": "year_on_year"
                 }
               },
               "snapshot": {
@@ -1097,7 +1097,7 @@
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "year-on-year",
+                "default_time_frame": "year_on_year",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1464,7 +1464,7 @@
                 "show_dimensions": "false",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "year-on-year"
+                "default_time_frame": "year_on_year"
               }
             }
           }
