@@ -846,13 +846,13 @@
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
                 "default_time_frame": "Year-on-year"
+                }
+              },
+              "snapshot": {
+                "chart_type": "groupChart",
+                "default_view": "scatterplot"
               }
             }
-          },
-          "snapshot": {
-            "chart_type": "groupChart",
-            "default_view": "scatterplot"
-          }
         }
       ],
       "filter_by_entries": [
