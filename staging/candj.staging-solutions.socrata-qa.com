@@ -111,7 +111,7 @@
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
-              "barChart": {
+              "barchart": {
                 "bench_mark_entries":[
                   {
                     "column":"judgeid",
@@ -166,7 +166,7 @@
             "snapshot":{
               "chart_type":"groupChart",
               "show_pie_chart":"true",
-              "barChart": {
+              "barchart": {
                 "bench_mark_entries":[
                   {
                     "column":"judgeid",
