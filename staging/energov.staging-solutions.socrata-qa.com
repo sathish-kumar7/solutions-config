@@ -118,9 +118,40 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "permitid",
+                    "name": "Number of Permits",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "name": "90%",
+                    "value": "90"
+                  }
+                ]
+              },
+              "scatterplot": {
+                "default_show_range": "false",
+                "secondary_metric_entries": [
+                  {
+                    "column": "permitid",
+                    "name": "Number of Permits",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
+                ]
             }
-          },
+          }},
           "fields": {
             "date_column": "applicationdate"
           },
