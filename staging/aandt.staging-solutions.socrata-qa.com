@@ -318,7 +318,7 @@
             }
           },
           "parent_queries": [
-            "select parid, case(saledt is not null,1,true,0) as has_sold, saledt"
+            "select *, case(saledt is not null,1,true,0) as has_sold"
           ]
         }
       ],
