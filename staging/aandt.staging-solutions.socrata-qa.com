@@ -300,7 +300,7 @@
           }
         },{
           "name": "% Parcels Sold",
-          "column": "(count(case(saledt is not null,1,0))/(count *))::double*100",
+          "column": "(count(case(saledt is not null,1,true, 0))/258811)::double*100",
           "aggregate_type": "",
           "stack_column": "land_use_type",
           "precision": "0",
@@ -315,7 +315,10 @@
               "chart_type": "groupChart",
               "show_pie_chart": "true"
             }
-          }
+          },
+          "parent_queries": [
+            "select parid, case(saledt is not null,1,0) as has_sold, saledt"
+          ]
         }
       ],
       "filter_by_entries": [
