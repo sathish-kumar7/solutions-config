@@ -375,7 +375,7 @@
               "chart_type": "barChart"
             },
           "parent_queries": [
-            "select * where actual_start_to_scheduled_start is not null"
+            "select * where actual_start_to_scheduled_start > 0"
           ]
           },
           "fields": {
