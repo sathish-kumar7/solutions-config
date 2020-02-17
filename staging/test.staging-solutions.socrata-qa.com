@@ -286,7 +286,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "scatterplot"
+              "default_view": "scatterplot"
             }
           },
           "prefix": "$",
@@ -535,7 +535,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "scatterplot"
+              "default_view": "scatterplot"
             }
           },
           "precision": "2"
@@ -641,7 +641,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "piechart"
+              "default_view": "piechart"
             }
           },
           "tags": [
@@ -712,7 +712,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "scatterplot"
+              "default_view": "scatterplot"
             }
           }
         }
@@ -789,7 +789,7 @@
           "visualization": {
             "default_view": "map",
             "map": {
-                "default_view": "point"
+              "default_view": "point"
             },
             "snapshot": {
               "chart_type": "groupChart"
@@ -823,8 +823,8 @@
           "visualization": {
             "default_view": "map",
             "map": {
-                "default_view": "choropleth"    
-            },   
+              "default_view": "choropleth"
+            },
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -837,33 +837,23 @@
           "precision": "2",
           "prefix": "$",
           "visualization": {
-            "default_view": "overtime",
+            "default_view": "snapshot",
             "overtime": {
-                "default_view": "timeline",
-                "timeline": {
-                    "show_total": "true",
-                    "show_dimensions": "true",
-                    "default_show_projection": "true",
-                    "default_compare_year": "2015",
-                    "default_time_frame": "Year-on-year",
-                    "secondary_metric_entries": [
-                      {
-                        "column": "county",
-                        "name": "County",
-                        "aggregate_type": "count",
-                        "precision": "",
-                        "prefix": "",
-                        "suffix": "county"
-                      }
-                    ],
-                    "default_secondary_metric": "County"
-                  }
-               }
+              "default_view": "timeline",
+              "timeline": {
+                "show_total": "true",
+                "show_dimensions": "true",
+                "default_show_projection": "true",
+                "default_compare_year": "2015",
+                "default_time_frame": "Year-on-year"
+                }
             },
-            "snapshot": {
-              "chart_type": "groupChart"
-            }
+              "snapshot": {
+                "chart_type": "groupChart",
+                "default_view": "scatterplot"
+              }
           }
+        }
       ],
       "filter_by_entries": [
         {
@@ -998,7 +988,7 @@
           "prefix": "",
           "suffix": "incidents",
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
@@ -1099,6 +1089,7 @@
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
+              "default_view": "timeline",
               "timeline": {
                 "show_total": "true",
                 "show_dimensions": "true",
@@ -1406,13 +1397,13 @@
           "visualization": {
             "default_view": "map",
             "map": {
-                "default_view": "heat"
+              "default_view": "heat"
             },
             "snapshot": {
               "chart_type": "groupChart",
               "show_scatterplot_range_bar": "true",
               "scatterplot": {
-                  "default_show_range": "true"
+                "default_show_range": "true"
               }
             },
             "overtime": {
@@ -1465,22 +1456,11 @@
               "show_burn_up_chart": "true",
               "default_view": "burn_up",
               "burn_up": {
-                  "show_total": "true",
-                  "show_dimensions": "false",
-                  "default_show_projection": "true",
-                  "default_compare_year": "2015",
-                  "default_time_frame": "Year-on-year",
-                  "secondary_metric_entries": [
-                      {
-                        "column": "style",
-                        "name": "Style",
-                        "aggregate_type": "count",
-                        "precision": "",
-                        "prefix": "",
-                        "suffix": ""
-                      }
-                    ],
-                    "default_secondary_metric": "Style"
+                "show_total": "true",
+                "show_dimensions": "false",
+                "default_show_projection": "true",
+                "default_compare_year": "2015",
+                "default_time_frame": "Year-on-year"
               }
             }
           }
@@ -1644,7 +1624,7 @@
               "default_view": "scatterplot",
               "show_scatterplot_range_bar": "true",
               "scatterplot": {
-                  "default_show_range": "true"
+                "default_show_range": "true"
               }
             }
           }
