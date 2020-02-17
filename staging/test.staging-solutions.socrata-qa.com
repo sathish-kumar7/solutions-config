@@ -1005,7 +1005,19 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Status"
+                "default_secondary_metric": "Status",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "400",
+                    "value1": "500"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "250",
+                    "value1": "350"
+                  }
+                ]
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -1026,7 +1038,19 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Status"
+                "default_secondary_metric": "Status",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "400",
+                    "value1": "500"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "250",
+                    "value1": "350"
+                  }
+                ]
               }
             },
             "overtime": {
