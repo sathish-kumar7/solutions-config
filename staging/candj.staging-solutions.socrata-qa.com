@@ -123,7 +123,10 @@
             },
             "overtime":{
               "show_area_chart":"true",
-              "show_timeline_total":"false"
+              "show_timeline_total":"false",
+              "timeline": {
+              "show_dimensions": "true"
+              }
             }
           }
         },
@@ -174,7 +177,10 @@
             },
             "overtime":{
               "show_area_chart":"true",
-              "show_timeline_total":"false"
+              "show_timeline_total":"false",
+              "timeline": {
+              "show_dimensions": "true"
+              }
             }
           }
         },
