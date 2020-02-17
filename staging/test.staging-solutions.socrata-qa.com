@@ -839,7 +839,14 @@
           "visualization": {
             "default_view": "overtime",
             "overtime": {
-                "default_view": "timeline"
+                "default_view": "timeline",
+                "timeline": {
+                    "show_total": "true",
+                    "show_dimensions": "true",
+                    "default_show_projection": "true",
+                    "default_compare_year": "2015",
+                    "default_time_frame": "Year-on-year"
+                }
             },
             "snapshot": {
               "chart_type": "groupChart"
@@ -1445,7 +1452,14 @@
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
-              "default_view": "burn_up"
+              "default_view": "burn_up",
+              "burn_up": {
+                  "show_total": "true",
+                  "show_dimensions": "true",
+                  "default_show_projection": "true",
+                  "default_compare_year": "2015",
+                  "default_time_frame": "Year-on-year"
+              }
             }
           }
         }
