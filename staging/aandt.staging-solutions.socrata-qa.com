@@ -301,7 +301,7 @@
           }
         },{
           "name": "% Parcels Sold",
-          "column": "(count(case(saledt is not null,1,true, 0))/258811)::double*100",
+          "column": "(sum(has_sold)/258811)::double*100",
           "aggregate_type": "",
           "stack_column": "land_use_type",
           "precision": "0",
