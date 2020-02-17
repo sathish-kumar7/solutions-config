@@ -1254,8 +1254,8 @@
       "view_entries": [
         {
           "name": "Applicants per Open Position",
-          "column": "sum(applicant_id)/count(jobopeningrequisitionnumber)",
-          "aggregate_type": "",
+          "column": "applicant_id"
+          "aggregate_type": "avg",
           "prefix": "",
           "suffix": "",
           "precision": "0",
