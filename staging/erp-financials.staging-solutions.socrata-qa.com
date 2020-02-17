@@ -1254,7 +1254,7 @@
       "view_entries": [
         {
           "name": "Applicants per Open Position",
-          "column": "sum(applicant_id)/count(jobopeningrequisitionnumber)",
+          "column": "count(applicant_id)/count(distinct jobopeningrequisitionnumber)",
           "aggregate_type": "",
           "prefix": "",
           "suffix": "",
