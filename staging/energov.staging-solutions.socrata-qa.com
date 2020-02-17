@@ -706,6 +706,42 @@
               "chart_type": "groupChart"
             }
           }
+        },
+        {
+          "name": "Average Time Open",
+          "column": "opened_to_closed",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " days",
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Outstanding Balance Due",
+          "column": "balancedue",
+          "aggregate_type": "sum",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
         }
       ],
       "leaf_page_entries": [
