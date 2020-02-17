@@ -157,7 +157,7 @@
           "visualization":{
             "default_view":"map",
             "map":{
-                "default_view":"choropleth"
+              "default_view":"choropleth"
             },
             "snapshot":{
               "chart_type":"groupChart",
@@ -180,16 +180,19 @@
         },
         {
           "name":"Beginning Active Pending Backlog",
-          "column":"casebacklog",
-          "aggregate_type":"sum",
+          "column":"casenumber",
+          "aggregate_type":"count",
           "use_dimension_value":"true",
           "precision":"0",
           "prefix":"",
-          "suffix":"pending events",
+          "suffix":"pending cases",
           "end_date_override_and_ignore":"true",
           "start_date_boolean_override":"<",
           "tags":[
             "Clearance Rate"
+          ],
+          "parent_queries":[
+            "select casenumber, statusdate, nextstatusdate,  eventstatusmappingcodede, county as county_, casecategorydescription as casecategorydescription_, casetypedescription as casetypedescription_, nodedescription as nodedescription_, judgeid as judgeid_, max(case( eventstatusmappingcodede in (%27New Filing%27, %27Reopened%27) , statusdate)) over (partition by casenumber) as last_opened, max(case( eventstatusmappingcodede in (%27Reactivated%27) , statusdate)) over (partition by casenumber) as last_reactivated, max(case( eventstatusmappingcodede in (%27Bench%2FNon-Jury Trial Disposition%27, %27Jury Trial Disposition%27,  %27Non-Trial Disposition%27,  %27Placed on Inactive Status%27) , statusdate)) over (partition by casenumber) as last_closed, isopen, isactive, casebacklog %7C%3E select casenumber, max(statusdate) as last_statusdate, max(county_) as county, max(casecategorydescription_) as casecategorydescription, max(casetypedescription_) as casetypedescription, max(nodedescription_) as nodedescription, max(judgeid_) as judgeid,  sum(case(eventstatusmappingcodede%3D%27Placed on Inactive Status%27,date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d(%272019-12-31%27, max(case(last_opened is not null, last_opened, true, last_reactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber having casebacklogsum  > 0"
           ],
           "target_entries":[
 
