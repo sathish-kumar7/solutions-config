@@ -164,8 +164,9 @@
             {
               "name": "Meets Standard",
               "color": "#259652",
-              "operator": "<",
-              "value": "1.2",
+              "operator": "between",
+              "value": "0.8",
+              "to": "1.2",
               "icon": "icons-check-circle"
             },
             {
