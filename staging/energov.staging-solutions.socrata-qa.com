@@ -49,6 +49,10 @@
         {
           "column": "projectname",
           "name": "Project"
+        },
+        {
+          "column": "capitalfundproject",
+          "name": "Capital Fund Project"
         }
       ],
       "group_by_entries": [
