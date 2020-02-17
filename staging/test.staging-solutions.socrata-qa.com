@@ -1455,7 +1455,7 @@
               "default_view": "burn_up",
               "burn_up": {
                   "show_total": "true",
-                  "show_dimensions": "true",
+                  "show_dimensions": "false",
                   "default_show_projection": "true",
                   "default_compare_year": "2015",
                   "default_time_frame": "Year-on-year"
