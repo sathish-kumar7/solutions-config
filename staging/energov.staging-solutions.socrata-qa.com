@@ -81,21 +81,7 @@
           },
           "fields": {
             "date_column": "issueddate"
-          },
-          "target_entries": [
-            {
-              "name": "Measuring",
-              "color": "#2B8FC2",
-              "operator": ">",
-              "value": "0",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
+          }
         },
         {
           "name": "Total Applications Received",
@@ -116,21 +102,7 @@
           },
           "fields": {
             "date_column": "applicationdate"
-          },
-          "target_entries": [
-            {
-              "name": "Measuring",
-              "color": "#2B8FC2",
-              "operator": ">",
-              "value": "0",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
+          }
         },
         {
           "name": "Permits issued Within 90 days",
@@ -160,7 +132,7 @@
               "name": "SLA Met",
               "color": "#259652",
               "operator": ">",
-              "value": "50",
+              "value": "90",
               "icon": "icons-check-circle"
             },
             {
@@ -192,7 +164,7 @@
               "name": "SLA Met",
               "color": "#259652",
               "operator": "<",
-              "value": "110",
+              "value": "120",
               "icon": "icons-check-circle"
             },
             {
@@ -217,21 +189,7 @@
             "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart"
-            },
-            "target_entries": [
-              {
-                "name": "Measuring",
-                "color": "#2B8FC2",
-                "operator": "<",
-                "value": "110",
-                "icon": "icons-check-circle"
-              },
-              {
-                "name": "SLA Not Met",
-                "color": "#e31219",
-                "icon": "icons-times-circle"
-              }
-            ]
+            }
           }
         }
       ],
@@ -344,22 +302,7 @@
             "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
-            },
-            "target_entries": [
-              {
-                "name": "Measuring",
-                "color": "#2B8FC2",
-                "operator": ">",
-                "value": "0",
-                "icon": "icons-check-circle"
-              },
-              {
-                "name": "Off track",
-                "color": "#e31219",
-                "icon": "icons-times-circle"
-              }
-            ]
-          }
+            }          }
         },
         {
           "name": "Completed Inspections",
@@ -379,21 +322,7 @@
           },
           "fields": {
             "date_column": "actualenddatetime"
-          },
-          "target_entries": [
-            {
-              "name": "Measuring",
-              "color": "#2B8FC2",
-              "operator": ">",
-              "value": "0",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
+          }
         },
         {
           "name": "Average Delay in Inspection Start Time",
@@ -418,7 +347,7 @@
             {
               "name": "SLA Met",
               "color": "#259652",
-              "operator": ">",
+              "operator": "<",
               "value": "10",
               "icon": "icons-check-circle"
             },
