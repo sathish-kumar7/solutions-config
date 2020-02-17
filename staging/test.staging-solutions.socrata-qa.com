@@ -1618,7 +1618,12 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_view": "scatterplot",
+              "show_scatterplot_range_bar": "true",
+              "scatterplot": {
+                  "default_show_range": "true"
+              }
             }
           }
         }
