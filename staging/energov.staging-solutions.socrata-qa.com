@@ -51,7 +51,7 @@
           "name": "Project"
         },
         {
-          "column": "capitalfundproject",
+          "column": "capital_fund_project",
           "name": "Capital Fund Project"
         }
       ],
