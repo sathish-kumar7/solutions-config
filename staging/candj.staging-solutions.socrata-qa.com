@@ -36,12 +36,12 @@
       },
       "dimension_entries":[
         {
-          "column":"county",
-          "name":"County"
-        },
-        {
           "column":"casecategorydescription",
           "name":"Case Category"
+        },
+        {
+          "column":"county",
+          "name":"County"
         },
         {
           "column":"casetypedescription",
