@@ -36,6 +36,9 @@
       },
       "dimension_entries": [
         {
+          "column": "class_cleaned_",
+          "name": "Class"
+        },{
           "column": "land_use_type",
           "name": "Land Use Type"
         },
@@ -344,8 +347,8 @@
       "map": {
         "centerLat": "33.9123902,",
         "centerLng": "-84.6976079",
-        "zoom": "10",
-        "mini_map_zoom": "10",
+        "zoom": "8",
+        "mini_map_zoom": "8",
         "shapes_outline_highlight_width": "4",
         "style_entries": [
           {
