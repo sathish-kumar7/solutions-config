@@ -3,6 +3,13 @@
     "browser_title": "Solutions | EnerGov ",
     "title": "Solutions - EnerGov"
   },
+    "exploration_card_entries": [
+    {
+      "name": "Growth Management Plan",
+      "link": "https://cityofsfgis.maps.arcgis.com/apps/webappviewer/index.html?id=eecb42437c0042ebb30ecc65e38c6bef",
+      "image": "https://www.siouxfalls.org/-/media/Images/planning/shape_sf/shape-sf-2040.ashx?la=en&hash=79662DE964CFB87A3B86520EAE0B06D0902D01CB",
+      "exploration_content": "View the 2040 comprehensive plan"
+    }],
   "tag_list": [
     "Community Development",
     "Business Services",
