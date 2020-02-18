@@ -879,7 +879,7 @@
               "show_timeline_total": "true",
               "timeline": {
                 "default_bench_mark": "Revised Budget",
-                "default_secondary_metric": "Actuals",
+                "default_secondary_metric": "Original Budget",
                 "default_time_frame" : "year_on_year",
                 "secondary_metric_entries": [
                   {
@@ -922,7 +922,7 @@
               },
               "burn_up": {
                 "default_bench_mark": "Revised Budget",
-                "default_secondary_metric": "Actuals",
+                "default_secondary_metric": "Original Budget",
                 "default_time_frame" : "year_on_year",
                 "secondary_metric_entries": [
                   {
