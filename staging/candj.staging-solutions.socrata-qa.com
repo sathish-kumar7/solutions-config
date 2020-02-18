@@ -1602,7 +1602,8 @@
         "zoom":"5",
         "mini_map_zoom": "4",
         "shapes_outline_highlight_width":"4",
-        "shapes_outline_width":"1",
+        "shapes_outline_highlight_color":"#000",
+        "shapes_outline_width":"0.5",
         "style_entries":[
           {
             "name":"Street",
