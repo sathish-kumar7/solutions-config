@@ -132,20 +132,6 @@
           "tags": [
             "Financials"
           ],
-          "target_entries": [
-            {
-              "name": "On Target",
-              "color": "#259652",
-              "operator": ">",
-              "value": "0",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off Target",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ],
           "target_entries": [],
           "visualization": {
             "default_view": "snapshot",
@@ -236,10 +222,6 @@
       },
       "dimension_entries": [
         {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
           "column": "segment2",
           "name": "Major Function"
         },
@@ -260,8 +242,8 @@
           "name": "Organization"
         },
         {
-          "column": "accounttype",
-          "name": "Account type"
+          "column": "fund",
+          "name": "Fund"
         }
       ],
       "view_entries": [
