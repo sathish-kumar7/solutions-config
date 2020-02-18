@@ -13,7 +13,8 @@
     "Financials",
     "Budget & Expenditures",
     "Payroll & HR",
-    "Revenue & Tax"
+    "Revenue & Tax",
+    "Water Resources"
   ],
   "show_share_via_email": true,
   "is_private": "false",
@@ -397,6 +398,7 @@
           "precision": "2",
           "tags": [
             "Budget & Expenditures"
+            "Water Resources"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -649,7 +651,8 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget & Expenditures"
+            "Budget & Expenditures",
+            "Water Resources"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -1085,7 +1088,8 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Revenue & Tax"
+            "Revenue & Tax",
+            "Water Resources"
           ],
           "visualization": {
             "default_view": "overtime",
