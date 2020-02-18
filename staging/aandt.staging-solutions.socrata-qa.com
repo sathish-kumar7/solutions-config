@@ -947,7 +947,7 @@
           "fields": {
             "shape": "the_geom"
           },
-          "color": "#d73b70",
+          "color": "#EB7300",
           "show_by_default": "true"
         }]
     }
