@@ -150,7 +150,7 @@
                   {
                     "column": "category",
                     "name": "Category",
-                    "aggregate_type": "count"
+                    "aggregate_type": "avg"
                   }
                 ],
                 "default_bench_mark": "Department"
@@ -213,7 +213,14 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount"
+                "default_secondary_metric": "Approved Amount",
+                "bench_mark_entries": [
+                  {
+                    "column": "approved_amount",
+                    "name": "Bench mark",
+                    "aggregate_type": "avg"
+                  }
+                ]
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -1056,7 +1063,7 @@
                   {
                     "column": "case_id",
                     "name": "Cases",
-                    "aggregate_type": "count"
+                    "aggregate_type": "avg"
                   }
                 ],
                 "default_bench_mark": "Disposition"
