@@ -97,10 +97,15 @@
                     "value1": "3500"
                   },
                   {
-                    "column": "department",
+                    "dimension_column": "department",
                     "name": "Department",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "category",
+                    "name": "Category",
+                    "aggregate_type": "count"
                   }
                 ],
                 "default_bench_mark": "Department"
@@ -137,10 +142,15 @@
                     "value1": "3500"
                   },
                   {
-                    "column": "department",
+                    "dimension_column": "department",
                     "name": "Department",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "category",
+                    "name": "Category",
+                    "aggregate_type": "count"
                   }
                 ],
                 "default_bench_mark": "Department"
@@ -1038,10 +1048,15 @@
                     "value1": "350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count"
                   }
                 ],
                 "default_bench_mark": "Disposition"
@@ -1078,10 +1093,15 @@
                     "value1": "1350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count"
                   }
                 ],
                 "default_bench_mark": "Disposition"
@@ -1129,10 +1149,15 @@
                     "value1": "1350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count"
                   }
                 ],
                 "default_bench_mark": "Disposition"
@@ -1174,10 +1199,15 @@
                     "value1": "350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count"
                   }
                 ],
                 "default_bench_mark": "Disposition"
