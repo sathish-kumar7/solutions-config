@@ -320,6 +320,24 @@
           "parent_queries": [
             "select *, case(saledt is not null,1,true,0) as has_sold"
           ]
+        },
+        {
+          "name": "% Appealed Value Upheld",
+          "column": "(sum(decision_value) / sum(appr_total))*100",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
+            }
+          }
         }
       ],
       "filter_by_entries": [
@@ -721,7 +739,7 @@
 
       ],
       "fields": {
-        "date_column": "sale_date",
+        "date_column": "tax_year",
         "incident_type": "parcel_id"
       },
       "dimension_entries": [
@@ -802,6 +820,24 @@
               "show_pie_chart": "true"
             }
           }
+        },
+        {
+          "name": "Average Price Per SF",
+          "column": "price_per_sf",
+          "aggregate_type": "avg",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " psf",
+          "tags": [
+            "Commercial"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
         }
       ],
       "leaf_page_entries": [
@@ -812,6 +848,10 @@
         {
           "column": "land_use_code",
           "name": "Land Use Code"
+        },
+        {
+          "column": "price_per_sf",
+          "name": "Price Per Square Foot"
         }
       ],
       "quick_filter_entries": [
