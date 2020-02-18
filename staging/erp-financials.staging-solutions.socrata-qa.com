@@ -873,7 +873,7 @@
               }
             },
             "overtime": {
-              "default_view": "burnup",
+              "default_view": "burn_up",
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
