@@ -1322,7 +1322,7 @@
           },
           "color": "#32a889",
           "border_color": "#cccccc",
-          "outline_highlight_color": "#808080"
+          "outline_highlight_color": "#00f"
         }
       ],
       "shape_outline_dataset_entries": []
