@@ -1602,7 +1602,6 @@
         "zoom":"5",
         "mini_map_zoom": "4",
         "shapes_outline_highlight_width":"4",
-        "shapes_outline_highlight_color":"#000",
         "shapes_outline_width":"0.5",
         "style_entries":[
           {
@@ -1639,7 +1638,8 @@
             "shape_description": "affgeoid"
           },
           "color": "#32a889",
-          "border_color": "#cccccc"
+          "border_color": "#cccccc",
+          "outline_highlight_color":"#000"
         }
       ],
       "shape_outline_dataset_entries":[
