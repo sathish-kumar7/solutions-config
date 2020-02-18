@@ -222,7 +222,7 @@
                   {
                     "name": "Bench mark 2",
                     "value": "200000000",
-                    "value": "300000000"
+                    "value1": "300000000"
                   }
                 ],
                 "default_bench_mark": "Bench mark 1"
