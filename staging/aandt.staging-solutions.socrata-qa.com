@@ -9,7 +9,7 @@
       "name": "Comp Finder",
       "link": "appraisalandtax.demo.socrata.com",
       "image": "https://www.tylertech.com/Portals/0/Images/Products/CLT-APPRAISAL-Techniques-Prepare-Financial-Support-Download.jpg?ver=2018-09-25-174822-170?format=jpg&quality=80",
-      "exploration_content": "Find comps for local and neighboring properties"
+      "exploration_content": "Find comps for local and neighboring propeties"
     }
   ],
   "tag_list": [
@@ -385,10 +385,10 @@
         }
       ],
       "map": {
-        "centerLat": "33.9123902,",
-        "centerLng": "-84.6976079",
+        "centerLat": "33.9509233,",
+        "centerLng": "-84.5832023",
         "zoom": "8",
-        "mini_map_zoom": "8",
+        "mini_map_zoom": "9",
         "shapes_outline_highlight_width": "4",
         "style_entries": [
           {
