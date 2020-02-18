@@ -387,10 +387,10 @@
       "map": {
         "centerLat": "33.9608276,",
         "centerLng": "-84.5699291",
-        "zoom": "8",
+        "zoom": "9",
         "mini_map_zoom": "8.5",
-        "shapes_outline_highlight_width": "1",
-        "shapes_outline_width": "0.1",
+        "shapes_outline_highlight_width": "2",
+        "shapes_outline_width": "0.5",
         "style_entries": [
           {
             "name": "Street",
@@ -427,6 +427,7 @@
           },
           "color": "#32a889",
           "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
           "outline_highlight_color": "#808080"
         }
       ]
