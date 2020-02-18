@@ -311,7 +311,10 @@
             "Sales"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "map",
+            "map": {
+                "default_view": "point"
+            },
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true"
