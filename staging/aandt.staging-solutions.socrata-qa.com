@@ -390,7 +390,7 @@
         "zoom": "9",
         "mini_map_zoom": "8.5",
         "shapes_outline_highlight_width": "2",
-        "shapes_outline_width": "0.5",
+        "shapes_outline_width": "1.5",
         "style_entries": [
           {
             "name": "Street",
