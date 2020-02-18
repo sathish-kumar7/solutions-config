@@ -743,7 +743,8 @@
       ],
       "fields": {
         "date_column": "tax_year",
-        "incident_type": "parcel_id"
+        "incident_type": "parcel_id",
+        "location": "geocoded_column"
       },
       "dimension_entries": [
         {
