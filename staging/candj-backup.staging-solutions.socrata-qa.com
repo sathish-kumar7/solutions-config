@@ -200,7 +200,7 @@
             "Clearance Rate"
           ],
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "fields":{
             "date_column":"last_statusdate"
@@ -280,7 +280,7 @@
           "prefix":"",
           "suffix":"pending cases",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "fields":{
             "date_column":"last_statusdate"
@@ -364,7 +364,7 @@
           "suffix":"pending cases",
           "start_date_override_and_ignore":"true",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "fields":{
             "date_column":"last_statusdate"
@@ -967,7 +967,7 @@
         {
           "name": "Average Age of Active Pending Cases",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "days_active_pending",
           "aggregate_type": "avg",
@@ -1012,7 +1012,7 @@
         {
           "name": "Median Age of Active Pending Cases",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "days_active_pending",
           "aggregate_type": "median",
@@ -1057,7 +1057,7 @@
         {
           "name": "Number of Cases Age of Active Pending Cases < 30 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "case(days_active_pending <= 30, 1, true, 0)",
           "aggregate_type": "sum",
@@ -1102,7 +1102,7 @@
         {
           "name": "Percentage of Cases Age of Active Pending Cases < 30 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "(sum(case(days_active_pending <= 30, 1, true, 0))/count(casenumber))*100",
           "aggregate_type": "",
@@ -1147,7 +1147,7 @@
         {
           "name": "Number of Cases Age of Active Pending Cases < 60 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "case(days_active_pending <= 60, 1, true, 0)",
           "aggregate_type": "sum",
@@ -1192,7 +1192,7 @@
         {
           "name": "Percentage of Cases Age of Active Pending Cases < 60 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "(sum(case(days_active_pending <= 60, 1, true, 0))/count(casenumber))*100",
           "aggregate_type": "",
@@ -1237,7 +1237,7 @@
         {
           "name": "Number of Cases Age of Active Pending Cases < 90 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "case(days_active_pending <= 90, 1, true, 0)",
           "aggregate_type": "sum",
@@ -1282,7 +1282,7 @@
         {
           "name": "Percentage of Cases Age of Active Pending Cases < 90 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "(sum(case(days_active_pending <= 90, 1, true, 0))/count(casenumber))*100",
           "aggregate_type": "",
@@ -1327,7 +1327,7 @@
         {
           "name": "Number of Cases Age of Active Pending Cases < 180 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "case(days_active_pending <= 180, 1, true, 0)",
           "aggregate_type": "sum",
@@ -1372,7 +1372,7 @@
         {
           "name": "Percentage of Cases Age of Active Pending Cases < 180 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "(sum(case(days_active_pending <= 180, 1, true, 0))/count(casenumber))*100",
           "aggregate_type": "",
@@ -1417,7 +1417,7 @@
         {
           "name": "Number of Cases Age of Active Pending Cases < 365 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "case(days_active_pending <= 365, 1, true, 0)",
           "aggregate_type": "sum",
@@ -1462,7 +1462,7 @@
         {
           "name": "Percentage of Cases Age of Active Pending Cases < 365 Days",
           "parent_queries":[
-            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending group by casenumber where isorphanevent='false' having casebacklogsum  > 0"
+            "select casenumber, max(statusdate) as last_statusdate, max(county) as county, max(casecategorydescription) as casecategorydescription, max(casetypedescription) as casetypedescription, max(nodedescription) as nodedescription, max(judgeid) as judgeid,  sum(case(eventstatusmappingcodede='Placed on Inactive Status',date_diff_d(nextstatusdate, statusdate), true, 0)) as days_inactive, date_diff_d({END_DATE}, max(case(lastopened is not null, lastopened, true, lastreactivated))) as days_pending,  sum(casebacklog) as casebacklogsum, (days_pending-days_inactive) as days_active_pending where isorphanevent='false' group by casenumber having casebacklogsum  > 0"
           ],
           "column": "(sum(case(days_active_pending <= 365, 1, true, 0))/count(casenumber))*100",
           "aggregate_type": "",
