@@ -840,11 +840,33 @@
             "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "show_pie_chart": "true"
-            }
+              "show_pie_chart": "true",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "parcel_id",
+                    "name": "Number of Parcels",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet"
+                  }
+                ]
+            }, "scatterplot": {
+                "default_show_range": "true",
+                "secondary_metric_entries": [
+                  {
+                    "column": "parcel_id",
+                    "name": "Number of Parcels",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }]
           }
-        }
-      ],
+        }}}]
+      ,
       "leaf_page_entries": [
         {
           "column": "class",
@@ -898,5 +920,4 @@
         ]
       }
     }
-  ]
-}
+]}
