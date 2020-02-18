@@ -342,7 +342,7 @@
             }
           },
           "parent_queries": [
-            "select * where appealed is true"
+            "select * where appealed='true'"
           ]
         },
         {
@@ -363,7 +363,7 @@
             }
           },
           "parent_queries": [
-            "select *, case(appealed is true,1,true,0) as was_appealed"
+            "select *, case(appealed='true',1,true,0) as was_appealed"
           ]
         }
       ],
