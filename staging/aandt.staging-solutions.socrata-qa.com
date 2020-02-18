@@ -891,11 +891,12 @@
 
       ],
       "map": {
-        "centerLat": "39.018425261608655",
-        "centerLng": "-84.00102962486125",
-        "zoom": "7",
-        "mini_map_zoom": "7",
-        "shapes_outline_highlight_width": "4",
+        "centerLat": "33.9608276,",
+        "centerLng": "-84.5699291",
+        "zoom": "9",
+        "mini_map_zoom": "8.5",
+        "shapes_outline_highlight_width": "2",
+        "shapes_outline_width": "1.5",
         "style_entries": [
           {
             "name": "Street",
