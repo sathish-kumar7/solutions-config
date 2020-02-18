@@ -1171,25 +1171,6 @@
             }
           },
           "comparison_column_entries": []
-        },
-        {
-          "name": "Time to Hire",
-          "parent_queries": [
-            "select *"
-          ],
-          "column": "date_diff_d(hiredate, positionopendate)",
-          "aggregate_type": "avg",
-          "prefix": "",
-          "suffix": "",
-          "precision": "0",
-          "tags": [],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart"
-            }
-          },
-          "comparison_column_entries": []
         }
       ],
       "leaf_page_entries": [
@@ -1204,7 +1185,7 @@
       ]
     },
     {
-      "name": "Hiring & Job Applicants",
+      "name": "Time to Hire",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
       "fields": {
