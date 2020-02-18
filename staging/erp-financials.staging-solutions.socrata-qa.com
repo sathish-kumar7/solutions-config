@@ -63,7 +63,7 @@
               "name": "On track",
               "color": "#259652",
               "operator": ">",
-              "value": "0",
+              "value": "135000000",
               "icon": "icons-check-circle"
             },
             {
@@ -131,6 +131,20 @@
           "precision": "2",
           "tags": [
             "Financials"
+          ],
+          "target_entries": [
+            {
+              "name": "On Target",
+              "color": "#259652",
+              "operator": ">",
+              "value": "0",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off Target",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
           ],
           "target_entries": [],
           "visualization": {
