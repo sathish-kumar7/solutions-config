@@ -1285,7 +1285,7 @@
         "zoom": "5",
         "mini_map_zoom": "4",
         "shapes_outline_highlight_width": "2",
-        "shapes_outline_width": "0.1",
+        "shapes_outline_width": "0.5",
         "style_entries": [
           {
             "name": "Street",
@@ -1322,7 +1322,7 @@
           },
           "color": "#32a889",
           "border_color": "#cccccc",
-          "mini_map_border_color": "#a6a6a6",
+          "mini_map_border_color": "#4d4e4f",
           "outline_highlight_color": "#808080"
         }
       ],
