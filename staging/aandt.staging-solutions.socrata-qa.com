@@ -389,7 +389,7 @@
         "centerLng": "-84.5699291",
         "zoom": "8",
         "mini_map_zoom": "8.5",
-        "shapes_outline_highlight_width": "2",
+        "shapes_outline_highlight_width": "1",
         "shapes_outline_width": "0.1",
         "style_entries": [
           {
