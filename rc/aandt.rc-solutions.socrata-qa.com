@@ -4,29 +4,42 @@
     "title": "Solutions - Tax and Appraisals",
     "delimiter": ","
   },
+    "exploration_card_entries": [
+    {
+      "name": "Comp Finder",
+      "link": "appraisalandtax.demo.socrata.com",
+      "image": "https://www.tylertech.com/Portals/0/Images/Products/CLT-APPRAISAL-Techniques-Prepare-Financial-Support-Download.jpg?ver=2018-09-25-174822-170?format=jpg&quality=80",
+      "exploration_content": "Find comps for local and neighboring properties"
+    }
+  ],
   "tag_list": [
     "Sales",
     "Appeals",
     "New Construction",
-    "Commercial"
+    "Commercial",
+    "CompFinder"
   ],
   "template_entries": [
     {
-      "name": "Clermont County Property Data",
+      "name": "Cobb County Property Data",
       "description": "Tax and Appraisals",
       "dataset_domain": "appraisalandtax.demo.socrata.com",
-      "dataset_id": "rf3x-u64k",
+      "dataset_id": "n3pu-983n",
       "parent_queries": [
-        "select *,:@computed_region_5ynq_aczk,avg(asr) over (partition by land_use_type='commercial') as median_asr, 1-asr/median_asr as asr_deviation_from_median"
+        "select * where sale_validity in ('0','00')",
+        "select *,avg(asr) over (partition by land_use_type) as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
       "fields": {
         "date_column": "saledt",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
-        "5ynq-aczk": ":@computed_region_5ynq_aczk"
+        "sua5-m9tm": "sua5_m9tm_objectid"
       },
       "dimension_entries": [
         {
+          "column": "class_cleaned_",
+          "name": "Class"
+        },{
           "column": "land_use_type",
           "name": "Land Use Type"
         },
@@ -80,7 +93,7 @@
       "view_entries": [
         {
           "name": "Average Sales Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
+          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
           "precision": "2",
           "prefix": "",
@@ -89,43 +102,72 @@
           "tags": [
             "Sales"
           ],
-          "visualization": {   
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true",
-                "show_scatterplot_range_bar": "true",
-                "scatterplot": {
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "default_view": "scatterplot",
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true",
+              "barchart": {
                 "secondary_metric_entries": [
-                    {
-                      "column": "parid",
-                      "name": "Number of sales",
-                      "aggregate_type": "count",
-                      "precision": "",
-                      "prefix": "",
-                      "suffix": ""
-                    }
+                  {
+                    "column": "parid",
+                    "name": "Number of Sales",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "name": "Benchmark",
+                    "value": "1"
+                  },
+                  {
+                    "name": "20% Variance",
+                    "value": "1.2",
+                    "value1": "0.8"
+                  }
+                ]
+              },
+              "scatterplot": {
+                "default_show_range": "true",
+                "secondary_metric_entries": [
+                  {
+                    "column": "parid",
+                    "name": "Number of sales",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
+                ],
+                "default_bench_mark": "20% Variance",
+                "default_secondary_metric": "Number of sales",
+                "bench_mark_entries": [
+                  {
+                    "name": "Benchmark",
+                    "value": "1"
+                  },
+                  {
+                    "name": "20% Variance",
+                    "value": "1.2",
+                    "value1": "0.8"
+                  }
                 ]
               }
             }
           },
-           "comparison_column_entries": [
+          "target_entries": [
             {
-              "column": "parid",
-              "name": "Number of Sales",
-              "aggregate_type": "count",
-              "prefix": "",
-              "suffix": "",
-              "precision": "0",
-              "render_type": "bullet"
-            }
-          ],
-        "target_entries": [
-        {
               "name": "Meets Standard",
               "color": "#259652",
-              "operator": "<",
-              "value": "1.2",
+              "operator": "between",
+              "value": "0.8",
+              "to": "1.2",
               "icon": "icons-check-circle"
             },
             {
@@ -147,11 +189,11 @@
             "Tax & Appraisals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true",
-                "show_scatterplot_range_bar": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
             }
           }
         },
@@ -167,16 +209,16 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
             }
           }
         },
         {
           "name": "Price Relative Differential",
-          "column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
+          "column": "avg(asr)/(   sum(sale_appr_value)/sum(price)    )",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
@@ -186,16 +228,24 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "barchart": {
+                "bench_mark_entries": [
+                  {
+                    "name": "Benchmark",
+                    "value": "1"
+                  }
+                ]
+              }
             }
           }
         },
         {
           "name": "Median Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
+          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
           "use_dimension_value": "true",
           "precision": "2",
@@ -204,18 +254,18 @@
           "tags": [
             "Sales"
           ],
-          "visualization": { 
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true",
-                "show_scatterplot_range_bar": "true"
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
             }
           }
         },
         {
           "name": "Estimated Total Market Value",
-          "column": "estimated_total_market_value",
+          "column": "appr_total",
           "aggregate_type": "sum",
           "stack_column": "land_use_type",
           "precision": "0",
@@ -225,10 +275,10 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -244,12 +294,78 @@
             "Sales"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "groupChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
             }
           }
+        },{
+          "name": "% Parcels Sold",
+          "column": "(sum(has_sold)/258000)::double*100",
+          "aggregate_type": "",
+          "stack_column": "land_use_type",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Sales"
+          ],
+          "visualization": {
+            "default_view": "map",
+            "map": {
+                "default_view": "choropleth"
+            },
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          },
+          "parent_queries": [
+            "select *, case(saledt is not null,1,true,0) as has_sold"
+          ]
+        },
+        {
+          "name": "% Appealed Value Upheld",
+          "column": "(sum(decision_value) / sum(appr_total))*100",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
+            }
+          },
+          "parent_queries": [
+            "select * where appealed='true'"
+          ]
+        },
+        {
+          "name": "% Appealed",
+          "column": "(sum(was_appealed) / count(*))::double*100",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
+            }
+          },
+          "parent_queries": [
+            "select *, case(appealed='true',1,true,0) as was_appealed"
+          ]
         }
       ],
       "filter_by_entries": [
@@ -257,7 +373,7 @@
           "column": "style",
           "name": "style"
         },
-                {
+        {
           "column": "com_use",
           "name": "Commercial Use Type"
         }
@@ -272,7 +388,7 @@
           "name": "Style"
         },
         {
-          "column": "estimated_total_market_value",
+          "column": "sale_appr_value",
           "name": "Estimated Total Market Value"
         },
         {
@@ -281,7 +397,7 @@
         },
         {
           "name": "Ratio",
-          "column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)"
+          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)"
         }
       ],
       "quick_filter_entries": [
@@ -296,24 +412,13 @@
           "renderType": "number"
         }
       ],
-      "bench_mark_entries": [
-        {
-          "view_column": "estimated_total_market_value/case(price <= 0 or price is null, case(estimated_total_market_value == 0, 1, true, estimated_total_market_value) , true, price)",
-          "display_name": "Ratio Benchmark",
-          "value": "1"
-        },
-        {
-          "view_column": "avg(asr)/(   sum(estimated_total_market_value)/sum(price)    )",
-          "display_name": "Relative Differential Benchmark",
-          "value": "1"
-        }
-      ],
       "map": {
-        "centerLat": "39.018425261608655",
-        "centerLng": "-84.00102962486125",
-        "zoom": "7",
-        "mini_map_zoom": "7",
-        "shapes_outline_highlight_width": "4",
+        "centerLat": "33.9608276,",
+        "centerLng": "-84.5699291",
+        "zoom": "9",
+        "mini_map_zoom": "8.5",
+        "shapes_outline_highlight_width": "2",
+        "shapes_outline_width": "1.5",
         "style_entries": [
           {
             "name": "Street",
@@ -340,15 +445,18 @@
       "shape_dataset_entries": [
         {
           "shape_dataset_domain": "appraisalandtax.demo.socrata.com",
-          "shape_dataset_id": "5ynq-aczk",
-          "shape_name": "Clermont Township Boundaries",
+          "shape_dataset_id": "sua5-m9tm",
+          "shape_name": "Cobb County City Boundaries",
           "fields": {
             "shape": "the_geom",
-            "shape_id": "_feature_id",
-            "shape_name": "townname",
-            "shape_description": "label"
+            "shape_id": "objectid",
+            "shape_name": "name",
+            "shape_description": "citycode"
           },
-          "color": "#32a889"
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
+          "outline_highlight_color": "#808080"
         }
       ]
     },
@@ -358,7 +466,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "22ci-twx5",
       "parent_queries": [
-        
+
       ],
       "fields": {
         "date_column": "decision_date",
@@ -411,10 +519,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -429,10 +537,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -447,10 +555,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -465,10 +573,10 @@
             "Appeals"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         }
@@ -536,7 +644,7 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3sa7-53ay",
       "parent_queries": [
-        
+
       ],
       "fields": {
         "date_column": "tax_year",
@@ -571,10 +679,10 @@
             "New Construction"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         },
@@ -589,10 +697,10 @@
             "New Construction"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
             }
           }
         }
@@ -660,16 +768,17 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "3hre-b49k",
       "parent_queries": [
-        
+
       ],
       "fields": {
-        "date_column": "sale_date",
-        "incident_type": "parcel_id"
+        "date_column": "tax_year",
+        "incident_type": "parcel_id",
+        "location": "geocoded_column"
       },
       "dimension_entries": [
         {
-          "column": "class",
-          "name": "Class"
+          "column": "county",
+          "name": "County"
         },
         {
           "column": "land_use_code",
@@ -678,10 +787,18 @@
         {
           "column": "building_use",
           "name": "Building Use"
+        },
+        {
+          "column": "owner",
+          "name": "Owner"
         }
       ],
       "group_by_entries": [
         {
+          "column": "county",
+          "name": "County"
+        },
+        {
           "column": "class",
           "name": "Class"
         },
@@ -692,28 +809,72 @@
         {
           "column": "building_use",
           "name": "Building Use"
+        },
+        {
+          "column": "owner",
+          "name": "Owner"
         }
       ],
       "view_entries": [
         {
-          "name": "Comp Finder Fake Tile",
+          "name": "Total Nearby Properties",
           "column": "parcel_id",
           "aggregate_type": "count",
           "precision": "0",
           "prefix": "",
-          "suffix": " parcels to compare",
+          "suffix": " parcels",
           "tags": [
-            "Commercial"
+            "CompFinder"
           ],
           "visualization": {
-             "default_view": "Snapshot",
-             "snapshot": {
-                "chart_type": "barChart",
-                "show_pie_chart": "true"
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
             }
           }
-        }
-      ],
+        },
+        {
+          "name": "Average Price Per SF",
+          "column": "price_per_sf",
+          "aggregate_type": "avg",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " psf",
+          "tags": [
+            "CompFinder"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "parcel_id",
+                    "name": "Number of Parcels",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet"
+                  }
+                ]
+            }, "scatterplot": {
+                "default_show_range": "true",
+                "secondary_metric_entries": [
+                  {
+                    "column": "parcel_id",
+                    "name": "Number of Parcels",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }]
+          }
+        }}}]
+      ,
       "leaf_page_entries": [
         {
           "column": "class",
@@ -722,23 +883,49 @@
         {
           "column": "land_use_code",
           "name": "Land Use Code"
+        },
+        {
+          "column": "price_per_sf",
+          "name": "Price Per Square Foot"
         }
       ],
       "quick_filter_entries": [
-
+        {
+          "column": "owner",
+          "name": "Owner",
+          "renderType": "text"
+        },
+        {
+          "column": "building_use",
+          "name": "Building Use",
+          "renderType": "text"
+        }
       ],
       "bench_mark_entries": [
 
       ],
       "shape_dataset_entries": [
-
+{"shape_dataset_domain": "appraisalandtax.demo.socrata.com",
+          "shape_dataset_id": "qpyi-pamy",
+          "shape_name": "County Boundaries",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "objectid",
+            "shape_name": "name10"
+          },
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
+          "outline_highlight_color": "#808080"
+        }
       ],
       "map": {
-        "centerLat": "39.018425261608655",
-        "centerLng": "-84.00102962486125",
-        "zoom": "7",
-        "mini_map_zoom": "7",
-        "shapes_outline_highlight_width": "4",
+        "centerLat": "33.9608276,",
+        "centerLng": "-84.5699291",
+        "zoom": "9",
+        "mini_map_zoom": "8.5",
+        "shapes_outline_highlight_width": "2",
+        "shapes_outline_width": "1.5",
         "style_entries": [
           {
             "name": "Street",
@@ -761,7 +948,17 @@
             "style": "mapbox://styles/mapbox/outdoors-v10"
           }
         ]
-      }
+      },
+      "shape_outline_dataset_entries": [
+        {
+          "shape_outline_dataset_domain": "appraisalandtax.demo.socrata.com",
+          "outline_name": "County Boundaries",
+          "shape_outline_dataset_id": "qpyi-pamy",
+          "fields": {
+            "shape": "the_geom"
+          },
+          "color": "#EB7300",
+          "show_by_default": "true"
+        }]
     }
-  ]
-}
+]}
