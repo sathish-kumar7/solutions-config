@@ -34,7 +34,7 @@
         "incident_type": "land_use_type",
         "location": "geocoded_column",
         "sua5-m9tm": "sua5_m9tm_objectid",
-        "52nt-trix": "52nt_trix_objectid"
+        "52nt-trix": ":@computed_region_52nt_trix"
       },
       "dimension_entries": [
         {
