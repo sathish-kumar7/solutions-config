@@ -16,7 +16,8 @@
     "Sales",
     "Appeals",
     "New Construction",
-    "Commercial"
+    "Commercial",
+    "CompFinder"
   ],
   "template_entries": [
     {
@@ -823,7 +824,7 @@
           "prefix": "",
           "suffix": " parcels",
           "tags": [
-            "Commercial"
+            "CompFinder"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -841,7 +842,7 @@
           "prefix": "",
           "suffix": " psf",
           "tags": [
-            "Commercial"
+            "CompFinder"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -889,7 +890,16 @@
         }
       ],
       "quick_filter_entries": [
-
+        {
+          "column": "owner",
+          "name": "Owner",
+          "renderType": "text"
+        },
+        {
+          "column": "building_use",
+          "name": "Building Use",
+          "renderType": "text"
+        }
       ],
       "bench_mark_entries": [
 
