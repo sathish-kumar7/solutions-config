@@ -302,7 +302,7 @@
           }
         },{
           "name": "% Parcels Sold",
-          "column": "(sum(has_sold)/count(parid))::double*100",
+          "column": "(sum(has_sold)/258000)::double*100",
           "aggregate_type": "",
           "stack_column": "land_use_type",
           "precision": "0",
