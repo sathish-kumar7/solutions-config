@@ -82,6 +82,43 @@
           "start_date_override_and_ignore": "true"
         },
         {
+          "name": "General Fund Cash Balance",
+          "parent_queries": [
+            "select * where cashaccount = 'true' and fund = 'General Fund'"
+          ],
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "0",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "quick_filters": [],
+          "visualization": {
+            "default_view": "overtime",
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true"
+            }
+          },
+          "start_date_override_and_ignore": "true"
+        },
+        {
           "name": "Unadjusted Net Income",
           "parent_queries": [
             "select *, case(accounttype == 'Revenue', actual, true, 0) as revenue_amount, case(accounttype == 'Expense', actual, true, 0) as expenditures_amount"
@@ -1448,10 +1485,10 @@
       "view_entries": [
         {
           "name": "MBE|WBE Bid %",
-          "column": "sum(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)*100",
+          "column": "sum(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)",
           "aggregate_type": "",
           "prefix": "",
-          "suffix": "%",
+          "suffix": "",
           "precision": "2",
           "tags": [
             "Budget & Expenditures"
