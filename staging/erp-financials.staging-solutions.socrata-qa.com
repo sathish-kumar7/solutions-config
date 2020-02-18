@@ -258,7 +258,7 @@
             "Budget & Expenditures"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -296,10 +296,15 @@
               }
             },
             "overtime": {
+              "default_view": "burn_up",
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
               "timeline": {
+                "default_bench_mark": "Revised Budget",
+                "default_secondary_metric": "Original Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
@@ -340,6 +345,10 @@
                 ]
               },
               "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_secondary_metric": "Original Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
@@ -880,7 +889,7 @@
               "timeline": {
                 "default_bench_mark": "Revised Budget",
                 "default_secondary_metric": "Original Budget",
-                "default_time_frame" : "year_on_year",
+                "default_time_frame": "year_on_year",
                 "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
@@ -924,7 +933,7 @@
               "burn_up": {
                 "default_bench_mark": "Revised Budget",
                 "default_secondary_metric": "Original Budget",
-                "default_time_frame" : "year_on_year",
+                "default_time_frame": "year_on_year",
                 "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
@@ -1664,7 +1673,7 @@
           "suffix": "days",
           "precision": "0",
           "tags": [
-          "Payroll & HR"
+            "Payroll & HR"
           ],
           "visualization": {
             "default_view": "snapshot",
