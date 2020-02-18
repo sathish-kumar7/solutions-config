@@ -1136,7 +1136,7 @@
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
       "parent_queries": [
-        "select min(jobopening) as job_opening, min(city) as city, count(applicantid) as applicant_id, jobopeningrequisitionnumber where applicationdate between ({START_DATE}, {END_DATE}} group by jobopeningrequisitionnumber"
+        "select min(jobopening) as job_opening, min(city) as city, count(applicantid) as applicant_id, jobopeningrequisitionnumber where applicationdate between {START_DATE} and {END_DATE} group by jobopeningrequisitionnumber"
       ],
       "fields": {
         "date_column": "hire_date"
