@@ -301,7 +301,7 @@
           }
         },{
           "name": "% Parcels Sold",
-          "column": "(sum(has_sold)/258811)::double*100",
+          "column": "(sum(has_sold)/count(parid))::double*100",
           "aggregate_type": "",
           "stack_column": "land_use_type",
           "precision": "0",
@@ -313,7 +313,7 @@
           "visualization": {
             "default_view": "map",
             "map": {
-                "default_view": "point"
+                "default_view": "choropleth"
             },
             "snapshot": {
               "chart_type": "groupChart",
