@@ -1611,7 +1611,7 @@
           "column": "applicant_id",
           "aggregate_type": "avg",
           "prefix": "",
-          "suffix": "",
+          "suffix": "applicants",
           "precision": "0",
           "tags": [
             "Payroll & HR"
@@ -1661,9 +1661,11 @@
           "column": "date_diff_d(hiredate, positionopendate)",
           "aggregate_type": "avg",
           "prefix": "",
-          "suffix": "",
+          "suffix": "days",
           "precision": "0",
-          "tags": [],
+          "tags": [
+          "Payroll & HR"
+          ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
