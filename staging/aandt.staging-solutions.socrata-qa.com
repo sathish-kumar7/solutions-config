@@ -736,9 +736,17 @@
         {
           "column": "building_use",
           "name": "Building Use"
+        },
+        {
+          "column": "owner",
+          "name": "Owner"
         }
       ],
       "group_by_entries": [
+        {
+          "column": "county",
+          "name": "County"
+        },
         {
           "column": "class",
           "name": "Class"
@@ -750,12 +758,16 @@
         {
           "column": "building_use",
           "name": "Building Use"
+        },
+        {
+          "column": "owner",
+          "name": "Owner"
         }
       ],
       "view_entries": [
         {
-          "name": "Comp Finder Fake Tile",
-          "column": "parcel_id",
+          "name": "Nearby Counties",
+          "column": "county",
           "aggregate_type": "count",
           "precision": "0",
           "prefix": "",
@@ -769,7 +781,9 @@
               "chart_type": "groupChart",
               "show_pie_chart": "true"
             }
-          }
+          },
+          "parent_queries": [
+            "select county, count(parcel_id) as total_parcels group by county"]
         }
       ],
       "leaf_page_entries": [
