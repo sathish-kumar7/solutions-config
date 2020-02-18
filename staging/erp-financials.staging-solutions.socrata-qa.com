@@ -835,7 +835,7 @@
             "Revenue & Tax"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -873,10 +873,14 @@
               }
             },
             "overtime": {
+              "default_view": "burnup",
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
               "timeline": {
+                "default_bench_mark": "Revised Budget",
+                "default_secondary_metric": "Actuals",
+                "default_time_frame" : "year_on_year",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
@@ -917,6 +921,9 @@
                 ]
               },
               "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_secondary_metric": "Actuals",
+                "default_time_frame" : "year_on_year",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
