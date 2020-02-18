@@ -216,11 +216,16 @@
                 "default_secondary_metric": "Approved Amount",
                 "bench_mark_entries": [
                   {
-                    "column": "approved_amount",
-                    "name": "Bench mark",
-                    "aggregate_type": "avg"
+                    "name": "Bench mark 1",
+                    "value": "200000000"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "200000000",
+                    "value": "300000000"
                   }
-                ]
+                ],
+                "default_bench_mark": "Bench mark 1"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -241,7 +246,19 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount"
+                "default_secondary_metric": "Approved Amount",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "200000000"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "200000000",
+                    "value": "300000000"
+                  }
+                ],
+                "default_bench_mark": "Bench mark 1"
               }
             }
           },
