@@ -389,7 +389,8 @@
         "centerLng": "-84.5699291",
         "zoom": "8",
         "mini_map_zoom": "8.5",
-        "shapes_outline_highlight_width": "4",
+        "shapes_outline_highlight_width": "2",
+        "shapes_outline_width": "0.1",
         "style_entries": [
           {
             "name": "Street",
@@ -424,7 +425,9 @@
             "shape_name": "name",
             "shape_description": "citycode"
           },
-          "color": "#32a889"
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "outline_highlight_color": "#808080"
         }
       ]
     },
