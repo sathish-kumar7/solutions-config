@@ -1637,7 +1637,7 @@
             "shape_description": "affgeoid"
           },
           "color": "#32a889",
-          "border_color": "#d3d3d3"
+          "border_color": "#cccccc"
         }
       ],
       "shape_outline_dataset_entries":[
