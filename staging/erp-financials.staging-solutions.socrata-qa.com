@@ -98,11 +98,53 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "barChart"
+              "chart_type": "barChart",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revenue_amount",
+                    "name": "Revenue Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "expenditures_amount",
+                    "name": "Expenditure Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  }
+                ]
+              }
             },
             "overtime": {
               "show_area_chart": "false",
-              "show_burn_up_chart": "true"
+              "show_burn_up_chart": "true",
+              "timeline": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revenue_amount",
+                    "name": "Revenue Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "expenditures_amount",
+                    "name": "Expenditure Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ]
+              }
             }
           }
         }
