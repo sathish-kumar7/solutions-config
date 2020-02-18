@@ -561,7 +561,7 @@
           }
         },
         {
-          "name":"Outgoing Cases: Entry of Judgement",
+          "name":"Outgoing Cases: Entry of Judgment",
           "column":"sum(case(eventstatusmappingcodede='Jury Trial Disposition' or eventstatusmappingcodede='Non-Trial Disposition' or eventstatusmappingcodede='Bench/Non-Jury Trial Disposition' , 1))",
           "aggregate_type":"",
           "use_dimension_value":"true",
