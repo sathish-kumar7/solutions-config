@@ -771,7 +771,7 @@
           "aggregate_type": "count",
           "precision": "0",
           "prefix": "",
-          "suffix": " parcels to compare",
+          "suffix": " counties",
           "tags": [
             "Commercial"
           ],
@@ -783,7 +783,25 @@
             }
           },
           "parent_queries": [
-            "select county, count(parcel_id) as total_parcels group by county"]
+            "select county, count(parcel_id) as total_parcels, max(sale_date) as sale_date group by county"]
+        },
+        {
+          "name": "Total Nearby Properties",
+          "column": "parcel_id",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " parcels",
+          "tags": [
+            "Commercial"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
         }
       ],
       "leaf_page_entries": [
