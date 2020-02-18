@@ -502,7 +502,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Financials"
+            "Revenue & Tax"
           ],
           "visualization": {
             "default_view": "snapshot",
