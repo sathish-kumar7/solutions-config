@@ -73,7 +73,7 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "burnup",
+            "default_view": "overtime",
             "overtime": {
               "show_area_chart": "false",
               "show_burn_up_chart": "true"
@@ -99,6 +99,10 @@
             "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true"
             }
           }
         }
