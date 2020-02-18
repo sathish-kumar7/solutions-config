@@ -5,7 +5,7 @@
   },
   "exploration_card_entries": [
     {
-      "name": "Courts and Justice",
+      "name": "",
       "link": "courtsandjustice.demo.socrata.com",
       "image": "https://www.tylertech.com/Portals/0/Images/Products/ODYSSEY-Courts-Justice-Solution.jpg?ver=2018-09-19-115543-363?format=jpg&quality=80",
       "exploration_content": "Court Operations"
@@ -24,7 +24,7 @@
   },
   "template_entries":[
     {
-      "name":"Courts and Justice",
+      "name":"e",
       "description":"",
       "dataset_domain":"courtsandjustice.demo.socrata.com",
       "dataset_id":"w7ey-ag3j",
