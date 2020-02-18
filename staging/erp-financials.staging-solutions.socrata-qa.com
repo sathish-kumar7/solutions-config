@@ -1643,7 +1643,7 @@
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
       "fields": {
-        "date_column": "hire_date"
+        "date_column": "hiredate"
       },
       "dimension_entries": [
         {
