@@ -1036,6 +1036,120 @@
               }
             }
           }
+        },
+        {
+          "name": "Water Resources Revenues vs. Budget",
+          "column": "actual",
+          "parent_queries": [
+            "select * where entity = 'Water Resources'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Revenue & Tax"
+          ],
+          "visualization": {
+            "default_view": "overtime",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actual Revenue",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Revised Budget"
+              }
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actual Revenue",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ]
+              },
+              "burn_up": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actual Revenue",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ]
+              }
+            }
+          }
         }
       ],
       "leaf_page_entries": [
