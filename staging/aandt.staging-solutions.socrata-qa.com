@@ -33,7 +33,8 @@
         "date_column": "saledt",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
-        "sua5-m9tm": "sua5_m9tm_objectid"
+        "sua5-m9tm": "sua5_m9tm_objectid",
+        "52nt-trix": "52nt_trix_objectid"
       },
       "dimension_entries": [
         {
@@ -452,6 +453,20 @@
             "shape_id": "objectid",
             "shape_name": "name",
             "shape_description": "citycode"
+          },
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
+          "outline_highlight_color": "#808080"
+        },
+        {
+          "shape_dataset_domain": "appraisalandtax.demo.socrata.com",
+          "shape_dataset_id": "52nt-trix",
+          "shape_name": "County Commission Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "objectid",
+            "shape_name": "commission"
           },
           "color": "#32a889",
           "border_color": "#cccccc",
