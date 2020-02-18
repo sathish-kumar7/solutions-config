@@ -1448,10 +1448,10 @@
       "view_entries": [
         {
           "name": "MBE|WBE Bid %",
-          "column": "sum(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)",
+          "column": "sum(case(iswomenorminoritybusines='True', 1, true, 0)) / count(bidderid)*100",
           "aggregate_type": "",
           "prefix": "",
-          "suffix": "",
+          "suffix": "%",
           "precision": "2",
           "tags": [
             "Budget & Expenditures"
