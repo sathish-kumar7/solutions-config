@@ -24,7 +24,7 @@
   },
   "template_entries":[
     {
-      "name":"",
+      "name":"e",
       "description":"",
       "dataset_domain":"courtsandjustice.demo.socrata.com",
       "dataset_id":"w7ey-ag3j",
