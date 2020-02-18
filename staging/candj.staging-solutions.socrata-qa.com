@@ -1284,7 +1284,7 @@
         "centerLng": "-115.16737594966821",
         "zoom": "5",
         "mini_map_zoom": "4",
-        "shapes_outline_highlight_width": "4",
+        "shapes_outline_highlight_width": "2",
         "shapes_outline_width": "0.5",
         "style_entries": [
           {
@@ -1322,7 +1322,7 @@
           },
           "color": "#32a889",
           "border_color": "#cccccc",
-          "outline_highlight_color": "#000"
+          "outline_highlight_color": "#808080"
         }
       ],
       "shape_outline_dataset_entries": []
@@ -2133,7 +2133,13 @@
         "centerLat": "44.40861110588011",
         "centerLng": "-115.16737594966821",
         "zoom": "3",
-        "shapes_outline_highlight_width": "1",
+        "
+        
+        
+        
+        
+        
+        s_outline_highlight_width": "1",
         "style_entries": [
           {
             "name": "Street",
