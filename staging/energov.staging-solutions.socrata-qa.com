@@ -662,6 +662,13 @@
           "name": "Project"
         }
       ],
+      "quick_filter_entries": [
+        {
+          "column": "days_open",
+          "name": "Days Open",
+          "renderType": "number"
+        }
+      ],
       "view_entries": [
         {
           "name": "Cases Opened",
