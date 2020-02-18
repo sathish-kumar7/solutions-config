@@ -895,7 +895,19 @@
 
       ],
       "shape_dataset_entries": [
-
+{"shape_dataset_domain": "appraisalandtax.demo.socrata.com",
+          "shape_dataset_id": "qpyi-pamy",
+          "shape_name": "County Boundaries",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "objectid",
+            "shape_name": "name10"
+          },
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
+          "outline_highlight_color": "#808080"
+        }
       ],
       "map": {
         "centerLat": "33.9608276,",
