@@ -1601,7 +1601,7 @@
         "centerLng":"-115.16737594966821",
         "zoom":"5",
         "mini_map_zoom": "4",
-        "shapes_outline_highlight_width":"4",
+        "shapes_outline_highlight_width":"1",
         "style_entries":[
           {
             "name":"Street",
@@ -2449,7 +2449,7 @@
         "centerLat":"44.40861110588011",
         "centerLng":"-115.16737594966821",
         "zoom":"3",
-        "shapes_outline_highlight_width":"4",
+        "shapes_outline_highlight_width":"1",
         "style_entries":[
           {
             "name":"Street",
