@@ -1285,7 +1285,7 @@
         "zoom": "5",
         "mini_map_zoom": "4",
         "shapes_outline_highlight_width": "2",
-        "shapes_outline_width": "0.2",
+        "shapes_outline_width": "0.1",
         "style_entries": [
           {
             "name": "Street",
