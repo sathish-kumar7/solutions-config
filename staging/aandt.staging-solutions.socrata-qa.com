@@ -926,6 +926,17 @@
             "style": "mapbox://styles/mapbox/outdoors-v10"
           }
         ]
-      }
+      },
+      "shape_outline_dataset_entries": [
+        {
+          "shape_outline_dataset_domain": "appraisalandtax.demo.socrata.com",
+          "outline_name": "County Boundaries",
+          "shape_outline_dataset_id": "qpyi-pamy",
+          "fields": {
+            "shape": "the_geom"
+          },
+          "color": "#d73b70",
+          "show_by_default": "true"
+        }]
     }
 ]}
