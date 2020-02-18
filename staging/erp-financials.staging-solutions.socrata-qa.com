@@ -397,7 +397,7 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget & Expenditures"
+            "Budget & Expenditures",
             "Water Resources"
           ],
           "visualization": {
