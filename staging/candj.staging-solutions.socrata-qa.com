@@ -114,7 +114,7 @@
               "barchart": {
                 "bench_mark_entries":[
                   {
-                    "column":"judgeid",
+                    "dimension_column":"judgeid",
                     "name":"State Standard",
                     "value":"50"
                   }
@@ -169,7 +169,7 @@
               "barchart": {
                 "bench_mark_entries":[
                   {
-                    "column":"judgeid",
+                    "dimension_column":"judgeid",
                     "name":"State Standard",
                     "value":"50"
                   }
