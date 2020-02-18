@@ -1132,7 +1132,7 @@
       ]
     },
     {
-      "name": "Hiring & Job Applicants",
+      "name": "Applicants per Open Position",
       "dataset_domain": "erpinsights.demo.socrata.com",
       "dataset_id": "n5zv-gf3k",
       "parent_queries": [
@@ -1162,8 +1162,8 @@
           "tags": [
             "Payroll & HR"
           ],
-         "start_date_override_and_ignore": "true",
-         "end_date_override_and_ignore": "true",
+          "start_date_override_and_ignore": "true",
+          "end_date_override_and_ignore": "true",
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -1177,6 +1177,52 @@
           "parent_queries": [
             "select *"
           ],
+          "column": "date_diff_d(hiredate, positionopendate)",
+          "aggregate_type": "avg",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": []
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "job_opening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
+        }
+      ]
+    },
+    {
+      "name": "Hiring & Job Applicants",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "n5zv-gf3k",
+      "fields": {
+        "date_column": "hire_date"
+      },
+      "dimension_entries": [
+        {
+          "column": "jobopening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Time to Hire",
           "column": "date_diff_d(hiredate, positionopendate)",
           "aggregate_type": "avg",
           "prefix": "",
