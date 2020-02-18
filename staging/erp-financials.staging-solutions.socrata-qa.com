@@ -184,10 +184,6 @@
       },
       "dimension_entries": [
         {
-          "column": "entity",
-          "name": "Entity"
-        },
-        {
           "column": "fund",
           "name": "Fund"
         },
@@ -350,14 +346,14 @@
                 ]
               }
             }
-          }
+          },
+          "parent_queries": [
+            "select * where entity = 'City'"
+          ]
         },
         {
-          "name": "Payroll Expenses vs. Budget",
+          "name": "Water Resources Actuals vs. Budget",
           "column": "actual",
-          "parent_queries": [
-            "select * where segment6 = 'Salary&Benefit Expenditures'"
-          ],
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -370,7 +366,6 @@
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
-              "default_comparison_column_entry": "revisedbudget",
               "barchart": {
                 "secondary_metric_entries": [
                   {
@@ -434,6 +429,145 @@
                     "suffix": "",
                     "precision": "2"
                   }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              },
+              "burn_up": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              }
+            }
+          },
+          "parent_queries": [
+            "select * where entity = 'Water Resources'"
+          ]
+        },
+        {
+          "name": "Payroll Expenses vs. Budget",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget & Expenditures"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Revised Budget"
+              },
+              "default_comparison_column_entry": "revisedbudget"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
                 ]
               },
               "burn_up": {
@@ -465,7 +599,125 @@
                 ]
               }
             }
-          }
+          },
+          "parent_queries": [
+            "select * where segment6 = 'Salary&Benefit Expenditures' and entity = 'City'"
+          ]
+        },
+        {
+          "name": "Water Resources Payroll Expenses vs. Budget",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget & Expenditures"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Revised Budget"
+              },
+              "default_comparison_column_entry": "revisedbudget"
+            },
+            "overtime": {
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ]
+              },
+              "burn_up": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ]
+              }
+            }
+          },
+          "parent_queries": [
+            "select * where segment6 = 'Salary&Benefit Expenditures' and entity = 'Water Resources'"
+          ]
         }
       ],
       "leaf_page_entries": [
