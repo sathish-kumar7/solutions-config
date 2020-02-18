@@ -77,7 +77,8 @@
             "default_view": "overtime",
             "overtime": {
               "show_area_chart": "false",
-              "show_burn_up_chart": "true"
+              "show_burn_up_chart": "true",
+              "default_view": "burn_up"
             }
           },
           "start_date_override_and_ignore": "true"
@@ -114,7 +115,8 @@
             "default_view": "overtime",
             "overtime": {
               "show_area_chart": "false",
-              "show_burn_up_chart": "true"
+              "show_burn_up_chart": "true",
+              "default_view": "burn_up"
             }
           },
           "start_date_override_and_ignore": "true"
