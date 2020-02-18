@@ -264,7 +264,7 @@
         },
         {
           "name": "Estimated Total Market Value",
-          "column": "sale_appr_value",
+          "column": "appr_total",
           "aggregate_type": "sum",
           "stack_column": "land_use_type",
           "precision": "0",
@@ -337,7 +337,31 @@
               "chart_type": "barChart",
               "show_pie_chart": "true"
             }
-          }
+          },
+          "parent_queries": [
+            "select * where appealed is true"
+          ]
+        },
+        {
+          "name": "% Appealed",
+          "column": "(sum(was_appealed) / count(*))::double*100",
+          "aggregate_type": "",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Appeals"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
+            }
+          },
+          "parent_queries": [
+            "select *, case(appealed is true,1,true,0) as was_appealed"
+          ]
         }
       ],
       "filter_by_entries": [
@@ -788,26 +812,6 @@
         }
       ],
       "view_entries": [
-        {
-          "name": "Nearby Counties",
-          "column": "county",
-          "aggregate_type": "count",
-          "precision": "0",
-          "prefix": "",
-          "suffix": " counties",
-          "tags": [
-            "Commercial"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true"
-            }
-          },
-          "parent_queries": [
-            "select county, count(parcel_id) as total_parcels, max(sale_date) as sale_date group by county"]
-        },
         {
           "name": "Total Nearby Properties",
           "column": "parcel_id",
