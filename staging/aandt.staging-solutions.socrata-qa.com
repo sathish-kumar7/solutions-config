@@ -465,7 +465,7 @@
           "shape_name": "County Commission Districts",
           "fields": {
             "shape": "the_geom",
-            "shape_id": "objectid",
+            "shape_id": "comm_d",
             "shape_name": "commission"
           },
           "color": "#32a889",
