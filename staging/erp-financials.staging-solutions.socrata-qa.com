@@ -1049,7 +1049,7 @@
             "Revenue & Tax"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "barChart",
               "show_pie_chart": "false",
@@ -1087,6 +1087,7 @@
               }
             },
             "overtime": {
+              "default_view": "burn_up",
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
@@ -1119,6 +1120,9 @@
                 ]
               },
               "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
@@ -1143,6 +1147,18 @@
                     "prefix": "$",
                     "suffix": "",
                     "precision": "2"
+                  }
+                ]
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
                   }
                 ]
               }
@@ -1202,6 +1218,7 @@
               }
             },
             "overtime": {
+              "default_view": "burn_up",
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
@@ -1234,6 +1251,9 @@
                 ]
               },
               "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
@@ -1258,6 +1278,18 @@
                     "prefix": "$",
                     "suffix": "",
                     "precision": "2"
+                  }
+                ]
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
                   }
                 ]
               }
