@@ -101,7 +101,7 @@
             "Permitting"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart"
             }
