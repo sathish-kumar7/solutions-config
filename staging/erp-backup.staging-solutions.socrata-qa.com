@@ -1273,22 +1273,43 @@
 		{
 			"name": "Payroll & Compensation",
 			"dataset_domain": "erpinsights.demo.socrata.com",
+			"parent_queries": [
+				"select * where runtype not 'VOID'"
+			],
 			"dataset_id": "dfmt-x4an",
+			
 			"fields": {
 				"date_column": "checkdate"
 			},
-			"dimension_entries": [{
-					"column": "jobclass",
-					"name": "Job"
-				},
+			"dimension_entries": [
 				{
 					"column": "groupbargainingunit",
 					"name": "Bargaining Unit"
 				},
 				{
+					"column": "jobclass",
+					"name": "Job"
+				},
+				{
+					"column": "position",
+					"name": "Position"
+				},
+				{
+					"column": "location",
+					"name": "Location"
+				},
+				{
+					"column": "employeeid",
+					"name": "Employee ID"
+				},
+				{
+					"column": "paycategory",
+					"name": "Pay Category"
+				},
+				{
 					"column": "paytype",
-					"name": "Employment Type"
-				}
+					"name": "Pay Type"
+				},
 			],
 			"view_entries": [{
 					"name": "Total Payroll",
