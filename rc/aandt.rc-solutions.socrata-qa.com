@@ -1,6 +1,6 @@
 {
   "branding": {
-    "browser_title": "Solutions | A&T ",
+    "browser_title": "Solutions | A&T",
     "title": "Solutions - Tax and Appraisals",
     "delimiter": ","
   },
