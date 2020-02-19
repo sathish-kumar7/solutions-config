@@ -97,12 +97,18 @@
                     "value1": "3500"
                   },
                   {
-                    "column": "department",
+                    "dimension_column": "department",
                     "name": "Department",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "category",
+                    "name": "Category",
+                    "aggregate_type": "count"
                   }
-                ]
+                ],
+                "default_bench_mark": "Department"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -136,12 +142,18 @@
                     "value1": "3500"
                   },
                   {
-                    "column": "department",
+                    "dimension_column": "department",
                     "name": "Department",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "category",
+                    "name": "Category",
+                    "aggregate_type": "avg"
                   }
-                ]
+                ],
+                "default_bench_mark": "Department"
               }
             }
           },
@@ -178,6 +190,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+                "default_view": "scatterplot",
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
               "barchart": {
@@ -201,7 +214,19 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount"
+                "default_secondary_metric": "Approved Amount",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "200000000"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "200000000",
+                    "value1": "300000000"
+                  }
+                ],
+                "default_bench_mark": "Bench mark 1"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -222,7 +247,19 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount"
+                "default_secondary_metric": "Approved Amount",
+                "bench_mark_entries": [
+                  {
+                    "name": "Bench mark 1",
+                    "value": "200000000"
+                  },
+                  {
+                    "name": "Bench mark 2",
+                    "value": "200000000",
+                    "value1": "300000000"
+                  }
+                ],
+                "default_bench_mark": "Bench mark 1"
               }
             }
           },
@@ -286,7 +323,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "scatterplot"
+              "default_view": "scatterplot"
             }
           },
           "prefix": "$",
@@ -535,7 +572,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "scatterplot"
+              "default_view": "scatterplot"
             }
           },
           "precision": "2"
@@ -641,7 +678,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "piechart"
+              "default_view": "piechart"
             }
           },
           "tags": [
@@ -712,7 +749,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "scatterplot"
+              "default_view": "scatterplot"
             }
           }
         }
@@ -789,7 +826,7 @@
           "visualization": {
             "default_view": "map",
             "map": {
-                "default_view": "point"
+              "default_view": "point"
             },
             "snapshot": {
               "chart_type": "groupChart"
@@ -823,8 +860,8 @@
           "visualization": {
             "default_view": "map",
             "map": {
-                "default_view": "choropleth"    
-            },   
+              "default_view": "choropleth"
+            },
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -837,19 +874,19 @@
           "precision": "2",
           "prefix": "$",
           "visualization": {
-            "default_view": "overtime",
+            "default_view": "snapshot",
             "overtime": {
-                "default_view": "timeline",
-                "timeline": {
-                    "show_total": "true",
-                    "show_dimensions": "true",
-                    "default_show_projection": "true",
-                    "default_compare_year": "2015",
-                    "default_time_frame": "Year-on-year"
-                }
+              "timeline": {
+                "show_total": "true",
+                "show_dimensions": "true",
+                "default_show_projection": "true",
+                "default_compare_year": "2015",
+                "default_time_frame": "year_on_year"
+              }
             },
             "snapshot": {
-              "chart_type": "groupChart"
+              "chart_type": "groupChart",
+              "default_view": "scatterplot"
             }
           }
         }
@@ -987,12 +1024,11 @@
           "prefix": "",
           "suffix": "incidents",
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
               "default_group_by_entry_column": "agency_name",
-              "default_comparison_column_entry": "case_disposition",
               "show_pie_chart": "true",
               "barchart": {
                 "secondary_metric_entries": [
@@ -1037,12 +1073,18 @@
                     "value1": "350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "avg"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -1076,24 +1118,31 @@
                     "value1": "1350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               }
             },
             "overtime": {
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
+              "default_view": "burn_up",
               "timeline": {
                 "show_total": "true",
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "Year-on-year",
+                "default_time_frame": "year_on_year",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1125,19 +1174,25 @@
                     "value1": "1350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               },
               "burn_up": {
                 "show_total": "true",
                 "show_dimensions": "false",
                 "default_show_projection": "false",
                 "default_compare_year": "",
-                "default_time_frame": "Rolling",
+                "default_time_frame": "rolling",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1169,12 +1224,18 @@
                     "value1": "350"
                   },
                   {
-                    "column": "case_disposition",
+                    "dimension_column": "case_disposition",
                     "name": "Disposition",
                     "value": "1100",
                     "value1": "1400"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases",
+                    "aggregate_type": "count"
                   }
-                ]
+                ],
+                "default_bench_mark": "Disposition"
               }
             }
           },
@@ -1184,8 +1245,8 @@
               "column": "reported_date_time",
               "field": "quick_filter_5_qs3a_3222_0",
               "dateRange": {
-                "start_date": "2019-12-01",
-                "end_date": "2019-12-30"
+                "start_date": "2018-10-01",
+                "end_date": "2018-12-30"
               }
             }
           ],
@@ -1395,13 +1456,13 @@
           "visualization": {
             "default_view": "map",
             "map": {
-                "default_view": "heat"
+              "default_view": "heat"
             },
             "snapshot": {
               "chart_type": "groupChart",
               "show_scatterplot_range_bar": "true",
               "scatterplot": {
-                  "default_show_range": "true"
+                "default_show_range": "true"
               }
             },
             "overtime": {
@@ -1454,11 +1515,11 @@
               "show_burn_up_chart": "true",
               "default_view": "burn_up",
               "burn_up": {
-                  "show_total": "true",
-                  "show_dimensions": "false",
-                  "default_show_projection": "true",
-                  "default_compare_year": "2015",
-                  "default_time_frame": "Year-on-year"
+                "show_total": "true",
+                "show_dimensions": "false",
+                "default_show_projection": "true",
+                "default_compare_year": "2015",
+                "default_time_frame": "year_on_year"
               }
             }
           }
@@ -1622,7 +1683,7 @@
               "default_view": "scatterplot",
               "show_scatterplot_range_bar": "true",
               "scatterplot": {
-                  "default_show_range": "true"
+                "default_show_range": "true"
               }
             }
           }
