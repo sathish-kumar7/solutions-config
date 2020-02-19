@@ -489,6 +489,9 @@
                 ]
               },
               "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
@@ -617,6 +620,9 @@
                 ]
               },
               "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
@@ -734,6 +740,9 @@
                 ]
               },
               "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
                 "secondary_metric_entries": [
                   {
                     "column": "revisedbudget",
