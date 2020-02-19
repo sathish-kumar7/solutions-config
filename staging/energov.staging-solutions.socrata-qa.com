@@ -24,7 +24,8 @@
   "is_private": "false",
   "template_entries": [
     {
-      "name": "Community Development",
+      "name": "Permitting",
+      "description": "Permitting",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "amhj-22i6",
       "fields": {
@@ -304,6 +305,7 @@
     },
     {
       "name": "Inspections",
+      "description": "Inspections",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "vnvd-qqjp",
       "fields": {
@@ -469,6 +471,7 @@
     },
     {
       "name": "Business Services",
+      "description": "Business Services",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "sb4f-xivi",
       "fields": {
@@ -627,6 +630,7 @@
     },
     {
       "name": "Code Cases",
+      "description": "Code Cases",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "sukz-2bfa",
       "fields": {
