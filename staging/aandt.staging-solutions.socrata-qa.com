@@ -26,8 +26,8 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "n3pu-983n",
       "parent_queries": [
-        "select * where sale_validity in ('0','00')",
-        "select *,avg(asr) over (partition by land_use_type) as median_asr, 1-asr/median_asr as asr_deviation_from_median"
+        "select *,:@computed_region_52nt_trix where sale_validity in ('0','00')",
+        "select *,:@computed_region_52nt_trix,avg(asr) over (partition by land_use_type) as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
       "fields": {
         "date_column": "saledt",
