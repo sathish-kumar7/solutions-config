@@ -47,12 +47,12 @@
           "name": "Permit Class"
         },
         {
-          "column": "projectname",
-          "name": "Project"
-        },
-        {
           "column": "capital_fund_project",
           "name": "Capital Fund Project"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
         }
       ],
       "group_by_entries": [
@@ -63,6 +63,14 @@
         {
           "column": "district",
           "name": "District"
+        },
+        {
+          "column": "capital_fund_project",
+          "name": "Capital Fund Project"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
         }
       ],
       "view_entries": [
