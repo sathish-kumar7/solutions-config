@@ -1,6 +1,6 @@
 {
   "branding": {
-    "browser_title": "Solutions | A&T",
+    "browser_title": "Solutions | A&T ",
     "title": "Solutions - Tax and Appraisals",
     "delimiter": ","
   },
@@ -26,14 +26,15 @@
       "dataset_domain": "appraisalandtax.demo.socrata.com",
       "dataset_id": "n3pu-983n",
       "parent_queries": [
-        "select * where sale_validity in ('0','00')",
-        "select *,avg(asr) over (partition by land_use_type) as median_asr, 1-asr/median_asr as asr_deviation_from_median"
+        "select *,:@computed_region_52nt_trix where sale_validity in ('0','00')",
+        "select *,:@computed_region_52nt_trix,avg(asr) over (partition by land_use_type) as median_asr, 1-asr/median_asr as asr_deviation_from_median"
       ],
       "fields": {
         "date_column": "saledt",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
-        "sua5-m9tm": "sua5_m9tm_objectid"
+        "sua5-m9tm": "sua5_m9tm_objectid",
+        "52nt-trix": ":@computed_region_52nt_trix"
       },
       "dimension_entries": [
         {
@@ -166,14 +167,16 @@
               "name": "Meets Standard",
               "color": "#259652",
               "operator": "between",
-              "value": "0.8",
-              "to": "1.2",
-              "icon": "icons-check-circle"
+              "value": "0.9",
+              "to": "1.1",
+              "icon": "icons-check-circle",
+              "target_entry_description": "This metric meets the IAAO standard. The standard is between 0.9 and 1.1."
             },
             {
               "name": "Does Not Meet Standard",
               "color": "#e31219",
-              "icon": "icons-times-circle"
+              "icon": "icons-times-circle",
+              "target_entry_description": "This metric does not meet the IAAO standard. The standard is between 0.9 and 1.1."
             }
           ]
         },
@@ -372,10 +375,6 @@
         {
           "column": "style",
           "name": "style"
-        },
-        {
-          "column": "com_use",
-          "name": "Commercial Use Type"
         }
       ],
       "leaf_page_entries": [
@@ -457,6 +456,20 @@
           "border_color": "#cccccc",
           "mini_map_border_color": "#4d4e4f",
           "outline_highlight_color": "#808080"
+        },
+        {
+          "shape_dataset_domain": "appraisalandtax.demo.socrata.com",
+          "shape_dataset_id": "52nt-trix",
+          "shape_name": "County Commission Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "commission"
+          },
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
+          "outline_highlight_color": "#808080"
         }
       ]
     },
@@ -480,9 +493,6 @@
         {
           "column": "land_use_type",
           "name": "Land Use Type"
-        },{
-          "column": "com_use",
-          "name": "Commercial Use Type"
         },{
           "column": "com_name",
           "name": "Commercial Description"
