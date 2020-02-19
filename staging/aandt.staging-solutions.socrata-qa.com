@@ -373,10 +373,6 @@
         {
           "column": "style",
           "name": "style"
-        },
-        {
-          "column": "com_use",
-          "name": "Commercial Use Type"
         }
       ],
       "leaf_page_entries": [
@@ -495,9 +491,6 @@
         {
           "column": "land_use_type",
           "name": "Land Use Type"
-        },{
-          "column": "com_use",
-          "name": "Commercial Use Type"
         },{
           "column": "com_name",
           "name": "Commercial Description"
