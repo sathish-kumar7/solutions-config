@@ -1309,7 +1309,7 @@
 					"aggregate_type": "sum",
 					"prefix": "$",
 					"suffix": "",
-					"precision": "2",
+					"precision": "0",
 					"tags": [
 						"Payroll & HR"
 					],
