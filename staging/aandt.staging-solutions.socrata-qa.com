@@ -169,7 +169,8 @@
               "operator": "between",
               "value": "0.8",
               "to": "1.2",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
+              "target_entry_description": "This metric meets the IAAO standard. The standard is between 0.8 and 1.2."
             },
             {
               "name": "Does Not Meet Standard",
