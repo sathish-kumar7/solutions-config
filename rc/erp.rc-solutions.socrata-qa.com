@@ -53,33 +53,101 @@
             "Financials"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
-            }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                  ],
+                  "default_secondary_metric": "Actual Amount"
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ],
+                  "default_secondary_metric": "Actual Amount"
+                }
             },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              },
+              "burn_up": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              }
             }
-          ]
+          }
         },
         {
           "name": "Payroll vs. Budgeted",
@@ -95,33 +163,101 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
-            }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                  ],
+                  "default_secondary_metric": "Actual amount"
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ],
+                  "default_secondary_metric": "Actual amount"
+                }
             },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
-            }
-          ]
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              },
+              "burn_up": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              }
+            }            
+          }
         },
         {
           "name": "Estimated vs. Actual Revenue",
@@ -152,33 +288,101 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "actual"
-            }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "actual",
-              "name": "Actual Amount",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2",
+                      "render_type": "bullet"
+                    }
+                  ],
+                  "default_secondary_metric": "Original budget"
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ],
+                  "default_secondary_metric": "Original budget"
+                }
             },
-            {
-              "column": "ltdoriginalbudget",
-              "name": "Original budget",
-              "aggregate_type": "sum",
-              "prefix": "$",
-              "suffix": "",
-              "precision": "2",
-              "render_type": "bullet"
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+                },
+                "burn_up": {
+                  "secondary_metric_entries": [
+                    {
+                      "column": "actual",
+                      "name": "Actual Amount",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    },
+                    {
+                      "column": "ltdoriginalbudget",
+                      "name": "Original budget",
+                      "aggregate_type": "sum",
+                      "prefix": "$",
+                      "suffix": "",
+                      "precision": "2"
+                    }
+                  ]
+              }
             }
-          ]
+          }
         },
         {
           "name": "Cash Balance",
@@ -209,7 +413,12 @@
           ],
           "quick_filters": [],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "snapshot",
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true"
+            }
           }
         },
         {
@@ -227,7 +436,7 @@
           ],
           "target_entries": [],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "barChart"
             }
@@ -273,8 +482,12 @@
           "name": "Job"
         },
         {
-          "column": "paycategory",
-          "name": "Pay Type"
+          "column": "groupbargainingunit",
+          "name": "Bargaining Unit"
+        },
+        {
+          "column": "paytype",
+          "name": "Employment Type"
         }
       ],
       "view_entries": [
@@ -289,24 +502,52 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
-            "chart_type": "barChart",
-            "show_pie_chart": "false",
-            "default_comparison_column_entry": "paycategory"
+                "chart_type": "barChart",
+                "show_pie_chart": "false",
+                "default_comparison_column_entry": "paycategory",
+                "barchart": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "paycategory",
+                      "name": "Pay Type",
+                      "aggregate_type": "",
+                      "prefix": "",
+                      "suffix": "",
+                      "precision": "",
+                      "render_type": "stack"
+                    }
+                  ]
+                },
+                "scatterplot": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "paycategory",
+                      "name": "Pay Type",
+                      "aggregate_type": "",
+                      "prefix": "",
+                      "suffix": "",
+                      "precision": ""
+                    }
+                  ]
+                }
+            },
+            "overtime": {
+                "timeline": {
+                    "secondary_metric_entries": [
+                    {
+                      "column": "paycategory",
+                      "name": "Pay Type",
+                      "aggregate_type": "",
+                      "prefix": "",
+                      "suffix": "",
+                      "precision": ""
+                    }
+                  ]
+                }
             }
-          },
-          "comparison_column_entries": [
-            {
-              "column": "paycategory",
-              "name": "Pay Type",
-              "aggregate_type": "",
-              "prefix": "",
-              "suffix": "",
-              "precision": "",
-              "render_type": "stack"
-            }
-          ]
+          }
         },
         {
           "name": "Total Overtime",
@@ -319,7 +560,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "snapshot"
           },
           "quick_filters": [
             {
@@ -336,7 +577,7 @@
         {
           "name": "Headcount",
           "parent_queries": [
-          "select distinct(employeeid) as distinct_employees, payamount, paycategory, checkdate, position, jobclass, firstname"
+          "select distinct(employeeid) as distinct_employees, payamount, paytype, checkdate, position, jobclass, firstname, groupbargainingunit"
           ],
           "column": "distinct_employees",
           "aggregate_type": "count",
@@ -347,7 +588,7 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot"
+            "default_view": "snapshot"
           },
           "quick_filters": [
               
@@ -421,14 +662,11 @@
             "Payroll & HR"
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
-          },
-          "comparison_column_entries": [
-            
-          ]
+          }
         }
       ],
       "leaf_page_entries": [
@@ -495,14 +733,11 @@
             
           ],
           "visualization": {
-            "default_view": "Snapshot",
+            "default_view": "snapshot",
             "snapshot": {
             "chart_type": "barChart"
             }
-          },
-          "comparison_column_entries": [
-            
-          ]
+          }
         }
       ],
       "leaf_page_entries": [
@@ -517,6 +752,114 @@
         {
           "column": "requestingdepartment",
           "name": "Requesting Department"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Bids per Oppurtunity",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "4f5p-ynjv",
+                "parent_queries": [
+          "select min(opportunityname) as oppurtunity_name, min(datesubmitted) as date_submitted, min(biddername) as bidder_name, min(requestingdepartment) as requesting_department, count(bidderid) as bidder_count, opportunityid group by opportunityid "
+        ],
+      "fields": {
+        "date_column": "date_submitted"
+      },
+      "dimension_entries": [
+        {
+          "column": "oppurtunity_name",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "bidder_name",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requesting_department",
+          "name": "Requesting Department"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Bids per Opportunity",
+          "column": "sum(bidder_count)/count(opportunityid)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "oppurtunity_name",
+          "name": "Oppurtunity Name"
+        },
+        {
+          "column": "bidder_name",
+          "name": "Bidder Name"
+        },
+        {
+          "column": "requesting_department",
+          "name": "Requesting Department"
+        }
+      ]
+    },
+    {
+      "name": "ERP - Applicants",
+      "dataset_domain": "erpinsights.demo.socrata.com",
+      "dataset_id": "n5zv-gf3k",
+                "parent_queries": [
+          "select min(positionopendate) as positionopen_date, min(jobopening) as job_opening, min(city) as city, count(applicantid) as applicant_id, jobopeningrequisitionnumber group by jobopeningrequisitionnumber"
+        ],
+      "fields": {
+        "date_column": "positionopen_date"
+      },
+      "dimension_entries": [
+        {
+          "column": "job_opening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Applicants per Open Position",
+          "column": "sum(applicant_id)/count(jobopeningrequisitionnumber)",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            "chart_type": "barChart"
+            }
+          }  
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "job_opening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
         }
       ]
     }
