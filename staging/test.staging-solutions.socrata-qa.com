@@ -17,7 +17,7 @@
   },
   "date_options": {
     "type": "yearly",
-    "year_start_month": "7",
+    "year_start_month": "4",
     "data_end_date": "2019-02-10"
   },
   "template_entries": [
@@ -190,6 +190,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+                "default_view": "scatterplot",
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
               "barchart": {
@@ -881,13 +882,13 @@
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
                 "default_time_frame": "year_on_year"
-                }
-              },
-              "snapshot": {
-                "chart_type": "groupChart",
-                "default_view": "scatterplot"
               }
+            },
+            "snapshot": {
+              "chart_type": "groupChart",
+              "default_view": "scatterplot"
             }
+          }
         }
       ],
       "filter_by_entries": [
@@ -1135,7 +1136,7 @@
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
-              "default_view": "timeline",
+              "default_view": "burn_up",
               "timeline": {
                 "show_total": "true",
                 "show_dimensions": "true",
