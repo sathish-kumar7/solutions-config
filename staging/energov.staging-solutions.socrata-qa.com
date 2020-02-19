@@ -1,7 +1,7 @@
 {
   "branding": {
-    "browser_title": "Solutions | EnerGov ",
-    "title": "Solutions - EnerGov"
+    "browser_title": "EnerGov Executive Insights",
+    "title": "EnerGov Executive Insights"
   },
     "exploration_card_entries": [
     {
