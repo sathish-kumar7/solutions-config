@@ -1,7 +1,7 @@
 {
   "branding": {
-    "browser_title": "Solutions | A&T ",
-    "title": "Solutions - Tax and Appraisals",
+    "browser_title": "Assessment Connect",
+    "title": "Assessment Connect",
     "delimiter": ","
   },
     "exploration_card_entries": [
