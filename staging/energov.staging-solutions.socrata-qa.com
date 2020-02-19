@@ -800,6 +800,138 @@
           "color": "#32a889"
         }
       ]
+    },
+    {
+      "name": "Plans",
+      "description": "Planning",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "akmz-6gsk",
+      "fields": {
+        "date_column": "applicationdate",
+        "incident_type": "planid"
+      },
+      "dimension_entries": [
+        {
+          "column": "plantypegroup",
+          "name": "Plan Type Group"
+        },
+        {
+          "column": "plantype",
+          "name": "Plan Type"
+        }
+      ],
+      "group_by_entries": [
+         {
+          "column": "plantypegroup",
+          "name": "Plan Type Group"
+        },
+        {
+          "column": "plantype",
+          "name": "Plan Type"
+        }
+      ],
+      "quick_filter_entries": [
+        
+      ],
+      "view_entries": [
+        {
+          "name": "Plan Applications Opened",
+          "column": "applicationdate",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Planning"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Average Time Open",
+          "column": "applied_to_completed",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " days",
+          "tags": [
+            "Planning"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "codecasetypename",
+          "name": "Code Case Type"
+        },
+        {
+          "column": "codecasestatusname",
+          "name": "Code Case Status"
+        },
+        {
+          "column": "districtname",
+          "name": "District"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
+        }
+      ],
+      "map": {
+        "centerLat": "43.539349",
+        "centerLng": "-96.730926",
+        "zoom": "10",
+        "mini_map_zoom": "9",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "8t69-jvh8",
+          "shape_name": "City Council Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "repname",
+            "shape_description": "repname"
+          },
+          "color": "#32a889"
+        }
+      ]
     }
   ]
 }
