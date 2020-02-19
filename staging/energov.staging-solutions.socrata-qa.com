@@ -804,19 +804,11 @@
       },
       "dimension_entries": [
         {
-          "column": "plantypegroup",
-          "name": "Plan Type Group"
-        },
-        {
           "column": "plantype",
           "name": "Plan Type"
         }
       ],
       "group_by_entries": [
-         {
-          "column": "plantypegroup",
-          "name": "Plan Type Group"
-        },
         {
           "column": "plantype",
           "name": "Plan Type"
