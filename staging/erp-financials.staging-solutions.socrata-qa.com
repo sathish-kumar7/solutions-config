@@ -618,6 +618,18 @@
                     "precision": "2"
                   }
                 ]
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
               },
               "burn_up": {
                 "default_bench_mark": "Revised Budget",
@@ -647,6 +659,18 @@
                     "prefix": "$",
                     "suffix": "",
                     "precision": "2"
+                  }
+                ]
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
                   }
                 ]
               }
@@ -738,6 +762,18 @@
                     "precision": "2"
                   }
                 ]
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
               },
               "burn_up": {
                 "default_bench_mark": "Revised Budget",
@@ -767,6 +803,18 @@
                     "prefix": "$",
                     "suffix": "",
                     "precision": "2"
+                  }
+                ]
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
                   }
                 ]
               }
