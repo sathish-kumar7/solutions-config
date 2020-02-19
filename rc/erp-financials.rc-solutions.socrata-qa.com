@@ -1277,17 +1277,30 @@
 			"fields": {
 				"date_column": "checkdate"
 			},
-			"dimension_entries": [{
-					"column": "jobclass",
-					"name": "Job"
-				},
+			"dimension_entries": [
 				{
 					"column": "groupbargainingunit",
 					"name": "Bargaining Unit"
 				},
 				{
+					"column": "jobclass",
+					"name": "Job"
+				},
+				{
+					"column": "position",
+					"name": "Position"
+				},
+				{
+					"column": "employeeid",
+					"name": "Employee ID"
+				},
+				{
+					"column": "paycategory",
+					"name": "Pay Category"
+				},
+				{
 					"column": "paytype",
-					"name": "Employment Type"
+					"name": "Pay Type"
 				}
 			],
 			"view_entries": [{
