@@ -167,15 +167,16 @@
               "name": "Meets Standard",
               "color": "#259652",
               "operator": "between",
-              "value": "0.8",
-              "to": "1.2",
+              "value": "0.9",
+              "to": "1.1",
               "icon": "icons-check-circle",
-              "target_entry_description": "This metric meets the IAAO standard. The standard is between 0.8 and 1.2."
+              "target_entry_description": "This metric meets the IAAO standard. The standard is between 0.9 and 1.1."
             },
             {
               "name": "Does Not Meet Standard",
               "color": "#e31219",
-              "icon": "icons-times-circle"
+              "icon": "icons-times-circle",
+              "target_entry_description": "This metric does not meet the IAAO standard. The standard is between 0.9 and 1.1."
             }
           ]
         },
