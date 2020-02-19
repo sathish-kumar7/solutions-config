@@ -12,6 +12,10 @@
       "exploration_content": "Find comps for local and neighboring properties"
     }
   ],
+  "date": {
+    "startDate": "2018-2-18",
+    "endDate": "2020-02-18"
+  },
   "tag_list": [
     "Sales",
     "Appeals",
