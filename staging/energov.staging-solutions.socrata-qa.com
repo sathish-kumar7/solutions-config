@@ -11,7 +11,8 @@
       "exploration_content": "View the 2040 comprehensive plan"
     }],
   "tag_list": [
-    "Community Development",
+    "Permitting",
+    "Planning",
     "Business Services",
     "Code Enforcement",
     "Inspections"
@@ -84,7 +85,7 @@
           "prefix": "",
           "suffix": "permits",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -105,7 +106,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -126,7 +127,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -195,7 +196,7 @@
           "prefix": "",
           "suffix": " days",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -227,7 +228,7 @@
           "prefix": "$",
           "suffix": "",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -636,7 +637,8 @@
       "fields": {
         "date_column": "openeddate",
         "incident_type": "codecaseid",
-        "location": "location"
+        "location": "location",
+        "8t69-jvh8": ":@computed_region_8t69_jvh8"
       },
       "dimension_entries": [
         {
@@ -783,7 +785,21 @@
             "style": "mapbox://styles/mapbox/outdoors-v10"
           }
         ]
-      }
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "8t69-jvh8",
+          "shape_name": "City Council Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "repname",
+            "shape_description": "repname"
+          },
+          "color": "#32a889"
+        }
+      ]
     }
   ]
 }
