@@ -182,6 +182,7 @@
         },
         {
           "name": "Total amount spent",
+          "primary_metric_name": "Current amount",
           "column": "actual_amount",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -190,7 +191,6 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-                "default_view": "scatterplot",
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
               "barchart": {
@@ -1136,7 +1136,7 @@
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
-              "default_view": "burn_up",
+              "default_view": "timeline",
               "timeline": {
                 "show_total": "true",
                 "show_dimensions": "true",
