@@ -12,7 +12,6 @@
     }
   ],
   "tag_list": [
-    "Overview",
     "Clearance Rate",
     "Age of Active Pending Cases",
     "Time to Disposition",
