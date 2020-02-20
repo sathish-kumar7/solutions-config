@@ -1302,7 +1302,7 @@
           "column": "actual",
           "parent_queries": [
             "select * where entity = 'Water Resources'",
-            "select * where department = 'Sewer'"
+            "select * where segment3 = 'Sewer'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1434,7 +1434,7 @@
           "column": "actual",
           "parent_queries": [
             "select * where entity = 'Water Resources'",
-            "select * where department = 'Water'"
+            "select * where segment3 = 'Water'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1566,7 +1566,7 @@
           "column": "actual",
           "parent_queries": [
             "select * where entity = 'Water Resources'",
-            "select * where department = 'Stormwater'"
+            "select * where segment3 = 'Stormwater'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
