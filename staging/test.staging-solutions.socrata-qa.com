@@ -191,6 +191,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+                "default_view": "scatterplot",
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
               "barchart": {
