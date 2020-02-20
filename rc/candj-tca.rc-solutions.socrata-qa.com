@@ -1348,6 +1348,9 @@
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
       "dataset_id": "x3q2-qjbe",
+      "parent_queries": [
+         "select * where county='Boise County'"
+      ],
       "fields": {
         "date_column": "lastcloseddate"
       },
