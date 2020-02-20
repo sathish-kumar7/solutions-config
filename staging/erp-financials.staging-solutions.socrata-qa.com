@@ -142,7 +142,8 @@
 										"prefix": "$",
 										"suffix": "",
 										"precision": "2",
-										"render_type": "bullet"
+										"render_type": "bullet",
+										"independent_axes_values": "true"
 									},
 									{
 										"column": "expenditures_amount",
@@ -151,7 +152,8 @@
 										"prefix": "$",
 										"suffix": "",
 										"precision": "2",
-										"render_type": "bullet"
+										"render_type": "bullet",
+										"independent_axes_values": "false"
 									}
 								]
 							}
