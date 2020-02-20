@@ -81,7 +81,7 @@
       "view_entries": [
         {
           "name": "Clearance Rate",
-          primary_metric_name: "Percentage of Case Clearance",
+          "primary_metric_name": "Percentage of Case Clearance",
           "column": "sum(case(isactive='false', 1))/sum(case(isactive='true', 1))*100",
           "aggregate_type": "",
           "use_dimension_value": "true",
