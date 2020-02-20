@@ -1301,7 +1301,8 @@
           "name": "Sewer Revenues vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where entity = 'Water Resources' and department = 'Sewer'"
+            "select * where entity = 'Water Resources'",
+            "select * where department = 'Sewer'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1432,7 +1433,8 @@
           "name": "Water Revenues vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where entity = 'Water Resources' and department = 'Water'"
+            "select * where entity = 'Water Resources'",
+            "select * where department = 'Water'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1563,7 +1565,8 @@
           "name": "Stormwater Revenues vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where entity = 'Water Resources' and department = 'Stormwater'"
+            "select * where entity = 'Water Resources'",
+            "select * where department = 'Stormwater'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
