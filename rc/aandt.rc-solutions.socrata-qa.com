@@ -13,7 +13,7 @@
     }
   ],
   "date": {
-    "startDate": "2018-1-1",
+    "startDate": "2018-01-01",
     "endDate": "2020-02-18"
   },
   "tag_list": [
