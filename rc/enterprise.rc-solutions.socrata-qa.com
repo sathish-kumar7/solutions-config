@@ -1,8 +1,8 @@
 {
   "branding": {
     "delimiter": ",",
-    "browser_title": "Munis Executive Insights",
-    "title": "Solutions - ERP Financials"
+    "browser_title": "Enterprise Executive Insights",
+    "title": "Enterprise Executive Insights"
   },
   "date_options": {
     "type": "yearly",
