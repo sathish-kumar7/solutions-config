@@ -1674,7 +1674,7 @@
 			],
 			"view_entries": [{
 				"name": "Time to Hire",
-				"column": "date_diff_d(hiredate, positionopendate)",
+				"column": "date_diff_d(betterhiredate, positionopendate)",
 				"parent_queries": [
 					"select * where acceptedposition = 'true'"
 				],
