@@ -123,7 +123,8 @@
                     "prefix": "",
                     "suffix": "",
                     "precision": "0",
-                    "render_type": "bullet"
+                    "render_type": "bullet",
+                    "independent_axes_values": "true"
                   }
                 ],
                 "bench_mark_entries": [
