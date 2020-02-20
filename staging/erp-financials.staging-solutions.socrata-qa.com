@@ -1675,6 +1675,9 @@
 			"view_entries": [{
 				"name": "Time to Hire",
 				"column": "date_diff_d(hiredate, positionopendate)",
+				"parent_queries": [
+					"select * where acceptedposition = 'true'"
+				],
 				"aggregate_type": "avg",
 				"prefix": "",
 				"suffix": "days",
