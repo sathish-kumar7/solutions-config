@@ -1,7 +1,7 @@
 {
   "branding": {
-    "browser_title": "Solutions | EnerGov ",
-    "title": "Solutions - EnerGov"
+    "browser_title": "EnerGov Executive Insights",
+    "title": "EnerGov Executive Insights"
   },
     "exploration_card_entries": [
     {
@@ -11,20 +11,22 @@
       "exploration_content": "View the 2040 comprehensive plan"
     }],
   "tag_list": [
-    "Community Development",
+    "Permitting",
+    "Planning",
     "Business Services",
     "Code Enforcement",
     "Inspections"
   ],
   "date": {
     "startDate": "2018-1-1",
-    "endDate": "2020-02-01"
+    "endDate": "2020-01-27"
   },
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
     {
-      "name": "Community Development",
+      "name": "Permitting",
+      "description": "Permitting",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "amhj-22i6",
       "fields": {
@@ -39,20 +41,16 @@
           "name": "Permit Type"
         },
         {
-          "column": "permitstatus",
-          "name": "Permit Status"
+          "column": "projectname",
+          "name": "Project"
         },
         {
           "column": "permitworkclass",
           "name": "Permit Class"
         },
         {
-          "column": "projectname",
-          "name": "Project"
-        },
-        {
-          "column": "capital_fund_project",
-          "name": "Capital Fund Project"
+          "column": "permitstatus",
+          "name": "Permit Status"
         }
       ],
       "group_by_entries": [
@@ -63,6 +61,10 @@
         {
           "column": "district",
           "name": "District"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
         }
       ],
       "view_entries": [
@@ -75,7 +77,7 @@
           "prefix": "",
           "suffix": "permits",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -96,10 +98,10 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -117,7 +119,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -186,7 +188,7 @@
           "prefix": "",
           "suffix": " days",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -218,7 +220,7 @@
           "prefix": "$",
           "suffix": "",
           "tags": [
-            "Community Development"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -296,6 +298,7 @@
     },
     {
       "name": "Inspections",
+      "description": "Inspections",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "vnvd-qqjp",
       "fields": {
@@ -461,6 +464,7 @@
     },
     {
       "name": "Business Services",
+      "description": "Business Services",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "sb4f-xivi",
       "fields": {
@@ -619,12 +623,14 @@
     },
     {
       "name": "Code Cases",
+      "description": "Code Cases",
       "dataset_domain": "tyler.partner.socrata.com",
       "dataset_id": "sukz-2bfa",
       "fields": {
         "date_column": "openeddate",
         "incident_type": "codecaseid",
-        "location": "location"
+        "location": "location",
+        "8t69-jvh8": ":@computed_region_8t69_jvh8"
       },
       "dimension_entries": [
         {
@@ -771,7 +777,145 @@
             "style": "mapbox://styles/mapbox/outdoors-v10"
           }
         ]
-      }
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "8t69-jvh8",
+          "shape_name": "City Council Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "repname",
+            "shape_description": "repname"
+          },
+          "color": "#32a889"
+        }
+      ]
+    },
+    {
+      "name": "Plans",
+      "description": "Planning",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "akmz-6gsk",
+      "fields": {
+        "date_column": "applicationdate",
+        "incident_type": "planid"
+      },
+      "dimension_entries": [
+        {
+          "column": "plantype",
+          "name": "Plan Type"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "plantype",
+          "name": "Plan Type"
+        }
+      ],
+      "quick_filter_entries": [
+        
+      ],
+      "view_entries": [
+        {
+          "name": "Plan Applications Opened",
+          "column": "applicationdate",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Planning"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Average Time Open",
+          "column": "applied_to_completed",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " days",
+          "tags": [
+            "Planning"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "codecasetypename",
+          "name": "Code Case Type"
+        },
+        {
+          "column": "codecasestatusname",
+          "name": "Code Case Status"
+        },
+        {
+          "column": "districtname",
+          "name": "District"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
+        }
+      ],
+      "map": {
+        "centerLat": "43.539349",
+        "centerLng": "-96.730926",
+        "zoom": "10",
+        "mini_map_zoom": "9",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "8t69-jvh8",
+          "shape_name": "City Council Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "repname",
+            "shape_description": "repname"
+          },
+          "color": "#32a889"
+        }
+      ]
     }
   ]
 }
