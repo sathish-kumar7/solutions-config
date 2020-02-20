@@ -1,7 +1,7 @@
 {
   "branding": {
-    "browser_title": "Solutions | C&J ",
-    "title": "Solutions - Courts and Justice"
+    "browser_title": "Court Insights",
+    "title": "Odyssey Court Insights"
   },
   "exploration_card_entries": [
     {
