@@ -239,6 +239,7 @@
 			],
 			"view_entries": [{
 					"name": "Actuals vs. Budget",
+					"primary_metric_name": "Actuals",
 					"column": "actual",
 					"aggregate_type": "sum",
 					"prefix": "$",
