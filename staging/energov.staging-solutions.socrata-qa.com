@@ -65,6 +65,10 @@
         {
           "column": "projectname",
           "name": "Project"
+        },
+        {
+          "column": "permitstatus",
+          "name": "Permit Status"
         }
       ],
       "view_entries": [
