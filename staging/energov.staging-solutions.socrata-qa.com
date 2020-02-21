@@ -110,10 +110,10 @@
               "chart_type": "groupChart"
             },
            "overtime": {
-	   "timeline": {
-		"default_time_frame": "year_on_year"
-		}
-		}
+     "timeline": {
+    "default_time_frame": "year_on_year"
+    }
+    }
           },
           "fields": {
             "date_column": "applicationdate"
@@ -156,6 +156,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+              "default_view": "scatterplot",
               "chart_type": "groupChart",
               "barchart": {
                 "secondary_metric_entries": [
