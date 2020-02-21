@@ -41,16 +41,16 @@
           "name": "Permit Type"
         },
         {
-          "column": "projectname",
-          "name": "Project"
-        },
-        {
           "column": "permitworkclass",
           "name": "Permit Class"
         },
         {
           "column": "permitstatus",
           "name": "Permit Status"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
         }
       ],
       "group_by_entries": [
@@ -59,8 +59,8 @@
           "name": "Permit Type"
         },
         {
-          "column": "district",
-          "name": "District"
+          "column": "permitworkclass",
+          "name": "Permit Class"
         },
         {
           "column": "projectname",
