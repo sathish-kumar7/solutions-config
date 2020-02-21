@@ -43,14 +43,6 @@
         {
           "column": "permitworkclass",
           "name": "Permit Class"
-        },
-        {
-          "column": "permitstatus",
-          "name": "Permit Status"
-        },
-        {
-          "column": "projectname",
-          "name": "Project"
         }
       ],
       "group_by_entries": [
