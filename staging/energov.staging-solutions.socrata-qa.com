@@ -180,6 +180,75 @@
           ]
         },
         {
+          "name": "Permits issued Within 30 days",
+          "column": "((sum(less_than_30_count)/count(*))::double)*100.00",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Permitting"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "permitnumber",
+                    "name": "Number of Permits",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "name": "90%",
+                    "value": "90"
+                  }
+                ]
+              },
+              "scatterplot": {
+                "default_show_range": "false",
+                "secondary_metric_entries": [
+                  {
+                    "column": "permitnumber",
+                    "name": "Number of Permits",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
+                ]
+            }
+          }},
+          "fields": {
+            "date_column": "applicationdate"
+          },
+          "parent_queries": [
+            "select :@computed_region_8t69_jvh8, location,applicationdate, permitnumber, permittypegroup, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+          ],
+          "target_entries": [
+            {
+              "name": "SLA Met",
+              "color": "#259652",
+              "operator": ">",
+              "value": "90",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "SLA Not Met",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ]
+        },
+        {
           "name": "Average # Days from Application to Issuance",
           "column": "avg(applied_to_issued)",
           "aggregate_type": "",
@@ -677,13 +746,36 @@
       ],
       "view_entries": [
         {
-          "name": "Cases Opened",
+          "name": "New Cases Opened",
           "column": "codecaseid",
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
           "suffix": "",
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Open Cases",
+          "column": "codecaseid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "end_date_override_and_ignore":"true",
+          "start_date_boolean_override":"<",
+          "parent_queries": [
+            "select * where codecasestatusname not in ('Closed')"
+          ],
           "tags": [
             "Code Enforcement"
           ],
