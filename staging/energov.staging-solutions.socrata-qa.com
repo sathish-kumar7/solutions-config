@@ -111,6 +111,29 @@
           }
         },
         {
+          "name": "Open Permit Applications",
+          "column": "permitid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "end_date_override_and_ignore":"true",
+          "start_date_boolean_override":"<",
+          "parent_queries": [
+            "select *,:@computed_region_8t69_jvh8 where permitstatus not in ('Finaled','Issued')"
+          ],
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
           "name": "Permits issued Within 90 days",
           "column": "((sum(less_than_90_count)/count(*))::double)*100.00",
           "aggregate_type": "",
