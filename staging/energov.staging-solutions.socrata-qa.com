@@ -108,7 +108,10 @@
             "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart"
-            }
+            },
+            "timeline": {
+								"default_time_frame": "year_on_year"
+							}
           },
           "fields": {
             "date_column": "applicationdate"
