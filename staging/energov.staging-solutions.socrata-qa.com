@@ -550,21 +550,7 @@
             "snapshot": {
               "chart_type": "groupChart"
             }
-          },
-          "target_entries": [
-            {
-              "name": "Measuring",
-              "color": "#2B8FC2",
-              "operator": ">",
-              "value": "0",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
+          }
         },
         {
           "name": "Average Time From Application to Issuance",
