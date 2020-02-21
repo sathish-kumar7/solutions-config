@@ -774,7 +774,7 @@
           "end_date_override_and_ignore":"true",
           "start_date_boolean_override":"<",
           "parent_queries": [
-            "select * where codecasestatusname not in ('Closed')"
+            "select *,:@computed_region_8t69_jvh8 where codecasestatusname not in ('Closed')"
           ],
           "tags": [
             "Code Enforcement"
