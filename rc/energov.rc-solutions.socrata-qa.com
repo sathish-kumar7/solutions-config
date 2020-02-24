@@ -41,16 +41,8 @@
           "name": "Permit Type"
         },
         {
-          "column": "projectname",
-          "name": "Project"
-        },
-        {
           "column": "permitworkclass",
           "name": "Permit Class"
-        },
-        {
-          "column": "permitstatus",
-          "name": "Permit Status"
         }
       ],
       "group_by_entries": [
@@ -59,12 +51,16 @@
           "name": "Permit Type"
         },
         {
-          "column": "district",
-          "name": "District"
+          "column": "permitworkclass",
+          "name": "Permit Class"
         },
         {
           "column": "projectname",
           "name": "Project"
+        },
+        {
+          "column": "permitstatus",
+          "name": "Permit Status"
         }
       ],
       "view_entries": [
@@ -104,15 +100,43 @@
             "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart"
-            }
+            },
+           "overtime": {
+     "timeline": {
+    "default_time_frame": "year_on_year"
+    }
+    }
           },
           "fields": {
             "date_column": "applicationdate"
           }
         },
         {
-          "name": "Permits issued Within 90 days",
-          "column": "((sum(less_than_90_count)/count(*))::double)*100.00",
+          "name": "Open Permit Applications",
+          "column": "permitid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "end_date_override_and_ignore":"true",
+          "start_date_boolean_override":"<",
+          "parent_queries": [
+            "select *,:@computed_region_8t69_jvh8 where permitstatus not in ('Finaled','Issued')"
+          ],
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Permits issued Within 30 days",
+          "column": "((sum(less_than_30_count)/count(*))::double)*100.00",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
@@ -124,6 +148,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+              "default_view": "scatterplot",
               "chart_type": "groupChart",
               "barchart": {
                 "secondary_metric_entries": [
@@ -162,7 +187,7 @@
             "date_column": "applicationdate"
           },
           "parent_queries": [
-            "select :@computed_region_8t69_jvh8, location, applicationdate, permitnumber, permittypegroup, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 90, 1) as less_than_90_count where isstatusissued='true'"
+            "select :@computed_region_8t69_jvh8, location,applicationdate, permitnumber, permittypegroup, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
           ],
           "target_entries": [
             {
@@ -517,21 +542,7 @@
             "snapshot": {
               "chart_type": "groupChart"
             }
-          },
-          "target_entries": [
-            {
-              "name": "Measuring",
-              "color": "#2B8FC2",
-              "operator": ">",
-              "value": "0",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
+          }
         },
         {
           "name": "Average Time From Application to Issuance",
@@ -677,13 +688,36 @@
       ],
       "view_entries": [
         {
-          "name": "Cases Opened",
+          "name": "New Cases Opened",
           "column": "codecaseid",
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
           "suffix": "",
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Open Cases",
+          "column": "codecaseid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "end_date_override_and_ignore":"true",
+          "start_date_boolean_override":"<",
+          "parent_queries": [
+            "select *,:@computed_region_8t69_jvh8 where codecasestatusname not in ('Closed')"
+          ],
           "tags": [
             "Code Enforcement"
           ],
