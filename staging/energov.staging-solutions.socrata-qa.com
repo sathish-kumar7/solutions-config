@@ -195,12 +195,14 @@
               "color": "#259652",
               "operator": ">",
               "value": "90",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
+              "target_entry_description": "The SLA for this operating metric is being met. The SLA is 90% of permits issued within 30 days."
             },
             {
               "name": "SLA Not Met",
               "color": "#e31219",
-              "icon": "icons-times-circle"
+              "icon": "icons-times-circle",
+              "target_entry_description": "The SLA for this operating metric is not being met. The SLA is 90% of permits issued within 30 days."
             }
           ]
         },
