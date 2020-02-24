@@ -2264,33 +2264,6 @@
           }
         },
         {
-          "name": "Price Relative Differential",
-          "column": "avg(asr)/(   sum(sale_appr_value)/sum(price)    )",
-          "aggregate_type": "",
-          "use_dimension_value": "true",
-          "precision": "2",
-          "prefix": "",
-          "suffix": "",
-          "tags": [
-            "Assessment"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true",
-              "barchart": {
-                "bench_mark_entries": [
-                  {
-                    "name": "Benchmark",
-                    "value": "1"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
           "name": "Median Ratio",
           "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
