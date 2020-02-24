@@ -1,5 +1,5 @@
 {
-	"branding": {
+    "branding": {
 		"delimiter": ",",
 		"browser_title": "Munis Executive Insights",
 		"title": "Solutions - ERP Financials"
@@ -1309,7 +1309,7 @@
 				{
 					"column": "paytype",
 					"name": "Pay Type"
-				},
+				}
 			],
 			"view_entries": [{
 					"name": "Total Payroll",
