@@ -64,7 +64,7 @@
               "color": "#259652",
               "operator": ">",
               "value": "135000000",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
               "target_entry_description": "Cash balance is currently on target against an FY20 plan of $135 million."
             },
             {
@@ -267,7 +267,7 @@
               "color": "#259652",
               "operator": ">",
               "value": "1000",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
               "target_entry_description": "Spending is currently on track to remain within budgeted levels ($332 million for FY20)."
             },
             {
@@ -428,7 +428,7 @@
               "color": "#259652",
               "operator": ">",
               "value": "1000",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
               "target_entry_description": "Water Resources revenues are currently on track to exceed plan (projected $62.3 million against a $52.4m target)."
             },
             {
