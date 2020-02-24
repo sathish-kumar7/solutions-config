@@ -1733,7 +1733,12 @@
             "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart"
-            }
+            },
+           "overtime": {
+     "timeline": {
+    "default_time_frame": "year_on_year"
+    }
+    }
           },
           "fields": {
             "date_column": "applicationdate"
@@ -1751,7 +1756,7 @@
             "Permitting"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "scatterplot",
             "snapshot": {
               "chart_type": "groupChart",
               "barchart": {
