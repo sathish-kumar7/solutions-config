@@ -98,7 +98,7 @@
       "view_entries": [
         {
           "name": "Average Sales Ratio",
-          "column": "appr_total/case(price <= 0 or price is null, case(appr_total == 0, 1, true, appr_total) , true, price)",
+          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
           "precision": "2",
           "prefix": "",
@@ -375,7 +375,7 @@
             }
           },
           "parent_queries": [
-            "select *, case(appealed='true',1,true,0) as was_appealed"
+            "select *, :@computed_region_52nt_trix, case(appealed='true',1,true,0) as was_appealed"
           ]
         }
       ],
@@ -415,7 +415,7 @@
         },
         {
           "column": "asr",
-          "name": "ASR",
+          "name": "Sale Ratio",
           "renderType": "number"
         }
       ],
