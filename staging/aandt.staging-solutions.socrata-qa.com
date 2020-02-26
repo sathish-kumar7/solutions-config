@@ -98,7 +98,7 @@
       "view_entries": [
         {
           "name": "Average Sales Ratio",
-          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
+          "column": "appr_total/case(price <= 0 or price is null, case(appr_total == 0, 1, true, appr_total) , true, price)",
           "aggregate_type": "avg",
           "precision": "2",
           "prefix": "",
