@@ -107,6 +107,9 @@
           "tags": [
             "Sales"
           ],
+          "parent_queries": [
+        "select *,:@computed_region_52nt_trix where sale_validity in ('0','00')"
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -310,7 +313,7 @@
           }
         },{
           "name": "% Parcels Sold",
-          "column": "(sum(has_sold)/258000)::double*100",
+          "column": "(sum(has_sold)/count(*))::double*100",
           "aggregate_type": "",
           "stack_column": "land_use_type",
           "precision": "0",
@@ -330,7 +333,7 @@
             }
           },
           "parent_queries": [
-            "select *, case(saledt is not null,1,true,0) as has_sold"
+            "select *, :@computed_region_52nt_trix, case(saledt is not null,1,true,0) as has_sold"
           ]
         },
         {
