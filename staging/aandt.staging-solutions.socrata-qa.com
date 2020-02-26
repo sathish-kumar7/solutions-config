@@ -35,8 +35,6 @@
       ],
       "fields": {
         "date_column": "saledt",
-        "end_date_override_and_ignore":"true",
-        "start_date_override_and_ignore":"true",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
         "sua5-m9tm": "sua5_m9tm_objectid",
@@ -164,9 +162,9 @@
                     "value": "1"
                   },
                   {
-                    "name": "20% Variance",
-                    "value": "1.2",
-                    "value1": "0.8"
+                    "name": "10% Variance",
+                    "value": "1.1",
+                    "value1": "0.9"
                   }
                 ]
               }
@@ -321,6 +319,8 @@
           "precision": "0",
           "prefix": "",
           "suffix": "%",
+          "end_date_override_and_ignore":"true",
+          "start_date_override_and_ignore":"true",
           "tags": [
             "Sales"
           ],
