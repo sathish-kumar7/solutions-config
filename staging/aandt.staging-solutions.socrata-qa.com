@@ -914,6 +914,11 @@
           "column": "building_use",
           "name": "Building Use",
           "renderType": "text"
+        },
+        {
+          "column": "price_per_sf",
+          "name": "Price Per SF",
+          "renderType": "number"
         }
       ],
       "bench_mark_entries": [
