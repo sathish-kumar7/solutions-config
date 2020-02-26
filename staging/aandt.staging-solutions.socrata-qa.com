@@ -35,6 +35,8 @@
       ],
       "fields": {
         "date_column": "saledt",
+        "end_date_override_and_ignore":"true",
+        "start_date_override_and_ignore":"true",
         "incident_type": "land_use_type",
         "location": "geocoded_column",
         "sua5-m9tm": "sua5_m9tm_objectid",
@@ -333,7 +335,7 @@
             }
           },
           "parent_queries": [
-            "select *, :@computed_region_52nt_trix, case(saledt is not null,1,true,0) as has_sold"
+            "select *, :@computed_region_52nt_trix, case(saledt between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
           ]
         },
         {
