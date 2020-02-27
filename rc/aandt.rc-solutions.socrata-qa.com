@@ -20,7 +20,6 @@
     "Sales",
     "Appeals",
     "New Construction",
-    "Commercial",
     "CompFinder"
   ],
   "template_entries": [
