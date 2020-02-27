@@ -96,6 +96,24 @@
       ],
       "view_entries": [
         {
+          "name": "Estimated Total Market Value",
+          "column": "appr_total",
+          "aggregate_type": "sum",
+          "stack_column": "land_use_type",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Sales"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
+        },{
           "name": "Average Sales Ratio",
           "column": "appr_total/case(price <= 0 or price is null, case(appr_total == 0, 1, true, appr_total) , true, price)",
           "aggregate_type": "avg",
@@ -188,22 +206,21 @@
           ]
         },
         {
-          "name": "Average Absolute Deviation",
-          "column": "asr_deviation_from_median",
-          "aggregate_type": "avg",
-          "use_dimension_value": "true",
-          "precision": "2",
+          "name": "Total Sales",
+          "column": "saledt",
+          "aggregate_type": "count",
+          "stack_column": "land_use_type",
+          "precision": "0",
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "show_pie_chart": "true",
-              "show_scatterplot_range_bar": "true"
+              "show_pie_chart": "true"
             }
           }
         },
@@ -254,6 +271,26 @@
           }
         },
         {
+          "name": "Average Absolute Deviation",
+          "column": "asr_deviation_from_median",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Tax & Appraisals"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
+            }
+          }
+        },
+        {
           "name": "Median Ratio",
           "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
@@ -270,44 +307,6 @@
               "chart_type": "groupChart",
               "show_pie_chart": "true",
               "show_scatterplot_range_bar": "true"
-            }
-          }
-        },
-        {
-          "name": "Estimated Total Market Value",
-          "column": "appr_total",
-          "aggregate_type": "sum",
-          "stack_column": "land_use_type",
-          "precision": "0",
-          "prefix": "$",
-          "suffix": "",
-          "tags": [
-            "Sales"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true"
-            }
-          }
-        },
-        {
-          "name": "Total Sales",
-          "column": "saledt",
-          "aggregate_type": "count",
-          "stack_column": "land_use_type",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "",
-          "tags": [
-            "Sales"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true"
             }
           }
         },{
