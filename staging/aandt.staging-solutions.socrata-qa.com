@@ -414,7 +414,7 @@
           "renderType": "text"
         },
         {
-          "column": "asr",
+          "column": "appr_total/case(price <= 0 or price is null, case(appr_total == 0, 1, true, appr_total) , true, price)",
           "name": "Sale Ratio",
           "renderType": "number"
         }
