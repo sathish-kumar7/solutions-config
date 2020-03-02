@@ -366,6 +366,10 @@
         {
           "column": "fiscal_year",
           "name": "Year"
+        },
+        {
+          "column": "description",
+          "name": "Description"
         }
       ],
       "quick_filter_entries": [
