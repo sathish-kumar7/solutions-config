@@ -773,7 +773,8 @@
       "fields": {
         "date_column": "tax_year",
         "incident_type": "parcel_id",
-        "location": "geocoded_column"
+        "location": "geocoded_column",
+        "qpyi-pamy": "@computed_region_qpyi_pamy"
       },
       "dimension_entries": [
         {
