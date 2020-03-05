@@ -21,7 +21,7 @@
       "dataset_domain": "portlandme.data.socrata.com",
       "dataset_id": "kx7n-ab4t",
       "parent_queries": [
-        "select *,avg(asr) over (partition by land_use_type) as median_asr, 1-asr/median_asr as asr_deviation_from_median"
+        "select *,avg(sale_ratio) over (partition by land_use_type) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median"
       ],
       "fields": {
         "date_column": "sale_date",
@@ -203,7 +203,7 @@
         },
         {
           "name": "Coefficient of Dispersion",
-          "column": "avg(asr_deviation_from_median)/avg(median_asr)",
+          "column": "avg(sale_ratio_deviation_from_median)/avg(median_sale_ratio)",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
@@ -222,7 +222,7 @@
         },
         {
           "name": "Price Relative Differential",
-          "column": "avg(asr)/(   sum(sale_appr_value)/sum(sale_price)    )",
+          "column": "avg(sale_ratio)/(   sum(sale_appr_value)/sum(sale_price)    )",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "2",
@@ -249,7 +249,7 @@
         },
         {
           "name": "Average Absolute Deviation",
-          "column": "asr_deviation_from_median",
+          "column": "sale_ratio_deviation_from_median",
           "aggregate_type": "avg",
           "use_dimension_value": "true",
           "precision": "2",
