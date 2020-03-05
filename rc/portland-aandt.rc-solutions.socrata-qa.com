@@ -101,9 +101,6 @@
           "tags": [
             "Sales"
           ],
-          "parent_queries": [
-        "select *,:@computed_region_52nt_trix where sale_validity in ('0','00')"
-      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -311,48 +308,6 @@
           },
           "parent_queries": [
             "select *, :@computed_region_52nt_trix, case(saledt between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
-          ]
-        },
-        {
-          "name": "% Appealed Value Upheld",
-          "column": "(sum(decision_value) / sum(appr_total))*100",
-          "aggregate_type": "",
-          "precision": "2",
-          "prefix": "",
-          "suffix": "%",
-          "tags": [
-            "Appeals"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "true"
-            }
-          },
-          "parent_queries": [
-            "select * where appealed='true'"
-          ]
-        },
-        {
-          "name": "% Appealed",
-          "column": "(sum(was_appealed) / count(*))::double*100",
-          "aggregate_type": "",
-          "precision": "2",
-          "prefix": "",
-          "suffix": "%",
-          "tags": [
-            "Appeals"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "true"
-            }
-          },
-          "parent_queries": [
-            "select *, :@computed_region_52nt_trix, case(appealed='true',1,true,0) as was_appealed"
           ]
         }
       ],
