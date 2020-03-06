@@ -64,7 +64,8 @@
               "color": "#259652",
               "operator": ">",
               "value": "135000000",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
+              "target_entry_description": "Cash balance is currently on target against an FY20 plan of $135 million."
             },
             {
               "name": "Off track",
@@ -260,6 +261,21 @@
           "tags": [
             "Budget & Expenditures"
           ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "1000",
+              "icon": "icons-check-circle",
+              "target_entry_description": "Spending is currently on track to remain within budgeted levels ($332 million for FY20)."
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
           "visualization": {
             "default_view": "overtime",
             "snapshot": {
@@ -405,6 +421,21 @@
           "tags": [
             "Budget & Expenditures",
             "Water Resources"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": "<",
+              "value": "1000",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle",
+              "target_entry_description": "Water Resources spending is currently on track to exceed plan (projected $57.3 million against a $50.2m target)."
+            }
           ],
           "visualization": {
             "default_view": "overtime",
@@ -1179,6 +1210,21 @@
           "tags": [
             "Revenue & Tax",
             "Water Resources"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "1000",
+              "icon": "icons-check-circle",
+              "target_entry_description": "Water Resources revenues are currently on track to exceed plan (projected $62.5 million against a $54.3m target)."
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
           ],
           "visualization": {
             "default_view": "overtime",

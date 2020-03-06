@@ -15,7 +15,7 @@
     "Payroll & HR",
     "Revenue & Tax",
     "Permitting",
-    "Sales"
+    "Assessment"
   ],
   "show_share_via_email": true,
   "is_private": "false",
@@ -1733,7 +1733,12 @@
             "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart"
-            }
+            },
+           "overtime": {
+     "timeline": {
+    "default_time_frame": "year_on_year"
+    }
+    }
           },
           "fields": {
             "date_column": "applicationdate"
@@ -1751,7 +1756,7 @@
             "Permitting"
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "scatterplot",
             "snapshot": {
               "chart_type": "groupChart",
               "barchart": {
@@ -1940,6 +1945,129 @@
           "color": "#32a889"
         }
       ]
+    },{
+      "name": "New Construction",
+      "description": "Tax and Appraisals",
+      "dataset_domain": "appraisalandtax.demo.socrata.com",
+      "dataset_id": "3sa7-53ay",
+      "parent_queries": [
+
+      ],
+      "fields": {
+        "date_column": "tax_year",
+        "incident_type": "own1"
+      },
+      "dimension_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "nbhd",
+          "name": "Neighborhood"
+        }
+      ],
+      "group_by_entries": [
+
+      ],
+      "view_entries": [
+        {
+          "name": "Total Parcels with New Construction",
+          "column": "count(new_constr_amount)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Assessment"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Total Value of New Construction",
+          "column": "sum(new_constr_amount)",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Assessment"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "true"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "class",
+          "name": "Class"
+        },
+        {
+          "column": "land_use_code",
+          "name": "Land Use Code"
+        },
+        {
+          "column": "nbhd",
+          "name": "Neighborhood"
+        },
+        {
+          "column": "new_constr_amount",
+          "name": "New Construction Value"
+        }
+      ],
+      "quick_filter_entries": [
+
+      ],
+      "bench_mark_entries": [
+
+      ],
+      "shape_dataset_entries": [
+
+      ],
+      "map": {
+        "centerLat": "39.018425261608655",
+        "centerLng": "-84.00102962486125",
+        "zoom": "7",
+        "mini_map_zoom": "7",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     },
         {
       "name": "Cobb County Property Data",
@@ -2022,7 +2150,7 @@
           "suffix": "",
           "use_dimension_value": "true",
           "tags": [
-            "Sales"
+            "Assessment"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -2141,33 +2269,6 @@
           }
         },
         {
-          "name": "Price Relative Differential",
-          "column": "avg(asr)/(   sum(sale_appr_value)/sum(price)    )",
-          "aggregate_type": "",
-          "use_dimension_value": "true",
-          "precision": "2",
-          "prefix": "",
-          "suffix": "",
-          "tags": [
-            "Sales"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true",
-              "barchart": {
-                "bench_mark_entries": [
-                  {
-                    "name": "Benchmark",
-                    "value": "1"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
           "name": "Median Ratio",
           "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
@@ -2176,7 +2277,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Sales"
+            "Assessment"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -2196,7 +2297,7 @@
           "prefix": "$",
           "suffix": "",
           "tags": [
-            "Sales"
+            "Assessment"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -2215,7 +2316,7 @@
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Sales"
+            "Assessment"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -2233,7 +2334,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Sales"
+            "Assessment"
           ],
           "visualization": {
             "default_view": "map",

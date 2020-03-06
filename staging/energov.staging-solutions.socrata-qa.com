@@ -41,16 +41,8 @@
           "name": "Permit Type"
         },
         {
-          "column": "projectname",
-          "name": "Project"
-        },
-        {
           "column": "permitworkclass",
           "name": "Permit Class"
-        },
-        {
-          "column": "permitstatus",
-          "name": "Permit Status"
         }
       ],
       "group_by_entries": [
@@ -59,8 +51,8 @@
           "name": "Permit Type"
         },
         {
-          "column": "district",
-          "name": "District"
+          "column": "permitworkclass",
+          "name": "Permit Class"
         },
         {
           "column": "projectname",
@@ -108,7 +100,12 @@
             "default_view": "overtime",
             "snapshot": {
               "chart_type": "groupChart"
-            }
+            },
+           "overtime": {
+     "timeline": {
+    "default_time_frame": "year_on_year"
+    }
+    }
           },
           "fields": {
             "date_column": "applicationdate"
@@ -138,75 +135,6 @@
           }
         },
         {
-          "name": "Permits issued Within 90 days",
-          "column": "((sum(less_than_90_count)/count(*))::double)*100.00",
-          "aggregate_type": "",
-          "use_dimension_value": "true",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "%",
-          "tags": [
-            "Permitting"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "barchart": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "permitnumber",
-                    "name": "Number of Permits",
-                    "aggregate_type": "count",
-                    "prefix": "",
-                    "suffix": "",
-                    "precision": "0",
-                    "render_type": "bullet"
-                  }
-                ],
-                "bench_mark_entries": [
-                  {
-                    "name": "90%",
-                    "value": "90"
-                  }
-                ]
-              },
-              "scatterplot": {
-                "default_show_range": "false",
-                "secondary_metric_entries": [
-                  {
-                    "column": "permitnumber",
-                    "name": "Number of Permits",
-                    "aggregate_type": "count",
-                    "precision": "",
-                    "prefix": "",
-                    "suffix": ""
-                  }
-                ]
-            }
-          }},
-          "fields": {
-            "date_column": "applicationdate"
-          },
-          "parent_queries": [
-            "select :@computed_region_8t69_jvh8, location,applicationdate, permitnumber, permittypegroup, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 90, 1) as less_than_90_count where isstatusissued='true'"
-          ],
-          "target_entries": [
-            {
-              "name": "SLA Met",
-              "color": "#259652",
-              "operator": ">",
-              "value": "90",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "SLA Not Met",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
-        },
-        {
           "name": "Permits issued Within 30 days",
           "column": "((sum(less_than_30_count)/count(*))::double)*100.00",
           "aggregate_type": "",
@@ -220,6 +148,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+              "default_view": "scatterplot",
               "chart_type": "groupChart",
               "barchart": {
                 "secondary_metric_entries": [
@@ -266,12 +195,14 @@
               "color": "#259652",
               "operator": ">",
               "value": "90",
-              "icon": "icons-check-circle"
+              "icon": "icons-check-circle",
+              "target_entry_description": "The SLA for this operating metric is being met. The SLA is 90% of permits issued within 30 days."
             },
             {
               "name": "SLA Not Met",
               "color": "#e31219",
-              "icon": "icons-times-circle"
+              "icon": "icons-times-circle",
+              "target_entry_description": "The SLA for this operating metric is not being met. The SLA is 90% of permits issued within 30 days."
             }
           ]
         },
@@ -613,21 +544,7 @@
             "snapshot": {
               "chart_type": "groupChart"
             }
-          },
-          "target_entries": [
-            {
-              "name": "Measuring",
-              "color": "#2B8FC2",
-              "operator": ">",
-              "value": "0",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle"
-            }
-          ]
+          }
         },
         {
           "name": "Average Time From Application to Issuance",

@@ -2237,7 +2237,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "barChart"
+              "chart_type": "groupChart"
             }
           }
         },
@@ -2257,7 +2257,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "barChart"
+              "chart_type": "groupChart"
             }
           }
         },
@@ -2277,7 +2277,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "barChart",
+              "chart_type": "groupChart",
               "barchart": {
                 "secondary_metric_entries": [
                   {

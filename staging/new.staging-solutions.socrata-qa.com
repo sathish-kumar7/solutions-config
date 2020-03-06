@@ -1,7 +1,7 @@
 {
   "branding": {
-    "browser_title": "Solutions | Test ",
-    "title": "Solutions - Test"
+    "browser_title": "Solutions | QA ",
+    "title": "Solutions - QA"
   },
   "tag_list": [
     "Cases",
@@ -18,7 +18,7 @@
   "date_options": {
     "type": "yearly",
     "year_start_month": "4",
-    "data_end_date": "2019-02-10"
+    "data_end_date": "2020-02-10"
   },
   "template_entries": [
     {
@@ -84,31 +84,7 @@
                     "suffix": "categories"
                   }
                 ],
-                "default_secondary_metric": "Program",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "4000",
-                    "value1": "5000"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "2500",
-                    "value1": "3500"
-                  },
-                  {
-                    "dimension_column": "department",
-                    "name": "Department",
-                    "value": "1100",
-                    "value1": "1400"
-                  },
-                  {
-                    "column": "category",
-                    "name": "Category",
-                    "aggregate_type": "count"
-                  }
-                ],
-                "default_bench_mark": "Department"
+                "default_secondary_metric": "Program"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -129,31 +105,7 @@
                     "suffix": "categories"
                   }
                 ],
-                "default_secondary_metric": "Category",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "4000",
-                    "value1": "5000"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "2500",
-                    "value1": "3500"
-                  },
-                  {
-                    "dimension_column": "department",
-                    "name": "Department",
-                    "value": "1100",
-                    "value1": "1400"
-                  },
-                  {
-                    "column": "category",
-                    "name": "Category",
-                    "aggregate_type": "avg"
-                  }
-                ],
-                "default_bench_mark": "Department"
+                "default_secondary_metric": "Category"
               }
             }
           },
@@ -182,7 +134,6 @@
         },
         {
           "name": "Total amount spent",
-          "primary_metric_name": "Current amount",
           "column": "actual_amount",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -191,7 +142,6 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "default_view": "scatterplot",
               "show_pie_chart": "true",
               "default_comparison_column_entry": "approved_amount",
               "barchart": {
@@ -203,8 +153,7 @@
                     "render_type": "bullet",
                     "precision": "2",
                     "prefix": "$",
-                    "suffix": "Approved",
-                    "independent_axes_values": "true"
+                    "suffix": "Approved"
                   },
                   {
                     "column": "recommneded_amount",
@@ -216,19 +165,7 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "200000000"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "200000000",
-                    "value1": "300000000"
-                  }
-                ],
-                "default_bench_mark": "Bench mark 1"
+                "default_secondary_metric": "Approved Amount"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -249,19 +186,7 @@
                     "suffix": "Recommended"
                   }
                 ],
-                "default_secondary_metric": "Approved Amount",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "200000000"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "200000000",
-                    "value1": "300000000"
-                  }
-                ],
-                "default_bench_mark": "Bench mark 1"
+                "default_secondary_metric": "Approved Amount"
               }
             }
           },
@@ -325,7 +250,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "default_view": "scatterplot"
+                "default_view": "scatterplot"
             }
           },
           "prefix": "$",
@@ -366,10 +291,6 @@
         {
           "column": "fiscal_year",
           "name": "Year"
-        },
-        {
-          "column": "description",
-          "name": "Description"
         }
       ],
       "quick_filter_entries": [
@@ -512,8 +433,7 @@
                     "render_type": "bullet",
                     "precision": "2",
                     "prefix": "$",
-                    "suffix": "Recommended",
-                    "independent_axes_values": "true"
+                    "suffix": "Recommended"
                   },
                   {
                     "column": "actual_amount",
@@ -522,8 +442,7 @@
                     "render_type": "bullet",
                     "precision": "2",
                     "prefix": "$",
-                    "suffix": "Actual",
-                    "independent_axes_values": "false"
+                    "suffix": "Actual"
                   }
                 ],
                 "default_secondary_metric": "Actual Amount"
@@ -580,7 +499,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "default_view": "scatterplot"
+                "default_view": "scatterplot"
             }
           },
           "precision": "2"
@@ -686,7 +605,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "default_view": "piechart"
+                "default_view": "piechart"
             }
           },
           "tags": [
@@ -757,7 +676,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "default_view": "scatterplot"
+                "default_view": "scatterplot"
             }
           }
         }
@@ -834,7 +753,7 @@
           "visualization": {
             "default_view": "map",
             "map": {
-              "default_view": "point"
+                "default_view": "point"
             },
             "snapshot": {
               "chart_type": "groupChart"
@@ -868,8 +787,8 @@
           "visualization": {
             "default_view": "map",
             "map": {
-              "default_view": "choropleth"
-            },
+                "default_view": "choropleth"    
+            },   
             "snapshot": {
               "chart_type": "groupChart"
             }
@@ -882,19 +801,12 @@
           "precision": "2",
           "prefix": "$",
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "overtime",
             "overtime": {
-              "timeline": {
-                "show_total": "true",
-                "show_dimensions": "true",
-                "default_show_projection": "true",
-                "default_compare_year": "2015",
-                "default_time_frame": "year_on_year"
-              }
+                "default_view": "timeline"
             },
             "snapshot": {
-              "chart_type": "groupChart",
-              "default_view": "scatterplot"
+              "chart_type": "groupChart"
             }
           }
         }
@@ -1032,11 +944,12 @@
           "prefix": "",
           "suffix": "incidents",
           "visualization": {
-            "default_view": "overtime",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
               "default_group_by_entry_column": "agency_name",
+              "default_comparison_column_entry": "case_disposition",
               "show_pie_chart": "true",
               "barchart": {
                 "secondary_metric_entries": [
@@ -1068,31 +981,7 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Status",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "400",
-                    "value1": "500"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "250",
-                    "value1": "350"
-                  },
-                  {
-                    "dimension_column": "case_disposition",
-                    "name": "Disposition",
-                    "value": "1100",
-                    "value1": "1400"
-                  },
-                  {
-                    "column": "case_id",
-                    "name": "Cases",
-                    "aggregate_type": "avg"
-                  }
-                ],
-                "default_bench_mark": "Disposition"
+                "default_secondary_metric": "Status"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
@@ -1113,44 +1002,14 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Status",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "1400",
-                    "value1": "1800"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "1250",
-                    "value1": "1350"
-                  },
-                  {
-                    "dimension_column": "case_disposition",
-                    "name": "Disposition",
-                    "value": "1100",
-                    "value1": "1400"
-                  },
-                  {
-                    "column": "case_id",
-                    "name": "Cases",
-                    "aggregate_type": "count"
-                  }
-                ],
-                "default_bench_mark": "Disposition"
+                "default_secondary_metric": "Status"
               }
             },
             "overtime": {
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
-              "default_view": "timeline",
               "timeline": {
-                "show_total": "true",
-                "show_dimensions": "true",
-                "default_show_projection": "true",
-                "default_compare_year": "2015",
-                "default_time_frame": "year_on_year",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1169,38 +1028,9 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Case Disposition",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "1400",
-                    "value1": "1500"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "1250",
-                    "value1": "1350"
-                  },
-                  {
-                    "dimension_column": "case_disposition",
-                    "name": "Disposition",
-                    "value": "1100",
-                    "value1": "1400"
-                  },
-                  {
-                    "column": "case_id",
-                    "name": "Cases",
-                    "aggregate_type": "count"
-                  }
-                ],
-                "default_bench_mark": "Disposition"
+                "default_secondary_metric": "Case Disposition"
               },
               "burn_up": {
-                "show_total": "true",
-                "show_dimensions": "false",
-                "default_show_projection": "false",
-                "default_compare_year": "",
-                "default_time_frame": "rolling",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1219,31 +1049,7 @@
                     "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Cases",
-                "bench_mark_entries": [
-                  {
-                    "name": "Bench mark 1",
-                    "value": "400",
-                    "value1": "500"
-                  },
-                  {
-                    "name": "Bench mark 2",
-                    "value": "250",
-                    "value1": "350"
-                  },
-                  {
-                    "dimension_column": "case_disposition",
-                    "name": "Disposition",
-                    "value": "1100",
-                    "value1": "1400"
-                  },
-                  {
-                    "column": "case_id",
-                    "name": "Cases",
-                    "aggregate_type": "count"
-                  }
-                ],
-                "default_bench_mark": "Disposition"
+                "default_secondary_metric": "Case Disposition"
               }
             }
           },
@@ -1253,8 +1059,8 @@
               "column": "reported_date_time",
               "field": "quick_filter_5_qs3a_3222_0",
               "dateRange": {
-                "start_date": "2018-10-01",
-                "end_date": "2018-12-30"
+                "start_date": "2019-12-01",
+                "end_date": "2019-12-30"
               }
             }
           ],
@@ -1464,14 +1270,10 @@
           "visualization": {
             "default_view": "map",
             "map": {
-              "default_view": "heat"
+                "default_view": "heat"
             },
             "snapshot": {
-              "chart_type": "groupChart",
-              "show_scatterplot_range_bar": "true",
-              "scatterplot": {
-                "default_show_range": "true"
-              }
+              "chart_type": "groupChart"
             },
             "overtime": {
               "show_area_chart": "true",
@@ -1521,14 +1323,7 @@
               "show_area_chart": "true",
               "show_timeline_total": "true",
               "show_burn_up_chart": "true",
-              "default_view": "burn_up",
-              "burn_up": {
-                "show_total": "true",
-                "show_dimensions": "false",
-                "default_show_projection": "true",
-                "default_compare_year": "2015",
-                "default_time_frame": "year_on_year"
-              }
+              "default_view": "burn_up"
             }
           }
         }
@@ -1687,12 +1482,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "groupChart",
-              "default_view": "scatterplot",
-              "show_scatterplot_range_bar": "true",
-              "scatterplot": {
-                "default_show_range": "true"
-              }
+              "chart_type": "groupChart"
             }
           }
         }

@@ -13,14 +13,13 @@
     }
   ],
   "date": {
-    "startDate": "2018-2-18",
+    "startDate": "2017-2-18",
     "endDate": "2020-02-18"
   },
   "tag_list": [
     "Sales",
     "Appeals",
     "New Construction",
-    "Commercial",
     "CompFinder"
   ],
   "template_entries": [
@@ -97,8 +96,26 @@
       ],
       "view_entries": [
         {
+          "name": "Estimated Total Market Value",
+          "column": "appr_total",
+          "aggregate_type": "sum",
+          "stack_column": "land_use_type",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Sales"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
+        },{
           "name": "Average Sales Ratio",
-          "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
+          "column": "appr_total/case(price <= 0 or price is null, case(appr_total == 0, 1, true, appr_total) , true, price)",
           "aggregate_type": "avg",
           "precision": "2",
           "prefix": "",
@@ -107,6 +124,9 @@
           "tags": [
             "Sales"
           ],
+          "parent_queries": [
+        "select *,:@computed_region_52nt_trix where sale_validity in ('0','00')"
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -159,9 +179,9 @@
                     "value": "1"
                   },
                   {
-                    "name": "20% Variance",
-                    "value": "1.2",
-                    "value1": "0.8"
+                    "name": "10% Variance",
+                    "value": "1.1",
+                    "value1": "0.9"
                   }
                 ]
               }
@@ -186,22 +206,21 @@
           ]
         },
         {
-          "name": "Average Absolute Deviation",
-          "column": "asr_deviation_from_median",
-          "aggregate_type": "avg",
-          "use_dimension_value": "true",
-          "precision": "2",
+          "name": "Total Sales",
+          "column": "saledt",
+          "aggregate_type": "count",
+          "stack_column": "land_use_type",
+          "precision": "0",
           "prefix": "",
           "suffix": "",
           "tags": [
-            "Tax & Appraisals"
+            "Sales"
           ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
-              "show_pie_chart": "true",
-              "show_scatterplot_range_bar": "true"
+              "show_pie_chart": "true"
             }
           }
         },
@@ -252,6 +271,26 @@
           }
         },
         {
+          "name": "Average Absolute Deviation",
+          "column": "asr_deviation_from_median",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Tax & Appraisals"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
+            }
+          }
+        },
+        {
           "name": "Median Ratio",
           "column": "sale_appr_value/case(price <= 0 or price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, price)",
           "aggregate_type": "avg",
@@ -270,52 +309,16 @@
               "show_scatterplot_range_bar": "true"
             }
           }
-        },
-        {
-          "name": "Estimated Total Market Value",
-          "column": "appr_total",
-          "aggregate_type": "sum",
-          "stack_column": "land_use_type",
-          "precision": "0",
-          "prefix": "$",
-          "suffix": "",
-          "tags": [
-            "Sales"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true"
-            }
-          }
-        },
-        {
-          "name": "Total Sales",
-          "column": "saledt",
-          "aggregate_type": "count",
-          "stack_column": "land_use_type",
-          "precision": "0",
-          "prefix": "",
-          "suffix": "",
-          "tags": [
-            "Sales"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true"
-            }
-          }
         },{
           "name": "% Parcels Sold",
-          "column": "(sum(has_sold)/258000)::double*100",
+          "column": "(sum(has_sold)/count(*))::double*100",
           "aggregate_type": "",
           "stack_column": "land_use_type",
           "precision": "0",
           "prefix": "",
           "suffix": "%",
+          "end_date_override_and_ignore":"true",
+          "start_date_override_and_ignore":"true",
           "tags": [
             "Sales"
           ],
@@ -330,7 +333,7 @@
             }
           },
           "parent_queries": [
-            "select *, case(saledt is not null,1,true,0) as has_sold"
+            "select *, :@computed_region_52nt_trix, case(saledt between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
           ]
         },
         {
@@ -372,7 +375,7 @@
             }
           },
           "parent_queries": [
-            "select *, case(appealed='true',1,true,0) as was_appealed"
+            "select *, :@computed_region_52nt_trix, case(appealed='true',1,true,0) as was_appealed"
           ]
         }
       ],
@@ -411,8 +414,8 @@
           "renderType": "text"
         },
         {
-          "column": "asr",
-          "name": "ASR",
+          "column": "appr_total/case(price <= 0 or price is null, case(appr_total == 0, 1, true, appr_total) , true, price)",
+          "name": "Sale Ratio",
           "renderType": "number"
         }
       ],
@@ -523,24 +526,6 @@
 
       ],
       "view_entries": [
-        {
-          "name": "% Appealed Value Upheld",
-          "column": "(sum(decision_value) / sum(county_value))*100",
-          "aggregate_type": "",
-          "precision": "2",
-          "prefix": "",
-          "suffix": "%",
-          "tags": [
-            "Appeals"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "true"
-            }
-          }
-        },
         {
           "name": "Total Value Under Dispute",
           "column": "sum(county_value)-sum(taxpayer_opinion_value)",
@@ -788,7 +773,8 @@
       "fields": {
         "date_column": "tax_year",
         "incident_type": "parcel_id",
-        "location": "geocoded_column"
+        "location": "geocoded_column",
+        "qpyi-pamy": "@computed_region_qpyi_pamy"
       },
       "dimension_entries": [
         {
@@ -914,6 +900,11 @@
           "column": "building_use",
           "name": "Building Use",
           "renderType": "text"
+        },
+        {
+          "column": "price_per_sf",
+          "name": "Price Per SF",
+          "renderType": "number"
         }
       ],
       "bench_mark_entries": [
