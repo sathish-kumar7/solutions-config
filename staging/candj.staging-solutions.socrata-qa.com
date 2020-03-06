@@ -26,7 +26,7 @@
       "name": "Courts and Justice",
       "description": "",
       "dataset_domain": "courtsandjustice.demo.socrata.com",
-      "dataset_id": 2ugs-dnyc",
+      "dataset_id": "2ugs-dnyc",
       "fields": {
         "date_column": "statusdate",
         "incident_type": "odysseycasecategorydescription",
