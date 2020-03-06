@@ -60,6 +60,7 @@ def md_table(columns, rows, text_list):
     return table
 
 def run_query(query_url):
+    print("QUERY: ", query_url)
     return requests.request("GET", query_url, auth=(SOCRATA_API_KEY_ID, SOCRATA_API_KEY))
 
 def test_query(base_url, soql_query):
@@ -110,13 +111,23 @@ def parse_and_write_config(_json_config, _file_name, _folder_name=''):
 
             for view_entry in entry["view_entries"]:
                 measure_list.append(view_entry['name'])
-                if ('parent_queries' in view_entry) and ('aggregate_type' in view_entry):
-                    soql_query = f"{view_entry['parent_queries'][0]} |> SELECT {view_entry['aggregate_type'].upper()}({view_entry['column']})"
-                elif 'aggregate_type' in view_entry:
-                    soql_query = f"SELECT {view_entry['aggregate_type'].upper()}({view_entry['column']})"
+                soql_queries = []
+
+                if ('parent_queries' in entry):
+                    soql_queries += parent_queries[1:]
+
+                if ('parent_queries' in view_entry):
+                    soql_queries += view_entry['parent_queries']
+               
+                if 'aggregate_type' in view_entry:
+                    soql_queries += [f"SELECT {view_entry['aggregate_type'].upper()}({view_entry['column']})"]
                 else:
-                    soql_query = f"SELECT {view_entry['column']}"
+                    soql_queries += [f"SELECT {view_entry['column']}"]
+
+                soql_query = ' |> ' .join(soql_queries)
+
                 measure_list.append(f"`{escape_pipe(add_more_space_between_subqueries(soql_query))}`")
+                
                 if 'date' in _json_config:
                     soql_query = replace_global_date_variables(soql_query, default_start_date, default_end_date)
 
