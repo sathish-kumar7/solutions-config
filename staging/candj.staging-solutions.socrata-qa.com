@@ -305,7 +305,7 @@
         },
         {
           "name": "Outgoing Cases: Entry of Judgment",
-          "column": "sum(isclosed='true')",
+          "column": "sum(case(isclosed='true', 1))",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
