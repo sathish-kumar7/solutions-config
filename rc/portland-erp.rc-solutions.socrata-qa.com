@@ -1155,7 +1155,7 @@
         },
         {
           "name": "External Vendor Payments",
-          "column": "actual",
+          "column": "actual * -1",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
