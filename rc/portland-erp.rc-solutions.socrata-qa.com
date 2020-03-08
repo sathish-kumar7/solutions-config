@@ -1826,62 +1826,6 @@
           }
         },
         {
-          "name": "School Payroll",
-          "column": "payamount",
-          "parent_queries": [
-            "select * where entity = 'School'"
-          ],
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "0",
-          "tags": [
-            "Payroll & HR"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "false",
-              "barchart": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "paycategory",
-                    "name": "Pay Type",
-                    "aggregate_type": "",
-                    "prefix": "",
-                    "suffix": "",
-                    "precision": "",
-                    "render_type": "stack"
-                  }
-                ],
-                "default_secondary_metric": "Pay Type"
-              }
-            },
-            "overtime": {
-              "show_burn_up_chart": "true",
-              "timeline": {
-                "bench_mark_entries": [
-                  {
-                    "column": "payamount",
-                    "name": "Total payroll",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              },
-              "burn_up": {
-                "bench_mark_entries": [
-                  {
-                    "column": "payamount",
-                    "name": "Total payroll",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
           "name": "Total Overtime",
           "column": "payamount",
           "aggregate_type": "sum",
@@ -2200,6 +2144,54 @@
           ],
           "start_date_override_and_ignore": "true",
           "end_date_override_and_ignore": "true",
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart"
+            }
+          },
+          "comparison_column_entries": []
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "job_opening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
+        }
+      ]
+    },
+    {
+      "name": "Time to Hire",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "y3ez-h7va",
+      "fields": {
+        "date_column": "hiredate"
+      },
+      "dimension_entries": [
+        {
+          "column": "jobopening",
+          "name": "Job Opening"
+        },
+        {
+          "column": "city",
+          "name": "City"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Time to Hire",
+          "column": "date_diff_d(hiredate, positionopendate)",
+          "aggregate_type": "avg",
+          "prefix": "",
+          "suffix": "days",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
