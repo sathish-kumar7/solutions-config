@@ -259,6 +259,245 @@
       ]
     },
     {
+      "name": "Core Financials",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "drvx-98uq",
+      "fields": {
+        "date_column": "date"
+      },
+      "dimension_entries": [
+        {
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        },
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
+        },
+        {
+          "column": "organization",
+          "name": "Organisation"
+        },
+        {
+          "column": "object",
+          "name": "Budget Object"
+        },
+        {
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Cash Balance",
+          "parent_queries": [
+            "select * where cashaccount = 'true'"
+          ],
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "135000000",
+              "icon": "icons-check-circle",
+              "target_entry_description": "Cash balance is currently on target against an FY20 plan of $135 million."
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "quick_filters": [],
+          "visualization": {
+            "default_view": "overtime",
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "default_view": "burn_up"
+            }
+          },
+          "start_date_override_and_ignore": "true"
+        },
+        {
+          "name": "General Fund Cash Balance",
+          "parent_queries": [
+            "select * where cashaccount = 'true' and fund = 'General Fund'"
+          ],
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "0",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ],
+          "quick_filters": [],
+          "visualization": {
+            "default_view": "overtime",
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "default_view": "burn_up"
+            }
+          },
+          "start_date_override_and_ignore": "true"
+        },
+        {
+          "name": "Unadjusted Net Income",
+          "parent_queries": [
+            "select *, case(accounttype == 'Revenue', actual, true, 0) as revenue_amount, case(accounttype == 'Expense', actual, true, 0) as expenditures_amount"
+          ],
+          "column": "sum(revenue_amount) - sum(expenditures_amount)",
+          "aggregate_type": "",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Financials"
+          ],
+          "target_entries": [],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revenue_amount",
+                    "name": "Revenue Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "expenditures_amount",
+                    "name": "Expenditure Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  }
+                ]
+              }
+            },
+            "overtime": {
+              "show_area_chart": "false",
+              "show_burn_up_chart": "true",
+              "timeline": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revenue_amount",
+                    "name": "Revenue Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "expenditures_amount",
+                    "name": "Expenditure Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        },
+        {
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
+        },
+        {
+          "column": "organization",
+          "name": "Organisation"
+        },
+        {
+          "column": "object",
+          "name": "Budget Object"
+        },
+        {
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "accounttype",
+          "name": "Account Type",
+          "renderType": "text"
+        },
+        {
+          "column": "fund",
+          "name": "Fund",
+          "renderType": "text"
+        },
+        {
+          "column": "actual",
+          "name": "Actual Spending",
+          "renderType": "number"
+        }
+      ]
+    },
+    {
       "name": "Budget Expenses",
       "dataset_domain": "portlandme.data.socrata.com",
       "dataset_id": "b5z7-aw6y",
@@ -1849,28 +2088,6 @@
               "operator": "="
             }
           ]
-        },
-        {
-          "name": "Headcount",
-          "parent_queries": [
-            "select employeeid, min(checkdate) as first_checkdate, max(checkdate) as last_checkdate, max(location) as last_location, max(position) as last_position, max(jobclass) as jobclass, max(groupbargainingunit) as groupbargainingunit, max(paycategory) as paycategory, max(paytype) as paytype group by employeeid"
-          ],
-          "fields": {
-            "date_column": "first_checkdate",
-            "date_column_secondary": "last_checkdate"
-          },
-          "column": "employeeid",
-          "aggregate_type": "count",
-          "prefix": "",
-          "suffix": "employees",
-          "precision": "",
-          "tags": [
-            "Payroll & HR"
-          ],
-          "visualization": {
-            "default_view": "snapshot"
-          },
-          "quick_filters": []
         }
       ],
       "leaf_page_entries": [
@@ -2144,102 +2361,6 @@
           ],
           "start_date_override_and_ignore": "true",
           "end_date_override_and_ignore": "true",
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart"
-            }
-          },
-          "comparison_column_entries": []
-        }
-      ],
-      "leaf_page_entries": [
-        {
-          "column": "job_opening",
-          "name": "Job Opening"
-        },
-        {
-          "column": "city",
-          "name": "City"
-        }
-      ]
-    },
-    {
-      "name": "Time to Hire",
-      "dataset_domain": "portlandme.data.socrata.com",
-      "dataset_id": "y3ez-h7va",
-      "fields": {
-        "date_column": "hiredate"
-      },
-      "dimension_entries": [
-        {
-          "column": "jobopening",
-          "name": "Job Opening"
-        },
-        {
-          "column": "city",
-          "name": "City"
-        }
-      ],
-      "view_entries": [
-        {
-          "name": "Time to Hire",
-          "column": "date_diff_d(hiredate, positionopendate)",
-          "aggregate_type": "avg",
-          "prefix": "",
-          "suffix": "days",
-          "precision": "0",
-          "tags": [
-            "Payroll & HR"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart"
-            }
-          },
-          "comparison_column_entries": []
-        }
-      ],
-      "leaf_page_entries": [
-        {
-          "column": "job_opening",
-          "name": "Job Opening"
-        },
-        {
-          "column": "city",
-          "name": "City"
-        }
-      ]
-    },
-    {
-      "name": "Time to Hire",
-      "dataset_domain": "portlandme.data.socrata.com",
-      "dataset_id": "y3ez-h7va",
-      "fields": {
-        "date_column": "hiredate"
-      },
-      "dimension_entries": [
-        {
-          "column": "jobopening",
-          "name": "Job Opening"
-        },
-        {
-          "column": "city",
-          "name": "City"
-        }
-      ],
-      "view_entries": [
-        {
-          "name": "Time to Hire",
-          "column": "date_diff_d(hiredate, positionopendate)",
-          "aggregate_type": "avg",
-          "prefix": "",
-          "suffix": "days",
-          "precision": "0",
-          "tags": [
-            "Payroll & HR"
-          ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
