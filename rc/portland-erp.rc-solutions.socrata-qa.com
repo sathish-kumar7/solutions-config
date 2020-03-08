@@ -20,7 +20,7 @@
   "template_entries": [
     {
       "name": "Core Financials",
-      "dataset_domain": "portlandme.demo.socrata.com",
+      "dataset_domain": "portlandme.data.socrata.com",
       "dataset_id": "b5z7-aw6y",
       "fields": {
         "date_column": "fiscalmonth"
