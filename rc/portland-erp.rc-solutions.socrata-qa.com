@@ -13,7 +13,8 @@
     "Financials",
     "Budget & Expenditures",
     "Payroll & HR",
-    "Revenue & Tax"
+    "Revenue & Tax",
+    "Schools"
   ],
   "show_share_via_email": true,
   "is_private": "false",
@@ -627,7 +628,7 @@
           "precision": "2",
           "tags": [
             "Budget & Expenditures",
-            "Water Resources"
+            "Schools"
           ],
           "visualization": {
             "default_view": "overtime",
@@ -778,7 +779,8 @@
           "suffix": "",
           "precision": "2",
           "tags": [
-            "Budget & Expenditures"
+            "Budget & Expenditures",
+            "Payroll & HR"
           ],
           "visualization": {
             "default_view": "overtime",
@@ -911,150 +913,6 @@
           },
           "parent_queries": [
             "select * where charactercodedescription = 'Payroll'"
-          ]
-        },
-        {
-          "name": "Water Resources Payroll Expenses vs. Budget",
-          "column": "actual",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Budget & Expenditures",
-            "Water Resources"
-          ],
-          "visualization": {
-            "default_view": "overtime",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "false",
-              "barchart": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actuals",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  }
-                ],
-                "default_secondary_metric": "Revised Budget"
-              },
-              "default_comparison_column_entry": "revisedbudget"
-            },
-            "overtime": {
-              "default_view": "burn_up",
-              "show_area_chart": "true",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true",
-              "timeline": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actuals",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  }
-                ],
-                "bench_mark_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              },
-              "burn_up": {
-                "default_bench_mark": "Revised Budget",
-                "default_time_frame": "year_on_year",
-                "default_compare_year": "2019",
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actuals",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  }
-                ],
-                "bench_mark_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              }
-            }
-          },
-          "parent_queries": [
-            "select * where segment6 = 'Salary&Benefit Expenditures' and entity = 'Water Resources'"
           ]
         }
       ],
@@ -1426,7 +1284,7 @@
           "precision": "2",
           "tags": [
             "Revenue & Tax",
-            "Water Resources"
+            "Schools"
           ],
           "visualization": {
             "default_view": "overtime",
@@ -1718,7 +1576,7 @@
           "precision": "2",
           "tags": [
             "Revenue & Tax",
-            "Water Resources"
+            "Jetport"
           ],
           "visualization": {
             "default_view": "overtime",
@@ -1968,6 +1826,62 @@
           }
         },
         {
+          "name": "School Payroll",
+          "column": "payamount",
+          "parent_queries": [
+            "select * where entity = 'School'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "paycategory",
+                    "name": "Pay Type",
+                    "aggregate_type": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "stack"
+                  }
+                ],
+                "default_secondary_metric": "Pay Type"
+              }
+            },
+            "overtime": {
+              "show_burn_up_chart": "true",
+              "timeline": {
+                "bench_mark_entries": [
+                  {
+                    "column": "payamount",
+                    "name": "Total payroll",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              },
+              "burn_up": {
+                "bench_mark_entries": [
+                  {
+                    "column": "payamount",
+                    "name": "Total payroll",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
           "name": "Total Overtime",
           "column": "payamount",
           "aggregate_type": "sum",
@@ -1983,7 +1897,7 @@
           "quick_filters": [
             {
               "column": "paycategory",
-              "field": "quick_filter_1_dfmt_x4an_0",
+              "field": "quick_filter_1_4fix-tsif_0",
               "type": "text",
               "values": [
                 "OVERTIME"
