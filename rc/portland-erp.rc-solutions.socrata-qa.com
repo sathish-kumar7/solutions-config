@@ -1,8 +1,8 @@
 {
   "branding": {
     "delimiter": ",",
-    "browser_title": "Munis Executive Insights",
-    "title": "Munis Executive Insights"
+    "browser_title": "Portland Executive Insights",
+    "title": "Portland Executive Insights"
   },
   "date_options": {
     "type": "yearly",
@@ -13,35 +13,50 @@
     "Financials",
     "Budget & Expenditures",
     "Payroll & HR",
-    "Revenue & Tax",
-    "Water Resources"
+    "Revenue & Tax"
   ],
   "show_share_via_email": true,
   "is_private": "false",
   "template_entries": [
     {
       "name": "Core Financials",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "darw-mart",
+      "dataset_domain": "portlandme.demo.socrata.com",
+      "dataset_id": "b5z7-aw6y",
       "fields": {
         "date_column": "fiscalmonth"
       },
       "dimension_entries": [
         {
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        },
+        {
           "column": "fund",
           "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
         },
         {
           "column": "organization",
           "name": "Organisation"
         },
         {
-          "column": "accountstatus",
-          "name": "Account status"
+          "column": "object",
+          "name": "Budget Object"
         },
         {
-          "column": "accounttype",
-          "name": "Account type"
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
         }
       ],
       "view_entries": [
@@ -192,20 +207,36 @@
       ],
       "leaf_page_entries": [
         {
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        },
+        {
           "column": "fund",
           "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
         },
         {
           "column": "organization",
           "name": "Organisation"
         },
         {
-          "column": "accountstatus",
-          "name": "Account status"
+          "column": "object",
+          "name": "Budget Object"
         },
         {
-          "column": "accounttype",
-          "name": "Account type"
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
         }
       ],
       "quick_filter_entries": [
@@ -213,40 +244,58 @@
           "column": "accounttype",
           "name": "Account Type",
           "renderType": "text"
+        },
+        {
+          "column": "fund",
+          "name": "Fund",
+          "renderType": "text"
+        },
+        {
+          "column": "actual",
+          "name": "Actual Spending",
+          "renderType": "number"
         }
       ]
     },
     {
       "name": "Budget Expenses",
-      "dataset_domain": "murfreesboro.data.socrata.com",
-      "dataset_id": "tdpw-ufv6",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "b5z7-aw6y",
       "fields": {
         "date_column": "fiscalmonth"
       },
       "dimension_entries": [
         {
           "column": "segment2",
-          "name": "Major Function"
+          "name": "Function"
         },
         {
           "column": "segment3",
           "name": "Department"
         },
         {
-          "column": "charactercodedescription",
-          "name": "Character Code"
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
+        },
+        {
+          "column": "organization",
+          "name": "Organisation"
         },
         {
           "column": "object",
           "name": "Budget Object"
         },
         {
-          "column": "organization",
-          "name": "Organization"
+          "column": "charactercodedescription",
+          "name": "Character Code"
         },
         {
-          "column": "fund",
-          "name": "Fund"
+          "column": "accountdescription",
+          "name": "Account Description"
         }
       ],
       "view_entries": [
@@ -261,6 +310,137 @@
           "tags": [
             "Budget & Expenditures"
           ],
+          "visualization": {
+            "default_view": "overtime",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Revised Budget"
+              }
+            },
+            "overtime": {
+              "default_view": "burn_up",
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              },
+              "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actuals",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              }
+            }
+          },
           "target_entries": [
             {
               "name": "On track",
@@ -275,6 +455,18 @@
               "color": "#e31219",
               "icon": "icons-times-circle"
             }
+          ]
+        },
+        {
+          "name": "City Actuals vs. Budget",
+          "primary_metric_name": "Actuals",
+          "column": "actual",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Budget & Expenditures"
           ],
           "visualization": {
             "default_view": "overtime",
@@ -409,10 +601,25 @@
           },
           "parent_queries": [
             "select * where entity = 'City'"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "1000",
+              "icon": "icons-check-circle",
+              "target_entry_description": "Spending is currently on track to remain within budgeted levels ($332 million for FY20)."
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
           ]
         },
         {
-          "name": "Water Resources Actuals vs. Budget",
+          "name": "Schools Actuals vs. Budget",
           "column": "actual",
           "aggregate_type": "sum",
           "prefix": "$",
@@ -421,21 +628,6 @@
           "tags": [
             "Budget & Expenditures",
             "Water Resources"
-          ],
-          "target_entries": [
-            {
-              "name": "On track",
-              "color": "#259652",
-              "operator": "<",
-              "value": "1000",
-              "icon": "icons-check-circle"
-            },
-            {
-              "name": "Off track",
-              "color": "#e31219",
-              "icon": "icons-times-circle",
-              "target_entry_description": "Water Resources spending is currently on track to exceed plan (projected $57.3 million against a $50.2m target)."
-            }
           ],
           "visualization": {
             "default_view": "overtime",
@@ -566,7 +758,16 @@
             }
           },
           "parent_queries": [
-            "select * where entity = 'Water Resources'"
+            "select * where entity = 'School'"
+          ],
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": "<",
+              "value": "1000",
+              "icon": "icons-check-circle"
+            }
           ]
         },
         {
@@ -709,7 +910,7 @@
             }
           },
           "parent_queries": [
-            "select * where segment6 = 'Salary&Benefit Expenditures' and entity = 'City'"
+            "select * where charactercodedescription = 'Payroll'"
           ]
         },
         {
@@ -859,20 +1060,36 @@
       ],
       "leaf_page_entries": [
         {
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        },
+        {
           "column": "fund",
           "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
         },
         {
           "column": "organization",
           "name": "Organisation"
         },
         {
-          "column": "segment2",
-          "name": "Major Function"
+          "column": "object",
+          "name": "Budget Object"
         },
         {
-          "column": "segment3",
-          "name": "Department"
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
         }
       ],
       "quick_filter_entries": [
@@ -885,43 +1102,43 @@
     },
     {
       "name": "Budgeted Revenues",
-      "dataset_domain": "murfreesboro.data.socrata.com",
-      "dataset_id": "wiba-zbm5",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "8mx7-tp5t",
       "fields": {
         "date_column": "fiscalmonth"
       },
       "dimension_entries": [
         {
-          "column": "entity",
-          "name": "Entity"
-        },
-        {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
           "column": "segment2",
-          "name": "Major Function"
+          "name": "Function"
         },
         {
           "column": "segment3",
           "name": "Department"
         },
         {
-          "column": "charactercodedescription",
-          "name": "Character Code"
+          "column": "fund",
+          "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
+        },
+        {
+          "column": "organization",
+          "name": "Organisation"
         },
         {
           "column": "object",
           "name": "Budget Object"
         },
         {
-          "column": "organization",
-          "name": "Organization"
+          "column": "charactercodedescription",
+          "name": "Character Code"
         },
         {
-          "column": "accounttype",
-          "name": "Account type"
+          "column": "accountdescription",
+          "name": "Account Description"
         }
       ],
       "view_entries": [
@@ -1071,7 +1288,7 @@
           "name": "Tax Revenue vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where charactercodedescription = 'Local Taxes'"
+            "select * where charactercodedescription = 'Prop & Excise Taxes'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1198,10 +1415,10 @@
           }
         },
         {
-          "name": "Water Resources Revenues vs. Budget",
+          "name": "School Revenues vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where entity = 'Water Resources'"
+            "select * where entity = 'School'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1211,6 +1428,122 @@
             "Revenue & Tax",
             "Water Resources"
           ],
+          "visualization": {
+            "default_view": "overtime",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actual Revenue",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Revised Budget"
+              }
+            },
+            "overtime": {
+              "default_view": "burn_up",
+              "show_area_chart": "true",
+              "show_burn_up_chart": "true",
+              "show_timeline_total": "true",
+              "timeline": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actual Revenue",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ]
+              },
+              "burn_up": {
+                "default_bench_mark": "Revised Budget",
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019",
+                "secondary_metric_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "actual",
+                    "name": "Actual Revenue",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "2"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "column": "revisedbudget",
+                    "name": "Revised Budget",
+                    "aggregate_type": "sum"
+                  },
+                  {
+                    "column": "originalbudget",
+                    "name": "Original Budget",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              }
+            }
+          },
           "target_entries": [
             {
               "name": "On track",
@@ -1225,130 +1558,13 @@
               "color": "#e31219",
               "icon": "icons-times-circle"
             }
-          ],
-          "visualization": {
-            "default_view": "overtime",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "false",
-              "barchart": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actual Revenue",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  }
-                ],
-                "default_secondary_metric": "Revised Budget"
-              }
-            },
-            "overtime": {
-              "default_view": "burn_up",
-              "show_area_chart": "true",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true",
-              "timeline": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actual Revenue",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  }
-                ]
-              },
-              "burn_up": {
-                "default_bench_mark": "Revised Budget",
-                "default_time_frame": "year_on_year",
-                "default_compare_year": "2019",
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actual Revenue",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  }
-                ],
-                "bench_mark_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              }
-            }
-          }
+          ]
         },
         {
-          "name": "Sewer Revenues vs. Budget",
+          "name": "City Revenues vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where entity = 'Water Resources'",
-            "select * where segment3 = 'Sewer'"
+            "select * where entity = 'City'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1473,146 +1689,28 @@
                 ]
               }
             }
-          }
-        },
-        {
-          "name": "Water Revenues vs. Budget",
-          "column": "actual",
-          "parent_queries": [
-            "select * where entity = 'Water Resources'",
-            "select * where segment3 = 'Water'"
-          ],
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Revenue & Tax",
-            "Water Resources"
-          ],
-          "visualization": {
-            "default_view": "overtime",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "false",
-              "barchart": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actual Revenue",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  }
-                ],
-                "default_secondary_metric": "Revised Budget"
-              }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "1000",
+              "icon": "icons-check-circle",
+              "target_entry_description": "Water Resources revenues are currently on track to exceed plan (projected $62.5 million against a $54.3m target)."
             },
-            "overtime": {
-              "default_view": "burn_up",
-              "show_area_chart": "true",
-              "show_burn_up_chart": "true",
-              "show_timeline_total": "true",
-              "timeline": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actual Revenue",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  }
-                ]
-              },
-              "burn_up": {
-                "default_bench_mark": "Revised Budget",
-                "default_time_frame": "year_on_year",
-                "default_compare_year": "2019",
-                "secondary_metric_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "actual",
-                    "name": "Actual Revenue",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2"
-                  }
-                ],
-                "bench_mark_entries": [
-                  {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              }
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
             }
-          }
+          ]
         },
         {
-          "name": "Stormwater Revenues vs. Budget",
+          "name": "Jetport Revenues vs. Budget",
           "column": "actual",
           "parent_queries": [
-            "select * where entity = 'Water Resources'",
-            "select * where segment3 = 'Stormwater'"
+            "select * where organization = 'Jetport'"
           ],
           "aggregate_type": "sum",
           "prefix": "$",
@@ -1742,20 +1840,36 @@
       ],
       "leaf_page_entries": [
         {
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "segment3",
+          "name": "Department"
+        },
+        {
           "column": "fund",
           "name": "Fund"
+        },
+        {
+          "column": "segment4",
+          "name": "Division"
         },
         {
           "column": "organization",
           "name": "Organisation"
         },
         {
-          "column": "segment2",
-          "name": "Major Function"
+          "column": "object",
+          "name": "Budget Object"
         },
         {
-          "column": "segment3",
-          "name": "Department"
+          "column": "charactercodedescription",
+          "name": "Character Code"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
         }
       ],
       "quick_filter_entries": [
@@ -1768,8 +1882,8 @@
     },
     {
       "name": "Payroll & Compensation",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "dfmt-x4an",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "4fix-tsif",
       "fields": {
         "date_column": "checkdate"
       },
@@ -1925,8 +2039,8 @@
     },
     {
       "name": "Employee Actions",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "57n2-v5cf",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "89jm-4cm3",
       "fields": {
         "date_column": "effectivedate"
       },
@@ -1973,9 +2087,6 @@
         },
         {
           "name": "Retirements & Resignations",
-          "parent_queries": [
-            "select * where action like '%RESIGN%'"
-          ],
           "column": "actionhistoryid",
           "aggregate_type": "count",
           "prefix": "",
@@ -1990,7 +2101,10 @@
               "chart_type": "barChart"
             }
           },
-          "comparison_column_entries": []
+          "comparison_column_entries": [],
+          "parent_queries": [
+            "select * where action like '%RESIGN%'"
+          ]
         }
       ],
       "leaf_page_entries": [
@@ -2022,8 +2136,8 @@
     },
     {
       "name": "Bids",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "4f5p-ynjv",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "c3bq-eivp",
       "fields": {
         "date_column": "datesubmitted"
       },
@@ -2082,8 +2196,8 @@
     },
     {
       "name": "Bids per Opportunity",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "4f5p-ynjv",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "c3bq-eivp",
       "parent_queries": [
         "select min(opportunityname) as oppurtunity_name, min(datesubmitted) as date_submitted, min(biddername) as bidder_name, min(requestingdepartment) as requesting_department, count(bidderid) as bidder_count, opportunityid group by opportunityid "
       ],
@@ -2141,8 +2255,8 @@
     },
     {
       "name": "Applicants per Open Position",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "n5zv-gf3k",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "y3ez-h7va",
       "parent_queries": [
         "select min(jobopening) as job_opening, min(city) as city, count(applicantid) as applicant_id, jobopeningrequisitionnumber where applicationdate between {START_DATE} and {END_DATE} group by jobopeningrequisitionnumber"
       ],
@@ -2194,8 +2308,8 @@
     },
     {
       "name": "Time to Hire",
-      "dataset_domain": "erpinsights.demo.socrata.com",
-      "dataset_id": "n5zv-gf3k",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "y3ez-h7va",
       "fields": {
         "date_column": "hiredate"
       },
