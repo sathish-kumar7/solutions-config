@@ -103,7 +103,7 @@
         {
           "name": "General Fund Cash Balance",
           "parent_queries": [
-            "select * where cashaccount = 'true' and fund = 'GENERAL FUND'"
+            "select * where cashaccount = 'true' and fund = 'General Fund'"
           ],
           "column": "actual",
           "aggregate_type": "sum",
