@@ -13,7 +13,7 @@
     "Financials",
     "Budget & Expenditures",
     "Payroll & HR",
-    "Revenue & Tax",
+    "Revenue & Tax"
   ],
   "show_share_via_email": true,
   "is_private": "false",
