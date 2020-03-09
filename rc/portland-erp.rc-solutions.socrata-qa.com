@@ -2707,7 +2707,7 @@
           "name": "Retirements & Resignations",
           "column": "employeeid",
           "parent_queries": [
-            "select * where inactivedate not null"
+            "select * where inactivedate IS NOT NULL"
           ],
           "aggregate_type": "count",
           "prefix": "",
