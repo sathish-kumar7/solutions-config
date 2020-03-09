@@ -2422,11 +2422,11 @@
         },
         {
           "name": "Average Years of Service",
-          "column": "totaloverallyearsofservice",
+          "column": "date_diff_d(last_updated_date, servicedate)",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
-          "aggregate_type": "sum",
+          "aggregate_type": "avg",
           "prefix": "",
           "suffix": "",
           "precision": "0",
@@ -2474,12 +2474,12 @@
           }
         },
         {
-          "name": "Age + Years of Service",
+          "name": "Avg. Age + Years of Service",
           "column": "employeeage + (date_diff_d(last_updated_date, servicedate))",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
-          "aggregate_type": "sum",
+          "aggregate_type": "avg",
           "prefix": "",
           "suffix": "",
           "precision": "0",
@@ -2538,11 +2538,11 @@
         },
         {
           "name": "Retirement Eligibility (Rule of 80)",
-          "column": "case(employeeage + date_diff_d(last_updated_date, servicedate) > 80, 1, true, 0)",
+          "column": "sum(case(employeeage + date_diff_d(last_updated_date, servicedate) > 80, 1, true, 0)) / count(employeeid)",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
-          "aggregate_type": "sum",
+          "aggregate_type": "",
           "prefix": "",
           "suffix": "",
           "precision": "0",
@@ -2591,7 +2591,7 @@
         },
         {
           "name": "Retirement Eligibility (Rule of 90)",
-          "column": "case(employeeage + date_diff_d(last_updated_date, servicedate) > 90, 1, true, 0)",
+          "column": "sum(case(employeeage + date_diff_d(last_updated_date, servicedate) > 90, 1, true, 0)) / count(employeeid)",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
