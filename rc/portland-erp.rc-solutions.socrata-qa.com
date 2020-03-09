@@ -1135,7 +1135,7 @@
             }
           },
           "parent_queries": [
-            "select * where object like 'Retirement'"
+            "select * where object like '%Retire%'"
           ],
           "target_entries": [
             {
