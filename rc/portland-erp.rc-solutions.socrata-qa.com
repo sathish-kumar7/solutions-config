@@ -2406,16 +2406,369 @@
               "barchart": {
                 "secondary_metric_entries": [
                   {
-                    "column": "paycategory",
-                    "name": "Pay Type",
-                    "aggregate_type": "",
+                    "column": "employeeannualcompensation",
+                    "name": "Average Annual Salary",
+                    "aggregate_type": "avg",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Annual Salary"
+              }
+            }
+          }
+        },
+        {
+          "name": "Employees Currently On Leave",
+          "column": "employeeid",
+          "parent_queries": [
+            "select * where isonleave = 'True'"
+          ],
+          "aggregate_type": "count",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "employeeannualsalary",
+                    "name": "Average Annual Salary",
+                    "aggregate_type": "avg",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Average Annual Salary"
+              }
+            }
+          }
+        },
+        {
+          "name": "Average Years of Service",
+          "column": "totaloverallyearsofservice",
+          "parent_queries": [
+            "select * where activestatus = 'ACTIVE'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "employeeannualsalary",
+                    "name": "Average Annual Salary",
+                    "aggregate_type": "avg",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "totalinternalyearsofservice",
+                    "name": "Internal Years of Service",
+                    "aggregate_type": "sum",
                     "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "employeeage",
+                    "name": "Employee Age",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Average Annual Salary"
+              }
+            }
+          }
+        },
+        {
+          "name": "Age + Years of Service",
+          "column": "employeeage + totaloverallyearsofservice",
+          "parent_queries": [
+            "select * where activestatus = 'ACTIVE'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "employeeannualsalary",
+                    "name": "Average Annual Salary",
+                    "aggregate_type": "avg",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "totaloverallyearsofservice",
+                    "name": "Years of Service",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "employeeage",
+                    "name": "Employee Age",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "value": "80",
+                    "name": "Rule of Eighty"
+                  },
+                  {
+                    "value": "90",
+                    "name": "Rule of Ninety"
+                  }
+                ],
+                "default_secondary_metric": "Average Annual Salary"
+              }
+            }
+          }
+        },
+        {
+          "name": "Retirement Eligibility (Rule of 80)",
+          "column": "case(employeeage + totaloverallyearsofservice > 80, 1, true, 0",
+          "parent_queries": [
+            "select * where activestatus = 'ACTIVE'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "employeeannualsalary",
+                    "name": "Average Annual Salary",
+                    "aggregate_type": "avg",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "totaloverallyearsofservice",
+                    "name": "Years of Service",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "employeeage",
+                    "name": "Employee Age",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Average Annual Salary"
+              }
+            }
+          }
+        },
+        {
+          "name": "Retirement Eligibility (Rule of 90)",
+          "column": "case(employeeage + totaloverallyearsofservice > 90, 1, true, 0",
+          "parent_queries": [
+            "select * where activestatus = 'ACTIVE'"
+          ],
+          "aggregate_type": "sum",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "employeeannualsalary",
+                    "name": "Average Annual Salary",
+                    "aggregate_type": "avg",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "totaloverallyearsofservice",
+                    "name": "Years of Service",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "employeeage",
+                    "name": "Employee Age",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Average Annual Salary"
+              }
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
+          "column": "paycategory",
+          "name": "Pay Type"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "paycategory",
+          "name": "Pay Type",
+          "renderType": "text"
+        }
+      ]
+    },
+    {
+      "name": "Employee Turnover",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "9e9t-jury",
+      "fields": {
+        "date_column": "inactivedate"
+      },
+      "dimension_entries": [
+        {
+          "column": "department",
+          "name": "Department"
+        },
+        {
+          "column": "primaryjobclass",
+          "name": "Primary Job Class"
+        },
+        {
+          "column": "primarygroupbargainingunit",
+          "name": "Primary Bargaining Unit"
+        },
+        {
+          "column": "inactivereason",
+          "name": "Inactive Reason"
+        },
+        {
+          "column": "personnelstatus",
+          "name": "Personnel Status"
+        },
+        {
+          "column": "gender",
+          "name": "Gender"
+        },
+        {
+          "column": "fullname",
+          "name": "Employee Name"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Retirements & Resignations",
+          "column": "employeeid",
+          "parent_queries": [
+            "select * where inactivedate not null"
+          ],
+          "aggregate_type": "count",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "employeeannualsalary",
+                    "name": "Average Annual Salary",
+                    "aggregate_type": "avg",
+                    "prefix": "$",
                     "suffix": "",
                     "precision": "",
                     "render_type": "stack"
                   }
                 ],
-                "default_secondary_metric": "employeeage"
+                "default_secondary_metric": "Average Annual Salary"
               }
             }
           }
