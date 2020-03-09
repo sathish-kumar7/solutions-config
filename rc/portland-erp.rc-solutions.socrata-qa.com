@@ -1004,7 +1004,7 @@
       ],
       "view_entries": [
         {
-          "name": "Average Days Open",
+          "name": "Average Invoice Days Open",
           "primary_metric_name": "Days",
           "column": "daysopen",
           "aggregate_type": "avg",
@@ -1135,7 +1135,7 @@
             }
           },
           "parent_queries": [
-            "select * where object contains 'Retirement'"
+            "select * where object like 'Retirement'"
           ],
           "target_entries": [
             {
