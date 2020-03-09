@@ -1053,7 +1053,7 @@
         {
           "name": "Retirement Payouts",
           "primary_metric_name": "Actuals",
-          "column": "actual",
+          "column": "actual * -1",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
