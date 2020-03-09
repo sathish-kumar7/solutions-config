@@ -1175,7 +1175,7 @@
             }
           },
           "parent_queries": [
-            "select * where employee = 'false'"
+            "select * where employee = 'false' and vendor not 'NULL'"
           ],
           "target_entries": [
             {
