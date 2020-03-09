@@ -1051,6 +1051,53 @@
           ]
         },
         {
+          "name": "Percentage of Invoices Paid within 30 Days",
+          "primary_metric_name": "Days",
+          "column": "(sum(case(daysopen <= 30, 1, true, 0))/count(daysopen))*100",
+          "aggregate_type": "",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Budget & Expenditures"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "default_secondary_metric": "Revised Budget"
+              }
+            },
+            "overtime": {
+              "default_view": "area",
+              "show_area_chart": "true",
+              "show_burn_up_chart": "false",
+              "show_timeline_total": "true",
+              "timeline": {
+                "default_time_frame": "year_on_year",
+                "default_compare_year": "2019"
+              }
+            }
+          },
+          "target_entries": [
+            {
+              "name": "On track",
+              "color": "#259652",
+              "operator": ">",
+              "value": "1000",
+              "icon": "icons-check-circle",
+              "target_entry_description": "Spending is currently on track to remain within budgeted levels ($332 million for FY20)."
+            },
+            {
+              "name": "Off track",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ]
+        },
+        {
           "name": "Retirement Payouts",
           "primary_metric_name": "Actuals",
           "column": "actual",
@@ -2150,38 +2197,80 @@
       "dataset_domain": "portlandme.data.socrata.com",
       "dataset_id": "9e9t-jury",
       "fields": {
-        "date_column": "checkdate"
+        "date_column": "last_updated_date"
       },
       "dimension_entries": [
         {
-          "column": "groupbargainingunit",
-          "name": "Bargaining Unit"
+          "column": "department",
+          "name": "Department"
         },
         {
-          "column": "jobclass",
-          "name": "Job"
+          "column": "primaryjobclass",
+          "name": "Primary Job Class"
         },
         {
-          "column": "position",
-          "name": "Position"
+          "column": "primarygroupbargainingunit",
+          "name": "Primary Bargaining Unit"
         },
         {
-          "column": "employeeid",
-          "name": "Employee ID"
+          "column": "primarylocation",
+          "name": "Primary Location"
         },
         {
-          "column": "paycategory",
-          "name": "Pay Category"
+          "column": "personnelstatus",
+          "name": "Personnel Status"
         },
         {
-          "column": "paytype",
-          "name": "Pay Type"
+          "column": "gender",
+          "name": "Gender"
+        },
+        {
+          "column": "fullname",
+          "name": "Employee Name"
         }
       ],
       "view_entries": [
         {
           "name": "Headcount",
           "column": "employeeid",
+          "parent_queries": [
+            "select * where activestatus = 'ACTIVE'"
+          ],
+          "aggregate_type": "count",
+          "prefix": "",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "paycategory",
+                    "name": "Pay Type",
+                    "aggregate_type": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "stack"
+                  }
+                ],
+                "default_secondary_metric": "employeeage"
+              }
+            }
+          }
+        },
+        {
+          "name": "Headcount",
+          "column": "employeeid",
+          "parent_queries": [
+            "select * where activestatus = 'ACTIVE'"
+          ],
           "aggregate_type": "count",
           "prefix": "",
           "suffix": "",
@@ -2208,54 +2297,8 @@
                 ],
                 "default_secondary_metric": "Pay Type"
               }
-            },
-            "overtime": {
-              "show_burn_up_chart": "true",
-              "timeline": {
-                "bench_mark_entries": [
-                  {
-                    "column": "payamount",
-                    "name": "Total payroll",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              },
-              "burn_up": {
-                "bench_mark_entries": [
-                  {
-                    "column": "payamount",
-                    "name": "Total payroll",
-                    "aggregate_type": "sum"
-                  }
-                ]
-              }
             }
           }
-        },
-        {
-          "name": "Total Overtime",
-          "column": "payamount",
-          "aggregate_type": "sum",
-          "prefix": "$",
-          "suffix": "",
-          "precision": "2",
-          "tags": [
-            "Payroll & HR"
-          ],
-          "visualization": {
-            "default_view": "snapshot"
-          },
-          "quick_filters": [
-            {
-              "column": "paycategory",
-              "field": "quick_filter_1_4fix-tsif_0",
-              "type": "text",
-              "values": [
-                "OVERTIME"
-              ],
-              "operator": "="
-            }
-          ]
         }
       ],
       "leaf_page_entries": [
