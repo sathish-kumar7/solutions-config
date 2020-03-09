@@ -2066,32 +2066,28 @@
       },
       "dimension_entries": [
         {
-          "column": "fund",
-          "name": "Fund"
+          "column": "groupbargainingunit",
+          "name": "Bargaining Unit"
         },
         {
-          "column": "segment2",
-          "name": "Function"
-        },
-        {
-          "column": "department",
-          "name": "Department"
+          "column": "jobclass",
+          "name": "Job"
         },
         {
           "column": "position",
           "name": "Position"
         },
         {
-          "column": "positiontype",
-          "name": "Position Type"
-        },
-        {
-          "column": "accountdescription",
-          "name": "Account Description"
-        },
-        {
           "column": "employeeid",
           "name": "Employee ID"
+        },
+        {
+          "column": "paycategory",
+          "name": "Pay Category"
+        },
+        {
+          "column": "paytype",
+          "name": "Pay Type"
         }
       ],
       "view_entries": [
@@ -2201,32 +2197,36 @@
       "dataset_domain": "portlandme.data.socrata.com",
       "dataset_id": "k89z-7z32",
       "fields": {
-        "date_column": "checkdate"
+        "date_column": "transactiondate"
       },
       "dimension_entries": [
         {
-          "column": "groupbargainingunit",
-          "name": "Bargaining Unit"
+          "column": "fund",
+          "name": "Fund"
         },
         {
-          "column": "jobclass",
-          "name": "Job"
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "department",
+          "name": "Department"
         },
         {
           "column": "position",
           "name": "Position"
         },
         {
+          "column": "positiontype",
+          "name": "Position Type"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
+        },
+        {
           "column": "employeeid",
           "name": "Employee ID"
-        },
-        {
-          "column": "paycategory",
-          "name": "Pay Category"
-        },
-        {
-          "column": "paytype",
-          "name": "Pay Type"
         }
       ],
       "view_entries": [
@@ -2312,7 +2312,7 @@
         },
         {
           "name": "Total Overtime",
-          "column": "payamount",
+          "column": "overtimepay",
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -2322,18 +2322,7 @@
           ],
           "visualization": {
             "default_view": "snapshot"
-          },
-          "quick_filters": [
-            {
-              "column": "paycategory",
-              "field": "quick_filter_1_4fix-tsif_0",
-              "type": "text",
-              "values": [
-                "OVERTIME"
-              ],
-              "operator": "="
-            }
-          ]
+          }
         }
       ],
       "leaf_page_entries": [
