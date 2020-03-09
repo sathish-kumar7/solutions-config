@@ -1885,7 +1885,7 @@
       "exploration_content": "Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content"
     },
     {
-      "name": "Test solutions",
+      "name": "Test solutions Opex Revenue",
       "link": "http://test.staging-solutions.socrata-qa.com/#!/analysis?dashboard[currentMetricTypeName]=All%20Metrics&currentDrilldownTemplateName=Opex%20Revenue&currentDrilldownDimensionField=dimension_1_mik7_qbhe_0&currentVisualizationType=snapshot&currentDrilldownGroupByField=&currentDrilldownViewField=view_1_mik7_qbhe_1&drilledDownDimensions=%5B%5D&genericFilters=%5B%5D&filteredGeojson=%7B%22type%22%3A%22FeatureCollection%22%2C%22features%22%3A%5B%5D%7D&quickFilters=%5B%5D&dateRange[startDate]=2018-04-01&dateRange[endDate]=2019-03-31&sortColumns=%5B%5D",
       "exploration_content": "Test exploration card text content"
     }
