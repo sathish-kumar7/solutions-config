@@ -2264,41 +2264,6 @@
               }
             }
           }
-        },
-        {
-          "name": "Headcount",
-          "column": "employeeid",
-          "parent_queries": [
-            "select * where activestatus = 'ACTIVE'"
-          ],
-          "aggregate_type": "count",
-          "prefix": "",
-          "suffix": "",
-          "precision": "0",
-          "tags": [
-            "Payroll & HR"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "false",
-              "barchart": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "paycategory",
-                    "name": "Pay Type",
-                    "aggregate_type": "",
-                    "prefix": "",
-                    "suffix": "",
-                    "precision": "",
-                    "render_type": "stack"
-                  }
-                ],
-                "default_secondary_metric": "Pay Type"
-              }
-            }
-          }
         }
       ],
       "leaf_page_entries": [
