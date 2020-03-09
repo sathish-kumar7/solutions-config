@@ -1009,7 +1009,7 @@
           "column": "daysopen",
           "aggregate_type": "avg",
           "prefix": "",
-          "suffix": "%",
+          "suffix": "",
           "precision": "0",
           "tags": [
             "Budget & Expenditures"
