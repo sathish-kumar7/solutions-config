@@ -25,9 +25,7 @@
       "name": "Opex Budget",
       "dataset_domain": "evergreen.data.socrata.com",
       "dataset_id": "s8xp-hq5q",
-      "fields": {
-        "date_column": "fiscal_year"
-      },
+      "fields": {},
       "dimension_entries": [
         {
           "column": "service",
