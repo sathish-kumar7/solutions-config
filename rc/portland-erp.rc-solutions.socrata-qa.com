@@ -1056,7 +1056,7 @@
           "column": "(sum(case(daysopen <= 30, 1, true, 0))/count(daysopen))*100",
           "aggregate_type": "",
           "prefix": "",
-          "suffix": "",
+          "suffix": "%",
           "precision": "0",
           "tags": [
             "Budget & Expenditures"
@@ -2066,28 +2066,32 @@
       },
       "dimension_entries": [
         {
-          "column": "groupbargainingunit",
-          "name": "Bargaining Unit"
+          "column": "fund",
+          "name": "Fund"
         },
         {
-          "column": "jobclass",
-          "name": "Job"
+          "column": "segment2",
+          "name": "Function"
+        },
+        {
+          "column": "department",
+          "name": "Department"
         },
         {
           "column": "position",
           "name": "Position"
         },
         {
+          "column": "positiontype",
+          "name": "Position Type"
+        },
+        {
+          "column": "accountdescription",
+          "name": "Account Description"
+        },
+        {
           "column": "employeeid",
           "name": "Employee ID"
-        },
-        {
-          "column": "paycategory",
-          "name": "Pay Category"
-        },
-        {
-          "column": "paytype",
-          "name": "Pay Type"
         }
       ],
       "view_entries": [
@@ -2119,6 +2123,168 @@
                   }
                 ],
                 "default_secondary_metric": "Pay Type"
+              }
+            },
+            "overtime": {
+              "show_burn_up_chart": "true",
+              "timeline": {
+                "bench_mark_entries": [
+                  {
+                    "column": "payamount",
+                    "name": "Total payroll",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              },
+              "burn_up": {
+                "bench_mark_entries": [
+                  {
+                    "column": "payamount",
+                    "name": "Total payroll",
+                    "aggregate_type": "sum"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "Total Overtime",
+          "column": "payamount",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "2",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot"
+          },
+          "quick_filters": [
+            {
+              "column": "paycategory",
+              "field": "quick_filter_1_4fix-tsif_0",
+              "type": "text",
+              "values": [
+                "OVERTIME"
+              ],
+              "operator": "="
+            }
+          ]
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job Class"
+        },
+        {
+          "column": "paycategory",
+          "name": "Pay Type"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "paycategory",
+          "name": "Pay Type",
+          "renderType": "text"
+        }
+      ]
+    },
+    {
+      "name": "Payroll & Compensation (Payroll)",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "k89z-7z32",
+      "fields": {
+        "date_column": "checkdate"
+      },
+      "dimension_entries": [
+        {
+          "column": "groupbargainingunit",
+          "name": "Bargaining Unit"
+        },
+        {
+          "column": "jobclass",
+          "name": "Job"
+        },
+        {
+          "column": "position",
+          "name": "Position"
+        },
+        {
+          "column": "employeeid",
+          "name": "Employee ID"
+        },
+        {
+          "column": "paycategory",
+          "name": "Pay Category"
+        },
+        {
+          "column": "paytype",
+          "name": "Pay Type"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Total Payroll",
+          "column": "totalpay",
+          "aggregate_type": "sum",
+          "prefix": "$",
+          "suffix": "",
+          "precision": "0",
+          "tags": [
+            "Payroll & HR"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barChart",
+              "show_pie_chart": "false",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "basepay",
+                    "name": "Base Pay",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "overtimepay",
+                    "name": "Overtime Pay",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "otherpay",
+                    "name": "Other Pay",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  },
+                  {
+                    "column": "benefitsamount",
+                    "name": "Benefits Amount",
+                    "aggregate_type": "sum",
+                    "prefix": "$",
+                    "suffix": "",
+                    "precision": "",
+                    "render_type": "bullet"
+                  }
+                ],
+                "default_secondary_metric": "Base Pay"
               }
             },
             "overtime": {
