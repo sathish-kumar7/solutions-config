@@ -1069,15 +1069,6 @@
               "barchart": {
                 "secondary_metric_entries": [
                   {
-                    "column": "revisedbudget",
-                    "name": "Revised Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
-                  },
-                  {
                     "column": "actual",
                     "name": "Actuals",
                     "aggregate_type": "sum",
@@ -1085,22 +1076,12 @@
                     "suffix": "",
                     "precision": "2",
                     "render_type": "bullet"
-                  },
-                  {
-                    "column": "originalbudget",
-                    "name": "Original Budget",
-                    "aggregate_type": "sum",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "2",
-                    "render_type": "bullet"
                   }
-                ],
-                "default_secondary_metric": "Revised Budget"
+                ]
               }
             },
             "overtime": {
-              "default_view": "area",
+              "default_view": "timeline",
               "show_area_chart": "true",
               "show_burn_up_chart": "true",
               "show_timeline_total": "true",
