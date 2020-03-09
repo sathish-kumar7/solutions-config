@@ -2421,41 +2421,6 @@
           }
         },
         {
-          "name": "Employees Currently On Leave",
-          "column": "employeeid",
-          "parent_queries": [
-            "select * where isonleave = 'True'"
-          ],
-          "aggregate_type": "count",
-          "prefix": "",
-          "suffix": "",
-          "precision": "0",
-          "tags": [
-            "Payroll & HR"
-          ],
-          "visualization": {
-            "default_view": "snapshot",
-            "snapshot": {
-              "chart_type": "barChart",
-              "show_pie_chart": "false",
-              "barchart": {
-                "secondary_metric_entries": [
-                  {
-                    "column": "employeeannualsalary",
-                    "name": "Average Annual Salary",
-                    "aggregate_type": "avg",
-                    "prefix": "$",
-                    "suffix": "",
-                    "precision": "",
-                    "render_type": "bullet"
-                  }
-                ],
-                "default_secondary_metric": "Average Annual Salary"
-              }
-            }
-          }
-        },
-        {
           "name": "Average Years of Service",
           "column": "totaloverallyearsofservice",
           "parent_queries": [
@@ -2510,7 +2475,7 @@
         },
         {
           "name": "Age + Years of Service",
-          "column": "employeeage + totaloverallyearsofservice",
+          "column": "employeeage + (date_diff_d(last_updated_date, servicedate))",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
@@ -2538,7 +2503,7 @@
                     "render_type": "bullet"
                   },
                   {
-                    "column": "totaloverallyearsofservice",
+                    "column": "date_diff_d(last_updated_date, servicedate)",
                     "name": "Years of Service",
                     "aggregate_type": "sum",
                     "prefix": "",
@@ -2573,7 +2538,7 @@
         },
         {
           "name": "Retirement Eligibility (Rule of 80)",
-          "column": "case(employeeage + totaloverallyearsofservice > 80, 1, true, 0",
+          "column": "case(employeeage + date_diff_d(last_updated_date, servicedate) > 80, 1, true, 0)",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
@@ -2601,7 +2566,7 @@
                     "render_type": "bullet"
                   },
                   {
-                    "column": "totaloverallyearsofservice",
+                    "column": "date_diff_d(last_updated_date, servicedate)",
                     "name": "Years of Service",
                     "aggregate_type": "sum",
                     "prefix": "",
@@ -2626,7 +2591,7 @@
         },
         {
           "name": "Retirement Eligibility (Rule of 90)",
-          "column": "case(employeeage + totaloverallyearsofservice > 90, 1, true, 0",
+          "column": "case(employeeage + date_diff_d(last_updated_date, servicedate) > 90, 1, true, 0)",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
