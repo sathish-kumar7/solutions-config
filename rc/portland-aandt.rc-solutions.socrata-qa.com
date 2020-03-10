@@ -192,7 +192,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select * where sale_validity in ('0','V')"
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
 
       ],
           "visualization": {
@@ -238,7 +238,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select * where sale_validity in ('0','V')"
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
 
       ],
           "visualization": {
@@ -293,7 +293,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select * where sale_validity in ('0','V')"
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
 
       ],
           "visualization": {
