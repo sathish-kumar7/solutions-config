@@ -356,8 +356,8 @@
         }
       ],
       "map": {
-        "centerLat": "33.9608276,",
-        "centerLng": "-84.5699291",
+        "centerLat": "43.680768,",
+        "centerLng": "-70.294197",
         "zoom": "9",
         "mini_map_zoom": "8.5",
         "shapes_outline_highlight_width": "2",
@@ -387,28 +387,14 @@
       },
       "shape_dataset_entries": [
         {
-          "shape_dataset_domain": "appraisalandtax.demo.socrata.com",
-          "shape_dataset_id": "sua5-m9tm",
-          "shape_name": "Cobb County City Boundaries",
+          "shape_dataset_domain": "portlandme.data.socrata.com",
+          "shape_dataset_id": "x8fa-hvzr",
+          "shape_name": "City of Portland Zip Codes",
           "fields": {
             "shape": "the_geom",
             "shape_id": "objectid",
-            "shape_name": "name",
-            "shape_description": "citycode"
-          },
-          "color": "#32a889",
-          "border_color": "#cccccc",
-          "mini_map_border_color": "#4d4e4f",
-          "outline_highlight_color": "#808080"
-        },
-        {
-          "shape_dataset_domain": "appraisalandtax.demo.socrata.com",
-          "shape_dataset_id": "52nt-trix",
-          "shape_name": "County Commission Districts",
-          "fields": {
-            "shape": "the_geom",
-            "shape_id": "_feature_id",
-            "shape_name": "commission"
+            "shape_name": "geoid10",
+            "shape_description": "geoid10"
           },
           "color": "#32a889",
           "border_color": "#cccccc",
