@@ -115,7 +115,7 @@
               "barchart": {
                 "secondary_metric_entries": [
                   {
-                    "column": "parid",
+                    "column": "parcel_id",
                     "name": "Number of Sales",
                     "aggregate_type": "count",
                     "prefix": "",
@@ -141,7 +141,7 @@
                 "default_show_range": "true",
                 "secondary_metric_entries": [
                   {
-                    "column": "parid",
+                    "column": "parcel_id",
                     "name": "Number of sales",
                     "aggregate_type": "count",
                     "precision": "",
