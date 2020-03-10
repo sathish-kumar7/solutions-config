@@ -26,7 +26,8 @@
       "fields": {
         "date_column": "sale_date",
         "incident_type": "land_use_code",
-        "location": "geocoded_column"
+        "location": "geocoded_column",
+        "x8fa-hvzr": ":@computed_region_x8fa_hvzr"
       },
       "dimension_entries": [
         {
@@ -311,7 +312,7 @@
             }
           },
           "parent_queries": [
-            "select *, :@computed_region_52nt_trix, case(sale_date between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
+            "select *, :@computed_region_x8fa_hvzr, case(sale_date between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
           ]
         }
       ],
