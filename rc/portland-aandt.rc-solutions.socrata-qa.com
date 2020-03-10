@@ -21,7 +21,7 @@
       "dataset_domain": "portlandme.data.socrata.com",
       "dataset_id": "kx7n-ab4t",
       "parent_queries": [
-        "select *,avg(sale_ratio) over (partition by land_use_type) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median"
+        "select *,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median"
       ],
       "fields": {
         "date_column": "sale_date",
@@ -76,7 +76,7 @@
           "name": "Estimated Total Market Value",
           "column": "appr_total",
           "aggregate_type": "sum",
-          "stack_column": "land_use_type",
+          "stack_column": "land_use_code",
           "precision": "0",
           "prefix": "$",
           "suffix": "",
@@ -183,7 +183,7 @@
           "name": "Total Sales",
           "column": "saledt",
           "aggregate_type": "count",
-          "stack_column": "land_use_type",
+          "stack_column": "land_use_code",
           "precision": "0",
           "prefix": "",
           "suffix": "",
@@ -287,7 +287,7 @@
           "name": "% Parcels Sold",
           "column": "(sum(has_sold)/count(*))::double*100",
           "aggregate_type": "",
-          "stack_column": "land_use_type",
+          "stack_column": "land_use_code",
           "precision": "0",
           "prefix": "",
           "suffix": "%",
