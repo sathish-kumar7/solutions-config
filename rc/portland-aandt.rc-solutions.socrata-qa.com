@@ -101,6 +101,10 @@
           "tags": [
             "Sales"
           ],
+          "parent_queries": [
+        "select * where sale_validity = '0'"
+
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -181,7 +185,7 @@
         },
         {
           "name": "Total Sales",
-          "column": "saledt",
+          "column": "sale_date",
           "aggregate_type": "count",
           "stack_column": "land_use_code",
           "precision": "0",
@@ -307,7 +311,7 @@
             }
           },
           "parent_queries": [
-            "select *, :@computed_region_52nt_trix, case(saledt between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
+            "select *, :@computed_region_52nt_trix, case(sale_date between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
           ]
         }
       ],
