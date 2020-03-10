@@ -1881,8 +1881,7 @@
     {
       "name": "2 Opex Budget",
       "link": "https://www.google.co.in/maps/@11.0273656,77.0219015,15z",
-      "exploration_content": "Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content",
-      "image": 
+      "exploration_content": "Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content Exploration card content"
     },
     {
       "name": "Test solutions Opex Revenue",
