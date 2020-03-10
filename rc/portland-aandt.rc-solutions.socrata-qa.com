@@ -215,7 +215,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select *,median_sale_ratio,sale_ratio_deviation_from_median,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
+        "select select *,:@computed_region_x8fa_hvzr,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median where sale_validity in ('0','V')"
 
       ],
           "visualization": {
@@ -269,7 +269,7 @@
             "Tax & Appraisals"
           ],
           "parent_queries": [
-        "select *,:@computed_region_x8fa_hvzr,median_sale_ratio,sale_ratio_deviation_from_median where sale_validity in ('0','V')"
+        "select select *,:@computed_region_x8fa_hvzr,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median where sale_validity in ('0','V')"
 
       ],
           "visualization": {
