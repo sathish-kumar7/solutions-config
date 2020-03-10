@@ -103,7 +103,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select * where sale_validity = '0'"
+        "select * where sale_validity in ('0','V')"
 
       ],
           "visualization": {
@@ -195,6 +195,10 @@
           "tags": [
             "Sales"
           ],
+          "parent_queries": [
+        "select * where sale_validity in ('0','V')"
+
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -214,6 +218,10 @@
           "tags": [
             "Sales"
           ],
+          "parent_queries": [
+        "select * where sale_validity in ('0','V')"
+
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -233,6 +241,10 @@
           "tags": [
             "Sales"
           ],
+          "parent_queries": [
+        "select * where sale_validity in ('0','V')"
+
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -260,6 +272,10 @@
           "tags": [
             "Tax & Appraisals"
           ],
+          "parent_queries": [
+        "select * where sale_validity in ('0','V')"
+
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
@@ -280,6 +296,10 @@
           "tags": [
             "Sales"
           ],
+          "parent_queries": [
+        "select * where sale_validity in ('0','V')"
+
+      ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
