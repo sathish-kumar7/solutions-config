@@ -21,7 +21,7 @@
       "dataset_domain": "portlandme.data.socrata.com",
       "dataset_id": "kx7n-ab4t",
       "parent_queries": [
-        "select *,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median"
+        "select *,:@computed_region_x8fa_hvzr,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median"
       ],
       "fields": {
         "date_column": "sale_date",
@@ -103,7 +103,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select * where sale_validity in ('0','V')"
+        "select *,:@computed_region_x8fa_hvzr, where sale_validity in ('0','V')"
 
       ],
           "visualization": {
@@ -219,7 +219,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select * where sale_validity in ('0','V')"
+        "select *,median_sale_ratio,sale_ratio_deviation_from_median,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
 
       ],
           "visualization": {
@@ -273,7 +273,7 @@
             "Tax & Appraisals"
           ],
           "parent_queries": [
-        "select * where sale_validity in ('0','V')"
+        "select *,:@computed_region_x8fa_hvzr,median_sale_ratio,sale_ratio_deviation_from_median where sale_validity in ('0','V')"
 
       ],
           "visualization": {
