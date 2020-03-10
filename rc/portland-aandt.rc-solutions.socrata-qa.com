@@ -409,7 +409,7 @@
           "shape_name": "City of Portland Zip Codes",
           "fields": {
             "shape": "the_geom",
-            "shape_id": "objectid",
+            "shape_id": "_feature_id",
             "shape_name": "geoid10",
             "shape_description": "geoid10"
           },
