@@ -31,7 +31,7 @@
       },
       "dimension_entries": [
         {
-          "column": "class_desc",
+          "column": "class_super",
           "name": "Class"
         },{
           "column": "luc_desc",
@@ -51,10 +51,6 @@
         }
       ],
       "group_by_entries": [
-        {
-          "column": "cityname",
-          "name": "City"
-        },
         {
           "column": "luc_desc",
           "name": "Land Use Type"
@@ -103,7 +99,7 @@
             "Sales"
           ],
           "parent_queries": [
-        "select *,:@computed_region_x8fa_hvzr, where sale_validity in ('0','V')"
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
 
       ],
           "visualization": {
