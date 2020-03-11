@@ -209,6 +209,9 @@
           "name": "Actuals vs. Budget",
           "primary_metric_name": "Actuals",
           "column": "actual",
+          "parent_queries": [
+            "select * where accounttype = 'Expense'"
+          ],
           "aggregate_type": "sum",
           "prefix": "$",
           "suffix": "",
@@ -506,7 +509,7 @@
             }
           },
           "parent_queries": [
-            "select * where entity = 'City'"
+            "select * where entity = 'City' and accounttype = 'Expense'"
           ],
           "target_entries": [
             {
@@ -664,7 +667,7 @@
             }
           },
           "parent_queries": [
-            "select * where entity = 'School'"
+            "select * where entity = 'School' and accounttype = 'Expense'"
           ],
           "target_entries": [
             {
