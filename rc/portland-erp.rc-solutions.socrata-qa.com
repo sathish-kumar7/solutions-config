@@ -2464,7 +2464,7 @@
             "default_view": "snapshot",
             "snapshot": {
               "default_view": "scatterplot",
-              "chart_type": "groupChart",
+              "chart_type": "scatterplot",
               "show_pie_chart": "false",
               "scatterplot": {
                 "secondary_metric_entries": [
