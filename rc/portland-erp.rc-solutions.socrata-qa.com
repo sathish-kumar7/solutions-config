@@ -2608,13 +2608,13 @@
         },
         {
           "name": "Retirement Eligibility (Rule of 80)",
-          "column": "sum(case(employeeage + (date_diff_d(last_updated_date, servicedate) / 365) > 80, 1, true, 0)) / count(employeeid)",
+          "column": "(sum(case(employeeage + (date_diff_d(last_updated_date, servicedate) / 365) > 80, 1, true, 0)) / count(employeeid))*100",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
           "aggregate_type": "",
           "prefix": "",
-          "suffix": "",
+          "suffix": "%",
           "precision": "0",
           "tags": [
             "Payroll & HR"
@@ -2653,15 +2653,14 @@
                     "precision": "",
                     "render_type": "bullet"
                   }
-                ],
-                "default_secondary_metric": "Average Annual Salary"
+                ]
               }
             }
           }
         },
         {
           "name": "Retirement Eligibility (Rule of 90)",
-          "column": "sum(case(employeeage + date_diff_d(last_updated_date, servicedate) > 90, 1, true, 0)) / count(employeeid)",
+          "column": "(sum(case(employeeage + (date_diff_d(last_updated_date, servicedate) / 365) > 90, 1, true, 0)) / count(employeeid))*100",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
