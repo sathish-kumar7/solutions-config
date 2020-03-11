@@ -2463,18 +2463,17 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "barChart",
+              "chart_type": "scatterplot",
               "show_pie_chart": "false",
-              "barchart": {
+              "scatterplot": {
                 "secondary_metric_entries": [
                   {
-                    "column": "employeeannualsalary",
-                    "name": "Average Annual Salary",
-                    "aggregate_type": "avg",
-                    "prefix": "$",
+                    "column": "employeeid",
+                    "name": "Number of Employees",
+                    "aggregate_type": "count",
+                    "prefix": "",
                     "suffix": "",
-                    "precision": "",
-                    "render_type": "bullet"
+                    "precision": ""
                   },
                   {
                     "column": "date_diff_d(last_updated_date, servicedate) / 365",
@@ -2482,8 +2481,7 @@
                     "aggregate_type": "sum",
                     "prefix": "",
                     "suffix": "",
-                    "precision": "",
-                    "render_type": "bullet"
+                    "precision": ""
                   },
                   {
                     "column": "employeeage",
@@ -2491,8 +2489,7 @@
                     "aggregate_type": "sum",
                     "prefix": "",
                     "suffix": "",
-                    "precision": "",
-                    "render_type": "bullet"
+                    "precision": ""
                   }
                 ]
               }
