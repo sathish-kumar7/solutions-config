@@ -2513,6 +2513,7 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
+              "default_view": "scatterplot",
               "chart_type": "barChart",
               "show_pie_chart": "false",
               "barchart": {
@@ -2543,6 +2544,34 @@
                     "suffix": "",
                     "precision": "",
                     "render_type": "bullet"
+                  }
+                ]
+              },
+              "scatterplot": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "employeeid",
+                    "name": "Number of Employees",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": ""
+                  },
+                  {
+                    "column": "totaloverallyearsofservice",
+                    "name": "Years of Service",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": ""
+                  },
+                  {
+                    "column": "employeeage",
+                    "name": "Employee Age",
+                    "aggregate_type": "sum",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": ""
                   }
                 ]
               }
