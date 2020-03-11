@@ -2463,7 +2463,8 @@
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "scatterplot",
+              "default_view": "scatterplot",
+              "chart_type": "groupChart",
               "show_pie_chart": "false",
               "scatterplot": {
                 "secondary_metric_entries": [
