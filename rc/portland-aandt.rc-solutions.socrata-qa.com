@@ -77,6 +77,8 @@
           "precision": "0",
           "prefix": "$",
           "suffix": "",
+          "end_date_override_and_ignore":"true",
+          "start_date_override_and_ignore":"true",
           "tags": [
             "Sales"
           ],
