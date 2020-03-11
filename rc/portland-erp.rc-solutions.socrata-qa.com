@@ -204,102 +204,7 @@
               }
             }
           }
-        }
-      ],
-      "leaf_page_entries": [
-        {
-          "column": "segment2",
-          "name": "Function"
         },
-        {
-          "column": "segment3",
-          "name": "Department"
-        },
-        {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
-          "column": "segment4",
-          "name": "Division"
-        },
-        {
-          "column": "organization",
-          "name": "Organisation"
-        },
-        {
-          "column": "object",
-          "name": "Budget Object"
-        },
-        {
-          "column": "charactercodedescription",
-          "name": "Character Code"
-        },
-        {
-          "column": "accountdescription",
-          "name": "Account Description"
-        }
-      ],
-      "quick_filter_entries": [
-        {
-          "column": "accounttype",
-          "name": "Account Type",
-          "renderType": "text"
-        },
-        {
-          "column": "fund",
-          "name": "Fund",
-          "renderType": "text"
-        },
-        {
-          "column": "actual",
-          "name": "Actual Spending",
-          "renderType": "number"
-        }
-      ]
-    },
-    {
-      "name": "Budget Expenses",
-      "dataset_domain": "portlandme.data.socrata.com",
-      "dataset_id": "b5z7-aw6y",
-      "fields": {
-        "date_column": "fiscalmonth"
-      },
-      "dimension_entries": [
-        {
-          "column": "segment2",
-          "name": "Function"
-        },
-        {
-          "column": "segment3",
-          "name": "Department"
-        },
-        {
-          "column": "fund",
-          "name": "Fund"
-        },
-        {
-          "column": "segment4",
-          "name": "Division"
-        },
-        {
-          "column": "organization",
-          "name": "Organisation"
-        },
-        {
-          "column": "object",
-          "name": "Budget Object"
-        },
-        {
-          "column": "charactercodedescription",
-          "name": "Character Code"
-        },
-        {
-          "column": "accountdescription",
-          "name": "Account Description"
-        }
-      ],
-      "view_entries": [
         {
           "name": "Actuals vs. Budget",
           "primary_metric_name": "Actuals",
@@ -955,6 +860,16 @@
           "column": "accounttype",
           "name": "Account Type",
           "renderType": "text"
+        },
+        {
+          "column": "fund",
+          "name": "Fund",
+          "renderType": "text"
+        },
+        {
+          "column": "actual",
+          "name": "Actual Spending",
+          "renderType": "number"
         }
       ]
     },
