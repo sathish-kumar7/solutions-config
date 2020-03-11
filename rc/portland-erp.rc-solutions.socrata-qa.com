@@ -2705,8 +2705,7 @@
                     "precision": "",
                     "render_type": "bullet"
                   }
-                ],
-                "default_secondary_metric": "Average Annual Salary"
+                ]
               }
             }
           }
