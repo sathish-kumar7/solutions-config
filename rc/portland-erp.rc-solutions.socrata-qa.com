@@ -2492,7 +2492,7 @@
         },
         {
           "name": "Average Years of Service",
-          "column": "date_diff_d(last_updated_date, servicedate)",
+          "column": "date_diff_d(last_updated_date, servicedate) / 365",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
@@ -2545,7 +2545,7 @@
         },
         {
           "name": "Avg. Age + Years of Service",
-          "column": "employeeage + (date_diff_d(last_updated_date, servicedate))",
+          "column": "employeeage + (date_diff_d(last_updated_date, servicedate) / 365)",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
@@ -2573,7 +2573,7 @@
                     "render_type": "bullet"
                   },
                   {
-                    "column": "date_diff_d(last_updated_date, servicedate)",
+                    "column": "date_diff_d(last_updated_date, servicedate) / 365",
                     "name": "Years of Service",
                     "aggregate_type": "sum",
                     "prefix": "",
@@ -2608,7 +2608,7 @@
         },
         {
           "name": "Retirement Eligibility (Rule of 80)",
-          "column": "sum(case(employeeage + date_diff_d(last_updated_date, servicedate) > 80, 1, true, 0)) / count(employeeid)",
+          "column": "sum(case(employeeage + (date_diff_d(last_updated_date, servicedate) / 365) > 80, 1, true, 0)) / count(employeeid)",
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
@@ -2636,7 +2636,7 @@
                     "render_type": "bullet"
                   },
                   {
-                    "column": "date_diff_d(last_updated_date, servicedate)",
+                    "column": "date_diff_d(last_updated_date, servicedate) / 365",
                     "name": "Years of Service",
                     "aggregate_type": "sum",
                     "prefix": "",
