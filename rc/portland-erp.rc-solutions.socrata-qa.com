@@ -680,7 +680,7 @@
           ]
         },
         {
-          "name": "Schools Actuals vs. Budget",
+          "name": "Jetport Actuals vs. Budget",
           "column": "actual",
           "aggregate_type": "sum",
           "prefix": "$",
