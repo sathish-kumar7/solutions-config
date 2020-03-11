@@ -1,7 +1,7 @@
 {
   "branding": {
-    "browser_title": "EnerGov Executive Insights",
-    "title": "EnerGov Executive Insights"
+    "browser_title": "Portland EnerGov Executive Insights",
+    "title": "Portland EnerGov Executive Insights"
   },
     "exploration_card_entries": [
     {
@@ -31,13 +31,13 @@
       "dataset_id": "2yai-kkq6",
       "fields": {
         "date_column": "applicationdate",
-        "incident_type": "permittypegroup",
+        "incident_type": "permittype",
         "location": "location",
         "8t69-jvh8": ":@computed_region_8t69_jvh8"
       },
       "dimension_entries": [
         {
-          "column": "permittypegroup",
+          "column": "permittype",
           "name": "Permit Type"
         },
         {
@@ -47,7 +47,7 @@
       ],
       "group_by_entries": [
         {
-          "column": "permittypegroup",
+          "column": "permittype",
           "name": "Permit Type"
         },
         {
@@ -187,7 +187,7 @@
             "date_column": "applicationdate"
           },
           "parent_queries": [
-            "select :@computed_region_8t69_jvh8, location,applicationdate, permitnumber, permittypegroup, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+            "select :@computed_region_8t69_jvh8, location,applicationdate, permitnumber, permittype, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
           ],
           "target_entries": [
             {
@@ -271,7 +271,7 @@
           "name": "Permit Class"
         },
         {
-          "column": "permittypegroup",
+          "column": "permittype",
           "name": "Permit Type"
         },
         {
