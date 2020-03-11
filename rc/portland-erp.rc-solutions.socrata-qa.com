@@ -2664,9 +2664,9 @@
           "parent_queries": [
             "select * where activestatus = 'ACTIVE'"
           ],
-          "aggregate_type": "sum",
+          "aggregate_type": "",
           "prefix": "",
-          "suffix": "",
+          "suffix": "%",
           "precision": "0",
           "tags": [
             "Payroll & HR"
