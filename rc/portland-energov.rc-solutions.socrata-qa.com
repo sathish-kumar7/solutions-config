@@ -187,7 +187,7 @@
             "date_column": "applicationdate"
           },
           "parent_queries": [
-            "select :@computed_region_x8fa_hvzr, location,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+            "select :@computed_region_x8fa_hvzr, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
           ],
           "target_entries": [
             {
