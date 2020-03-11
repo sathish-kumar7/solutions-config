@@ -33,7 +33,7 @@
         "date_column": "applicationdate",
         "incident_type": "permittype",
         "location": "location",
-        "8t69-jvh8": ":@computed_region_8t69_jvh8"
+        "x8fa-hvzr": ":@computed_region_x8fa_hvzr"
       },
       "dimension_entries": [
         {
@@ -310,16 +310,19 @@
       },
       "shape_dataset_entries": [
         {
-          "shape_dataset_domain": "tyler.partner.socrata.com",
-          "shape_dataset_id": "8t69-jvh8",
-          "shape_name": "City Council Districts",
+          "shape_dataset_domain": "portlandme.data.socrata.com",
+          "shape_dataset_id": "x8fa-hvzr",
+          "shape_name": "City of Portland Zip Codes",
           "fields": {
             "shape": "the_geom",
             "shape_id": "_feature_id",
-            "shape_name": "repname",
-            "shape_description": "repname"
+            "shape_name": "geoid10",
+            "shape_description": "geoid10"
           },
-          "color": "#32a889"
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
+          "outline_highlight_color": "#808080"
         }
       ]
     }
