@@ -2738,10 +2738,6 @@
       },
       "dimension_entries": [
         {
-          "column": "department",
-          "name": "Department"
-        },
-        {
           "column": "primaryjobclass",
           "name": "Primary Job Class"
         },
