@@ -14,7 +14,9 @@
     "Budget & Expenditures",
     "Payroll & HR",
     "Revenue & Tax",
-    "Schools"
+    "Schools",
+    "Assessor",
+    "Permitting"
   ],
   "show_share_via_email": true,
   "is_private": "false",
@@ -2898,6 +2900,711 @@
         {
           "column": "city",
           "name": "City"
+        }
+      ]
+    },{
+      "name": "City of Portland Property Data",
+      "description": "Assessor's Office",
+      "dataset_domain": "portlandme.data.socrata.com",
+      "dataset_id": "kx7n-ab4t",
+      "parent_queries": [
+        "select *,:@computed_region_x8fa_hvzr,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median"
+      ],
+      "fields": {
+        "date_column": "sale_date",
+        "incident_type": "land_use_code",
+        "location": "geocoded_column",
+        "x8fa-hvzr": ":@computed_region_x8fa_hvzr"
+      },
+      "dimension_entries": [
+        {
+          "column": "class_super",
+          "name": "Class"
+        },{
+          "column": "luc_desc",
+          "name": "Land Use Type"
+        },
+        {
+          "column": "style_desc",
+          "name": "Style"
+        },
+        {
+          "column": "grade_desc",
+          "name": "Grade"
+        },
+        {
+          "column": "stories",
+          "name": "Stories"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "luc_desc",
+          "name": "Land Use Type"
+        },
+        {
+          "column": "style_desc",
+          "name": "Style"
+        },
+        {
+          "column": "grade_desc",
+          "name": "Grade"
+        },
+        {
+          "column": "stories",
+          "name": "Stories"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Estimated Total Market Value",
+          "column": "appr_total",
+          "aggregate_type": "sum",
+          "stack_column": "land_use_code",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "end_date_override_and_ignore":"true",
+          "start_date_override_and_ignore":"true",
+          "tags": [
+            "Assessor"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
+        },{
+          "name": "Average Sales Ratio",
+          "column": "appr_total/case(sale_price <= 0 or sale_price is null, case(appr_total == 0, 1, true, appr_total) , true, sale_price)",
+          "aggregate_type": "avg",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "use_dimension_value": "true",
+          "tags": [
+            "Assessor"
+          ],
+          "parent_queries": [
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
+
+      ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "default_view": "scatterplot",
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "parcel_id",
+                    "name": "Number of Sales",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet",
+                    "independent_axes_values": "true"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "name": "Benchmark",
+                    "value": "1"
+                  },
+                  {
+                    "name": "20% Variance",
+                    "value": "1.2",
+                    "value1": "0.8"
+                  }
+                ]
+              },
+              "scatterplot": {
+                "default_show_range": "true",
+                "secondary_metric_entries": [
+                  {
+                    "column": "parcel_id",
+                    "name": "Number of sales",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
+                ],
+                "default_bench_mark": "20% Variance",
+                "default_secondary_metric": "Number of sales",
+                "bench_mark_entries": [
+                  {
+                    "name": "Benchmark",
+                    "value": "1"
+                  },
+                  {
+                    "name": "10% Variance",
+                    "value": "1.1",
+                    "value1": "0.9"
+                  }
+                ]
+              }
+            }
+          },
+          "target_entries": [
+            {
+              "name": "Meets Standard",
+              "color": "#259652",
+              "operator": "between",
+              "value": "0.9",
+              "to": "1.1",
+              "icon": "icons-check-circle",
+              "target_entry_description": "This metric meets the IAAO standard. The standard is between 0.9 and 1.1."
+            },
+            {
+              "name": "Does Not Meet Standard",
+              "color": "#e31219",
+              "icon": "icons-times-circle",
+              "target_entry_description": "This metric does not meet the IAAO standard. The standard is between 0.9 and 1.1."
+            }
+          ]
+        },
+        {
+          "name": "Total Sales",
+          "column": "sale_date",
+          "aggregate_type": "count",
+          "stack_column": "land_use_code",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Assessor"
+          ],
+          "parent_queries": [
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
+
+      ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Coefficient of Dispersion",
+          "column": "avg(sale_ratio_deviation_from_median)/avg(median_sale_ratio)",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Assessor"
+          ],
+          "parent_queries": [
+        "select *,:@computed_region_x8fa_hvzr,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median where sale_validity in ('0','V')"
+
+      ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          }
+        },
+        {
+          "name": "Price Relative Differential",
+          "column": "avg(sale_ratio)/(   sum(sale_appr_value)/sum(sale_price)    )",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Assessor"
+          ],
+          "parent_queries": [
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
+
+      ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "barchart": {
+                "bench_mark_entries": [
+                  {
+                    "name": "Benchmark",
+                    "value": "1"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "Average Absolute Deviation",
+          "column": "sale_ratio_deviation_from_median",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Assessor"
+          ],
+          "parent_queries": [
+        "select *,:@computed_region_x8fa_hvzr,avg(sale_ratio) over (partition by land_use_code) as median_sale_ratio, 1-sale_ratio/median_sale_ratio as sale_ratio_deviation_from_median where sale_validity in ('0','V')"
+
+      ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
+            }
+          }
+        },
+        {
+          "name": "Median Ratio",
+          "column": "sale_appr_value/case(sale_price <= 0 or sale_price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, sale_price)",
+          "aggregate_type": "avg",
+          "use_dimension_value": "true",
+          "precision": "2",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Assessor"
+          ],
+          "parent_queries": [
+        "select *,:@computed_region_x8fa_hvzr where sale_validity in ('0','V')"
+
+      ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true",
+              "show_scatterplot_range_bar": "true"
+            }
+          }
+        },{
+          "name": "% Parcels Sold",
+          "column": "(sum(has_sold)/count(*))::double*100",
+          "aggregate_type": "",
+          "stack_column": "land_use_code",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "end_date_override_and_ignore":"true",
+          "start_date_override_and_ignore":"true",
+          "tags": [
+            "Assessor"
+          ],
+          "visualization": {
+            "default_view": "map",
+            "map": {
+                "default_view": "choropleth"
+            },
+            "snapshot": {
+              "chart_type": "groupChart",
+              "show_pie_chart": "true"
+            }
+          },
+          "parent_queries": [
+            "select *, :@computed_region_x8fa_hvzr, case(sale_date between {START_DATE} and {END_DATE} ,1,true,0) as has_sold"
+          ]
+        }
+      ],
+      "filter_by_entries": [
+        {
+          "column": "style",
+          "name": "style"
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "address",
+          "name": "Address"
+        },
+        {
+          "column": "style",
+          "name": "Style"
+        },
+        {
+          "column": "sale_appr_value",
+          "name": "Estimated Total Market Value"
+        },
+        {
+          "column": "tax_year",
+          "name": "Tax Year"
+        },
+        {
+          "name": "Ratio",
+          "column": "sale_appr_value/case(sale_price <= 0 or sale_price is null, case(sale_appr_value == 0, 1, true, sale_appr_value) , true, sale_price)"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "style",
+          "name": "Style",
+          "renderType": "text"
+        },
+        {
+          "column": "appr_total/case(sale_price <= 0 or sale_price is null, case(appr_total == 0, 1, true, appr_total) , true, sale_price)",
+          "name": "Sale Ratio",
+          "renderType": "number"
+        }
+      ],
+      "map": {
+        "centerLat": "43.680768,",
+        "centerLng": "-70.294197",
+        "zoom": "9",
+        "mini_map_zoom": "8.5",
+        "shapes_outline_highlight_width": "2",
+        "shapes_outline_width": "1.5",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "portlandme.data.socrata.com",
+          "shape_dataset_id": "x8fa-hvzr",
+          "shape_name": "City of Portland Zip Codes",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "geoid10",
+            "shape_description": "geoid10"
+          },
+          "color": "#32a889",
+          "border_color": "#cccccc",
+          "mini_map_border_color": "#4d4e4f",
+          "outline_highlight_color": "#808080"
+        }
+      ]
+    },
+    {
+      "name": "Permitting",
+      "description": "Permitting",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "amhj-22i6",
+      "fields": {
+        "date_column": "applicationdate",
+        "incident_type": "permittypegroup",
+        "location": "location",
+        "8t69-jvh8": ":@computed_region_8t69_jvh8"
+      },
+      "dimension_entries": [
+        {
+          "column": "permittypegroup",
+          "name": "Permit Type"
+        },
+        {
+          "column": "permitworkclass",
+          "name": "Permit Class"
+        }
+      ],
+      "group_by_entries": [
+        {
+          "column": "permittypegroup",
+          "name": "Permit Type"
+        },
+        {
+          "column": "permitworkclass",
+          "name": "Permit Class"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
+        },
+        {
+          "column": "permitstatus",
+          "name": "Permit Status"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Permits Issued",
+          "column": "permitid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "permits",
+          "tags": [
+            "Permitting"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          },
+          "fields": {
+            "date_column": "issueddate"
+          }
+        },
+        {
+          "name": "Total Applications Received",
+          "column": "permitid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Permitting"
+          ],
+          "visualization": {
+            "default_view": "overtime",
+            "snapshot": {
+              "chart_type": "groupChart"
+            },
+           "overtime": {
+     "timeline": {
+    "default_time_frame": "year_on_year"
+    }
+    }
+          },
+          "fields": {
+            "date_column": "applicationdate"
+          }
+        },
+        {
+          "name": "Open Permit Applications",
+          "column": "permitid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "end_date_override_and_ignore":"true",
+          "start_date_boolean_override":"<",
+          "parent_queries": [
+            "select *,:@computed_region_8t69_jvh8 where permitstatus not in ('Finaled','Issued')"
+          ],
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        },
+        {
+          "name": "Permits issued Within 30 days",
+          "column": "((sum(less_than_30_count)/count(*))::double)*100.00",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+            "Permitting"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "default_view": "scatterplot",
+              "chart_type": "groupChart",
+              "barchart": {
+                "secondary_metric_entries": [
+                  {
+                    "column": "permitnumber",
+                    "name": "Number of Permits",
+                    "aggregate_type": "count",
+                    "prefix": "",
+                    "suffix": "",
+                    "precision": "0",
+                    "render_type": "bullet"
+                  }
+                ],
+                "bench_mark_entries": [
+                  {
+                    "name": "90%",
+                    "value": "90"
+                  }
+                ]
+              },
+              "scatterplot": {
+                "default_show_range": "false",
+                "secondary_metric_entries": [
+                  {
+                    "column": "permitnumber",
+                    "name": "Number of Permits",
+                    "aggregate_type": "count",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": ""
+                  }
+                ]
+            }
+          }},
+          "fields": {
+            "date_column": "applicationdate"
+          },
+          "parent_queries": [
+            "select :@computed_region_8t69_jvh8, location,applicationdate, permitnumber, permittypegroup, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+          ],
+          "target_entries": [
+            {
+              "name": "SLA Met",
+              "color": "#259652",
+              "operator": ">",
+              "value": "90",
+              "icon": "icons-check-circle",
+              "target_entry_description": "The SLA for this operating metric is being met. The SLA is 90% of permits issued within 30 days."
+            },
+            {
+              "name": "SLA Not Met",
+              "color": "#e31219",
+              "icon": "icons-times-circle",
+              "target_entry_description": "The SLA for this operating metric is not being met. The SLA is 90% of permits issued within 30 days."
+            }
+          ]
+        },
+        {
+          "name": "Average # Days from Application to Issuance",
+          "column": "avg(applied_to_issued)",
+          "aggregate_type": "",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": " days",
+          "tags": [
+            "Permitting"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          },
+          "target_entries": [
+            {
+              "name": "SLA Met",
+              "color": "#259652",
+              "operator": "<",
+              "value": "120",
+              "icon": "icons-check-circle"
+            },
+            {
+              "name": "SLA Not Met",
+              "color": "#e31219",
+              "icon": "icons-times-circle"
+            }
+          ]
+        },
+        {
+          "name": "Total Estimated Value of Permitted Construction",
+          "column": "sum(permitvaluation)",
+          "aggregate_type": "",
+          "use_dimension_value": "",
+          "precision": "0",
+          "prefix": "$",
+          "suffix": "",
+          "tags": [
+            "Permitting"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "groupChart"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "projectname",
+          "name": "Project"
+        },
+        {
+          "column": "permitstatus",
+          "name": "Permit Status"
+        },
+        {
+          "column": "permitworkclass",
+          "name": "Permit Class"
+        },
+        {
+          "column": "permittypegroup",
+          "name": "Permit Type"
+        },
+        {
+          "column": "district",
+          "name": "District"
+        }
+      ],
+      "map": {
+        "centerLat": "43.539349",
+        "centerLng": "-96.730926",
+        "zoom": "10",
+        "mini_map_zoom": "9",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      },
+      "shape_dataset_entries": [
+        {
+          "shape_dataset_domain": "tyler.partner.socrata.com",
+          "shape_dataset_id": "8t69-jvh8",
+          "shape_name": "City Council Districts",
+          "fields": {
+            "shape": "the_geom",
+            "shape_id": "_feature_id",
+            "shape_name": "repname",
+            "shape_description": "repname"
+          },
+          "color": "#32a889"
         }
       ]
     }
