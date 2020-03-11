@@ -122,7 +122,7 @@
           "end_date_override_and_ignore":"true",
           "start_date_boolean_override":"<",
           "parent_queries": [
-            "select *,:@computed_region_8t69_jvh8 where permitstatus not in ('Finaled','Issued')"
+            "select *,:@computed_region_x8fa_hvzr where permitstatus not in ('Finaled','Issued')"
           ],
           "tags": [
             "Code Enforcement"
@@ -187,7 +187,7 @@
             "date_column": "applicationdate"
           },
           "parent_queries": [
-            "select :@computed_region_8t69_jvh8, location,applicationdate, permitnumber, permittype, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+            "select :@computed_region_x8fa_hvzr, location,applicationdate, permitnumber, permittype, permitstatus, permitworkclass, capital_fund_project,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
           ],
           "target_entries": [
             {
