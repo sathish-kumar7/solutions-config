@@ -2790,10 +2790,9 @@
                     "prefix": "$",
                     "suffix": "",
                     "precision": "",
-                    "render_type": "stack"
+                    "render_type": "bullet"
                   }
-                ],
-                "default_secondary_metric": "Average Annual Salary"
+                ]
               }
             }
           }
