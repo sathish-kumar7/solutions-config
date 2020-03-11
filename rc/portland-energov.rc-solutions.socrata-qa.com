@@ -32,7 +32,7 @@
       "fields": {
         "date_column": "applicationdate",
         "incident_type": "permittype",
-        "location": "location",
+        "location": "geocoded_column",
         "x8fa-hvzr": ":@computed_region_x8fa_hvzr"
       },
       "dimension_entries": [
