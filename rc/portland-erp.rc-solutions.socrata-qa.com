@@ -1123,7 +1123,7 @@
         {
           "name": "Percentage of Invoices Paid within 30 Days",
           "primary_metric_name": "Days",
-          "column": "(sum(case(daysopen <= 30, 1, true, 0))/count(daysopen))*100",
+          "column": "(sum(case(daysopen <= 30, 1, true, 0))/(case(count(daysopen) = 0, 1, true, count(daysopen)))*100",
           "aggregate_type": "",
           "prefix": "",
           "suffix": "%",
