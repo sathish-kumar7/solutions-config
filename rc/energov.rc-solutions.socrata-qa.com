@@ -125,7 +125,7 @@
             "select *,:@computed_region_8t69_jvh8 where permitstatus not in ('Finaled','Issued')"
           ],
           "tags": [
-            "Code Enforcement"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
