@@ -1033,7 +1033,7 @@
           "prefix": "",
           "suffix": "incidents",
           "visualization": {
-            "default_view": "overtime",
+            "default_view": "snapshot",
             "snapshot": {
               "chart_type": "groupChart",
               "showCompareDropDown": "true",
