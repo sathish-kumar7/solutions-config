@@ -1067,9 +1067,18 @@
                     "precision": "",
                     "prefix": "",
                     "suffix": "cases"
+                  },
+                  {
+                    "column": "case_id",
+                    "name": "Cases Count",
+                    "aggregate_type": "count",
+                    "render_type": "parallel",
+                    "precision": "",
+                    "prefix": "",
+                    "suffix": "cases"
                   }
                 ],
-                "default_secondary_metric": "Status",
+                "default_secondary_metric": "Cases Count",
                 "bench_mark_entries": [
                   {
                     "name": "Bench mark 1",
