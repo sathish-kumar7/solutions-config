@@ -890,7 +890,7 @@
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
                 "default_time_frame": "year_on_year",
-                "show_range_slider": false
+                "show_range_slider": "false"
               }
             },
             "snapshot": {
@@ -1161,7 +1161,7 @@
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
                 "default_time_frame": "year_on_year",
-                "show_range_slider": true,
+                "show_range_slider": "true",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1212,7 +1212,7 @@
                 "default_show_projection": "false",
                 "default_compare_year": "",
                 "default_time_frame": "rolling",
-                "show_range_slider": false,
+                "show_range_slider": "false",
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
