@@ -889,7 +889,8 @@
                 "show_dimensions": "true",
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
-                "default_time_frame": "year_on_year"
+                "default_time_frame": "year_on_year",
+                "show_range_slider": true
               }
             },
             "snapshot": {
@@ -1151,6 +1152,7 @@
                 "default_show_projection": "true",
                 "default_compare_year": "2015",
                 "default_time_frame": "year_on_year",
+                "show_range_slider": true,
                 "secondary_metric_entries": [
                   {
                     "column": "case_disposition",
@@ -1476,7 +1478,8 @@
             "overtime": {
               "show_area_chart": "true",
               "show_timeline_total": "true",
-              "show_burn_up_chart": "true"
+              "show_burn_up_chart": "true",
+              "show_range_slider": "false"
             }
           },
           "target_entries": [
