@@ -526,7 +526,7 @@
                     "independent_axes_values": "false"
                   }
                 ],
-                "default_secondary_metric": "Actual Amount"
+                "default_secondary_metric": "Recommended Amount"
               },
               "scatterplot": {
                 "secondary_metric_entries": [
