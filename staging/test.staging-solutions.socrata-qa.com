@@ -509,7 +509,7 @@
                     "column": "recommneded_amount",
                     "name": "Recommended Amount",
                     "aggregate_type": "sum",
-                    "render_type": "bullet",
+                    "render_type": "parallel",
                     "precision": "2",
                     "prefix": "$",
                     "suffix": "Recommended",
