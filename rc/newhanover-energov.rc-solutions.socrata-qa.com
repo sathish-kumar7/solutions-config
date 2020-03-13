@@ -112,7 +112,7 @@
           "end_date_override_and_ignore": "true",
           "start_date_boolean_override": "<",
           "parent_queries": [
-            "select * where permitstatus in (‘Submitted’, ‘In Review’, ‘Application Incomplete’, ‘Awaiting Payment’, ‘On Hold’, ‘Stop Work Order’, ‘Submitted - Online’)"
+            "select * where permitstatus in ('Submitted', 'In Review', 'Application Incomplete', 'Awaiting Payment', 'On Hold', 'Stop Work Order', 'Submitted - Online')"
           ],
           "tags": [
             "Permitting"
