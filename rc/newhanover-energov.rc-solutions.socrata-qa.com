@@ -112,7 +112,7 @@
           "end_date_override_and_ignore": "true",
           "start_date_boolean_override": "<",
           "parent_queries": [
-            "select * where permitstatus in ('Submitted', 'In Review', 'Application Incomplete', 'Awaiting Payment', 'On Hold', 'Stop Work Order', 'Submitted - Online')"
+            "select *,:@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y where permitstatus in ('Submitted', 'In Review', 'Application Incomplete', 'Awaiting Payment', 'On Hold', 'Stop Work Order', 'Submitted - Online')"
           ],
           "tags": [
             "Permitting"
@@ -172,7 +172,7 @@
             "date_column": "applicationdate"
           },
           "parent_queries": [
-            "select :@computed_region_x8fa_hvzr, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+            "select :@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
           ],
           "target_entries": [{
               "name": "SLA Met",
@@ -291,13 +291,26 @@
       },
       "shape_dataset_entries": [{
         "shape_dataset_domain": "newhanovercounty.data.socrata.com",
-        "shape_dataset_id": "x8fa-hvzr",
-        "shape_name": "City of Portland Zip Codes",
+        "shape_dataset_id": "p5ek-7z3f",
+        "shape_name": "New Hanover County Municipal Limits",
         "fields": {
           "shape": "the_geom",
           "shape_id": "_feature_id",
-          "shape_name": "geoid10",
-          "shape_description": "geoid10"
+          "shape_name": "city"
+        },
+        "color": "#32a889",
+        "border_color": "#cccccc",
+        "mini_map_border_color": "#4d4e4f",
+        "outline_highlight_color": "#808080"
+      },
+    {
+        "shape_dataset_domain": "newhanovercounty.data.socrata.com",
+        "shape_dataset_id": "t3ic-dd5y",
+        "shape_name": "New Hanover County Tax Appraisal Areas",
+        "fields": {
+          "shape": "the_geom",
+          "shape_id": "_feature_id",
+          "shape_name": "area"
         },
         "color": "#32a889",
         "border_color": "#cccccc",
@@ -387,7 +400,7 @@
               "chart_type": "barChart"
             },
             "parent_queries": [
-              "select * where actual_start_to_scheduled_start is not null"
+              "select *,:@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y where actual_start_to_scheduled_start is not null"
             ]
           },
           "fields": {
@@ -455,13 +468,26 @@
       },
       "shape_dataset_entries": [{
         "shape_dataset_domain": "newhanovercounty.data.socrata.com",
-        "shape_dataset_id": "x8fa-hvzr",
-        "shape_name": "City of Portland Zip Codes",
+        "shape_dataset_id": "p5ek-7z3f",
+        "shape_name": "New Hanover County Municipal Limits",
         "fields": {
           "shape": "the_geom",
           "shape_id": "_feature_id",
-          "shape_name": "geoid10",
-          "shape_description": "geoid10"
+          "shape_name": "city"
+        },
+        "color": "#32a889",
+        "border_color": "#cccccc",
+        "mini_map_border_color": "#4d4e4f",
+        "outline_highlight_color": "#808080"
+      },
+    {
+        "shape_dataset_domain": "newhanovercounty.data.socrata.com",
+        "shape_dataset_id": "t3ic-dd5y",
+        "shape_name": "New Hanover County Tax Appraisal Areas",
+        "fields": {
+          "shape": "the_geom",
+          "shape_id": "_feature_id",
+          "shape_name": "area"
         },
         "color": "#32a889",
         "border_color": "#cccccc",
@@ -549,7 +575,7 @@
           "end_date_override_and_ignore": "true",
           "start_date_boolean_override": "<",
           "parent_queries": [
-            "select *,:@computed_region_x8fa_hvzr where codecasestatusname not in ('Closed')"
+            "select *,:@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y where codecasestatusname not in ('Closed')"
           ],
           "tags": [
             "Code Enforcement"
