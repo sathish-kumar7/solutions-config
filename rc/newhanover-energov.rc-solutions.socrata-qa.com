@@ -192,7 +192,7 @@
         },
         {
           "name": "Average # Days from Application to Issuance",
-          "column": "avg(applied_to_issued)",
+          "column": "avg(date_diff_d(applicationdate,issueddate))",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
@@ -264,7 +264,7 @@
       "map": {
         "centerLat": "34.196895,",
         "centerLng": "-77.876867",
-        "zoom": "10",
+        "zoom": "9",
         "mini_map_zoom": "9",
         "shapes_outline_highlight_width": "4",
         "style_entries": [{
@@ -441,8 +441,8 @@
       "map": {
         "centerLat": "34.196895,",
         "centerLng": "-77.876867",
-        "zoom": "11",
-        "mini_map_zoom": "11",
+        "zoom": "9",
+        "mini_map_zoom": "9",
         "shapes_outline_highlight_width": "4",
         "style_entries": [{
             "name": "Street",
@@ -644,7 +644,7 @@
       "map": {
         "centerLat": "34.196895,",
         "centerLng": "-77.876867",
-        "zoom": "10",
+        "zoom": "9",
         "mini_map_zoom": "9",
         "shapes_outline_highlight_width": "4",
         "style_entries": [{
