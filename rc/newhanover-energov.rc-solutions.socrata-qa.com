@@ -25,7 +25,8 @@
         "date_column": "applicationdate",
         "incident_type": "permittype",
         "location": "geocoded_column",
-        "x8fa-hvzr": ":@computed_region_x8fa_hvzr"
+        "p5ek-7z3f": ":@computed_region_p5ek_7z3f",
+        "t3ic-dd5y": ":@computed_region_t3ic_dd5y"
       },
       "dimension_entries": [{
           "column": "permittype",
@@ -111,10 +112,10 @@
           "end_date_override_and_ignore": "true",
           "start_date_boolean_override": "<",
           "parent_queries": [
-            "select * where permitstatus not in ('Finaled','Issued')"
+            "select * where permitstatus in (‘Submitted’, ‘In Review’, ‘Application Incomplete’, ‘Awaiting Payment’, ‘On Hold’, ‘Stop Work Order’, ‘Submitted - Online’)"
           ],
           "tags": [
-            "Code Enforcement"
+            "Permitting"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -313,7 +314,8 @@
         "date_column": "requestdatetime",
         "incident_type": "inspectiontypename",
         "location": "location",
-        "x8fa-hvzr": ":@computed_region_x8fa_hvzr"
+        "p5ek-7z3f": ":@computed_region_p5ek_7z3f",
+        "t3ic-dd5y": ":@computed_region_t3ic_dd5y"
       },
       "dimension_entries": [{
           "column": "inspectiontypename",
@@ -476,7 +478,8 @@
         "date_column": "openeddate",
         "incident_type": "codecaseid",
         "location": "geocoded_column",
-        "x8fa-hvzr": ":@computed_region_x8fa_hvzr"
+        "p5ek-7z3f": ":@computed_region_p5ek_7z3f",
+        "t3ic-dd5y": ":@computed_region_t3ic_dd5y"
       },
       "dimension_entries": [{
           "column": "codecasetypename",
@@ -642,13 +645,26 @@
       },
       "shape_dataset_entries": [{
         "shape_dataset_domain": "newhanovercounty.data.socrata.com",
-        "shape_dataset_id": "x8fa-hvzr",
-        "shape_name": "City of Portland Zip Codes",
+        "shape_dataset_id": "p5ek-7z3f",
+        "shape_name": "New Hanover County Municipal Limits",
         "fields": {
           "shape": "the_geom",
           "shape_id": "_feature_id",
-          "shape_name": "geoid10",
-          "shape_description": "geoid10"
+          "shape_name": "city"
+        },
+        "color": "#32a889",
+        "border_color": "#cccccc",
+        "mini_map_border_color": "#4d4e4f",
+        "outline_highlight_color": "#808080"
+      },
+    {
+        "shape_dataset_domain": "newhanovercounty.data.socrata.com",
+        "shape_dataset_id": "t3ic-dd5y",
+        "shape_name": "New Hanover County Tax Appraisal Areas",
+        "fields": {
+          "shape": "the_geom",
+          "shape_id": "_feature_id",
+          "shape_name": "area"
         },
         "color": "#32a889",
         "border_color": "#cccccc",
