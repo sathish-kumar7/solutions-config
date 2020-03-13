@@ -172,7 +172,7 @@
             "date_column": "applicationdate"
           },
           "parent_queries": [
-            "select :@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+            "select :@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, date_diff_d(issueddate, applicationdate) as applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
           ],
           "target_entries": [{
               "name": "SLA Met",
@@ -192,7 +192,7 @@
         },
         {
           "name": "Average # Days from Application to Issuance",
-          "column": "avg(date_diff_d(applicationdate,issueddate))",
+          "column": "avg(date_diff_d(issueddate, applicationdate))",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
