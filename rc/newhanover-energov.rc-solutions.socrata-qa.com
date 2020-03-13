@@ -262,8 +262,8 @@
         }
       ],
       "map": {
-        "centerLat": "43.680768,",
-        "centerLng": "-70.294197",
+        "centerLat": "34.196895,",
+        "centerLng": "-77.876867",
         "zoom": "10",
         "mini_map_zoom": "9",
         "shapes_outline_highlight_width": "4",
@@ -439,8 +439,8 @@
         }
       ],
       "map": {
-        "centerLat": "43.680768,",
-        "centerLng": "-70.294197",
+        "centerLat": "34.196895,",
+        "centerLng": "-77.876867",
         "zoom": "11",
         "mini_map_zoom": "11",
         "shapes_outline_highlight_width": "4",
@@ -642,8 +642,8 @@
         }
       ],
       "map": {
-        "centerLat": "43.680768,",
-        "centerLng": "-70.294197",
+        "centerLat": "34.196895,",
+        "centerLng": "-77.876867",
         "zoom": "10",
         "mini_map_zoom": "9",
         "shapes_outline_highlight_width": "4",
