@@ -3,12 +3,6 @@
 		"browser_title": "Portland EnerGov Executive Insights",
 		"title": "Portland EnerGov Executive Insights"
 	},
-	"exploration_card_entries": [{
-		"name": "Growth Management Plan",
-		"link": "https://cityofsfgis.maps.arcgis.com/apps/webappviewer/index.html?id=eecb42437c0042ebb30ecc65e38c6bef",
-		"image": "https://www.tylertech.com/Portals/0/Images/Products/CLT-APPRAISAL-Techniques-Prepare-Financial-Support-Download.jpg?ver=2018-09-25-174822-170?format=jpg&quality=80",
-		"exploration_content": "View the 2040 comprehensive plan"
-	}],
 	"tag_list": [
 		"Permitting",
 		"Planning",
@@ -117,7 +111,7 @@
 					"end_date_override_and_ignore": "true",
 					"start_date_boolean_override": "<",
 					"parent_queries": [
-						"select *,:@computed_region_x8fa_hvzr where permitstatus not in ('Finaled','Issued')"
+						"select *,:@computed_region_x8fa_hvzr where permitstatus in ('In Review', 'Submitted', 'In Review - Pending Payment', 'Submitted - Incomplete', 'Pending Payment', 'Submitted - Online', 'Third Party Review', 'Ready to Issue')"
 					],
 					"tags": [
 						"Code Enforcement"
@@ -552,7 +546,7 @@
 					"end_date_override_and_ignore": "true",
 					"start_date_boolean_override": "<",
 					"parent_queries": [
-						"select *,:@computed_region_x8fa_hvzr where codecasestatusname not in ('Closed')"
+						"select *,:@computed_region_x8fa_hvzr where codecasestatusname not in ('Closed', 'Closed - Unfounded', 'Closed - Resolved')"
 					],
 					"tags": [
 						"Code Enforcement"
