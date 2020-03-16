@@ -945,7 +945,7 @@
         "zoom": "5",
         "mini_map_zoom": "4",
         "shapes_outline_highlight_width": "4",
-        "show_geocoder_control": "false",
+        "show_geocoder_control": false,
         "style_entries": [
           {
             "name": "Street",
@@ -1339,7 +1339,7 @@
         "centerLng": "-82.711240",
         "zoom": "12",
         "shapes_outline_highlight_width": "4",
-        "show_geocoder_control": "true",
+        "show_geocoder_control": true,
         "style_entries": [
           {
             "name": "Street",
