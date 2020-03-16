@@ -1132,6 +1132,7 @@
         "centerLng": "-82.711240",
         "zoom": "12",
         "shapes_outline_highlight_width": "4",
+        "show_geocoder_control": "false",
         "style_entries": [
           {
             "name": "Street",
