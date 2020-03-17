@@ -16,8 +16,8 @@
   "template_entries": [{
       "name": "Permitting",
       "description": "Permitting",
-      "dataset_domain": "newhanovercounty.data.socrata.com",
-      "dataset_id": "i4cb-h4yi",
+      "dataset_domain": "neworleans-ei.data.socrata.com",
+      "dataset_id": "55ss-q7m6",
       "fields": {
         "date_column": "applicationdate",
         "incident_type": "permittype",
@@ -26,28 +26,28 @@
         "t3ic-dd5y": ":@computed_region_t3ic_dd5y"
       },
       "dimension_entries": [{
-          "column": "permittype",
+          "column": "type",
           "name": "Permit Type"
         },
         {
-          "column": "permitworkclass",
-          "name": "Permit Class"
+          "column": "councildist",
+          "name": "Council District"
+        },
+        {
+          "column": "currentstatus",
+          "name": "Permit Status"
         }
       ],
       "group_by_entries": [{
-          "column": "permittype",
+          "column": "type",
           "name": "Permit Type"
         },
         {
-          "column": "permitworkclass",
-          "name": "Permit Class"
+          "column": "councildist",
+          "name": "Council District"
         },
         {
-          "column": "projectname",
-          "name": "Project"
-        },
-        {
-          "column": "permitstatus",
+          "column": "currentstatus",
           "name": "Permit Status"
         }
       ],
