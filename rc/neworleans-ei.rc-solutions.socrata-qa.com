@@ -19,11 +19,10 @@
       "dataset_domain": "neworleans-ei.data.socrata.com",
       "dataset_id": "55ss-q7m6",
       "fields": {
-        "date_column": "applicationdate",
-        "incident_type": "permittype",
+        "date_column": "filingdate",
+        "incident_type": "type",
         "location": "geocoded_column",
-        "p5ek-7z3f": ":@computed_region_p5ek_7z3f",
-        "t3ic-dd5y": ":@computed_region_t3ic_dd5y"
+        "bve8-xnew": ":@computed_region_bve8_xnew"
       },
       "dimension_entries": [{
           "column": "type",
@@ -109,7 +108,7 @@
           "end_date_override_and_ignore": "true",
           "start_date_boolean_override": "<",
           "parent_queries": [
-            "select *,:@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y where permitstatus in ('Submitted', 'In Review', 'Application Incomplete', 'Awaiting Payment', 'On Hold', 'Stop Work Order', 'Submitted - Online')"
+            "select *,:@computed_region_bve8_xnew where permitstatus in ('Submitted', 'In Review', 'Application Incomplete', 'Awaiting Payment', 'On Hold', 'Stop Work Order', 'Submitted - Online')"
           ],
           "tags": [
             "Permitting"
@@ -169,7 +168,7 @@
             "date_column": "applicationdate"
           },
           "parent_queries": [
-            "select :@computed_region_p5ek_7z3f,:@computed_region_t3ic_dd5y, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, date_diff_d(issueddate, applicationdate) as applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+            "select :@computed_region_bve8_xnew, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, date_diff_d(issueddate, applicationdate) as applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
           ],
           "target_entries": [{
               "name": "SLA Met",
@@ -287,13 +286,13 @@
         ]
       },
       "shape_dataset_entries": [{
-        "shape_dataset_domain": "newhanovercounty.data.socrata.com",
-        "shape_dataset_id": "p5ek-7z3f",
-        "shape_name": "New Hanover County Municipal Limits",
+        "shape_dataset_domain": "neworleans-ei.data.socrata.com",
+        "shape_dataset_id": "bve8-xnew",
+        "shape_name": "New Orleans Neighborhood Statistical Areas",
         "fields": {
           "shape": "the_geom",
           "shape_id": "_feature_id",
-          "shape_name": "city"
+          "shape_name": "gnocdc_lab"
         },
         "color": "#32a889",
         "border_color": "#cccccc",
