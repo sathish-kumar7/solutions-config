@@ -5,8 +5,6 @@
 	},
 	"tag_list": [
 		"Permitting",
-		"Planning",
-		"Business Services",
 		"Code Enforcement",
 		"Inspections"
 	],
@@ -334,13 +332,16 @@
 			],
 			"view_entries": [{
 					"name": "Open Inspections",
-					"column": "case(isstatusindicatesuccess='False', 1, true, 0)",
-					"aggregate_type": "sum",
+					"column": "requestdatetime",
+					"aggregate_type": "count",
 					"precision": "0",
 					"prefix": "",
 					"suffix": "",
 					"tags": [
 						"Inspections"
+					]
+					,"parent_queries": [
+						"select *,:@computed_region_x8fa_hvzr where inspectionstatusname in ('Re-inspection required', 'Sheduled', 'Follow-up Required','Requested','Re-inspection required first','Re-inspection required second','Re-inspection required third')"
 					],
 					"visualization": {
 						"default_view": "snapshot",
