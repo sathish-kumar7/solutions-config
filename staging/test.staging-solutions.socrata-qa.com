@@ -910,28 +910,6 @@
           "name": "Owner"
         }
       ],
-      "leaf_page_entries": [
-        {
-          "column": "class",
-          "name": "Class"
-        },
-        {
-          "column": "building_value",
-          "name": "Building value"
-        },
-        {
-          "column": "county",
-          "name": "County"
-        },
-        {
-          "column": "cityname",
-          "name": "City"
-        },
-        {
-          "column": "year_built_1",
-          "name": "Year"
-        }
-      ],
       "quick_filter_entries": [
         {
           "column": "sale_date",
