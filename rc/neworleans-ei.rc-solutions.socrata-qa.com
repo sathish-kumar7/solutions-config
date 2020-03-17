@@ -52,7 +52,7 @@
       ],
       "view_entries": [{
           "name": "Permits Issued",
-          "column": "permitid",
+          "column": "numstring",
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "0",
@@ -73,7 +73,7 @@
         },
         {
           "name": "Total Applications Received",
-          "column": "permitid",
+          "column": "numstring",
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "0",
@@ -94,12 +94,12 @@
             }
           },
           "fields": {
-            "date_column": "applicationdate"
+            "date_column": "filingdate"
           }
         },
         {
           "name": "Open Permit Applications",
-          "column": "permitid",
+          "column": "numstring",
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "0",
@@ -108,7 +108,7 @@
           "end_date_override_and_ignore": "true",
           "start_date_boolean_override": "<",
           "parent_queries": [
-            "select *,:@computed_region_bve8_xnew where permitstatus in ('Submitted', 'In Review', 'Application Incomplete', 'Awaiting Payment', 'On Hold', 'Stop Work Order', 'Submitted - Online')"
+            "select *,:@computed_region_bve8_xnew where currentstatus in ('Submitted', 'In Review', 'Application Incomplete', 'Awaiting Payment', 'On Hold', 'Stop Work Order', 'Submitted - Online')"
           ],
           "tags": [
             "Permitting"
@@ -138,7 +138,7 @@
               "chart_type": "groupChart",
               "barchart": {
                 "secondary_metric_entries": [{
-                  "column": "permitnumber",
+                  "column": "numstring",
                   "name": "Number of Permits",
                   "aggregate_type": "count",
                   "prefix": "",
@@ -154,7 +154,7 @@
               "scatterplot": {
                 "default_show_range": "false",
                 "secondary_metric_entries": [{
-                  "column": "permitnumber",
+                  "column": "numstring",
                   "name": "Number of Permits",
                   "aggregate_type": "count",
                   "precision": "",
@@ -165,10 +165,10 @@
             }
           },
           "fields": {
-            "date_column": "applicationdate"
+            "date_column": "filingdate"
           },
           "parent_queries": [
-            "select :@computed_region_bve8_xnew, geocoded_column,applicationdate, permitnumber, permittype, permitstatus, permitworkclass,projectname, district, date_diff_d(issueddate, applicationdate) as applied_to_issued, case(applied_to_issued < 30, 1) as less_than_30_count where isstatusissued='true'"
+            "select *, :@computed_region_bve8_xnew, geocoded_column,case(applied_to_issued < 30, 1) as less_than_30_count where applied_to_issued is not null"
           ],
           "target_entries": [{
               "name": "SLA Met",
@@ -188,7 +188,7 @@
         },
         {
           "name": "Average # Days from Application to Issuance",
-          "column": "avg(date_diff_d(issueddate, applicationdate))",
+          "column": "avg(applied_to_issued)",
           "aggregate_type": "",
           "use_dimension_value": "true",
           "precision": "0",
@@ -219,7 +219,7 @@
         },
         {
           "name": "Total Estimated Value of Permitted Construction",
-          "column": "sum(permitvaluation)",
+          "column": "sum(constrval)",
           "aggregate_type": "",
           "use_dimension_value": "",
           "precision": "0",
@@ -236,26 +236,7 @@
           }
         }
       ],
-      "leaf_page_entries": [{
-          "column": "projectname",
-          "name": "Project"
-        },
-        {
-          "column": "permitstatus",
-          "name": "Permit Status"
-        },
-        {
-          "column": "permitworkclass",
-          "name": "Permit Class"
-        },
-        {
-          "column": "permittype",
-          "name": "Permit Type"
-        },
-        {
-          "column": "district",
-          "name": "District"
-        }
+      "leaf_page_entries": [
       ],
       "map": {
         "centerLat": "34.196895,",
@@ -293,20 +274,6 @@
           "shape": "the_geom",
           "shape_id": "_feature_id",
           "shape_name": "gnocdc_lab"
-        },
-        "color": "#32a889",
-        "border_color": "#cccccc",
-        "mini_map_border_color": "#4d4e4f",
-        "outline_highlight_color": "#808080"
-      },
-    {
-        "shape_dataset_domain": "newhanovercounty.data.socrata.com",
-        "shape_dataset_id": "t3ic-dd5y",
-        "shape_name": "New Hanover County Tax Appraisal Areas",
-        "fields": {
-          "shape": "the_geom",
-          "shape_id": "_feature_id",
-          "shape_name": "area"
         },
         "color": "#32a889",
         "border_color": "#cccccc",
