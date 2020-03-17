@@ -1,5 +1,5 @@
 {
-  "application_use": "demo",
+  "application_use": "live",
   "branding": {
     "browser_title": "Assessment Connect",
     "title": "Assessment Connect",
