@@ -182,20 +182,18 @@
           }
         },
         {
-          "name": "Open Cases",
-          "column": "codecaseid",
+          "name": "Open Work Orders",
+          "column": "workordernumber",
+          "parent_queries": [
+            "select * where status = '5' OR where status = '2' OR where status = '4'"
+          ],
           "aggregate_type": "count",
           "use_dimension_value": "true",
           "precision": "0",
           "prefix": "",
           "suffix": "",
-          "end_date_override_and_ignore": "true",
-          "start_date_boolean_override": "<",
-          "parent_queries": [
-            "select * where status = '5' OR where status = '2' OR where status = '4'"
-          ],
           "tags": [
-            "Code Enforcement"
+            "Work Orders"
           ],
           "visualization": {
             "default_view": "snapshot",
