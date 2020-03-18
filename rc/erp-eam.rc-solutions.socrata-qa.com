@@ -185,7 +185,7 @@
           "name": "Open Work Orders",
           "column": "workordernumber",
           "parent_queries": [
-            "select * where status = '5' OR where status = '2' OR where status = '4'"
+            "select * where status = 5 OR status = 2 OR status = 4"
           ],
           "aggregate_type": "count",
           "use_dimension_value": "true",
