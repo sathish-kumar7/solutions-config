@@ -185,7 +185,7 @@
           "name": "Open Work Orders",
           "column": "workordernumber",
           "parent_queries": [
-            "select * where status = 5 OR status = 2 OR status = 4"
+            "select * where openeddate is not null AND closeddate is null"
           ],
           "aggregate_type": "count",
           "use_dimension_value": "true",
