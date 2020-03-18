@@ -1705,10 +1705,6 @@
           "name": "Stories"
         },
         {
-          "column": "basmt",
-          "name": "Basement"
-        },
-        {
           "column": "attic",
           "name": "Attic"
         },
