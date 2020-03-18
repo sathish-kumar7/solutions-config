@@ -86,7 +86,7 @@
           "name": "Account type"
         }
       ],
-        "map": {
+      "map": {
         "centerLat": "41.7445544",
         "centerLng": "-88.1936202",
         "zoom": "12",
@@ -122,6 +122,136 @@
           "renderType": "text"
         }
       ]
+    },
+    {
+      "name": "Work Orders",
+      "description": "Work Orders",
+      "dataset_domain": "tyler.partner.socrata.com",
+      "dataset_id": "p82r-rswr",
+      "fields": {
+        "date_column": "openeddate",
+        "incident_type": "activitymaintenancetypedesc",
+        "location": "geocoded_column"
+      },
+      "dimension_entries": [
+        {
+          "column": "activitymaintenancetypedesc",
+          "name": "Maintenance Type"
+        },
+        {
+          "column": "servicingdepartment",
+          "name": "Servicing Department"
+        },
+        {
+          "column": "requestingdepartment",
+          "name": "Requesting Department"
+        },
+        {
+          "column": "statustext",
+          "name": "Status"
+        },
+        {
+          "column": "activitycode",
+          "name": "Activity Code"
+        }
+      ],
+      "quick_filter_entries": [
+        {
+          "column": "days_open",
+          "name": "Days Open",
+          "renderType": "number"
+        }
+      ],
+      "view_entries": [
+        {
+          "name": "Work Orders",
+          "column": "workordernumber",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "tags": [
+            "Work Orders"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barchart"
+            }
+          }
+        },
+        {
+          "name": "Open Cases",
+          "column": "codecaseid",
+          "aggregate_type": "count",
+          "use_dimension_value": "true",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "",
+          "end_date_override_and_ignore": "true",
+          "start_date_boolean_override": "<",
+          "parent_queries": [
+            "select * where status = '5' OR where status = '2' OR where status = '4'"
+          ],
+          "tags": [
+            "Code Enforcement"
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+              "chart_type": "barchart"
+            }
+          }
+        }
+      ],
+      "leaf_page_entries": [
+        {
+          "column": "codecasetypename",
+          "name": "Code Case Type"
+        },
+        {
+          "column": "codecasestatusname",
+          "name": "Code Case Status"
+        },
+        {
+          "column": "districtname",
+          "name": "District"
+        },
+        {
+          "column": "projectname",
+          "name": "Project"
+        }
+      ],
+      "map": {
+        "centerLat": "41.7445544",
+        "centerLng": "-88.1936202",
+        "zoom": "12",
+        "mini_map_zoom": "9",
+        "shapes_outline_highlight_width": "4",
+        "style_entries": [
+          {
+            "name": "Street",
+            "style": "mapbox://styles/mapbox/streets-v10"
+          },
+          {
+            "name": "Light",
+            "style": "mapbox://styles/mapbox/light-v9"
+          },
+          {
+            "name": "Dark",
+            "style": "mapbox://styles/mapbox/dark-v9"
+          },
+          {
+            "name": "Satelite",
+            "style": "mapbox://styles/mapbox/satellite-v9"
+          },
+          {
+            "name": "Outdoors",
+            "style": "mapbox://styles/mapbox/outdoors-v10"
+          }
+        ]
+      }
     }
   ]
 }
