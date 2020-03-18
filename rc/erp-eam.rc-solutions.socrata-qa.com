@@ -24,7 +24,7 @@
       "fields": {
         "date_column": "last_updated_date",
         "incident_type": "assettype",
-        "location": "new_georeferenced_column"
+        "location": "geocoded_column"
       },
       "dimension_entries": [
         {
