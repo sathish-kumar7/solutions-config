@@ -1,4 +1,5 @@
 {
+  "application_use": "live",
   "branding": {
     "browser_title": "Solutions | Test ",
     "title": "Solutions - Test"
