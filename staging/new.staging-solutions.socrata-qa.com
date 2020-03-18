@@ -1,4 +1,5 @@
 {
+	"application_use": "live",
 	"branding": {
 		"delimiter": ",",
 		"browser_title": "Munis Executive Insights",
