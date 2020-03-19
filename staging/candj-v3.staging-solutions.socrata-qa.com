@@ -18,8 +18,8 @@
         "Trial Date Certainty"
     ],
     "date": {
-        "startDate": "2020-1-1",
-        "endDate": "2020-12-31"
+        "startDate": "2019-1-1",
+        "endDate": "2019-12-31"
     },
     "template_entries": [
         {
