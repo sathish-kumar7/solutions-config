@@ -213,6 +213,7 @@
           "precision": "0",
           "prefix": "",
           "suffix": "",
+          "end_date_override_and_ignore":"true",
           "tags": [
             "Sales"
           ],
@@ -221,6 +222,9 @@
             "snapshot": {
               "chart_type": "groupChart",
               "show_pie_chart": "true"
+            },
+            "overtime": {
+              "show_burn_up_chart": "true"
             }
           }
         },
