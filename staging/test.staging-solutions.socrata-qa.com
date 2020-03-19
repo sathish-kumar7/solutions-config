@@ -16,6 +16,7 @@
     "startDate": "2019-10-01",
     "endDate": "2019-12-31"
   },
+  "street_view_map_key": "AIzaSyB17sR2sKWfEcfsXwq_EKH4_J4DKuZ3y6I",
   "date_options": {
     "type": "yearly",
     "year_start_month": "4",
