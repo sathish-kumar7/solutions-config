@@ -214,6 +214,7 @@
           "prefix": "",
           "suffix": "",
           "start_date_override_and_ignore":"true",
+          "end_date_override_and_ignore":"true",
           "tags": [
             "Sales"
           ],
