@@ -17,6 +17,7 @@
     "startDate": "2017-2-18",
     "endDate": "2020-02-18"
   },
+  "street_view_map_key": "AIzaSyB17sR2sKWfEcfsXwq_EKH4_J4DKuZ3y6I",
   "tag_list": [
     "Sales",
     "Appeals",
