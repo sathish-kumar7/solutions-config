@@ -57,7 +57,7 @@
           "tags": [
           ],
           "visualization": {
-            "default_view": "snapshot",
+            "default_view": "map",
             "snapshot": {
             }
           }
