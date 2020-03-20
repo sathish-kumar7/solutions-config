@@ -7,7 +7,7 @@
   },
     "exploration_card_entries": [
     {
-      "name": "CC - Covid-19 Response",
+      "name": "Covid-19 Beds Projects",
       "link": "covid-19-beds.projects.socrata.com",
       "exploration_content": "COVID-19 Response"
     }
@@ -18,7 +18,8 @@
   },
   "street_view_map_key": "AIzaSyB17sR2sKWfEcfsXwq_EKH4_J4DKuZ3y6I",
   "tag_list": [
-
+      "Occupancy Health",
+      "Ventilators Health"        
   ],
   "template_entries": [
     {
@@ -65,7 +66,7 @@
           "name": "# of hospitals with GREEN Occupancy Health",
           "primary_metric name" : "Hospitals with green occupancy", 
           "parent_queries": [
-    		"select * where occupancy_health = '1'"
+        	"select * where occupancy_health = '1'"
 		  ],
           "column": "npi",
           "aggregate_type": "count",
@@ -73,6 +74,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
+              "Occupancy Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -92,6 +94,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
+              "Occupancy Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -111,6 +114,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
+              "Occupancy Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -118,7 +122,7 @@
             }
           }
         },
-                {
+        {
           "name": "% of hospitals with GREEN Occupancy Health",
           "primary_metric name" : "Hospitals with green occupancy health", 
           "column": "(sum(case(occupancy_health = 1, 1, true, 0))/count(npi))*100",
@@ -127,6 +131,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
+              "Occupancy Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -143,6 +148,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
+            "Occupancy Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -159,6 +165,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
+              "Occupancy Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -178,6 +185,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
+              "Ventilators Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -197,6 +205,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
+              "Ventilators Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -216,6 +225,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
+              "Ventilators Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -232,6 +242,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
+              "Ventilators Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -248,6 +259,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
+              "Ventilators Health"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -264,6 +276,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
+              "Ventilators Health"
           ],
           "visualization": {
             "default_view": "snapshot",
