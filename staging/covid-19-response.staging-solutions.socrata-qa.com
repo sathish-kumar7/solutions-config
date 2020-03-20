@@ -69,8 +69,8 @@
 
       ],
       "map": {
-        "centerLat": "33.9608276,",
-        "centerLng": "-84.5699291",
+        "centerLat": "39.20465469073116",
+        "centerLng": "-95.82864859440542,",
         "zoom": "9",
         "mini_map_zoom": "8.5",
         "shapes_outline_highlight_width": "2",
