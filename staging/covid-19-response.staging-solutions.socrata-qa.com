@@ -47,6 +47,10 @@
         {
           "column": "provider_organization_name",
           "name": "Organisation"
+        },
+        {
+          "column": "provider_business_mailing_1",
+          "name": "State"
         }
       ],
       "view_entries": [
