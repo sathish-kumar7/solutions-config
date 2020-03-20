@@ -118,6 +118,54 @@
             }
           }
         },
+                {
+          "name": "% of hospitals with GREEN Occupancy Health",
+          "primary_metric name" : "Hospitals with green occupancy health", 
+          "column": "(sum(case(occupancy_health = 1, 1, true, 0))/count(npi))*100",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "% of hospitals with YELLOW Occupancy Health",
+          "primary_metric name" : "Hospitals with occupancy ventilator health", 
+          "column": "(sum(case(occupancy_health = 2, 1, true, 0))/count(npi))*100",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "% of hospitals with RED Occupancy Health",
+          "primary_metric name" : "Hospitals with red occupancy health", 
+          "column": "(sum(case(occupancy_health = 3, 1, true, 0))/count(npi))*100",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
         {
           "name": "# of hospitals with GREEN Ventilator Health",
           "primary_metric name" : "Hospitals with red ventilator health", 
@@ -177,11 +225,40 @@
         },
         {
           "name": "% of hospitals with GREEN Ventilator Health",
-          "primary_metric name" : "Hospitals with red ventilator health", 
-          "parent_queries": [
-            "select * where ventilators_use_health = '1'"
-    	  ],
+          "primary_metric name" : "Hospitals with green ventilator health", 
           "column": "(sum(case(ventilators_use_health = 1, 1, true, 0))/count(npi))*100",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "% of hospitals with YELLOW Ventilator Health",
+          "primary_metric name" : "Hospitals with yellow ventilator health", 
+          "column": "(sum(case(ventilators_use_health = 2, 1, true, 0))/count(npi))*100",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "% of hospitals with RED Ventilator Health",
+          "primary_metric name" : "Hospitals with red ventilator health", 
+          "column": "(sum(case(ventilators_use_health = 3, 1, true, 0))/count(npi))*100",
           "aggregate_type": "",
           "precision": "0",
           "prefix": "",
