@@ -99,7 +99,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
-            "Occupancy Health"
+            "Beds & Occupancy"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -118,7 +118,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
-            "Occupancy Health"
+            "Beds & Occupancy"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -134,7 +134,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Occupancy Health"
+            "Beds & Occupancy"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -150,7 +150,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Occupancy Health"
+            "Beds & Occupancy"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -166,7 +166,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Occupancy Health"
+            "Beds & Occupancy"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -185,7 +185,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
-            "Ventilators Health"
+            "Ventilator Access"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -204,7 +204,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
-            "Ventilators Health"
+            "Ventilator Access"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -223,7 +223,7 @@
           "prefix": "",
           "suffix": "hospitals",
           "tags": [
-            "Ventilators Health"
+            "Ventilator Access"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -239,7 +239,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Ventilators Health"
+            "Ventilator Access"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -255,7 +255,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Ventilators Health"
+            "Ventilator Access"
           ],
           "visualization": {
             "default_view": "snapshot",
@@ -271,7 +271,7 @@
           "prefix": "",
           "suffix": "%",
           "tags": [
-            "Ventilators Health"
+            "Ventilator Access"
           ],
           "visualization": {
             "default_view": "snapshot",
