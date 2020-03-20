@@ -23,7 +23,7 @@
   "template_entries": [
     {
       "name": "COVID-19 Response",
-      "description": "COVID-19 Response",
+      "description": "",
       "dataset_domain": "covid-19-response.demo.socrata.com",
       "dataset_id": "6ide-cs9c",
       "parent_queries": [
@@ -104,6 +104,63 @@
           "primary_metric name" : "Hospitals with red occupancy", 
           "parent_queries": [
         	"select * where occupancy_health = '3'"
+		  ],
+          "column": "npi",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "hospitals",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "# of hospitals with GREEN Ventilator Health",
+          "primary_metric name" : "Hospitals with red ventilator health", 
+          "parent_queries": [
+            "select * where ventilators_use_health = '1'"
+		  ],
+          "column": "npi",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "hospitals",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "# of hospitals with YELLOW Ventilator Health",
+          "primary_metric name" : "Hospitals with red ventilator health", 
+          "parent_queries": [
+            "select * where ventilators_use_health = '2'"
+		  ],
+          "column": "npi",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "hospitals",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "# of hospitals with RED Ventilator Health",
+          "primary_metric name" : "Hospitals with red ventilator health", 
+          "parent_queries": [
+            "select * where ventilators_use_health = '3'"
 		  ],
           "column": "npi",
           "aggregate_type": "count",
