@@ -82,7 +82,7 @@
         },
         {
           "name": "# of hospitals with YELLOW Occupancy Health",
-          "primary_metric name" : "Hospitals with green occupancy", 
+          "primary_metric name" : "Hospitals with yellow occupancy", 
           "parent_queries": [
         	"select * where occupancy_health = '2'"
 		  ],
@@ -101,7 +101,7 @@
         },
         {
           "name": "# of hospitals with RED Occupancy Health",
-          "primary_metric name" : "Hospitals with green occupancy", 
+          "primary_metric name" : "Hospitals with red occupancy", 
           "parent_queries": [
         	"select * where occupancy_health = '3'"
 		  ],
