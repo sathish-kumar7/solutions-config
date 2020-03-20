@@ -8,7 +8,7 @@
     "exploration_card_entries": [
     {
       "name": "CC - Covid-19 Response",
-      "link": " covid-19-beds.projects.socrata.com",
+      "link": "covid-19-beds.projects.socrata.com",
       "exploration_content": "COVID-19 Response"
     }
   ],
@@ -167,6 +167,25 @@
           "precision": "0",
           "prefix": "",
           "suffix": "hospitals",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "% of hospitals with GREEN Ventilator Health",
+          "primary_metric name" : "Hospitals with red ventilator health", 
+          "parent_queries": [
+            "select * where ventilators_use_health = '1'"
+    	  ],
+          "column": "(sum(case(ventilators_use_health = 1, 1, true, 0))/count(npi))*100",
+          "aggregate_type": "",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "%",
           "tags": [
           ],
           "visualization": {
