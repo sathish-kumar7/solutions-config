@@ -46,21 +46,17 @@
       ],
       "view_entries": [
         {
-          "name": "Total Sales",
-          "column": "saledt",
+          "name": "# of hospitals",
+          "column": "npi",
           "aggregate_type": "count",
-          "stack_column": "land_use_type",
           "precision": "0",
-          "prefix": "",
+          "prefix": "hospitals",
           "suffix": "",
           "tags": [
-            "Sales"
           ],
           "visualization": {
             "default_view": "snapshot",
             "snapshot": {
-              "chart_type": "groupChart",
-              "show_pie_chart": "true"
             }
           }
         }
