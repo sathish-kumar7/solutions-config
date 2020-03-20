@@ -127,7 +127,7 @@
           "primary_metric name" : "Hospitals with green occupancy health", 
           "column": "(sum(case(occupancy_health == 1, 1, true, 0))/count(npi))*100",
           "aggregate_type": "",
-          "precision": "0",
+          "precision": "2",
           "prefix": "",
           "suffix": "%",
           "tags": [
@@ -144,7 +144,7 @@
           "primary_metric name" : "Hospitals with occupancy ventilator health", 
           "column": "(sum(case(occupancy_health == 2, 1, true, 0))/count(npi))*100",
           "aggregate_type": "",
-          "precision": "0",
+          "precision": "2",
           "prefix": "",
           "suffix": "%",
           "tags": [
@@ -161,7 +161,7 @@
           "primary_metric name" : "Hospitals with red occupancy health", 
           "column": "(sum(case(occupancy_health == 3, 1, true, 0))/count(npi))*100",
           "aggregate_type": "",
-          "precision": "0",
+          "precision": "2",
           "prefix": "",
           "suffix": "%",
           "tags": [
@@ -238,7 +238,7 @@
           "primary_metric name" : "Hospitals with green ventilator health", 
           "column": "(sum(case(ventilators_use_health == 1, 1, true, 0))/count(npi))*100",
           "aggregate_type": "",
-          "precision": "0",
+          "precision": "2",
           "prefix": "",
           "suffix": "%",
           "tags": [
@@ -255,7 +255,7 @@
           "primary_metric name" : "Hospitals with yellow ventilator health", 
           "column": "(sum(case(ventilators_use_health == 2, 1, true, 0))/count(npi))*100",
           "aggregate_type": "",
-          "precision": "0",
+          "precision": "2",
           "prefix": "",
           "suffix": "%",
           "tags": [
@@ -272,7 +272,7 @@
           "primary_metric name" : "Hospitals with red ventilator health", 
           "column": "(sum(case(ventilators_use_health == 3, 1, true, 0))/count(npi))*100",
           "aggregate_type": "",
-          "precision": "0",
+          "precision": "2",
           "prefix": "",
           "suffix": "%",
           "tags": [
