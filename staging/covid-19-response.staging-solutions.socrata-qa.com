@@ -40,7 +40,7 @@
           "name": "Classification"
         },
         {
-          "column": "provider_organisation_name",
+          "column": "provider_organization_name",
           "name": "Organisation"
         }
       ],
@@ -50,8 +50,8 @@
           "column": "npi",
           "aggregate_type": "count",
           "precision": "0",
-          "prefix": "hospitals",
-          "suffix": "",
+          "prefix": "",
+          "suffix": "hospitals",
           "tags": [
           ],
           "visualization": {
