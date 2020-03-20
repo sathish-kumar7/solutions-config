@@ -47,6 +47,64 @@
       "view_entries": [
         {
           "name": "# of hospitals",
+          "primary_metric name" : "Hospitals",    
+          "column": "npi",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "hospitals",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "# of hospitals with GREEN Occupancy Health",
+          "primary_metric name" : "Hospitals with green occupancy", 
+          "parent_queries": [
+    		"select * where occupancy_health = '1'"
+		  ],
+          "column": "npi",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "hospitals",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "# of hospitals with YELLOW Occupancy Health",
+          "primary_metric name" : "Hospitals with green occupancy", 
+          "parent_queries": [
+        	"select * where occupancy_health = '2'"
+		  ],
+          "column": "npi",
+          "aggregate_type": "count",
+          "precision": "0",
+          "prefix": "",
+          "suffix": "hospitals",
+          "tags": [
+          ],
+          "visualization": {
+            "default_view": "snapshot",
+            "snapshot": {
+            }
+          }
+        },
+        {
+          "name": "# of hospitals with RED Occupancy Health",
+          "primary_metric name" : "Hospitals with green occupancy", 
+          "parent_queries": [
+        	"select * where occupancy_health = '3'"
+		  ],
           "column": "npi",
           "aggregate_type": "count",
           "precision": "0",
