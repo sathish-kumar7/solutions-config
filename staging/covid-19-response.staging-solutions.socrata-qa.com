@@ -7,9 +7,8 @@
   },
     "exploration_card_entries": [
     {
-      "name": "Covid-19",
+      "name": "CC - Covid-19 Response",
       "link": " covid-19-beds.projects.socrata.com",
-      "image": " ",
       "exploration_content": "COVID-19 Response"
     }
   ],
