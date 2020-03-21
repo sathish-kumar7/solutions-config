@@ -1,4 +1,6 @@
 {
+	"is_private": "true",
+	"solutions_app_user": ["sathish@elumitas.com", "*@elumitas.com"]
 	"branding": {
 		"delimiter": ",",
 		"browser_title": "Munis Executive Insights",
